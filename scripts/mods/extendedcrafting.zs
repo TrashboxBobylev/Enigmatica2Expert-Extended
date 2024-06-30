@@ -362,14 +362,14 @@ addShaped(0, <actuallyadditions:block_misc:9> * 4, Grid(['pretty',
   '⌂': <forestry:hardened_machine>,   // Hardened Casing
 }).shaped());
 
-// [Basic Plating]*4 from [HOP Graphite Ingot][+2]
-addShaped(0, <nuclearcraft:part> * 4, Grid(['pretty',
-  '⌂ ⌂ ⌂',
-  '□ ▬ □',
-  '⌂ ⌂ ⌂'], {
-  '⌂': <ic2:casing:4>,         // Lead Item Casing
-  '□': <ore:plateLead>,        // Lead Plate
-  '▬': <ore:ingotHOPGraphite>, // HOP Graphite Ingot
+// [Basic Plating]*6 from [Graphite Block][+2]
+addShaped(0, <nuclearcraft:part> * 6, Grid(['pretty',
+  '□ ⌂ □',
+  '⌂ ■ ⌂',
+  '□ ⌂ □'], {
+  '□': <ore:plateLead>,     // Lead Plate
+  '⌂': <ic2:casing:5>,      // Steel Item Casing
+  '■': <ore:blockGraphite>, // Graphite Block
 }).shaped());
 
 // [Advanced Plating]*2 from [Basic Plating][+2]
