@@ -286,6 +286,19 @@ craft.remake(<extendedcrafting:frame> * 8, ['pretty',
 
 // [ENGINEERING TABLE RECIPES]
 
+// [Engineering Package Crafter] from [Engineering Table][+4]
+recipes.removeByRecipeName("packagedexcrafting:basic_crafter");
+craft.make(<packagedexcrafting:basic_crafter>, ['pretty',
+  'A M A',
+  'B n B',
+  'A E A'], {
+  'A': <extendedcrafting:material:15>,             // Advanced Component
+  'M': <appliedenergistics2:molecular_assembler>,  // Molecular Assembler
+  'B': <extendedcrafting:material:2>,              // Black Iron Slate
+  'n': <extendedcrafting:table_basic>            , // Engineering Table
+  'E': <packagedauto:me_package_component>,        // ME Packaging Component
+});
+
 // [Redstone Engineering Block] from [Eye of Redstone][+2]
 addShaped(0, <immersiveengineering:metal_decoration0:3> * 4, Grid(['pretty',
   '□ ▬ □',
