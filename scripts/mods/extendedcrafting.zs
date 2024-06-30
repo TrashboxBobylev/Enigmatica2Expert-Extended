@@ -284,8 +284,6 @@ craft.remake(<extendedcrafting:frame> * 8, ['pretty',
   '⌃': <appliedenergistics2:quartz_glass>, // Quartz Glass
 });
 
-// [ENGINEERING TABLE RECIPES]
-
 // [Engineering Package Crafter] from [Engineering Table][+4]
 recipes.removeByRecipeName("packagedexcrafting:basic_crafter");
 craft.make(<packagedexcrafting:basic_crafter>, ['pretty',
@@ -298,6 +296,8 @@ craft.make(<packagedexcrafting:basic_crafter>, ['pretty',
   'n': <extendedcrafting:table_basic>            , // Engineering Table
   'E': <packagedauto:me_package_component>,        // ME Packaging Component
 });
+
+// [ENGINEERING TABLE RECIPES]
 
 // [Redstone Engineering Block] from [Eye of Redstone][+2]
 addShaped(0, <immersiveengineering:metal_decoration0:3> * 4, Grid(['pretty',
@@ -454,7 +454,6 @@ addShaped(0, <actuallyadditions:block_misc:4> * 4, Grid(['pretty',
   '≢': <forestry:wood_pile>,   // Wood Pile
 }).shaped());
 
-
 // [Machine Frame]*4 from [Machine Case][+5]
 addShaped(0, <rftools:machine_frame> * 4, Grid(['pretty',
   'H ¤ H',
@@ -465,7 +464,7 @@ addShaped(0, <rftools:machine_frame> * 4, Grid(['pretty',
   'D': <industrialforegoing:dryrubber>,           // Dry Rubber
   'M': <teslacorelib:machine_case>,               // Machine Case
   '▬': <ore:ingotPinkMetal>,                      // Pink Slime Ingot
-  'A': <ore:listAllmeatcooked> | <ore:ingotMeat>, // Cooked Meat Ingot
+  'A': <ore:ingotMeat>,                           // Cooked Meat Ingot
 }).shaped());
 
 // [Advanced Control Circuit]*4 from [Electronic Circuit][+2]
