@@ -467,8 +467,8 @@ addShaped(0, <rftools:machine_frame> * 4, Grid(['pretty',
   'A': <ore:ingotMeat>,                           // Cooked Meat Ingot
 }).shaped());
 
-// [Advanced Control Circuit]*4 from [Electronic Circuit][+2]
-addShaped(0, <mekanism:controlcircuit:1> * 4, Grid(['pretty',
+// [Advanced Control Circuit]*6 from [Electronic Circuit][+2]
+addShaped(0, <mekanism:controlcircuit:1> * 6, Grid(['pretty',
   '* A *',
   'A B A',
   '* A *'], {
@@ -477,8 +477,8 @@ addShaped(0, <mekanism:controlcircuit:1> * 4, Grid(['pretty',
   'B': <ore:circuitBasic>,                         // Electronic Circuit
 }).shaped());
 
-// [Elite Control Circuit]*4 from [Advanced Control Circuit][+2]
-addShaped(0, <mekanism:controlcircuit:2> * 4, Grid(['pretty',
+// [Elite Control Circuit]*6 from [Advanced Control Circuit][+2]
+addShaped(0, <mekanism:controlcircuit:2> * 6, Grid(['pretty',
   '* E *',
   'E A E',
   '* E *'], {
