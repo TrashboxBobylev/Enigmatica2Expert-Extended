@@ -473,7 +473,7 @@ addShaped(0, <mekanism:controlcircuit:1> * 4, Grid(['pretty',
   'A B A',
   '* A *'], {
   '*': <actuallyadditions:item_crystal_empowered>, // Empowered Restonia Crystal
-  'A': <ore:alloyAdvanced> | <ore:itemEnrichedAlloy>, // Enriched Alloy
+  'A': <ore:itemEnrichedAlloy>,                    // Enriched Alloy
   'B': <ore:circuitBasic>,                         // Electronic Circuit
 }).shaped());
 
@@ -505,7 +505,7 @@ addShaped(0, <ic2:resource:13> * 2, Grid(['pretty',
   '▬': <ore:ingotTough>,         // Tough Alloy Ingot
   '-': <ore:ingotHardCarbon>,    // Hard Carbon Alloy Ingot
   '□': <ore:plateAdvancedAlloy>, // Advanced Alloy
-  '■': <ore:machineBlock> | <ore:machineBlockCasing>, // Basic Machine Casing
+  '■': <ore:machineBlock>,       // Basic Machine Casing
 }).shaped());
 
 // [Machine Chassis]*2 from [Black Iron Ingot][+2]
