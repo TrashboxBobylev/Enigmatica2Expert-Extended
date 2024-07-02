@@ -293,7 +293,7 @@ craft.make(<packagedexcrafting:basic_crafter>, ['pretty',
   'A': <extendedcrafting:material:15>,             // Advanced Component
   'M': <appliedenergistics2:molecular_assembler>,  // Molecular Assembler
   'B': <extendedcrafting:material:2>,              // Black Iron Slate
-  'n': <extendedcrafting:table_basic>            , // Engineering Table
+  'n': <extendedcrafting:table_basic>,             // Engineering Table
   'E': <packagedauto:me_package_component>,        // ME Packaging Component
 });
 
