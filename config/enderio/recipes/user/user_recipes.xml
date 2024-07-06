@@ -622,7 +622,7 @@
   <recipe name="Alloy: Black Dye, Variant">
     <disabled/>
   </recipe>
-  <grindingball name="Fur Ball" grinding="1.0" chance="1.0" power="0.25" durability="8000">
+  <grindingball name="Fur Ball" grinding="1.0" chance="1.0" power="0.25" durability="64000">
     <item name="actuallyadditions:item_hairy_ball"/>
   </grindingball>
   <!-- Endergy Grinding Balls -->
