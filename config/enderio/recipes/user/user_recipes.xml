@@ -694,7 +694,7 @@
   <grindingball name="Stellar Alloy Ball" grinding="2.3" chance="2.25" power="2.2" durability="1088000" >
     <item name="ballStellarAlloy"/>
   </grindingball>
-  <grindingball name="Crystalline Pink Slime Ball" grinding="1.75" chance="1.55" power="1.55" durability="496000" >
+  <grindingball name="Crystalline Pink Slime Ball" grinding="1.75" chance="1.55" power="1.55" durability="620000" >
     <item name="ballCrystallinePinkSlime"/>
   </grindingball>
   <grindingball name="Vivid Alloy Ball" grinding="1.75" chance="1.35" power="1.35" durability="544000" >
