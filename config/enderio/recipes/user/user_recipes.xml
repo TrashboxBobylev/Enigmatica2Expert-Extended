@@ -679,7 +679,7 @@
   <grindingball name="Signalum Ball" grinding="1.2" chance="1.65" power="0.35" durability="571000" >
     <item name="SIGNALUM_BALL"/>
   </grindingball>
-  <grindingball name="Enderium Ball" grinding="1.65" chance="1.45" power="1.25" durability="360000" >
+  <grindingball name="Enderium Ball" grinding="1.65" chance="1.45" power="1.25" durability="400000" >
     <item name="ENDERIUM_BALL"/>
   </grindingball>
   <grindingball name="Lumium Ball" grinding="1.1" chance="2.15" power="0.9" durability="222000" >
@@ -697,7 +697,7 @@
   <grindingball name="Crystalline Pink Slime Ball" grinding="1.75" chance="1.55" power="1.55" durability="620000" >
     <item name="ballCrystallinePinkSlime"/>
   </grindingball>
-  <grindingball name="Vivid Alloy Ball" grinding="1.75" chance="1.35" power="1.35" durability="544000" >
+  <grindingball name="Vivid Alloy Ball" grinding="1.75" chance="1.35" power="1.35" durability="598000" >
     <item name="ballVividAlloy"/>
   </grindingball>
   <!-- Dyes remake -->
