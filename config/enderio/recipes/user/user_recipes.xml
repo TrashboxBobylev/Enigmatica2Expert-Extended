@@ -688,7 +688,7 @@
   <grindingball name="Crystalline Alloy Ball" grinding="1.8" chance="1.4" power="1.45" durability="304000" >
     <item name="ballCrystallineAlloy"/>
   </grindingball>
-  <grindingball name="Melodic Alloy Ball" grinding="2.0" chance="1.45" power="1.55" durability="336000" >
+  <grindingball name="Melodic Alloy Ball" grinding="2.0" chance="1.45" power="1.55" durability="840000" >
     <item name="ballMelodicAlloy"/>
   </grindingball>
   <grindingball name="Stellar Alloy Ball" grinding="2.3" chance="2.25" power="2.2" durability="1088000" >
