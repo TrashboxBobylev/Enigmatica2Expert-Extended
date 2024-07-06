@@ -697,7 +697,7 @@
   <grindingball name="Crystalline Pink Slime Ball" grinding="1.75" chance="1.55" power="1.55" durability="496000" >
     <item name="ballCrystallinePinkSlime"/>
   </grindingball>
-  <grindingball name="Vivid Alloy Ball" grinding="1.75" chance="1.35" power="1.35" durability="272000" >
+  <grindingball name="Vivid Alloy Ball" grinding="1.75" chance="1.35" power="1.35" durability="544000" >
     <item name="ballVividAlloy"/>
   </grindingball>
   <!-- Dyes remake -->
