@@ -670,7 +670,7 @@
   <grindingball name="Soularium Ball" grinding="1.2" chance="2.15" power="0.9" durability="177000" >
     <item name="ballSoularium"/>
   </grindingball>
-  <grindingball name="End Steel Ball" grinding="1.4" chance="2.4" power="0.7" durability="214000" >
+  <grindingball name="End Steel Ball" grinding="1.4" chance="2.4" power="0.7" durability="375000" >
     <item name="ballEndSteel"/>
   </grindingball>
   <grindingball name="Construction Alloy Ball" grinding="1.0" chance="0.33" power="0.25" durability="96000" >
