@@ -570,6 +570,18 @@ scripts.mods.forestry.ThermionicFabricator.addCast(<thermalexpansion:frame:64>, 
   '▬': <ore:ingotTin>, // Tin Ingot
 }).shaped(), <liquid:glass> * 1000);
 
+// [Forge Lexicon] from [Book][+4]
+craft.make(<thermalfoundation:tome_lexicon>.withTag({Mode: 1, Inventory: {}}), ['pretty',
+  '  D  ',
+  '▬ B -',
+  '  ♥  '], {
+  'D': <chisel:chisel_diamond>.withTag({chiseldata: {mode: "PANEL"}}), // Diamond Chisel
+  '▬': <ore:ingotGold>,                       // Gold Ingot
+  'B': <minecraft:book>,                      // Book
+  '-': <ore:ingotIron> | <ore:ingotFakeIron>, // Iron Ingot
+  '♥': <ore:dustRedstone>,                    // Redstone
+});
+
 // [Augment: Auxiliary Reception Coil] from [Redstone Servo][+2]
 craft.remake(<thermalexpansion:augment:128>, ['pretty',
   '  E  ',
