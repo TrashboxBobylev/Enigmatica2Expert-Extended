@@ -896,6 +896,26 @@
     </fermenting>
   </recipe>
   <!-- Recipe below generated automatically. Do not make changes or they gonna be rewritten. -->
+  <recipe name="Molten Knightslime">
+    <fermenting energy="10000">
+      <inputgroup>
+        <input name="mysticalagriculture:knightslime_essence" amount="10" multiplier="1.0"/>
+      </inputgroup>
+      <inputfluid name="fluid_quicksilver" multiplier="1.0"/>
+      <outputfluid name="knightslime"/>
+    </fermenting>
+  </recipe>
+  <!-- Recipe below generated automatically. Do not make changes or they gonna be rewritten. -->
+  <recipe name="Molten Obsidian">
+    <fermenting energy="10000">
+      <inputgroup>
+        <input name="mysticalagriculture:obsidian_essence" amount="2" multiplier="1.0"/>
+      </inputgroup>
+      <inputfluid name="fluid_quicksilver" multiplier="1.0"/>
+      <outputfluid name="obsidian"/>
+    </fermenting>
+  </recipe>
+  <!-- Recipe below generated automatically. Do not make changes or they gonna be rewritten. -->
   <recipe name="Nichrome Ingot">
     <alloying energy="10000">
       <input name="ingotNickel"/>
