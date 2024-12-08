@@ -6,7 +6,7 @@ import crafttweaker.item.IIngredient;
 
 import scripts.category.magicProcessing.magicProcessing;
 import scripts.process.beneficiate;
-import scripts.processWork;
+import scripts.processWork.work;
 
 static benOpts as IData = {
   exceptions       : 'Pulverizer StarlightInfuser',
