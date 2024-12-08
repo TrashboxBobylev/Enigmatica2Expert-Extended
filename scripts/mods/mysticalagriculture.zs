@@ -754,7 +754,9 @@ function remakeSimple(recName as string, output as IIngredient, ingrs as IIngred
 function remakeFluid(recName as string, output as ILiquidStack, ingrs as IIngredient[]) as void {
   recipes.removeByRecipeName(recName);
   mods.inworldcrafting.FluidToFluid.transform(output, <liquid:fluid_quicksilver>, ingrs);
-  scripts.process.solution(ingrs, [<liquid:fluid_quicksilver> * 1000], [output * 1000]);
+  scripts.processWork.work(['vat', 'ChemicalReactor', 'Mixer'], null, 
+    [ingrs[0]], [<liquid:fluid_quicksilver> * 1000], 
+    null, [output * 1000], null, null);
 }
 
 function remakeAltair(recName as string, output as IIngredient, ingrs as IIngredient[]) as void {
