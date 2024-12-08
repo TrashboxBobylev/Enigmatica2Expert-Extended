@@ -40,9 +40,9 @@ for ore_entry in oreDict {
       if (isNull(asBlock) || asBlock.definition.id == 'minecraft:air') continue;
       val oreBlockState = asBlock.definition.getStateFromMeta(item.damage);
       scripts.do.burnt_in_fluid.add(ore_entry.itemArray[0].definition.id, oreBlockState, 'stone', baseChance);
-      work(["NCInfuser", "Transposer", "OreCrystallizer"], "", 
-        [ore_entry.itemArray[0] * ((1.0/baseChance) as int)], [<ic2:construction_foam> * 4000], 
-        [item], null, null, null, null);
+      work(["NCInfuser", "Transposer", "OreCrystallizer"], null, 
+        [ore_entry.itemArray[0] * ((1.0/baseChance) as int)], [<liquid:ic2construction_foam> * 4000], 
+        [item], null, null, null);
       break;
     }
     continue;

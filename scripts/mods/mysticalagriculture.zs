@@ -738,9 +738,9 @@ for i, item in furnaceByTier {
 function remakeBlock(recName as string, output as IBlockState, ingrs as IIngredient[], fluid as string = 'stone') as void {
   if (!isNull(recName)) recipes.removeByRecipeName(recName);
   scripts.do.burnt_in_fluid.add(ingrs[0].items[0].definition.id, output, fluid);
-  scripts.processWork.work(["NCInfuser", "Transposer", "OreCrystallizer"], "", 
-    [ingrs[0].items[0]], [<ic2:construction_foam> * 4000], 
-    [output.block.item], null, null, null, null);
+  scripts.processWork.work(["NCInfuser", "Transposer", "OreCrystallizer"], null, 
+    [ingrs[0].items[0]], [<liquid:ic2construction_foam> * 4000], 
+    [output.block.item], null, null, null);
 }
 
 function makeSmelt(recName as string, output as ILiquidStack, ingrs as IIngredient[]) as void {
