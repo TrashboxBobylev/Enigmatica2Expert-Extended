@@ -142,7 +142,7 @@ function stateToItem(state as IBlockState, pos as IBlockPos = null, world as IWo
       break;
     }
   }
-  var item = isWeird && (isNull(world) || isNull(pos)))
+  var item = isWeird && (isNull(world) || isNull(pos))
       ? <item:${defId}:${state.block.meta}>
       : state.block.getItem(world, pos, state);
   if (isNull(item)) item = blockRepresentation[defId];
