@@ -870,13 +870,13 @@ function workEx(machineNameAnyCase as string, exceptionsAnyCase as string,
 
   
   // Complicated input
-  // [📦+]|💧 → 📦
-  if ((haveItemInput || haveLiquidInput) && outputIsSingle) {
+  // [📦+]|💧 → [📦+]
+  if ((haveItemInput || haveLiquidInput) && haveItemOutput) {
     if (machineName == 'arcrystallizer') {
       val b = mods.advancedrocketry.RecipeTweaker.forMachine('Crystallizer').builder();
       for i in inputItems { b.input(i); }
       b.inputLiquid(inputLiquid0);
-      b.outputs(o);
+      for o in outputItems { b.outputs(o); }
       b.power(getOptionEnergy(options, 40000));
       b.timeRequired(getOptionTime(options, 10));
       b.build();
