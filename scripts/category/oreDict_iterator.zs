@@ -6,7 +6,6 @@ import crafttweaker.item.IIngredient;
 
 import scripts.category.magicProcessing.magicProcessing;
 import scripts.process.beneficiate;
-import scripts.processWork.work;
 
 static benOpts as IData = {
   exceptions       : 'Pulverizer StarlightInfuser',
@@ -40,7 +39,7 @@ for ore_entry in oreDict {
       val oreBlockState = asBlock.definition.getStateFromMeta(item.damage);
       val baseChance = 1.0 / 3.0;
       scripts.do.burnt_in_fluid.add(ore_entry.itemArray[0].definition.id, oreBlockState, 'stone', baseChance);
-      work(["NCInfuser", "Transposer", "OreCrystallizer"], null, 
+      scripts.processWork.work(["NCInfuser", "Transposer", "OreCrystallizer"], null, 
         [ore_entry * ((1.0/baseChance) as int)], [<liquid:ic2construction_foam> * 4000], 
         [item], null, null, null);
       break;
