@@ -41,7 +41,7 @@ for ore_entry in oreDict {
       val baseChance = 1.0 / 3.0;
       scripts.do.burnt_in_fluid.add(ore_entry.itemArray[0].definition.id, oreBlockState, 'stone', baseChance);
       work(["NCInfuser", "Transposer", "OreCrystallizer"], null, 
-        [ore_entry.itemArray[0] * ((1.0/baseChance) as int)], [<liquid:ic2construction_foam> * 4000], 
+        [ore_entry * ((1.0/baseChance) as int)], [<liquid:ic2construction_foam> * 4000], 
         [item], null, null, null);
       break;
     }
