@@ -869,21 +869,6 @@ function workEx(machineNameAnyCase as string, exceptionsAnyCase as string,
   }
 
   // Complicated input
-  // [📦+]|💧 → [📦+]
-  if ((haveItemInput || haveLiquidInput) && haveItemOutput) {
-    if (machineName == 'arcrystallizer') {
-      val b = mods.advancedrocketry.RecipeTweaker.forMachine('Crystallizer').builder();
-      for i in inputItems { b.input(i); }
-      b.inputLiquid(inputLiquid0);
-      for o in outputItems { b.outputs(o); }
-      b.power(getOptionEnergy(options, 40000));
-      b.timeRequired(getOptionTime(options, 10));
-      b.build();
-      return machineName;
-    }
-  }
-
-  // Complicated input
   // [📦+]|[💧+] → [📦+]|💧
   if ((haveItemInput || haveLiquidInput) && (haveItemOutput || outputLiquidIsSingle)) {
     if (machineName == 'chemicalreactor') {
@@ -911,6 +896,18 @@ function workEx(machineNameAnyCase as string, exceptionsAnyCase as string,
         mods.forestry.Squeezer.addRecipe(outputLiquid0, inputItemStacks, 20, wOut);
         return machineName;
       }
+    }
+
+    if (machineName == 'arcrystallizer') {
+      val b = mods.advancedrocketry.RecipeTweaker.forMachine('Crystallizer').builder();
+      if (!isNull(inputItems)) for o in inputItems { b.input(o); }
+      if (!isNull(inputLiquids)) for o in inputLiquids { b.input(o); }
+      if (!isNull(outputItems)) for o in outputItems { b.outputs(o); }
+      if (!isNull(outputLiquids)) for o in outputLiquids { b.outputs(o); }
+      b.power(getOptionEnergy(options, 40000));
+      b.timeRequired(getOptionTime(options, 10));
+      b.build();
+      return machineName;
     }
   }
 
