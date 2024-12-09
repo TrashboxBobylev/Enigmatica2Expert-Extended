@@ -741,7 +741,7 @@ function remakeBlock(recName as string, output as IBlockState, ingrs as IIngredi
   if (!(ingrs[0] has <mysticalagriculture:rock_crystal_essence>))
     scripts.processWork.work(["ARCrystallizer"], null, 
       [ingrs[0].items[0] * 8], [<liquid:ic2construction_foam> * 8000], 
-      [scripts.do.portal_spread.utils.state_to_item(output)], null, null, null);
+      [scripts.do.portal_spread.utils.state_to_item(output) * 8], null, null, null);
 }
 
 function makeSmelt(recName as string, output as ILiquidStack, ingrs as IIngredient[]) as void {

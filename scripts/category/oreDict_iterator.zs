@@ -41,7 +41,7 @@ for ore_entry in oreDict {
       scripts.do.burnt_in_fluid.add(ore_entry.itemArray[0].definition.id, oreBlockState, 'stone', baseChance);
       scripts.processWork.work(["ARCrystallizer"], null, 
         [ore_entry * ((1.0/baseChance) as int * 8)], [<liquid:ic2construction_foam> * 8000], 
-        [item], null, null, null);
+        [item * 8], null, null, null);
       break;
     }
     continue;
