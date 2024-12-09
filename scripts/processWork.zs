@@ -868,7 +868,6 @@ function workEx(machineNameAnyCase as string, exceptionsAnyCase as string,
     }
   }
 
-  
   // Complicated input
   // [📦+]|💧 → [📦+]
   if ((haveItemInput || haveLiquidInput) && haveItemOutput) {

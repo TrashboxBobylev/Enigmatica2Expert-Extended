@@ -122,9 +122,12 @@ static blockRepresentation as IItemStack[string] = {
   'minecraft:air'               : !isNull(<mechanics:empty>) ? <mechanics:empty> : <minecraft:barrier>,
   'biomesoplenty:blood'         : <forge:bucketfilled>.withTag({ FluidName: 'blood', Amount: 1000 }),
 };
-// For some reason those blocks do not like being `getItem`ed
+
+// Those blocks cant be safetly used with `block.getItem()`
 static weirdBlockNames as string[] = [
-  'netherendingores:', 'ic2:te', 'draconicevolution:draconium_ore'
+  'netherendingores:',
+  'ic2:te',
+  'draconicevolution:draconium_ore',
 ];
 
 function stateToItem(state as IBlockState, pos as IBlockPos = null, world as IWorld = null) as IItemStack {
@@ -137,7 +140,7 @@ function stateToItem(state as IBlockState, pos as IBlockPos = null, world as IWo
   val defId = state.block.definition.id;
   var isWeird = false;
   for str in weirdBlockNames {
-    if (defId.startsWith(str)){
+    if (defId.startsWith(str)) {
       isWeird = true;
       break;
     }
