@@ -739,7 +739,7 @@ function remakeBlock(recName as string, output as IBlockState, ingrs as IIngredi
   if (!isNull(recName)) recipes.removeByRecipeName(recName);
   scripts.do.burnt_in_fluid.add(ingrs[0].items[0].definition.id, output, fluid);
   if (!(ingrs[0] has <mysticalagriculture:rock_crystal_essence>))
-    scripts.processWork.work(["NCInfuser", "Transposer", "ARCrystallizer"], null, 
+    scripts.processWork.work(["ARCrystallizer"], null, 
       [ingrs[0].items[0]], [<liquid:ic2construction_foam> * 4000], 
       [itemUtils.getItem(output.getBlock().definition.id, output.getBlock().meta)], null, null, null);
 }
@@ -755,7 +755,7 @@ function remakeSimple(recName as string, output as IIngredient, ingrs as IIngred
 function remakeFluid(recName as string, output as ILiquidStack, ingrs as IIngredient[]) as void {
   recipes.removeByRecipeName(recName);
   mods.inworldcrafting.FluidToFluid.transform(output, <liquid:fluid_quicksilver>, ingrs);
-  scripts.processWork.work(['fluidenricher', 'ChemicalReactor', 'Mixer'], null, 
+  scripts.processWork.work(['Mixer'], null, 
     [ingrs[0]], [<liquid:fluid_quicksilver> * 1000], 
     null, [output * 1000], null, null);
 }
