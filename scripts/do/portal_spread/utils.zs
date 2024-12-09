@@ -123,9 +123,9 @@ static blockRepresentation as IItemStack[string] = {
   'biomesoplenty:blood'         : <forge:bucketfilled>.withTag({ FluidName: 'blood', Amount: 1000 }),
 };
 // For some reason those blocks do not like being `getItem`ed
-static weirdBlockNames as string[] = {
+static weirdBlockNames as string[] = [
   'netherendingores:', 'ic2:te', 'draconicevolution:draconium_ore'
-};
+];
 
 function stateToItem(state as IBlockState, pos as IBlockPos = null, world as IWorld = null) as IItemStack {
   if (
@@ -135,8 +135,8 @@ function stateToItem(state as IBlockState, pos as IBlockPos = null, world as IWo
   ) return null;
 
   val defId = state.block.definition.id;
-  val isWeird = false;
-  for str in weirdBlocks {
+  var isWeird = false;
+  for str in weirdBlockNames {
     if (defId.startsWith(str)){
       isWeird = true;
       break;
