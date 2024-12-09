@@ -701,11 +701,6 @@ function workEx(machineNameAnyCase as string, exceptionsAnyCase as string,
       }
       return machineName;
     }
-
-    if (machineName == 'orecrystallizer') {
-      avdRockXmlRecipe('Crystallizer', [inputIngr0], [inputLiquid0], [outputItem0], null);
-      return machineName;
-    }
   }
 
   // ONE item + ONE liquid -> ONE liquid
@@ -869,6 +864,22 @@ function workEx(machineNameAnyCase as string, exceptionsAnyCase as string,
       else {
         mods.integrateddynamics.MechanicalDryingBasin.addRecipe(null, inputLiquid0, outputItem0, outputLiquid0, 80);
       }
+      return machineName;
+    }
+  }
+
+  
+  // Complicated input
+  // [📦+]|💧 → 📦
+  if ((haveItemInput || haveLiquidInput) && outputIsSingle) {
+    if (machineName == 'arcrystallizer') {
+      val b = mods.advancedrocketry.RecipeTweaker.forMachine('Crystallizer').builder();
+      for i in inputItems { b.input(i); }
+      b.inputLiquid(inputLiquid0);
+      b.outputs(o);
+      b.power(getOptionEnergy(options, 40000));
+      b.timeRequired(getOptionTime(options, 10));
+      b.build();
       return machineName;
     }
   }

@@ -739,7 +739,7 @@ function remakeBlock(recName as string, output as IBlockState, ingrs as IIngredi
   if (!isNull(recName)) recipes.removeByRecipeName(recName);
   scripts.do.burnt_in_fluid.add(ingrs[0].items[0].definition.id, output, fluid);
   if (!(ingrs[0] has <mysticalagriculture:rock_crystal_essence>))
-    scripts.processWork.work(["NCInfuser", "Transposer", "OreCrystallizer"], null, 
+    scripts.processWork.work(["NCInfuser", "Transposer", "ARCrystallizer"], null, 
       [ingrs[0].items[0]], [<liquid:ic2construction_foam> * 4000], 
       [itemUtils.getItem(output.getBlock().definition.id, output.getBlock().meta)], null, null, null);
 }
