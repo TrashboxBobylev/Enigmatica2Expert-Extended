@@ -9,7 +9,6 @@ import crafttweaker.liquid.ILiquidStack;
 import mods.mekanism.MekanismHelper.getGas;
 
 import scripts.processUtils.I;
-import scripts.processUtils.avdRockXmlRecipe;
 import scripts.processUtils.arrN_float;
 import scripts.processUtils.arrN_ingr;
 import scripts.processUtils.arrN_item;
