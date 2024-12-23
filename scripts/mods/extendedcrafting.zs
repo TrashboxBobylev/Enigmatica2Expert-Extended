@@ -307,7 +307,7 @@ addShaped(0, <immersiveengineering:metal_decoration0:3> * 4, Grid(['pretty',
   '□ ▬ □'], {
   '□': <ore:plateCopper>,     // Copper Plate
   '▬': <ore:ingotConstantan>, // Constantan Ingot
-  'e': <ore:eyeofredstone>,   // Eye of Redstone
+  'e': <ore:ingotSignalum>,   // Signalum Ingot
 }).shaped());
 
 // [Light Engineering Block]*6 from [Aluminium Scaffolding][+2]
@@ -316,16 +316,16 @@ addShaped(0, <immersiveengineering:metal_decoration0:4> * 6, Grid(['pretty',
   'A l A',
   '□ A □'], {
   '□': <ore:plateConstantan>,     // Constantan Plate
-  'A': <ore:alloyAdvanced>,       // Enriched Alloy
+  'A': <ore:ingotRedstoneAlloy>,  // Redstone Alloy Ingot
   'l': <ore:scaffoldingAluminum>, // Aluminium Scaffolding
 }).shaped());
 
 // [Heavy Engineering Block]*8 from [Steel Scaffolding][+3]
-addShaped(0, <immersiveengineering:metal_decoration0:5> * 8, Grid(['pretty',
+addShaped(0, <immersiveengineering:metal_decoration0:5> * 10, Grid(['pretty',
   '□ E □',
   'S t S',
   '□ E □'], {
-  '□': <ore:plateUranium>,                // Uranium Plate
+  '□': <ore:plateDU>,                     // DU Plating
   'E': <ore:alloyElite>,                  // Reinforced Alloy
   'S': <immersiveengineering:material:9>, // Steel Mechanical Component
   't': <ore:scaffoldingSteel>,            // Steel Scaffolding
