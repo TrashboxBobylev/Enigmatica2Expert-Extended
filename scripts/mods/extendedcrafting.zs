@@ -631,7 +631,7 @@ addShaped(0, <ic2:crafting:6> * 3, Grid(['pretty',
   '  ▬  '], {
   '▬': <ore:ingotFerroboron>,       // Ferroboron Alloy Ingot
   '□': <ore:plateBasic>,            // Basic Plating
-  'C': scripts.mods.ic2.copperCoil, // Copper Wire Coil
+  'C': scripts.mods.industrialcraft2.copperCoil, // Copper Wire Coil
 }).shaped());
 
 // [Machine Structure]*48 from [Resonant Cell Frame (Full)][+2]
