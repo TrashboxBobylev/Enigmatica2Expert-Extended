@@ -456,9 +456,9 @@ addShaped(0, <actuallyadditions:block_misc:4> * 4, Grid(['pretty',
 
 // [Machine Frame]*4 from [Machine Case][+5]
 addShaped(0, <rftools:machine_frame> * 4, Grid(['pretty',
-  'H¤H',
-  '■M■',
-  'sAs'], {
+  'H ¤ H',
+  '■ M ■',
+  's A s'], {
   'H': <ic2:heat_vent>,                  // Heat Vent
   '¤': <thermalfoundation:material:294>, // Lumium Gear 
   '■': <mekanism:plasticblock:15>,       // White Plastic Block
