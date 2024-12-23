@@ -633,3 +633,36 @@ addShaped(0, <ic2:crafting:6> * 3, Grid(['pretty',
   '□': <ore:plateBasic>,            // Basic Plating
   'C': scripts.mods.ic2.copperCoil, // Copper Wire Coil
 }).shaped());
+
+// [Machine Structure]*48 from [Resonant Cell Frame (Full)][+2]
+addShaped(0, <libvulpes:structuremachine> * 48, Grid(['pretty',
+  '■ A ■',
+  'A ◘ A',
+  '■ A ■'], {
+  '■': <ore:blockDilithium>,         // Block of Dilithium
+  'A': <ore:processorAdvanced>,      // Advanced Processor
+  '◘': <thermalexpansion:frame:148>, // Resonant Cell Frame (Full)
+}).shaped());
+
+// [Connector]*4 from [Vibrant Alloy Ingot][+2]
+addShaped(0, <environmentaltech:connector> * 4, Grid(['pretty',
+  '♥ ■ ♥',
+  '■ ▬ ■',
+  '♥ ■ ♥'], {
+  '♥': <ore:crystalRedstone>,   // Destabilized Clathrate
+  '■': <ore:blockMithril>,      // Block of Mana Infused Metal
+  '▬': <ore:ingotVibrantAlloy>, // Vibrant Alloy Ingot
+}).shaped());
+
+// [Basic Fusion Crafting Injector]*8 from [Genetics Processor][+5]
+addShaped(0, <draconicevolution:crafting_injector> * 8, Grid(['pretty',
+  'Ϟ ▬ Ϟ',
+  '* G *',
+  'A √ A'], {
+  'Ϟ': <draconicevolution:wyvern_energy_core>, // Wyvern Energy Core
+  '▬': <ore:ingotYttrium>,                     // Yttrium Ingot
+  '*': <ore:crystalPladium>,                   // Pladium Crystal
+  'G': <gendustry:genetics_processor>,         // Genetics Processor
+  'A': <ore:processorAdvanced>,                // Advanced Processor
+  '√': <draconicevolution:energy_crystal:6>,   // Basic Wireless Energy Crystal
+}).shaped());
