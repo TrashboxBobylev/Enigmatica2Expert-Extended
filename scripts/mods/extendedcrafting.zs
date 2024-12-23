@@ -508,7 +508,7 @@ addShaped(0, <forestry:sturdy_machine> * 4, Grid(['pretty',
 }).shaped());
 
 // [Basic Machine Casing]*8 from [Titanium Plate][+1]
-addShaped(0, <ic2:resource:12> * 8, Grid(['pretty',
+addShaped(0, <ic2:resource:12> * 6, Grid(['pretty',
   '□ ■ □',
   '■   ■',
   '□ ■ □'], {
