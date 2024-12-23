@@ -1,4 +1,5 @@
 #modloaded extendedcrafting thermalfoundation
+#priority -1
 import mods.extendedcrafting.TableCrafting.addShaped;
 
 val piston = <minecraft:piston>;
