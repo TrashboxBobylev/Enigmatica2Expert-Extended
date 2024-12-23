@@ -568,3 +568,39 @@ addShaped(0, <enderio:item_material> * 3, Grid(['pretty',
   'L': <endreborn:block_lormyte_crystal>, // Lormyte Stone
   '◘': <thermalexpansion:frame:129>,      // Hardened Cell Frame
 }).shaped());
+
+// [Steel Chassis]*20 from [Steel Gear][+8]
+addShaped(0, <nuclearcraft:part:12> * 20, Grid(['pretty',
+  '_ Ξ ≡',
+  '- ¤ F',
+  '‗ = ▬'], {
+  '_': <ore:ingotTerrasteel>,      // Terrasteel Ingot
+  'Ξ': <ore:ingotEndSteel>,        // End Steel Ingot
+  '≡': <ore:ingotElectricalSteel>, // Electrical Steel Ingot
+  '-': <ore:dragonsteelIngot>,     // any Dragonsteel Ingot
+  '¤': <ore:gearSteel>,            // Steel Gear
+  'F': <ore:ingotFluixSteel>,      // Fluix Steel Ingot
+  '‗': <ore:ingotHSLASteel>,       // HSLA Steel Ingot
+  '=': <ore:ingotDarkSteel>,       // Dark Steel Ingot
+  '▬': <ore:ingotStainlessSteel>,  // Stainless Steel Ingot
+}).shaped());
+
+// [Empty Frame]*6 from [Silver Gear][+2]
+addShaped(0, <nuclearcraft:part:11> * 6, Grid(['pretty',
+  '□ ¤ □',
+  'I   I',
+  '□ ¤ □'], {
+  '□': <ore:plateAdvanced>,         // Advanced Plating
+  '¤': <ore:gearSilver>,            // Silver Gear
+  'I': <nuclearcraft:water_source>, // Infinite Water Source
+}).shaped());
+
+// [Copper Solenoid]*8 from [Advanced Alloy][+2]
+addShaped(0, <nuclearcraft:part:4> * 8, Grid(['pretty',
+  '‚ ‚ ‚',
+  '■ □ ■',
+  '‚ ‚ ‚'], {
+  '‚': <ore:nuggetAluminum>,               // Aluminum Nugget
+  '■': <ore:blockCoil> | <ore:coilCopper>, // Copper Coil Block
+  '□': <ore:plateAdvancedAlloy>,           // Advanced Alloy
+}).shaped());
