@@ -619,9 +619,9 @@ addShaped(0, <nuclearcraft:part:4> * 8, Grid(['pretty',
   '‚ ‚ ‚',
   '■ □ ■',
   '‚ ‚ ‚'], {
-  '‚': <ore:nuggetAluminum>,               // Aluminum Nugget
-  '■': <ore:blockCoil> | <ore:coilCopper>, // Copper Coil Block
-  '□': <ore:plateAdvancedAlloy>,           // Advanced Alloy
+  '‚': <ore:nuggetAluminum>,                      // Aluminum Nugget
+  '■': <immersiveengineering:metal_decoration0>,  // Copper Coil Block
+  '□': <ore:plateAdvancedAlloy>,                  // Advanced Alloy
 }).shaped());
 
 // [Basic Coil]*3 from [Electrical Steel Ingot][+2]
