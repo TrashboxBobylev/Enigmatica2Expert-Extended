@@ -454,6 +454,24 @@ addShaped(0, <actuallyadditions:block_laser_relay> * 10, Grid(['pretty',
   'A': <actuallyadditions:item_misc:8>,   // Advanced Coil
 }).shaped());
 
+// [ME Dense Smart Cable - Fluix]*8 from [Fluix Steel Ingot][+1]
+addShaped(0, <appliedenergistics2:part:76> * 8, Grid(['pretty',
+  '■ ■ ■',
+  '▬ ▬ ▬',
+  '■ ■ ■'], {
+  '■': <ore:blockGlass>,      // Glass
+  '▬': <ore:ingotFluixSteel>, // Fluix Steel Ingot
+}).shaped());
+
+// [ME Smart Cable - Fluix]*8 from [Fluix Steel Shard][+1]
+addShaped(0, <appliedenergistics2:part:56> * 8, Grid(['pretty',
+  'G G G',
+  'F F F',
+  'G G G'], {
+  'G': <ore:paneGlass>,                                       // Glass Pane
+  'F': <tconstruct:shard>.withTag({Material: "fluix_steel"}), // Fluix Steel Shard
+}).shaped());
+
 // [Wood Casing]*4 from [Wood Pile][+2]
 addShaped(0, <actuallyadditions:block_misc:4> * 4, Grid(['pretty',
   '# ╱ #',
