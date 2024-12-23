@@ -457,15 +457,15 @@ addShaped(0, <actuallyadditions:block_misc:4> * 4, Grid(['pretty',
 
 // [Machine Frame]*4 from [Machine Case][+5]
 addShaped(0, <rftools:machine_frame> * 4, Grid(['pretty',
-  'H ¤ H',
-  'D M D',
-  '▬ A ▬'], {
-  'H': <ic2:heat_vent>.anyDamage(),               // Heat Vent
-  '¤': <ore:gearLumium>,                          // Lumium Gear
-  'D': <industrialforegoing:dryrubber>,           // Dry Rubber
-  'M': <teslacorelib:machine_case>,               // Machine Case
-  '▬': <ore:ingotPinkMetal>,                      // Pink Slime Ingot
-  'A': <ore:ingotMeat>,                           // Cooked Meat Ingot
+  'H¤H',
+  '■M■',
+  'sAs'], {
+  'H': <ic2:heat_vent>,                  // Heat Vent
+  '¤': <thermalfoundation:material:294>, // Lumium Gear 
+  '■': <mekanism:plasticblock:15>,       // White Plastic Block
+  'M': <teslacorelib:machine_case>,      // Machine Case
+  's': <industrialforegoing:pink_slime>, // Pink Slime
+  'A': <tconevo:edible:1>                // Cooked Meat Ingot
 }).shaped());
 
 // [Advanced Control Circuit]*6 from [Electronic Circuit][+2]
