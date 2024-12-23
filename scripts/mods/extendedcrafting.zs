@@ -503,10 +503,10 @@ addShaped(0, <ic2:resource:13> * 2, Grid(['pretty',
   '▬ - ▬',
   '□ ■ □',
   '▬ - ▬'], {
-  '▬': <ore:ingotTough>,         // Tough Alloy Ingot
-  '-': <ore:ingotHardCarbon>,    // Hard Carbon Alloy Ingot
-  '□': <ore:plateAdvancedAlloy>, // Advanced Alloy
-  '■': <ore:machineBlock>,       // Basic Machine Casing
+  '▬': <ore:ingotElectricalSteel>,         // Electrical Steel Ingot
+  '-': <ore:ingotHardCarbon>,              // Hard Carbon Alloy Ingot
+  '□': <ore:plateAdvancedAlloy>,           // Advanced Alloy
+  '■': <ore:machineBlock>,                 // Basic Machine Casing
 }).shaped());
 
 // [Machine Chassis]*2 from [Black Iron Ingot][+2]
