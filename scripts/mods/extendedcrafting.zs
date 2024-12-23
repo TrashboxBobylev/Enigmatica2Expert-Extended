@@ -502,8 +502,8 @@ addShaped(0, <ic2:resource:12> * 8, Grid(['pretty',
   '□ ■ □',
   '■   ■',
   '□ ■ □'], {
-  '□': <ore:plateTitanium>, // Titanium Plate
-  '■': <ore:blockFakeIron>, // Iron Alloy Block
+  '□': <ore:plateTitanium>,          // Titanium Plate
+  '■': <ore:blockConstructionAlloy>, // Iron Alloy Block
 }).shaped());
 
 // [Advanced Machine Casing]*2 from [Basic Machine Casing][+3]
