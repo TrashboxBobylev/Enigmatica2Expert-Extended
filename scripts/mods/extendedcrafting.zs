@@ -604,3 +604,22 @@ addShaped(0, <nuclearcraft:part:4> * 8, Grid(['pretty',
   '■': <ore:blockCoil> | <ore:coilCopper>, // Copper Coil Block
   '□': <ore:plateAdvancedAlloy>,           // Advanced Alloy
 }).shaped());
+
+// [Basic Coil]*3 from [Electrical Steel Ingot][+2]
+addShaped(0, <actuallyadditions:item_misc:7> * 3, Grid(['pretty',
+  '- ▬ ╱',
+  '▬ ╱ ▬',
+  '╱ ▬ -'], {
+  '-': <ore:ingotElectricalSteel>, // Electrical Steel Ingot
+  '▬': <ore:ingotAluminum>,        // Aluminum Ingot
+  '╱': <forestry:oak_stick>,       // Impregnated Stick
+}).shaped());
+
+// [Advanced Coil]*8 from [Basic Coil][+1]
+addShaped(0, <actuallyadditions:item_misc:8> * 8, Grid(['pretty',
+  '  ▬ B',
+  '▬ B ▬',
+  'B ▬  '], {
+  '▬': <ore:ingotLumium>,               // Lumium Ingot
+  'B': <actuallyadditions:item_misc:7>, // Basic Coil
+}).shaped());
