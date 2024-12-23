@@ -498,6 +498,15 @@ addShaped(0, <forestry:sturdy_machine> * 4, Grid(['pretty',
   '¤': <ore:gearBronze>,     // Bronze Gear
 }).shaped());
 
+// [Basic Machine Casing]*8 from [Titanium Plate][+1]
+addShaped(0, <ic2:resource:12> * 8, Grid(['pretty',
+  '□ ■ □',
+  '■   ■',
+  '□ ■ □'], {
+  '□': <ore:plateTitanium>, // Titanium Plate
+  '■': <ore:blockFakeIron>, // Iron Alloy Block
+}).shaped());
+
 // [Advanced Machine Casing]*2 from [Basic Machine Casing][+3]
 addShaped(0, <ic2:resource:13> * 2, Grid(['pretty',
   '▬ - ▬',
