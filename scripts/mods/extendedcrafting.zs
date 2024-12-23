@@ -623,3 +623,13 @@ addShaped(0, <actuallyadditions:item_misc:8> * 8, Grid(['pretty',
   '▬': <ore:ingotLumium>,               // Lumium Ingot
   'B': <actuallyadditions:item_misc:7>, // Basic Coil
 }).shaped());
+
+// [Electric Motor]*3 from [Copper Wire Coil][+2]
+addShaped(0, <ic2:crafting:6> * 3, Grid(['pretty',
+  '  ▬  ',
+  '□ C □',
+  '  ▬  '], {
+  '▬': <ore:ingotFerroboron>,       // Ferroboron Alloy Ingot
+  '□': <ore:plateBasic>,            // Basic Plating
+  'C': scripts.mods.ic2.copperCoil, // Copper Wire Coil
+}).shaped());
