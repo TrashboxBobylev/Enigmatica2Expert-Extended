@@ -362,6 +362,16 @@ addShaped(0, <actuallyadditions:block_misc:9> * 4, Grid(['pretty',
   '⌂': <forestry:hardened_machine>,   // Hardened Casing
 }).shaped());
 
+// [Machine Case]*3 from [Advanced Machine Casing][+2]
+addShaped(0, <teslacorelib:machine_case> * 3, Grid(['pretty',
+  'Q ■ Q',
+  '■ ▄ ■',
+  'Q ■ Q'], {
+  'Q': <extrautils2:decorativesolid:7>, // Quartzburnt
+  '■': <mekanism:plasticblock:15>,      // White Plastic Block
+  '▄': <ore:machineBlockAdvanced>,      // Advanced Machine Casing
+}).shaped());
+
 // [Basic Plating]*6 from [Graphite Block][+2]
 addShaped(0, <nuclearcraft:part> * 6, Grid(['pretty',
   '□ ⌂ □',
