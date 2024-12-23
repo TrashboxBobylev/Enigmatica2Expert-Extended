@@ -557,3 +557,14 @@ addShaped(0, <nuclearcraft:part:8> * 2, Grid(['pretty',
   'C': <ore:solenoidCopper>,       // Copper Solenoid
   '‚': <ore:nuggetElectrum>,       // Electrum Nugget
 }).shaped());
+
+// [Simple Machine Chassis]*3 from [Hardened Cell Frame][+3]
+addShaped(0, <enderio:item_material> * 3, Grid(['pretty',
+  '□ ¤ □',
+  'L ◘ L',
+  '□ ¤ □'], {
+  '□': <ore:plateTitaniumIridium>,        // Titanium Iridium Alloy Plate
+  '¤': <ore:gearSteel>,                   // Steel Gear
+  'L': <endreborn:block_lormyte_crystal>, // Lormyte Stone
+  '◘': <thermalexpansion:frame:129>,      // Hardened Cell Frame
+}).shaped());
