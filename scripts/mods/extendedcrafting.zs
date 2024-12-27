@@ -658,13 +658,13 @@ addShaped(0, <environmentaltech:connector> * 4, Grid(['pretty',
 
 // [Basic Fusion Crafting Injector]*8 from [Genetics Processor][+5]
 addShaped(0, <draconicevolution:crafting_injector> * 8, Grid(['pretty',
-  'Ϟ ▬ Ϟ',
+  'D ▬ D',
   '* G *',
-  'A √ A'], {
-  'Ϟ': <draconicevolution:wyvern_energy_core>, // Wyvern Energy Core
-  '▬': <ore:ingotYttrium>,                     // Yttrium Ingot
-  '*': <ore:crystalPladium>,                   // Pladium Crystal
-  'G': <gendustry:genetics_processor>,         // Genetics Processor
-  'A': <ore:processorAdvanced>,                // Advanced Processor
-  '√': <draconicevolution:energy_crystal:6>,   // Basic Wireless Energy Crystal
+  'A Ϟ A'], {
+  'D': <draconicevolution:draconic_core>,  // Draconic Core
+  '▬': <ore:ingotYttrium>,                 // Yttrium Ingot
+  '*': <ore:crystalLitherite>,             // Litherite Crystal
+  'G': <gendustry:genetics_processor>,     // Genetics Processor
+  'A': <ore:processorAdvanced>,            // Advanced Processor
+  'Ϟ': <draconicevolution:energy_crystal>, // Basic Energy Relay Crystal
 }).shaped());
