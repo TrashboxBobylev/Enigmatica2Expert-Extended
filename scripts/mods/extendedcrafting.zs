@@ -1,4 +1,5 @@
 #modloaded extendedcrafting thermalfoundation
+// makes it so this script loads after all other scripts: in this case, it makes it possible to reference IC2's copper coil thing
 #priority -1
 import mods.extendedcrafting.TableCrafting.addShaped;
 
