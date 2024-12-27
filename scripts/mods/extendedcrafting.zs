@@ -461,17 +461,17 @@ addShaped(0, <appliedenergistics2:part:76> * 8, Grid(['pretty',
   '■ ■ ■',
   '▬ ▬ ▬',
   '■ ■ ■'], {
-  '■': <ore:blockGlass>,      // Glass
-  '▬': <ore:ingotFluixSteel>, // Fluix Steel Ingot
+  '■': <ore:blockGlassHardened>,  // Hardened Glass
+  '▬': <ore:ingotFluixSteel>,     // Fluix Steel Ingot
 }).shaped());
 
-// [ME Smart Cable - Fluix]*8 from [Fluix Steel Shard][+1]
-addShaped(0, <appliedenergistics2:part:56> * 8, Grid(['pretty',
-  'G G G',
-  'F F F',
-  'G G G'], {
-  'G': <ore:paneGlass>,                                       // Glass Pane
-  'F': <tconstruct:shard>.withTag({Material: "fluix_steel"}), // Fluix Steel Shard
+// [ME Smart Cable - Fluix]*16 from [Fluix Steel Shard][+1]
+addShaped(0, <appliedenergistics2:part:56> * 16, Grid(['pretty',
+  '■ ▬ ■',
+  '■ ▬ ■',
+  '■ ▬ ■'], {
+  '■': <ore:blockGlassHardened>,  // Hardened Glass
+  '▬': <ore:ingotFluixSteel>,     // Fluix Steel Ingot
 }).shaped());
 
 // [Wood Casing]*4 from [Wood Pile][+2]
