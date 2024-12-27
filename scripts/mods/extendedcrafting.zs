@@ -624,13 +624,13 @@ addShaped(0, <nuclearcraft:part:4> * 8, Grid(['pretty',
 }).shaped());
 
 // [Basic Coil]*3 from [Electrical Steel Ingot][+2]
-addShaped(0, <actuallyadditions:item_misc:7> * 3, Grid(['pretty',
+addShaped(0, <actuallyadditions:item_misc:7> * 4, Grid(['pretty',
   '- ▬ ╱',
   '▬ ╱ ▬',
   '╱ ▬ -'], {
-  '-': <ore:ingotElectricalSteel>, // Electrical Steel Ingot
-  '▬': <ore:ingotAluminum>,        // Aluminum Ingot
-  '╱': <forestry:oak_stick>,       // Impregnated Stick
+  '-': <actuallyadditions:item_crystal_empowered:5>, // Empowered Enori Crystal
+  '▬': <ore:ingotAluminum>,                          // Aluminum Ingot
+  '╱': <forestry:oak_stick>,                         // Impregnated Stick
 }).shaped());
 
 // [Advanced Coil]*8 from [Basic Coil][+1]
