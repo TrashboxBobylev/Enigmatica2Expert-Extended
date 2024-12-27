@@ -285,7 +285,7 @@ addShaped(<nuclearcraft:part:8> * 2, ['pretty',
 });
 
 // [Simple Machine Chassis]*3 from [Hardened Cell Frame][+3]
-addShaped(<enderio:item_material> * 3, ['pretty',
+addShaped(<enderio:item_material> * 2, ['pretty',
   '□ ¤ □',
   'L ◘ L',
   '□ ¤ □'], {
