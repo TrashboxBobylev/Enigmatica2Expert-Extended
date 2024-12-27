@@ -663,7 +663,7 @@ addShaped(0, <environmentaltech:connector> * 4, Grid(['pretty',
   '♥ ■ ♥'], {
   '♥': <ore:crystalRedstone>,   // Destabilized Clathrate
   '■': <ore:blockMithril>,      // Block of Mana Infused Metal
-  '▬': <ore:ingotVibrantAlloy>, // Vibrant Alloy Ingot
+  '▬': <ore:ingotAlubrass>,     // Aluminum Brass Ingot
 }).shaped());
 
 // [Basic Fusion Crafting Injector]*8 from [Genetics Processor][+5]
