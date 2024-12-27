@@ -1,6 +1,4 @@
 #modloaded extendedcrafting thermalfoundation
-// makes it so this script loads after all other scripts: in this case, it makes it possible to reference IC2's copper coil thing
-#priority -1
 import mods.extendedcrafting.TableCrafting.addShaped;
 
 val piston = <minecraft:piston>;
@@ -649,9 +647,9 @@ addShaped(0, <ic2:crafting:6> * 3, Grid(['pretty',
   '  ▬  ',
   '□ C □',
   '  ▬  '], {
-  '▬': <ore:ingotFerroboron>,       // Ferroboron Alloy Ingot
-  '□': <ore:plateBasic>,            // Basic Plating
-  'C': scripts.mods.industrialcraft2.copperCoil, // Copper Wire Coil
+  '▬': <ore:ingotFerroboron>,             // Ferroboron Alloy Ingot
+  '□': <ore:plateBasic>,                  // Basic Plating
+  'C': <immersiveengineering:wirecoil:2>, // HV Wire Coil
 }).shaped());
 
 // [Machine Structure]*48 from [Resonant Cell Frame (Full)][+2]
