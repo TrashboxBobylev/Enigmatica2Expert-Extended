@@ -306,7 +306,7 @@ addShaped(<nuclearcraft:part:12> * 12, ['pretty',
 });
 
 // [Empty Frame]*6 from [Silver Gear][+2]
-addShaped(<nuclearcraft:part:11> * 6, ['pretty',
+addShaped(<nuclearcraft:part:11> * 12, ['pretty',
   '□ ¤ □',
   'I   I',
   '□ ¤ □'], {
