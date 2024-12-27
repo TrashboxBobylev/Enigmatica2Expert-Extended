@@ -289,10 +289,10 @@ addShaped(<enderio:item_material> * 3, ['pretty',
   '□ ¤ □',
   'L ◘ L',
   '□ ¤ □'], {
-  '□': <ore:plateTitaniumIridium>,        // Titanium Iridium Alloy Plate
-  '¤': <ore:gearSteel>,                   // Steel Gear
-  'L': <endreborn:block_lormyte_crystal>, // Lormyte Stone
-  '◘': <thermalexpansion:frame:129>,      // Hardened Cell Frame
+  '□': <ore:plateTitaniumIridium>,           // Titanium Iridium Alloy Plate
+  '¤': <ore:gearEnderium>,                   // Enderium Gear
+  'L': <endreborn:block_decorative_lormyte>, // Decorative Lormyte Stone
+  '◘': <thermalexpansion:frame:129>,         // Hardened Cell Frame
 });
 
 // [Steel Chassis]*12 from [Stainless Steel Ingot][+2]
