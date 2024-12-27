@@ -646,16 +646,6 @@ addShaped(0, <ic2:crafting:6> * 3, Grid(['pretty',
   'C': <immersiveengineering:wirecoil:2>, // HV Wire Coil
 }).shaped());
 
-// [Machine Structure]*48 from [Resonant Cell Frame (Full)][+2]
-addShaped(0, <libvulpes:structuremachine> * 48, Grid(['pretty',
-  '■ A ■',
-  'A ◘ A',
-  '■ A ■'], {
-  '■': <ore:blockDilithium>,         // Block of Dilithium
-  'A': <ore:processorAdvanced>,      // Advanced Processor
-  '◘': <thermalexpansion:frame:148>, // Resonant Cell Frame (Full)
-}).shaped());
-
 // [Connector]*4 from [Vibrant Alloy Ingot][+2]
 addShaped(0, <environmentaltech:connector> * 4, Grid(['pretty',
   '♥ ■ ♥',
