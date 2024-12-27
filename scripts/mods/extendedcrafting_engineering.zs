@@ -365,7 +365,7 @@ addShaped(<environmentaltech:connector> * 4, ['pretty',
 });
 
 // [Basic Fusion Crafting Injector]*8 from [Genetics Processor][+5]
-addShaped(<draconicevolution:crafting_injector> * 8, ['pretty',
+addShaped(<draconicevolution:crafting_injector> * 3, ['pretty',
   'D ▬ D',
   '* G *',
   'A Ϟ A'], {
