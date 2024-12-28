@@ -236,6 +236,13 @@ craft.remake(<rats:rat_upgrade_fisherman>, ['pretty',
   'F': <rats:fisherman_hat>.anyDamage(),
 });
 
+craft.remake(<rats:fish_barrel>, [
+  'A',
+  'W'], {
+  'A': <ore:listAllfishraw>,
+  'W': <exnihilocreatio:block_barrel0>,
+});
+
 // Rat flowers
 scripts.process.grow(<rats:ratglove_flower>, <rats:ratglove_flower>, 'No exceptions', null, 0);
 

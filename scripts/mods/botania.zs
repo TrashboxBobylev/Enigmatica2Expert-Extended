@@ -299,7 +299,7 @@ function remakeRune(rune as IItemStack, ingrList as IIngredient[], mana as int) 
   mods.botania.RuneAltar.addRecipe(rune, ingrList, mana);
 }
 
-/* Water */   remakeRune(<botania:rune:0> * 2, [<ore:dustBlizz>, <ore:fish>, <ore:gemAquamarine>, <ore:ingotManasteel>, <ore:powderMana>], 5000);
+/* Water */   remakeRune(<botania:rune:0> * 2, [<ore:dustBlizz>, <ore:listAllfishraw>, <ore:gemAquamarine>, <ore:ingotManasteel>, <ore:powderMana>], 5000);
 /* Fire */    remakeRune(<botania:rune:1> * 2, [<ore:dustBlaze>, <ore:slimeballMagma>, <ore:gemAmber>, <ore:ingotManasteel>, <ore:powderMana>], 5000);
 /* Earth */   remakeRune(<botania:rune:2> * 2, [<ore:dustBasalz>, <biomesoplenty:ash>, <ore:podzol>, <ore:ingotManasteel>, <ore:powderMana>], 5000);
 /* Air */     remakeRune(<botania:rune:3> * 2, [<ore:dustBlitz>, <ore:boneDragon>, <twilightforest:raven_feather>, <ore:ingotManasteel>, <ore:powderMana>], 5000);
