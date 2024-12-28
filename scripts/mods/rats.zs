@@ -226,6 +226,16 @@ craft.remake(<rats:rat_upgrade_nonbeliever>, ['pretty',
   'O': <ore:tokenOrIdolFlag>,  // Avatar of Ratlantis
 });
 
+craft.remake(<rats:rat_upgrade_fisherman>, ['pretty',
+  '  §  ',
+  'A R A',
+  '  F  '], {
+  '§': <contenttweaker:fish_singularity>,
+  'A': <ore:listAllfishraw>,
+  'R': <rats:rat_upgrade_basic>,
+  'F': <rats:fisherman_hat>.anyDamage(),
+});
+
 // Rat flowers
 scripts.process.grow(<rats:ratglove_flower>, <rats:ratglove_flower>, 'No exceptions', null, 0);
 
