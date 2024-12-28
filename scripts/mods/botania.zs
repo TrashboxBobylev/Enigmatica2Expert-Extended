@@ -451,3 +451,12 @@ recipes.removeByRecipeName('botania:tornadorod');   recipes.addShaped(<botania:t
 recipes.removeByRecipeName('botania:waterrod');     recipes.addShaped(<botania:waterrod>, [[null, <minecraft:potion>.withTag({Potion: 'minecraft:water'})], [<ore:livingwoodTwig>, null]]);
 recipes.removeByRecipeName('botania:skydirtrod');   recipes.addShapeless(<botania:skydirtrod>, [<botania:dirtrod>, <ore:elvenPixieDust>]);
 // ////////////////////////////////////////////////////////////////
+// To avoid flooding inventory with tens of variants,
+// we make them drom common items
+for i in 0 .. 16 {
+  scripts.lib.dropt.addDrop(
+    <botania:mushroom>.definition.makeStack(i),
+    <botania:petal>.definition.makeStack(i),
+    1.25, 'shears;-1;-1');
+}
+// ////////////////////////////////////////////////////////////////
