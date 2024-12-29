@@ -66,6 +66,12 @@ x.noRepair = true;
 // x.attackDamage = 0;
 x.register();
 
+x = VanillaFactory.createExpandItem('fish_singularity');
+x.creativeTab = <creativetab:other>;
+x.maxDamage = 30000;
+x.noRepair = true;
+x.register();
+
 createBlockStone('compressed_skystone', 6, <blockmaterial:rock>);
 createBlockStone('compressed_andesite', 4, <blockmaterial:rock>);
 createBlockStone('compressed_diorite', 4, <blockmaterial:rock>);

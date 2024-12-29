@@ -207,6 +207,15 @@ scripts.do.diverse.addRecipe(
   <ore:plankFireproof>
 );
 
+needPowerStr = mods.zenutils.StaticString.format('%,d', <contenttweaker:fish_singularity>.maxDamage).replaceAll(',', '§8,§6');
+scripts.lib.tooltip.desc.jei(<contenttweaker:fish_singularity>, 'singularity.fish', needPowerStr);
+scripts.do.diverse.addRecipe(
+  'Fish Singularity',
+  <avaritia:singularity>,
+  <contenttweaker:fish_singularity>,
+  <ore:listAllfishraw>
+);
+
 // -------------------------------------------------------------------
 
 /*
