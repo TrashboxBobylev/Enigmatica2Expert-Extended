@@ -1,4 +1,5 @@
 #modloaded tconstruct mechanics inworldcrafting tconstruct extendedcrafting thaumcraft
+#reloadable
 
 import crafttweaker.item.IIngredient;
 
