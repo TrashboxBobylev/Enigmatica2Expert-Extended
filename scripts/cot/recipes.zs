@@ -194,6 +194,21 @@ mods.tconstruct.Alloy.addRecipe(<liquid:perfect_fuel>, [
 mods.enderio.CombustionGen.addFuel(<fluid:perfect_fuel>, 20000, 1500000);
 mods.thermalexpansion.MagmaticDynamo.addFuel(<fluid:perfect_fuel>, 2000000000);
 
+// -------------------------------------------------------------------
+// Singularities
+// -------------------------------------------------------------------
+var needPowerStr = mods.zenutils.StaticString.format('%,d', <contenttweaker:woodweave_singularity>.maxDamage).replaceAll(',', '§8,§6');
+scripts.lib.tooltip.desc.jei(<contenttweaker:woodweave_singularity>, 'singularity.woodweave', needPowerStr);
+
+scripts.do.diverse.addRecipe(
+  'Woodweave Singularity',
+  <avaritia:singularity>,
+  <contenttweaker:woodweave_singularity>,
+  <ore:plankFireproof>
+);
+
+// -------------------------------------------------------------------
+
 /*
 # Knowledge absorber craft
 # [Golden eye] from [Ender Orb Translocator][+3]
