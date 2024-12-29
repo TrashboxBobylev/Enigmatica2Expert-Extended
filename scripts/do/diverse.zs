@@ -19,21 +19,6 @@ function addRecipe(
   R as IItemStack, // Result item, fully charged
   A as IIngredient // All items that may be used as fuel
 ) as void {
-  // Add icon display
-  mods.backpackdisplay.BackpackDisplay.addBackDisplay(R.anyDamage(), function(item) {
-    if (isNull(item.tag) || isNull(item.tag.singularity)) return null;
-    val length = getMapLength(item.tag.singularity);
-    val result = arrayOf(length, null as IItemStack);
-    var i = 0;
-    for itemStr, value in item.tag.singularity.asMap() {
-      val item = getItemFromString(itemStr);
-      if (!isNull(item) && value > 0)
-        result[i] = item * value;
-      i += 1;
-    }
-    return result;
-  });
-
   // Actual recipe
   recipes.addShaped(recipeName, R, [
     [(E | R.anyDamage()).marked('0'), A.marked('1'), A.marked('2')],
