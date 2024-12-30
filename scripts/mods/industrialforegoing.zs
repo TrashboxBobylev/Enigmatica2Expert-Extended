@@ -109,12 +109,17 @@ recipes.addShapedMirrored('Black Hole Controller', <industrialforegoing:black_ho
     [<mekanism:plasticblock:8>, <mekanism:plasticblock:8>, <mekanism:plasticblock:8>]]);
 
 // Machine Case
-recipes.remove(<teslacorelib:machine_case>);
-recipes.addShaped('Tesla Core Lib Machine Case',
-  <teslacorelib:machine_case>,
-  [[<ic2:resource:11>, <ore:itemRubber>, <ic2:resource:11>],
-    [<ore:itemRubber>, <ic2:resource:13>, <ore:itemRubber>],
-    [<ic2:resource:11>, <ore:itemRubber>, <ic2:resource:11>]]);
+scripts.mods.extendedcrafting_engineering.addShaped(<teslacorelib:machine_case>, ['pretty',
+  'Q ■ Q',
+  '■ ▄ ■',
+  'Q ■ Q'], {
+  'Q': <ic2:resource:11>, // Reinforced Stone
+  '■': <ore:itemRubber>,                // Rubber
+  '▄': <ore:machineBlockAdvanced>,      // Advanced Machine Casing
+}, 3, {
+  'Q': <extrautils2:decorativesolid:7>, // Quartzburnt
+  '■': <mekanism:plasticblock:15>,      // White Plastic Block
+});
 
 // Mob Duplicator
 recipes.remove(<industrialforegoing:mob_duplicator>);

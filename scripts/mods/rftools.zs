@@ -63,12 +63,20 @@ recipes.addShaped('RFTools Matter Receiver',
     [<ore:enderpearl>, <ore:enderpearl>, <ore:enderpearl>]]);
 
 // Machine Frame
-recipes.remove(<rftools:machine_frame>);
-recipes.addShaped('RFTools Machine Frame',
-  <rftools:machine_frame> * 2,
-  [[<ic2:heat_vent>, <ore:gearGold>, <ic2:heat_vent>],
-    [<industrialforegoing:dryrubber>, <teslacorelib:machine_case>, <industrialforegoing:dryrubber>],
-    [<industrialforegoing:pink_slime>, <tconevo:edible:1>, <industrialforegoing:pink_slime>]]);
+scripts.mods.extendedcrafting_engineering.addShaped(<rftools:machine_frame> * 2, ['pretty',
+  'H ¤ H',
+  '■ M ■',
+  's A s'], {
+  'H': <ic2:heat_vent>,                  // Heat Vent
+  '¤': <ore:gearGold>, // Gold Gear 
+  '■': <industrialforegoing:dryrubber>,       // White Plastic Block
+  'M': <teslacorelib:machine_case>,      // Machine Case
+  's': <industrialforegoing:pink_slime>, // Pink Slime
+  'A': <tconevo:edible:1>                // Cooked Meat Ingot
+}, 4, {
+  '¤': <thermalfoundation:material:294>, // Lumium Gear 
+  '■': <mekanism:plasticblock:15>,       // White Plastic Block
+});
 
 // Machine Base
 recipes.remove(<rftools:machine_base>);

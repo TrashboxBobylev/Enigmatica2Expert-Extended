@@ -137,13 +137,42 @@ recipes.addShaped('IC2 Reactor Chamber',
     [<ore:plateDenseLead>, <ic2:resource:12>, <ore:plateDenseLead>],
     [null, <ore:plateDenseLead>, null]]);
 
+// [Electronic Circuit] from [Iron Plate][+2]
+scripts.mods.extendedcrafting_engineering.addShaped(<ic2:crafting:1>, ['pretty',
+  'C C C',
+  '♥ : ♥',
+  'C C C'], {
+  'C': <ore:itemInsulatedCopperCable>,       // Insulated Copper Cable
+  '♥': <ore:dustRedstone>,                   // Redstone
+  ':': <ore:plateIron>,                      // Iron Plate
+}, 2, {
+  ':': <ore:oc:materialCircuitBoardPrinted>, // Printed Circuit Board (PCB)
+});
+
+// [Advanced Circuit] from [Electronic Circuit][+3]
+scripts.mods.extendedcrafting_engineering.addShaped(<ic2:crafting:2>, ['pretty',
+  '♥ G ♥',
+  '◊ B ◊',
+  '♥ G ♥'], {
+  '♥': <ore:dustRedstone>,                  // Redstone
+  'G': <ore:dustGlowstone>,                 // Glowstone Dust
+  '◊': <ore:gemLapis>,                      // Lapis Lazuli
+  'B': <ore:circuitBasic>,                  // Electronic Circuit
+}, 2, {
+  'G': <enderio:block_holier_fog>,                 // Glowstone Nano-Particles
+});
+
 // Basic Machine Casing
-recipes.remove(<ic2:resource:12>);
-recipes.addShapedMirrored('Basic Machine Casing1',
-  <ic2:resource:12> * 4,
-  [[<ore:plateAluminum>, <tconstruct:large_plate>.withTag({ Material: 'iron' }), <ore:plateAluminum>],
-    [<tconstruct:large_plate>.withTag({ Material: 'iron' }), null, <tconstruct:large_plate>.withTag({ Material: 'iron' })],
-    [<ore:plateAluminum>, <tconstruct:large_plate>.withTag({ Material: 'iron' }), <ore:plateAluminum>]]);
+scripts.mods.extendedcrafting_engineering.addShaped(<ic2:resource:12> * 4, ['pretty',
+  '□ ■ □',
+  '■   ■',
+  '□ ■ □'], {
+  '□': <ore:plateAluminum>,                                      // Aluminum Plate
+  '■': <tconstruct:large_plate>.withTag({ Material: 'iron' }), // Large Iron Plate
+}, 6, {
+  '□': <ore:plateTitanium>,          // Titanium Plate
+  '■': <ore:blockConstructionAlloy>, // Iron Alloy Block
+});
 
 recipes.addShapedMirrored('Basic Machine Casing2',
   <ic2:resource:12> * 4,
@@ -157,12 +186,40 @@ recipes.addShapedMirrored('Basic Machine Casing3',
     [<ore:plateDenseTin>, null, <ore:plateDenseTin>],
     [<ore:plateAluminium>, <ore:plateDenseTin>, <ore:plateAluminium>]]);
 
+// [Advanced Machine Casing] from [Basic Machine Casing][+3]
+scripts.mods.extendedcrafting_engineering.addShaped(<ic2:resource:13>, ['pretty',
+  '▬ - ▬',
+  '□ ■ □',
+  '▬ - ▬'], {
+  '▬': <ore:plateSteel>,          // Steel Plate
+  '-': <ore:plateCarbon>,         // Carbon Plate
+  '□': <ore:plateAdvancedAlloy>,  // Advanced Alloy
+  '■': <ore:machineBlock>,        // Basic Machine Casing
+}, 2, {
+  '▬': <ore:ingotElectricalSteel>,         // Electrical Steel Ingot
+  '-': <ore:ingotHardCarbon>,              // Hard Carbon Alloy Ingot
+});
+
 // Reinforced Stone
 recipes.addShapedMirrored('Reinforced Stone',
   <ic2:resource:11> * 16,
   [[<minecraft:stone:*>, <tconstruct:soil>, <minecraft:stone:*>],
     [<tconstruct:soil>, <ore:dustClay>, <tconstruct:soil>],
     [<minecraft:stone:*>, <tconstruct:soil>, <minecraft:stone:*>]]);
+
+// [Mixed Metal Ingot]*2 from [Bronze Plate][+2]
+scripts.mods.extendedcrafting_engineering.addShaped(<ic2:ingot> * 2, ['pretty',
+  '□ □ □',
+  'п п п',
+  'A A A'], {
+  '□': <ore:plateIron>,   // Iron Plate
+  'п': <ore:plateBronze>, // Bronze Plate
+  'A': <ore:plateTin>,    // Tin Plate
+}, 3, {
+  '□': <ore:plateSteel>,      // Steel Plate
+  'п': <ore:plateConstantan>, // Constantan Plate
+  'A': <ore:plateAluminum>,   // Aluminum Plate
+});
 
 // Iridium TiC Compat
 mods.tconstruct.Melting.addRecipe(<liquid:iridium> * 144, <ic2:misc_resource:1>, 500);
@@ -677,13 +734,17 @@ craft.remake(<ic2:te:55>, ['pretty',
 });
 
 // [Electric Motor] from [Copper Wire Coil][+2]
-craft.remake(<ic2:crafting:6>, ['pretty',
+scripts.mods.extendedcrafting_engineering.addShaped(<ic2:crafting:6>, ['pretty',
   '  ▬  ',
   '⌂ C ⌂',
   '  ▬  '], {
   '▬': <ore:ingotFakeIron>, // Iron Ingot
   '⌂': <ic2:casing:6>,      // Tin Item Casing
   'C': copperCoil,
+}, 3, {
+  '▬': <ore:ingotFerroboron>,             // Ferroboron Alloy Ingot
+  '⌂': <ore:plateBasic>,                  // Basic Plating
+  'C': <immersiveengineering:wirecoil:2>, // HV Wire Coil
 });
 
 // [Variac®] from [HOP Graphite Ingot][+2]

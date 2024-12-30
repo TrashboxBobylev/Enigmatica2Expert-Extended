@@ -64,12 +64,17 @@ recipes.addShapedMirrored('Lonsdaleite',
     [<ore:gemQuartzBlack>, <ore:dustWither>, <ore:gemQuartzBlack>]]);
 
 // Connector
-recipes.remove(<environmentaltech:connector>);
-recipes.addShapedMirrored('Environmental Tech Connector',
-  <environmentaltech:connector>,
-  [[<thermalfoundation:material:165>, <ore:blockTin>, <thermalfoundation:material:165>],
-    [<ore:blockTin>, <ore:ingotAlubrass>, <ore:blockTin>],
-    [<thermalfoundation:material:165>, <ore:blockTin>, <thermalfoundation:material:165>]]);
+scripts.mods.extendedcrafting_engineering.addShaped(<environmentaltech:connector>, ['pretty',
+  '♥ ■ ♥',
+  '■ ▬ ■',
+  '♥ ■ ♥'], {
+  '♥': <ore:ingotSignalum>,   // Signalum Ingot
+  '■': <ore:blockTin>,        // Block of Tin
+  '▬': <ore:ingotAlubrass>,   // Aluminum Brass Ingot
+}, 4, {
+  '♥': <ore:crystalRedstone>,   // Destabilized Clathrate
+  '■': <ore:blockMithril>,      // Block of Mana Infused Metal
+});
 
 // [Diode] from [Energy Cell Frame][+4]
 craft.remake(<environmentaltech:diode>, ['pretty',

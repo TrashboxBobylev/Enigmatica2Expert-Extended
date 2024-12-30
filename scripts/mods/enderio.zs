@@ -149,7 +149,7 @@ recipes.addShapedMirrored('Machine Chassis',
     [<enderio:block_reinforced_obsidian>, <ore:dyeMachine>, <enderio:block_reinforced_obsidian>]]);
 
 // [Simple Machine Chassis] from [Hardened Cell Frame][+3]
-craft.remake(<enderio:item_material>, ['pretty',
+scripts.mods.extendedcrafting_engineering.addShaped(<enderio:item_material>, ['pretty',
   '□ ¤ □',
   'D ◘ D',
   '□ ¤ □'], {
@@ -157,6 +157,9 @@ craft.remake(<enderio:item_material>, ['pretty',
   '¤': <ore:gearIronInfinity>, // Infinity Bimetal Gear
   'D': <endreborn:block_decorative_lormyte>, // Decorative Lormyte Stone
   '◘': <thermalexpansion:frame:129>, // Hardened Cell Frame
+}, 2, {
+  '□': <ore:plateTitaniumIridium>,           // Titanium Iridium Alloy Plate
+  '¤': <ore:gearEnderium>,                   // Enderium Gear
 });
 
 // [End Steel Chassis] from [Quartzburnt][+2]

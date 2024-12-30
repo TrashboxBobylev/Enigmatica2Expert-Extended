@@ -156,14 +156,16 @@ recipes.addShaped(<mekanism:basicblock2:7> * 8,
     [<ore:ingotSteel>, <ore:ingotSteel>, <ore:ingotSteel>]]);
 
 // [Steel Casing]*2 from [Blast Brick][+3]
-craft.remake(<mekanism:basicblock:8> * 2, ['pretty',
-  '▬ - ▬',
-  'S B S',
-  '▬ - ▬'], {
+scripts.mods.extendedcrafting_engineering.addShaped(<mekanism:basicblock:8> * 2, ['pretty',
+  '▬ B ▬',
+  'S l S',
+  '▬ B ▬'], {
   '▬': <ore:ingotOsmium>,                         // Osmium Ingot
-  '-': <ore:ingotAlubrass>,                       // Aluminum Brass Ingot
+  'B': <ore:ingotAlubrass>,                       // Aluminum Brass Ingot
   'S': <immersiveengineering:material:9>,         // Steel Mechanical Component
-  'B': <immersiveengineering:stone_decoration:1>, // Blast Brick
+  'l': <immersiveengineering:stone_decoration:1>, // Blast Brick
+}, 3, {
+  'B': <extendedcrafting:material:14>            // Basic Component
 });
 
 // Metallurgic Infuser
@@ -220,20 +222,28 @@ mods.mekanism.infuser.removeRecipe(<mekanism:controlcircuit>);
 mods.mekanism.compressor.addRecipe(<opencomputers:material:4>, <mekanism:controlcircuit>);
 
 // Advanced Circuit
-recipes.remove(<mekanism:controlcircuit:1>);
-recipes.addShapedMirrored('Advanced Circuit',
-  <mekanism:controlcircuit:1>,
-  [[<ore:dustRedstone>, <ore:alloyAdvanced>, <ore:dustRedstone>],
-    [<ore:alloyAdvanced>, <ore:circuitBasic>, <ore:alloyAdvanced>],
-    [<ore:dustRedstone>, <ore:alloyAdvanced>, <ore:dustRedstone>]]);
+scripts.mods.extendedcrafting_engineering.addShaped(<mekanism:controlcircuit:1>, ['pretty',
+  '* A *',
+  'A B A',
+  '* A *'], {
+  '*': <ore:dustRedstone>,   // Redstone
+  'A': <ore:alloyAdvanced>,  // Enriched Alloy
+  'B': <ore:circuitBasic>,   // Electronic Circuit
+}, 6, {
+  '*': <actuallyadditions:item_crystal_empowered>, // Empowered Restonia Crystal
+});
 
 // Elite Circuit
-recipes.remove(<mekanism:controlcircuit:2>);
-recipes.addShaped('Elite Circuit',
-  <mekanism:controlcircuit:2>,
-  [[<ore:gemLapis>, <ore:alloyElite>, <ore:gemLapis>],
-    [<ore:alloyElite>, <ore:circuitAdvanced>, <ore:alloyElite>],
-    [<ore:gemLapis>, <ore:alloyElite>, <ore:gemLapis>]]);
+scripts.mods.extendedcrafting_engineering.addShaped(<mekanism:controlcircuit:2>, ['pretty',
+  '* E *',
+  'E A E',
+  '* E *'], {
+  '*': <ore:gemLapis>,        // Lapis Lazuli
+  'E': <ore:alloyElite>,      // Reinforced Alloy
+  'A': <ore:circuitAdvanced>, // Advanced Control Circuit
+}, 6, {
+  '*': <actuallyadditions:item_crystal_empowered:1>, // Empowered Palis Crystal
+});
 
 // Ultimate Circuit
 recipes.remove(<mekanism:controlcircuit:3>);

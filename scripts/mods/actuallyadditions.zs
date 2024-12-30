@@ -124,12 +124,16 @@ craft.remake(<actuallyadditions:block_xp_solidifier>, ['pretty',
 });
 
 // Wood Casing
-recipes.remove(<actuallyadditions:block_misc:4>);
-recipes.addShapedMirrored('Wood Casing',
-  <actuallyadditions:block_misc:4> * 2,
-  [[<ore:plankTreatedWood>, <forestry:oak_stick>, <ore:plankTreatedWood>],
-    [<forestry:oak_stick>, <ore:logWood>, <forestry:oak_stick>],
-    [<ore:plankTreatedWood>, <forestry:oak_stick>, <ore:plankTreatedWood>]]);
+scripts.mods.extendedcrafting_engineering.addShaped(<actuallyadditions:block_misc:4> * 2, ['pretty',
+  '# ╱ #',
+  '╱ ≢ ╱',
+  '# ╱ #'], {
+  '#': <ore:plankTreatedWood>, // Treated Wood Planks
+  '╱': <forestry:oak_stick>,   // Impregnated Stick
+  '≢': <ore:logWood>,          // Wood Pile
+}, 4, {
+  '≢': <forestry:wood_pile>,   // Wood Pile
+});
 
 // Emerald Dust
 recipes.remove(<actuallyadditions:item_dust:3>);
@@ -141,28 +145,44 @@ recipes.remove(<actuallyadditions:item_dust:7>);
 mods.actuallyadditions.Crusher.removeRecipe(<actuallyadditions:item_dust:6>);
 
 // Iron Casing
-recipes.remove(<actuallyadditions:block_misc:9>);
-recipes.addShapedMirrored('Iron Casing',
-  <actuallyadditions:block_misc:9> * 2,
-  [[<ore:blockSheetmetalIron>, <forestry:thermionic_tubes:1>, <ore:blockSheetmetalIron>],
-    [<forestry:thermionic_tubes:1>, <forestry:hardened_machine>, <forestry:thermionic_tubes:1>],
-    [<ore:blockSheetmetalIron>, <forestry:thermionic_tubes:1>, <ore:blockSheetmetalIron>]]);
+scripts.mods.extendedcrafting_engineering.addShaped(<actuallyadditions:block_misc:9> * 2, ['pretty',
+  '□ G □',
+  'G ⌂ G',
+  '□ G □'], {
+  '□': <ore:blockSheetmetalIron>,              // Iron Sheetmetal
+  'G': <forestry:thermionic_tubes:1>, // Tin Electron Tube
+  '⌂': <forestry:hardened_machine>,   // Hardened Casing
+}, 4, {
+  '□': <ore:plateInvar>,             // Invar Plate
+  'G': <forestry:thermionic_tubes:4> // Golden Electron Tube
+});
 
 // Basic Coil
-recipes.remove(<actuallyadditions:item_misc:7>);
-recipes.addShapedMirrored('Basic Coil',
-  <actuallyadditions:item_misc:7>,
-  [[<actuallyadditions:item_crystal:5>, <ore:wireAluminum>, <forestry:oak_stick>],
-    [<ore:wireAluminum>, <forestry:oak_stick>, <ore:wireAluminum>],
-    [<forestry:oak_stick>, <ore:wireAluminum>, <actuallyadditions:item_crystal:5>]]);
+scripts.mods.extendedcrafting_engineering.addShaped(<actuallyadditions:item_misc:7>, ['pretty',
+  '- ▬ ╱',
+  '▬ ╱ ▬',
+  '╱ ▬ -'], {
+  '-': <actuallyadditions:item_crystal:5>, // Enori Crystal
+  '▬': <ore:wireAluminum>,                          // Aluminum Wire
+  '╱': <forestry:oak_stick>,                         // Impregnated Stick
+}, 4, {
+  '-': <actuallyadditions:item_crystal_empowered:5>, // Empowered Enori Crystal
+  '▬': <ore:ingotAluminum>                          // Aluminum Ingot
+});
 
 // Advanced Coil
-recipes.remove(<actuallyadditions:item_misc:8>);
-recipes.addShapedMirrored('Advanced Coil',
-  <actuallyadditions:item_misc:8>,
-  [[null, <ic2:cable:2>.withTag({ type: 2 as byte, insulation: 0 as byte }), <forestry:oak_stick>],
-    [<ic2:cable:2>.withTag({ type: 2 as byte, insulation: 0 as byte }), <actuallyadditions:item_misc:7>, <ic2:cable:2>.withTag({ type: 2 as byte, insulation: 0 as byte })],
-    [<forestry:oak_stick>, <ic2:cable:2>.withTag({ type: 2 as byte, insulation: 0 as byte }), null]]);
+scripts.mods.extendedcrafting_engineering.addShaped(<actuallyadditions:item_misc:8> , ['pretty',
+  '  ▬ I',
+  '▬ B ▬',
+  'I ▬  '], {
+  '▬': <ic2:cable:2>.withTag({ type: 2 as byte, insulation: 0 as byte }),               // Gold Cable
+  'B': <actuallyadditions:item_misc:7>, // Basic Coil
+  'I': <forestry:oak_stick>, // Impregnated Stick
+}, 8, {
+  '▬': <ore:ingotLumium>,               // Lumium Ingot
+  'B': <actuallyadditions:item_misc:7>, // Basic Coil
+  'I': <actuallyadditions:item_misc:7>, // Basic Coil
+});
 
 // Atomic Reconstructor
 recipes.remove(<actuallyadditions:block_atomic_reconstructor>);
@@ -488,6 +508,20 @@ for i in 0 .. 10 {
 
   recipes.addShapeless(ringAdvanced, [ringBauble]);
 }
+
+// [Energy Laser Relay]*4 from [Advanced Coil][+3]
+scripts.mods.extendedcrafting_engineering.addShaped(<actuallyadditions:block_laser_relay> * 4, ['pretty',
+  '▬ * ▬',
+  '╳ A ╳',
+  '▬ * ▬'], {
+  '▬': <ore:obsidian>,                    // Obsidian
+  '*': <ore:blockRedstone>,              // Block of Redstone
+  '╳': <ore:crystalRestonia>,             // Restonia Crystal
+  'A': <actuallyadditions:item_misc:8>,   // Advanced Coil
+}, 10, {
+  '▬': <ore:ingotRefinedObsidian>,        // Refined Obsidian Ingot
+  '*': <actuallyadditions:block_crystal>, // Restonia Crystal Block
+});
 
 // Simplify because it produce only max 256 RF/T
 // [Bio_Reactor] from [Iron_Casing][+2]
