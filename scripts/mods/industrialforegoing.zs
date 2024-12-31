@@ -109,7 +109,8 @@ recipes.addShapedMirrored('Black Hole Controller', <industrialforegoing:black_ho
     [<mekanism:plasticblock:8>, <mekanism:plasticblock:8>, <mekanism:plasticblock:8>]]);
 
 // Machine Case
-scripts.mods.extendedcrafting_engineering.addShaped(<teslacorelib:machine_case>, ['pretty',
+scripts.mods.extendedcrafting_engineering.remakeAlted(
+  <teslacorelib:machine_case>, ['pretty',
   'Q ■ Q',
   '■ ▄ ■',
   'Q ■ Q'], {

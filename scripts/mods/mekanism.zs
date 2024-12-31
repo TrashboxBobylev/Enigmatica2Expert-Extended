@@ -156,7 +156,8 @@ recipes.addShaped(<mekanism:basicblock2:7> * 8,
     [<ore:ingotSteel>, <ore:ingotSteel>, <ore:ingotSteel>]]);
 
 // [Steel Casing]*2 from [Blast Brick][+3]
-scripts.mods.extendedcrafting_engineering.addShaped(<mekanism:basicblock:8> * 2, ['pretty',
+scripts.mods.extendedcrafting_engineering.remakeAlted(
+  <mekanism:basicblock:8> * 2, ['pretty',
   '▬ B ▬',
   'S l S',
   '▬ B ▬'], {
@@ -222,7 +223,8 @@ mods.mekanism.infuser.removeRecipe(<mekanism:controlcircuit>);
 mods.mekanism.compressor.addRecipe(<opencomputers:material:4>, <mekanism:controlcircuit>);
 
 // Advanced Circuit
-scripts.mods.extendedcrafting_engineering.addShaped(<mekanism:controlcircuit:1>, ['pretty',
+scripts.mods.extendedcrafting_engineering.remakeAlted(
+  <mekanism:controlcircuit:1>, ['pretty',
   '* A *',
   'A B A',
   '* A *'], {
@@ -234,7 +236,8 @@ scripts.mods.extendedcrafting_engineering.addShaped(<mekanism:controlcircuit:1>,
 });
 
 // Elite Circuit
-scripts.mods.extendedcrafting_engineering.addShaped(<mekanism:controlcircuit:2>, ['pretty',
+scripts.mods.extendedcrafting_engineering.remakeAlted(
+  <mekanism:controlcircuit:2>, ['pretty',
   '* E *',
   'E A E',
   '* E *'], {

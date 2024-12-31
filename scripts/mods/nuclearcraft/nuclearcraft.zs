@@ -36,7 +36,8 @@ furnace.addRecipe(<nuclearcraft:ingot:14>, <nuclearcraft:dust:14>, 0.5);
 // ------------------------------------------------------------------
 
 // [Machine Chassis] from [Tough Alloy Ingot][+2]
-scripts.mods.extendedcrafting_engineering.addShaped(<nuclearcraft:part:10>, ['pretty',
+scripts.mods.extendedcrafting_engineering.remakeAlted(
+  <nuclearcraft:part:10>, ['pretty',
   'C ⌂ C',
   '⌂ ▬ ⌂',
   'C ⌂ C'], {
@@ -48,7 +49,8 @@ scripts.mods.extendedcrafting_engineering.addShaped(<nuclearcraft:part:10>, ['pr
 });
 
 // [Steel Chassis] from [Bronze Item Casing][+2]
-scripts.mods.extendedcrafting_engineering.addShaped(<nuclearcraft:part:12>, ['pretty',
+scripts.mods.extendedcrafting_engineering.remakeAlted(
+  <nuclearcraft:part:12>, ['pretty',
   '▬ - ▬',
   '- ■ -',
   '▬ - ▬'], {
@@ -62,7 +64,8 @@ scripts.mods.extendedcrafting_engineering.addShaped(<nuclearcraft:part:12>, ['pr
 });
 
 // [Basic Plating]*4 from [Graphite Block][+2]
-scripts.mods.extendedcrafting_engineering.addShaped(<nuclearcraft:part> * 4, ['pretty',
+scripts.mods.extendedcrafting_engineering.remakeAlted(
+  <nuclearcraft:part> * 4, ['pretty',
   '□ ⌂ □',
   '⌂ ■ ⌂',
   '□ ⌂ □'], {
@@ -74,7 +77,8 @@ scripts.mods.extendedcrafting_engineering.addShaped(<nuclearcraft:part> * 4, ['p
 });
 
 // [Advanced Plating] from [Basic Plating][+2]
-scripts.mods.extendedcrafting_engineering.addShaped(<nuclearcraft:part:1>, ['pretty',
+scripts.mods.extendedcrafting_engineering.remakeAlted(
+  <nuclearcraft:part:1>, ['pretty',
   '  ▲  ',
   '▬ □ ▬',
   '  ▲  '], {
@@ -86,7 +90,8 @@ scripts.mods.extendedcrafting_engineering.addShaped(<nuclearcraft:part:1>, ['pre
 });
 
 // [DU Plating] from [Advanced Plating][+2]
-scripts.mods.extendedcrafting_engineering.addShaped(<nuclearcraft:part:2>, ['pretty',
+scripts.mods.extendedcrafting_engineering.remakeAlted(
+  <nuclearcraft:part:2>, ['pretty',
   '▲ ▬ ▲',
   '▬ □ ▬',
   '▲ ▬ ▲'], {
@@ -98,7 +103,8 @@ scripts.mods.extendedcrafting_engineering.addShaped(<nuclearcraft:part:2>, ['pre
 });
 
 // [Elite Plating] from [DU Plating][+2]
-scripts.mods.extendedcrafting_engineering.addShaped(<nuclearcraft:part:3>, ['pretty',
+scripts.mods.extendedcrafting_engineering.remakeAlted(
+  <nuclearcraft:part:3>, ['pretty',
   '* ▬ *',
   '▬ □ ▬',
   '* ▬ *'], {
@@ -110,7 +116,8 @@ scripts.mods.extendedcrafting_engineering.addShaped(<nuclearcraft:part:3>, ['pre
 });
 
 // [Copper Solenoid]*4 from [Advanced Alloy][+3]
-scripts.mods.extendedcrafting_engineering.addShaped(<nuclearcraft:part:4> * 4, ['pretty',
+scripts.mods.extendedcrafting_engineering.remakeAlted(
+  <nuclearcraft:part:4> * 4, ['pretty',
   '□ ⌂ □',
   '╱ п ╱',
   '□ ⌂ □'], {
@@ -126,7 +133,8 @@ scripts.mods.extendedcrafting_engineering.addShaped(<nuclearcraft:part:4> * 4, [
 });
 
 // [Servomechanism]*2 from [Copper Ingot][+3]
-scripts.mods.extendedcrafting_engineering.addShaped(<nuclearcraft:part:7>, ['pretty',
+scripts.mods.extendedcrafting_engineering.remakeAlted(
+  <nuclearcraft:part:7>, ['pretty',
   '-   -',
   '* ▬ *',
   '▬ _ ▬'], {
@@ -140,7 +148,8 @@ scripts.mods.extendedcrafting_engineering.addShaped(<nuclearcraft:part:7>, ['pre
 });
 
 // [Electric Motor]*2 from [Electrum Nugget][+2]
-scripts.mods.extendedcrafting_engineering.addShaped(<nuclearcraft:part:8>, ['pretty',
+scripts.mods.extendedcrafting_engineering.remakeAlted(
+  <nuclearcraft:part:8>, ['pretty',
   '▬ ▬ G',
   'C C ‚',
   '▬ ▬ G'], {
@@ -197,7 +206,8 @@ craft.remake(<nuclearcraft:rtg_uranium>, ['pretty',
 });
 
 // [Empty Frame] from [Tin Gear][+2]
-scripts.mods.extendedcrafting_engineering.addShaped(<nuclearcraft:part:11>, ['pretty',
+scripts.mods.extendedcrafting_engineering.remakeAlted(
+  <nuclearcraft:part:11>, ['pretty',
   '□ ¤ □',
   'I   I',
   '□ ¤ □'], {

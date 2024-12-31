@@ -149,7 +149,8 @@ recipes.addShapedMirrored('Machine Chassis',
     [<enderio:block_reinforced_obsidian>, <ore:dyeMachine>, <enderio:block_reinforced_obsidian>]]);
 
 // [Simple Machine Chassis] from [Hardened Cell Frame][+3]
-scripts.mods.extendedcrafting_engineering.addShaped(<enderio:item_material>, ['pretty',
+scripts.mods.extendedcrafting_engineering.remakeAlted(
+  <enderio:item_material>, ['pretty',
   '□ ¤ □',
   'D ◘ D',
   '□ ¤ □'], {

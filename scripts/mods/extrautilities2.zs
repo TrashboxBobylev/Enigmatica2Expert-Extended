@@ -120,19 +120,20 @@ craft.make(<extrautils2:machine>, ['pretty',
 });
 
 // [Machine Block]*2 from [Vacuum Tube][+2]
-scripts.mods.extendedcrafting_engineering.addShaped(<extrautils2:machine> * 2, ['pretty',
+scripts.mods.extendedcrafting_engineering.makeAlted(
+  <extrautils2:machine> * 2, ['pretty',
   'P I P',
   'T B T',
   'P I P'], {
-  'P': <extrautils2:decorativesolid:2>,    // Polished Stone
-  'I': <ore:plateConstantan>,                              // Constantan Plate
-  'T': <ore:plateConstantan>,                     
-  'B': <immersiveengineering:material:26>,      // Vacuum Tube
+  'P': <extrautils2:decorativesolid:2>,
+  'I': <ore:plateConstantan>,
+  'T': <ore:plateConstantan>,
+  'B': <immersiveengineering:material:26>,
 }, 5, {
-  'I': <forestry:thermionic_tubes:3>,      // Iron Electron Tube
-  'T': <immersiveengineering:material:26>, // Vacuum Tube
-  'B': <extendedcrafting:material:8>,      // Basic Catalyst
-}, false);
+  'I': <forestry:thermionic_tubes:3>,
+  'T': <immersiveengineering:material:26>,
+  'B': <extendedcrafting:material:8>,
+});
 
 // [Machine Block]*3 from [Sturdy Casing][+2]
 craft.make(<extrautils2:machine> * 3, ['pretty',

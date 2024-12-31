@@ -138,7 +138,8 @@ recipes.addShaped('IC2 Reactor Chamber',
     [null, <ore:plateDenseLead>, null]]);
 
 // [Electronic Circuit] from [Iron Plate][+2]
-scripts.mods.extendedcrafting_engineering.addShaped(<ic2:crafting:1>, ['pretty',
+scripts.mods.extendedcrafting_engineering.remakeAlted(
+  <ic2:crafting:1>, ['pretty',
   'C C C',
   '♥ : ♥',
   'C C C'], {
@@ -150,7 +151,8 @@ scripts.mods.extendedcrafting_engineering.addShaped(<ic2:crafting:1>, ['pretty',
 });
 
 // [Advanced Circuit] from [Electronic Circuit][+3]
-scripts.mods.extendedcrafting_engineering.addShaped(<ic2:crafting:2>, ['pretty',
+scripts.mods.extendedcrafting_engineering.remakeAlted(
+  <ic2:crafting:2>, ['pretty',
   '♥ G ♥',
   '◊ B ◊',
   '♥ G ♥'], {
@@ -163,7 +165,8 @@ scripts.mods.extendedcrafting_engineering.addShaped(<ic2:crafting:2>, ['pretty',
 });
 
 // Basic Machine Casing
-scripts.mods.extendedcrafting_engineering.addShaped(<ic2:resource:12> * 4, ['pretty',
+scripts.mods.extendedcrafting_engineering.remakeAlted(
+  <ic2:resource:12> * 4, ['pretty',
   '□ ■ □',
   '■   ■',
   '□ ■ □'], {
@@ -187,7 +190,8 @@ recipes.addShapedMirrored('Basic Machine Casing3',
     [<ore:plateAluminium>, <ore:plateDenseTin>, <ore:plateAluminium>]]);
 
 // [Advanced Machine Casing] from [Basic Machine Casing][+3]
-scripts.mods.extendedcrafting_engineering.addShaped(<ic2:resource:13>, ['pretty',
+scripts.mods.extendedcrafting_engineering.remakeAlted(
+  <ic2:resource:13>, ['pretty',
   '▬ - ▬',
   '□ ■ □',
   '▬ - ▬'], {
@@ -208,7 +212,8 @@ recipes.addShapedMirrored('Reinforced Stone',
     [<minecraft:stone:*>, <tconstruct:soil>, <minecraft:stone:*>]]);
 
 // [Mixed Metal Ingot]*2 from [Bronze Plate][+2]
-scripts.mods.extendedcrafting_engineering.addShaped(<ic2:ingot> * 2, ['pretty',
+scripts.mods.extendedcrafting_engineering.remakeAlted(
+  <ic2:ingot> * 2, ['pretty',
   '□ □ □',
   'п п п',
   'A A A'], {
@@ -743,7 +748,8 @@ craft.remake(<ic2:te:55>, ['pretty',
 });
 
 // [Electric Motor] from [Copper Wire Coil][+2]
-scripts.mods.extendedcrafting_engineering.addShaped(<ic2:crafting:6>, ['pretty',
+scripts.mods.extendedcrafting_engineering.remakeAlted(
+  <ic2:crafting:6>, ['pretty',
   '  ▬  ',
   '⌂ C ⌂',
   '  ▬  '], {

@@ -192,7 +192,8 @@ craft.remake(<immersiveengineering:stone_decoration> * 3, ['pretty',
 });
 
 // Redstone Engineering Block
-scripts.mods.extendedcrafting_engineering.addShaped(<immersiveengineering:metal_decoration0:3> * 2, ['pretty',
+scripts.mods.extendedcrafting_engineering.remakeAlted(
+  <immersiveengineering:metal_decoration0:3> * 2, ['pretty',
   '□ ▬ □',
   '▬ e ▬',
   '□ ▬ □'], {
@@ -204,7 +205,8 @@ scripts.mods.extendedcrafting_engineering.addShaped(<immersiveengineering:metal_
 });
 
 // Light Engineering Block
-scripts.mods.extendedcrafting_engineering.addShaped(<immersiveengineering:metal_decoration0:4> * 4, ['pretty',
+scripts.mods.extendedcrafting_engineering.remakeAlted(
+  <immersiveengineering:metal_decoration0:4> * 4, ['pretty',
   '□ A □',
   'A l A',
   '□ A □'], {
@@ -217,7 +219,8 @@ scripts.mods.extendedcrafting_engineering.addShaped(<immersiveengineering:metal_
 });
 
 // Heavy Engineering Block
-scripts.mods.extendedcrafting_engineering.addShaped(<immersiveengineering:metal_decoration0:5> * 10, ['pretty',
+scripts.mods.extendedcrafting_engineering.remakeAlted(
+  <immersiveengineering:metal_decoration0:5> * 10, ['pretty',
   '□ E □',
   'S t S',
   '□ E □'], {

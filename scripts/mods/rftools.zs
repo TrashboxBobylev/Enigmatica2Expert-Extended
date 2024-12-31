@@ -63,7 +63,8 @@ recipes.addShaped('RFTools Matter Receiver',
     [<ore:enderpearl>, <ore:enderpearl>, <ore:enderpearl>]]);
 
 // Machine Frame
-scripts.mods.extendedcrafting_engineering.addShaped(<rftools:machine_frame> * 2, ['pretty',
+scripts.mods.extendedcrafting_engineering.remakeAlted(
+  <rftools:machine_frame> * 2, ['pretty',
   'H ¤ H',
   '■ M ■',
   's A s'], {

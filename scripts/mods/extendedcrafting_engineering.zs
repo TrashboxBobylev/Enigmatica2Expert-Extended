@@ -4,37 +4,36 @@
 import crafttweaker.item.IIngredient;
 import crafttweaker.item.IItemStack;
 
-function addShaped(output as IItemStack, gridLine as string[], options as IIngredient[string], altOutputAmount as int, altMapReplacements as IIngredient[string], remake as bool = true){
-    if (remake)
-      craft.remake(output, gridLine, options);
-    else
-      craft.make(output, gridLine, options);
-    for key, value in altMapReplacements {
-      if options has key {
-        options[key] = value;
-      }
-    }
-    mods.extendedcrafting.TableCrafting.addShaped(0, output * altOutputAmount, Grid(gridLine, options).shaped());
+function remakeAlted(
+  output as IItemStack,
+  gridStr as string[],
+  options as IIngredient[string],
+  altOutputAmount as int,
+  altMapReplacements as IIngredient[string]
+) as void {
+  craft.remake(output, gridStr, options);
+  add(output * altOutputAmount, gridStr, merge(options, altMapReplacements));
 }
 
-function addShapedD(output as IItemStack, gridLine as string[], options as IIngredient[string]){
-    mods.extendedcrafting.TableCrafting.addShaped(0, output, Grid(gridLine, options).shaped());
+function makeAlted(
+  output as IItemStack,
+  gridStr as string[],
+  options as IIngredient[string],
+  altOutputAmount as int,
+  altMapReplacements as IIngredient[string]
+) as void {
+  craft.make(output, gridStr, options);
+  add(output * altOutputAmount, gridStr, merge(options, altMapReplacements));
 }
 
-// [ME Dense Smart Cable - Fluix]*8 from [Fluix Steel Ingot][+1]
-addShapedD(<appliedenergistics2:part:76> * 8, ['pretty',
-  '■ ■ ■',
-  '▬ ▬ ▬',
-  '■ ■ ■'], {
-  '■': <ore:blockGlassHardened>,  // Hardened Glass
-  '▬': <ore:ingotFluixSteel>,     // Fluix Steel Ingot
-});
+function add(output as IItemStack, gridStr as string[], options as IIngredient[string]) as void {
+  mods.extendedcrafting.TableCrafting.addShaped(0, output, Grid(gridStr, options).shaped());
+}
 
-// [ME Smart Cable - Fluix]*16 from [Fluix Steel Shard][+1]
-addShapedD(<appliedenergistics2:part:56> * 16, ['pretty',
-  '■ ▬ ■',
-  '■ ▬ ■',
-  '■ ▬ ■'], {
-  '■': <ore:blockGlassHardened>,  // Hardened Glass
-  '▬': <ore:ingotFluixSteel>,     // Fluix Steel Ingot
-});
+// Overwrate values of one map over another
+function merge(a as IIngredient[string], b as IIngredient[string]) as IIngredient[string] {
+  for key, value in b {
+    a[key] = value;
+  }
+  return a;
+}

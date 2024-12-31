@@ -133,7 +133,8 @@ craft.remake(<actuallyadditions:block_fishing_net>, ['pretty',
 });
 
 // Wood Casing
-scripts.mods.extendedcrafting_engineering.addShaped(<actuallyadditions:block_misc:4> * 2, ['pretty',
+scripts.mods.extendedcrafting_engineering.remakeAlted(
+  <actuallyadditions:block_misc:4> * 2, ['pretty',
   '# ╱ #',
   '╱ ≢ ╱',
   '# ╱ #'], {
@@ -154,7 +155,8 @@ recipes.remove(<actuallyadditions:item_dust:7>);
 mods.actuallyadditions.Crusher.removeRecipe(<actuallyadditions:item_dust:6>);
 
 // Iron Casing
-scripts.mods.extendedcrafting_engineering.addShaped(<actuallyadditions:block_misc:9> * 2, ['pretty',
+scripts.mods.extendedcrafting_engineering.remakeAlted(
+  <actuallyadditions:block_misc:9> * 2, ['pretty',
   '□ G □',
   'G ⌂ G',
   '□ G □'], {
@@ -167,7 +169,8 @@ scripts.mods.extendedcrafting_engineering.addShaped(<actuallyadditions:block_mis
 });
 
 // Basic Coil
-scripts.mods.extendedcrafting_engineering.addShaped(<actuallyadditions:item_misc:7>, ['pretty',
+scripts.mods.extendedcrafting_engineering.remakeAlted(
+  <actuallyadditions:item_misc:7>, ['pretty',
   '- ▬ ╱',
   '▬ ╱ ▬',
   '╱ ▬ -'], {
@@ -180,7 +183,8 @@ scripts.mods.extendedcrafting_engineering.addShaped(<actuallyadditions:item_misc
 });
 
 // Advanced Coil
-scripts.mods.extendedcrafting_engineering.addShaped(<actuallyadditions:item_misc:8> , ['pretty',
+scripts.mods.extendedcrafting_engineering.remakeAlted(
+  <actuallyadditions:item_misc:8> , ['pretty',
   '  ▬ I',
   '▬ B ▬',
   'I ▬  '], {
@@ -519,7 +523,8 @@ for i in 0 .. 10 {
 }
 
 // [Energy Laser Relay]*4 from [Advanced Coil][+3]
-scripts.mods.extendedcrafting_engineering.addShaped(<actuallyadditions:block_laser_relay> * 4, ['pretty',
+scripts.mods.extendedcrafting_engineering.remakeAlted(
+  <actuallyadditions:block_laser_relay> * 4, ['pretty',
   '▬ * ▬',
   '╳ A ╳',
   '▬ * ▬'], {

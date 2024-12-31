@@ -49,7 +49,8 @@ scripts.mods.forestry.Carpenter.addRecipe(<forestry:chipsets:3>.withTag({ T: 3 a
   }).shaped(), 40, <liquid:water> * 1000);
 
 // Sturdy Casing
-scripts.mods.extendedcrafting_engineering.addShaped(<forestry:sturdy_machine> * 2, ['pretty',
+scripts.mods.extendedcrafting_engineering.remakeAlted(
+  <forestry:sturdy_machine> * 2, ['pretty',
   '☼ ▬ ☼',
   '▬   ▬',
   '¤ ▬ ¤'], {

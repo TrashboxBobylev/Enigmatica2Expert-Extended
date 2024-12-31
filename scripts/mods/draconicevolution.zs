@@ -155,7 +155,8 @@ scripts.mods.forestry.Carpenter.addRecipe(<draconicevolution:draconic_energy_cor
 }).shaped(), 40, <fluid:ic2hot_coolant> * 8000, null, 2);
 
 // [Basic Fusion Crafting Injector] from [Genetics Processor][+5]
-scripts.mods.extendedcrafting_engineering.addShaped(<draconicevolution:crafting_injector>, ['pretty',
+scripts.mods.extendedcrafting_engineering.remakeAlted(
+  <draconicevolution:crafting_injector>, ['pretty',
   'D ▬ D',
   '* G *',
   '□ Ϟ □'], {

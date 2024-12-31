@@ -64,7 +64,8 @@ recipes.addShapedMirrored('Lonsdaleite',
     [<ore:gemQuartzBlack>, <ore:dustWither>, <ore:gemQuartzBlack>]]);
 
 // Connector
-scripts.mods.extendedcrafting_engineering.addShaped(<environmentaltech:connector>, ['pretty',
+scripts.mods.extendedcrafting_engineering.remakeAlted(
+  <environmentaltech:connector>, ['pretty',
   '♥ ■ ♥',
   '■ ▬ ■',
   '♥ ■ ♥'], {
