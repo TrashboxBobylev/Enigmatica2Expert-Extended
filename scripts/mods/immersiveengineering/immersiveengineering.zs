@@ -197,11 +197,11 @@ scripts.mods.extendedcrafting_engineering.remakeAlted(
   '□ ▬ □',
   '▬ e ▬',
   '□ ▬ □'], {
-  '□': <ore:plateCopper>,     // Copper Plate
-  '▬': <ore:ingotConstantan>, // Constantan Ingot
-  'e': <ore:gemRedstone>      // Resonating Redstone Crystal
+  '□': <ore:plateCopper>,
+  '▬': <ore:ingotConstantan>,
+  'e': <ore:gemRedstone>
 }, 4, {
-  'e': <ore:ingotSignalum>   // Signalum Ingot
+  'e': <ore:ingotSignalum>
 });
 
 // Light Engineering Block
@@ -210,12 +210,12 @@ scripts.mods.extendedcrafting_engineering.remakeAlted(
   '□ A □',
   'A l A',
   '□ A □'], {
-  '□': <ore:plateBronze>,         // Bronze Plate
-  'A': <ore:alloyAdvanced>,       // Advanced Alloy
-  'l': <ore:scaffoldingAluminum>, // Aluminium Scaffolding
+  '□': <ore:plateBronze>,
+  'A': <ore:alloyAdvanced>,
+  'l': <ore:scaffoldingAluminum>,
 }, 6, {
-  '□': <ore:plateConstantan>,     // Constantan Plate
-  'A': <ore:ingotRedstoneAlloy>,  // Redstone Alloy Ingot
+  '□': <ore:plateConstantan>,
+  'A': <ore:ingotRedstoneAlloy>,
 });
 
 // Heavy Engineering Block
@@ -224,13 +224,13 @@ scripts.mods.extendedcrafting_engineering.remakeAlted(
   '□ E □',
   'S t S',
   '□ E □'], {
-  '□': <ore:plateUranium>,                // Uranium Plate
-  'E': <ore:alloyElite>,                  // Reinforced Alloy
-  'S': <immersiveengineering:material:8>, // Steel Mechanical Component
-  't': <ore:scaffoldingSteel>,            // Steel Scaffolding
+  '□': <ore:plateUranium>,
+  'E': <ore:alloyElite>,
+  'S': <immersiveengineering:material:8>,
+  't': <ore:scaffoldingSteel>,
 }, 10, {
-  '□': <ore:plateDU>,                     // DU Plating
-  'S': <immersiveengineering:material:9>, // Steel Mechanical Component
+  '□': <ore:plateDU>,
+  'S': <immersiveengineering:material:9>,
 });
 
 // Garden Cloche

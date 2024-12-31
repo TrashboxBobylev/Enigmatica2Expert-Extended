@@ -161,12 +161,12 @@ scripts.mods.extendedcrafting_engineering.remakeAlted(
   '▬ B ▬',
   'S l S',
   '▬ B ▬'], {
-  '▬': <ore:ingotOsmium>,                         // Osmium Ingot
-  'B': <ore:ingotAlubrass>,                       // Aluminum Brass Ingot
-  'S': <immersiveengineering:material:9>,         // Steel Mechanical Component
-  'l': <immersiveengineering:stone_decoration:1>, // Blast Brick
+  '▬': <ore:ingotOsmium>,
+  'B': <ore:ingotAlubrass>,
+  'S': <immersiveengineering:material:9>,
+  'l': <immersiveengineering:stone_decoration:1>,
 }, 3, {
-  'B': <extendedcrafting:material:14>            // Basic Component
+  'B': <extendedcrafting:material:14>
 });
 
 // Metallurgic Infuser
@@ -228,11 +228,11 @@ scripts.mods.extendedcrafting_engineering.remakeAlted(
   '* A *',
   'A B A',
   '* A *'], {
-  '*': <ore:dustRedstone>,   // Redstone
-  'A': <ore:alloyAdvanced>,  // Enriched Alloy
-  'B': <ore:circuitBasic>,   // Electronic Circuit
+  '*': <ore:dustRedstone>,
+  'A': <ore:alloyAdvanced>,
+  'B': <ore:circuitBasic>,
 }, 6, {
-  '*': <actuallyadditions:item_crystal_empowered>, // Empowered Restonia Crystal
+  '*': <actuallyadditions:item_crystal_empowered>,
 });
 
 // Elite Circuit
@@ -241,11 +241,11 @@ scripts.mods.extendedcrafting_engineering.remakeAlted(
   '* E *',
   'E A E',
   '* E *'], {
-  '*': <ore:gemLapis>,        // Lapis Lazuli
-  'E': <ore:alloyElite>,      // Reinforced Alloy
-  'A': <ore:circuitAdvanced>, // Advanced Control Circuit
+  '*': <ore:gemLapis>,
+  'E': <ore:alloyElite>,
+  'A': <ore:circuitAdvanced>,
 }, 6, {
-  '*': <actuallyadditions:item_crystal_empowered:1>, // Empowered Palis Crystal
+  '*': <actuallyadditions:item_crystal_empowered:1>,
 });
 
 // Ultimate Circuit

@@ -69,12 +69,12 @@ scripts.mods.extendedcrafting_engineering.remakeAlted(
   '♥ ■ ♥',
   '■ ▬ ■',
   '♥ ■ ♥'], {
-  '♥': <ore:ingotSignalum>,   // Signalum Ingot
-  '■': <ore:blockTin>,        // Block of Tin
-  '▬': <ore:ingotAlubrass>,   // Aluminum Brass Ingot
+  '♥': <ore:ingotSignalum>,
+  '■': <ore:blockTin>,
+  '▬': <ore:ingotAlubrass>,
 }, 4, {
-  '♥': <ore:crystalRedstone>,   // Destabilized Clathrate
-  '■': <ore:blockMithril>,      // Block of Mana Infused Metal
+  '♥': <ore:crystalRedstone>,
+  '■': <ore:blockMithril>,
 });
 
 // [Diode] from [Energy Cell Frame][+4]

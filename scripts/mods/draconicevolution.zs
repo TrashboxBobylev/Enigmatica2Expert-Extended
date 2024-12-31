@@ -160,15 +160,15 @@ scripts.mods.extendedcrafting_engineering.remakeAlted(
   'D ▬ D',
   '* G *',
   '□ Ϟ □'], {
-  'D': <draconicevolution:draconic_core>, // Draconic Core
-  '▬': <ore:ingotCobalt60>, // Cobalt-60
-  '*': <ore:crystalLitherite>, // Litherite Crystal
-  'G': <gendustry:genetics_processor>, // Genetics Processor
-  '□': <ore:plateElite>, // Elite Plating
-  'Ϟ': <draconicevolution:energy_crystal>, // Basic Energy Relay Crystal
+  'D': <draconicevolution:draconic_core>,
+  '▬': <ore:ingotCobalt60>,
+  '*': <ore:crystalLitherite>,
+  'G': <gendustry:genetics_processor>,
+  '□': <ore:plateElite>,
+  'Ϟ': <draconicevolution:energy_crystal>,
 }, 3, {
-  '▬': <ore:ingotYttrium>,                 // Yttrium Ingot
-  '□': <ore:processorAdvanced>,            // Advanced Processor
+  '▬': <ore:ingotYttrium>,
+  '□': <ore:processorAdvanced>,
 });
 
 // Potentiometer

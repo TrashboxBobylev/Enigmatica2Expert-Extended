@@ -68,15 +68,15 @@ scripts.mods.extendedcrafting_engineering.remakeAlted(
   'H ¤ H',
   '■ M ■',
   's A s'], {
-  'H': <ic2:heat_vent>,                  // Heat Vent
-  '¤': <ore:gearGold>, // Gold Gear 
-  '■': <industrialforegoing:dryrubber>,       // White Plastic Block
-  'M': <teslacorelib:machine_case>,      // Machine Case
-  's': <industrialforegoing:pink_slime>, // Pink Slime
-  'A': <tconevo:edible:1>                // Cooked Meat Ingot
+  'H': <ic2:heat_vent>,
+  '¤': <ore:gearGold>,
+  '■': <industrialforegoing:dryrubber>,
+  'M': <teslacorelib:machine_case>,
+  's': <industrialforegoing:pink_slime>,
+  'A': <tconevo:edible:1>
 }, 4, {
-  '¤': <thermalfoundation:material:294>, // Lumium Gear 
-  '■': <mekanism:plasticblock:15>,       // White Plastic Block
+  '¤': <thermalfoundation:material:294>,
+  '■': <mekanism:plasticblock:15>,
 });
 
 // Machine Base

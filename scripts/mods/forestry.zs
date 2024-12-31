@@ -54,12 +54,12 @@ scripts.mods.extendedcrafting_engineering.remakeAlted(
   '☼ ▬ ☼',
   '▬   ▬',
   '¤ ▬ ¤'], {
-  '☼': <ore:gearCopper>,     // Copper Gear
-  '▬': <ore:ingotBronze>,    // Bronze Ingot
-  '¤': <ore:gearBronze>,     // Bronze Gear
+  '☼': <ore:gearCopper>,
+  '▬': <ore:ingotBronze>,
+  '¤': <ore:gearBronze>,
 }, 4, {
-  '☼': <ore:gearConstantan>, // Constantan Gear
-  '▬': <ore:ingotBrass>,     // Alchemical Brass Ingot
+  '☼': <ore:gearConstantan>,
+  '▬': <ore:ingotBrass>,
 });
 
 // [Hardened Casing] from [Sturdy Casing][+1]

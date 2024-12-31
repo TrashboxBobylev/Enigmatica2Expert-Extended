@@ -154,13 +154,13 @@ scripts.mods.extendedcrafting_engineering.remakeAlted(
   '□ ¤ □',
   'D ◘ D',
   '□ ¤ □'], {
-  '□': <ore:plateTitaniumAluminide>, // Titanium Aluminide Plate
-  '¤': <ore:gearIronInfinity>, // Infinity Bimetal Gear
-  'D': <endreborn:block_decorative_lormyte>, // Decorative Lormyte Stone
-  '◘': <thermalexpansion:frame:129>, // Hardened Cell Frame
+  '□': <ore:plateTitaniumAluminide>,
+  '¤': <ore:gearIronInfinity>,
+  'D': <endreborn:block_decorative_lormyte>,
+  '◘': <thermalexpansion:frame:129>,
 }, 2, {
-  '□': <ore:plateTitaniumIridium>,           // Titanium Iridium Alloy Plate
-  '¤': <ore:gearEnderium>,                   // Enderium Gear
+  '□': <ore:plateTitaniumIridium>,
+  '¤': <ore:gearEnderium>,
 });
 
 // [End Steel Chassis] from [Quartzburnt][+2]
@@ -329,7 +329,7 @@ mods.nuclearcraft.AlloyFurnace.removeRecipeWithOutput(<enderio:item_alloy_ingot:
 mods.nuclearcraft.AlloyFurnace.removeRecipeWithOutput(<enderio:item_alloy_ingot:8>);
 mods.nuclearcraft.AlloyFurnace.removeRecipeWithOutput(<enderio:item_alloy_ingot:9> * 3);
 
-val fake_iron_variations = 
+val fake_iron_variations =
 <thermalfoundation:material:1>   | <thermalfoundation:material:64>         | <thermalfoundation:material:65>  |
 <thermalfoundation:material:66>  | <thermalfoundation:material:67>         | <thermalfoundation:material:68>  |
 <thermalfoundation:material:69>  | <thermalfoundation:material:70>         | <thermalfoundation:material:71>  |

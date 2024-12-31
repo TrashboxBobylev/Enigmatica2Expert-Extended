@@ -41,9 +41,9 @@ scripts.mods.extendedcrafting_engineering.remakeAlted(
   'C ⌂ C',
   '⌂ ▬ ⌂',
   'C ⌂ C'], {
-  'C': <ore:plateConcrete>, // Concrete Sheet
-  '⌂': <ic2:casing:5>, // Steel Item Casing
-  '▬': <ore:ingotTough>, // Tough Alloy Ingot
+  'C': <ore:plateConcrete>,
+  '⌂': <ic2:casing:5>,
+  '▬': <ore:ingotTough>,
 }, 2, {
   '▬': <ore:ingotBlackIron>,
 });
@@ -54,13 +54,13 @@ scripts.mods.extendedcrafting_engineering.remakeAlted(
   '▬ - ▬',
   '- ■ -',
   '▬ - ▬'], {
-  '▬': <ic2:casing:5>,   // Steel Item Casing
-  '-': <ore:ingotTough>, // Tough Alloy Ingot
-  '■': <ic2:casing>,     // Bronze Item Casing
+  '▬': <ic2:casing:5>,
+  '-': <ore:ingotTough>,
+  '■': <ic2:casing>,
 }, 12, {
-  '▬': <ore:ingotStainlessSteel>, // Stainless Steel Ingot
-  '-': <ore:ingotEndSteel>,       // End Steel Ingot
-  '■': <ore:blockDarkSteel>,      // Dark Steel Block
+  '▬': <ore:ingotStainlessSteel>,
+  '-': <ore:ingotEndSteel>,
+  '■': <ore:blockDarkSteel>,
 });
 
 // [Basic Plating]*4 from [Graphite Block][+2]
@@ -69,11 +69,11 @@ scripts.mods.extendedcrafting_engineering.remakeAlted(
   '□ ⌂ □',
   '⌂ ■ ⌂',
   '□ ⌂ □'], {
-  '□': <ore:plateLead>,     // Lead Plate
-  '⌂': <ic2:casing:4>,      // Lead Item Casing
-  '■': <ore:blockGraphite>, // Graphite Block
+  '□': <ore:plateLead>,
+  '⌂': <ic2:casing:4>,
+  '■': <ore:blockGraphite>,
 }, 6, {
-  '⌂': <ic2:casing:5>,      // Steel Item Casing
+  '⌂': <ic2:casing:5>,
 });
 
 // [Advanced Plating] from [Basic Plating][+2]
@@ -82,11 +82,11 @@ scripts.mods.extendedcrafting_engineering.remakeAlted(
   '  ▲  ',
   '▬ □ ▬',
   '  ▲  '], {
-  '▲': <ore:dustRedstone>,  // Redstone Dust
-  '▬': <ore:ingotTough>,    // Tough Alloy Ingot
-  '□': <ore:plateBasic>,    // Basic Plating
+  '▲': <ore:dustRedstone>,
+  '▬': <ore:ingotTough>,
+  '□': <ore:plateBasic>,
 }, 2, {
-  '▲': <ore:dustEnergetic>, // Energetic Blend
+  '▲': <ore:dustEnergetic>,
 });
 
 // [DU Plating] from [Advanced Plating][+2]
@@ -95,11 +95,11 @@ scripts.mods.extendedcrafting_engineering.remakeAlted(
   '▲ ▬ ▲',
   '▬ □ ▬',
   '▲ ▬ ▲'], {
-  '▲': <ore:dustSulfur>,           // Sulfur
-  '▬': <nuclearcraft:uranium:10>, // Uranium-238
-  '□': <ore:plateAdvanced>,        // Advanced Plating
+  '▲': <ore:dustSulfur>,
+  '▬': <nuclearcraft:uranium:10>,
+  '□': <ore:plateAdvanced>,
 }, 4, {
-  '▬': <ore:ingotPlutonium242All>, // Plutonium-242
+  '▬': <ore:ingotPlutonium242All>,
 });
 
 // [Elite Plating] from [DU Plating][+2]
@@ -108,11 +108,11 @@ scripts.mods.extendedcrafting_engineering.remakeAlted(
   '* ▬ *',
   '▬ □ ▬',
   '* ▬ *'], {
-  '*': <ore:dustCrystalBinder>, // Crystal Binder
-  '▬': <ore:ingotBoron>,        // Boron Ingot
-  '□': <ore:plateDU>,           // DU Plating
+  '*': <ore:dustCrystalBinder>,
+  '▬': <ore:ingotBoron>,
+  '□': <ore:plateDU>,
 }, 2, {
-  '▬': <ore:ingotBoron10>,      // Boron-10
+  '▬': <ore:ingotBoron10>,
 });
 
 // [Copper Solenoid]*4 from [Advanced Alloy][+3]
@@ -121,15 +121,15 @@ scripts.mods.extendedcrafting_engineering.remakeAlted(
   '□ ⌂ □',
   '╱ п ╱',
   '□ ⌂ □'], {
-  '□': <ore:plateCopper>,        // Copper Plate
-  '⌂': <ic2:casing:1>,           // Copper Item Casing
-  '╱': <ore:stickAluminum>,      // Aluminium Rod
-  'п': <ore:plateAdvancedAlloy>, // Advanced Alloy
+  '□': <ore:plateCopper>,
+  '⌂': <ic2:casing:1>,
+  '╱': <ore:stickAluminum>,
+  'п': <ore:plateAdvancedAlloy>,
 }, 8, {
-  '□': <ore:nuggetAluminum>,        // Aluminum Nugget
+  '□': <ore:nuggetAluminum>,
   '⌂': <ore:nuggetAluminum>,
-  '╱': <immersiveengineering:metal_decoration0>,  // Copper Coil Block
-  'п': <ore:plateAdvancedAlloy>,                  // Advanced Alloy
+  '╱': <immersiveengineering:metal_decoration0>,
+  'п': <ore:plateAdvancedAlloy>,
 });
 
 // [Servomechanism]*2 from [Copper Ingot][+3]
@@ -138,13 +138,13 @@ scripts.mods.extendedcrafting_engineering.remakeAlted(
   '-   -',
   '* ▬ *',
   '▬ _ ▬'], {
-  '-': <ore:ingotFerroboron>, // Ferroboron Alloy Ingot
-  '*': <ore:dustRedstone>,    // Redstone Dust
-  '▬': <ore:ingotSteel>,      // Steel Ingot
-  '_': <ore:ingotCopper>,     // Copper Ingot
+  '-': <ore:ingotFerroboron>,
+  '*': <ore:dustRedstone>,
+  '▬': <ore:ingotSteel>,
+  '_': <ore:ingotCopper>,
 }, 2, {
-  '*': <ore:crystalRestonia>, // Restonia Crystal
-  '▬': <ore:ingotDarkSteel>,  // Dark Steel Ingot
+  '*': <ore:crystalRestonia>,
+  '▬': <ore:ingotDarkSteel>,
 });
 
 // [Electric Motor]*2 from [Electrum Nugget][+2]
@@ -153,13 +153,13 @@ scripts.mods.extendedcrafting_engineering.remakeAlted(
   '▬ ▬ G',
   'C C ‚',
   '▬ ▬ G'], {
-  '▬': <ore:ingotSteel>,           // Steel Ingot
-  'C': <ore:solenoidCopper>,       // Copper Solenoid
-  '‚': <ore:ingotIron>,            // Iron Ingot
+  '▬': <ore:ingotSteel>,
+  'C': <ore:solenoidCopper>,
+  '‚': <ore:ingotIron>,
 }, 2, {
-  '▬': <ore:ingotElectricalSteel>, // Electrical Steel Ingot
+  '▬': <ore:ingotElectricalSteel>,
   'G': null,
-  '‚': <ore:nuggetElectrum>,       // Electrum Nugget
+  '‚': <ore:nuggetElectrum>,
 });
 
 // [Alloy Furnace] from [Electric Furnace][+4]
@@ -211,13 +211,13 @@ scripts.mods.extendedcrafting_engineering.remakeAlted(
   '□ ¤ □',
   'I   I',
   '□ ¤ □'], {
-  '□': <ore:plateBasic>,          // Basic Plating
-  '¤': <ore:gearTin>,             // Tin Gear
-  'I': <enderio:block_reservoir>, // Endervoir
+  '□': <ore:plateBasic>,
+  '¤': <ore:gearTin>,
+  'I': <enderio:block_reservoir>,
 }, 12, {
-  '□': <ore:plateAdvanced>,         // Advanced Plating
-  '¤': <ore:gearSilver>,            // Silver Gear
-  'I': <nuclearcraft:water_source>, // Infinite Water Source
+  '□': <ore:plateAdvanced>,
+  '¤': <ore:gearSilver>,
+  'I': <nuclearcraft:water_source>,
 });
 
 // [Ingot Former] from [Machine Chassis][+3]

@@ -114,12 +114,12 @@ scripts.mods.extendedcrafting_engineering.remakeAlted(
   'Q ■ Q',
   '■ ▄ ■',
   'Q ■ Q'], {
-  'Q': <ic2:resource:11>, // Reinforced Stone
-  '■': <ore:itemRubber>,                // Rubber
-  '▄': <ore:machineBlockAdvanced>,      // Advanced Machine Casing
+  'Q': <ic2:resource:11>,
+  '■': <ore:itemRubber>,
+  '▄': <ore:machineBlockAdvanced>,
 }, 3, {
-  'Q': <extrautils2:decorativesolid:7>, // Quartzburnt
-  '■': <mekanism:plasticblock:15>,      // White Plastic Block
+  'Q': <extrautils2:decorativesolid:7>,
+  '■': <mekanism:plasticblock:15>,
 });
 
 // Mob Duplicator

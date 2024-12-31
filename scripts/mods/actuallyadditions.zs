@@ -138,11 +138,11 @@ scripts.mods.extendedcrafting_engineering.remakeAlted(
   '# ╱ #',
   '╱ ≢ ╱',
   '# ╱ #'], {
-  '#': <ore:plankTreatedWood>, // Treated Wood Planks
-  '╱': <forestry:oak_stick>,   // Impregnated Stick
-  '≢': <ore:logWood>,          // Wood Pile
+  '#': <ore:plankTreatedWood>,
+  '╱': <forestry:oak_stick>,
+  '≢': <ore:logWood>,
 }, 4, {
-  '≢': <forestry:wood_pile>,   // Wood Pile
+  '≢': <forestry:wood_pile>,
 });
 
 // Emerald Dust
@@ -160,12 +160,12 @@ scripts.mods.extendedcrafting_engineering.remakeAlted(
   '□ G □',
   'G ⌂ G',
   '□ G □'], {
-  '□': <ore:blockSheetmetalIron>,              // Iron Sheetmetal
-  'G': <forestry:thermionic_tubes:1>, // Tin Electron Tube
-  '⌂': <forestry:hardened_machine>,   // Hardened Casing
+  '□': <ore:blockSheetmetalIron>,
+  'G': <forestry:thermionic_tubes:1>,
+  '⌂': <forestry:hardened_machine>,
 }, 4, {
-  '□': <ore:plateInvar>,             // Invar Plate
-  'G': <forestry:thermionic_tubes:4> // Golden Electron Tube
+  '□': <ore:plateInvar>,
+  'G': <forestry:thermionic_tubes:4>
 });
 
 // Basic Coil
@@ -174,12 +174,12 @@ scripts.mods.extendedcrafting_engineering.remakeAlted(
   '- ▬ ╱',
   '▬ ╱ ▬',
   '╱ ▬ -'], {
-  '-': <actuallyadditions:item_crystal:5>, // Enori Crystal
-  '▬': <ore:wireAluminum>,                          // Aluminum Wire
-  '╱': <forestry:oak_stick>,                         // Impregnated Stick
+  '-': <actuallyadditions:item_crystal:5>,
+  '▬': <ore:wireAluminum>,
+  '╱': <forestry:oak_stick>,
 }, 4, {
-  '-': <actuallyadditions:item_crystal_empowered:5>, // Empowered Enori Crystal
-  '▬': <ore:ingotAluminum>                          // Aluminum Ingot
+  '-': <actuallyadditions:item_crystal_empowered:5>,
+  '▬': <ore:ingotAluminum>
 });
 
 // Advanced Coil
@@ -188,13 +188,13 @@ scripts.mods.extendedcrafting_engineering.remakeAlted(
   '  ▬ I',
   '▬ B ▬',
   'I ▬  '], {
-  '▬': <ic2:cable:2>.withTag({ type: 2 as byte, insulation: 0 as byte }),               // Gold Cable
-  'B': <actuallyadditions:item_misc:7>, // Basic Coil
-  'I': <forestry:oak_stick>, // Impregnated Stick
+  '▬': <ic2:cable:2>.withTag({ type: 2 as byte, insulation: 0 as byte }),
+  'B': <actuallyadditions:item_misc:7>,
+  'I': <forestry:oak_stick>,
 }, 8, {
-  '▬': <ore:ingotLumium>,               // Lumium Ingot
-  'B': <actuallyadditions:item_misc:7>, // Basic Coil
-  'I': <actuallyadditions:item_misc:7>, // Basic Coil
+  '▬': <ore:ingotLumium>,
+  'B': <actuallyadditions:item_misc:7>,
+  'I': <actuallyadditions:item_misc:7>,
 });
 
 // Atomic Reconstructor
@@ -528,13 +528,13 @@ scripts.mods.extendedcrafting_engineering.remakeAlted(
   '▬ * ▬',
   '╳ A ╳',
   '▬ * ▬'], {
-  '▬': <ore:obsidian>,                    // Obsidian
-  '*': <ore:blockRedstone>,              // Block of Redstone
-  '╳': <ore:crystalRestonia>,             // Restonia Crystal
-  'A': <actuallyadditions:item_misc:8>,   // Advanced Coil
+  '▬': <ore:obsidian>,
+  '*': <ore:blockRedstone>,
+  '╳': <ore:crystalRestonia>,
+  'A': <actuallyadditions:item_misc:8>,
 }, 10, {
-  '▬': <ore:ingotRefinedObsidian>,        // Refined Obsidian Ingot
-  '*': <actuallyadditions:block_crystal>, // Restonia Crystal Block
+  '▬': <ore:ingotRefinedObsidian>,
+  '*': <actuallyadditions:block_crystal>,
 });
 
 // Simplify because it produce only max 256 RF/T
