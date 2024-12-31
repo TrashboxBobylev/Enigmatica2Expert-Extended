@@ -21,7 +21,7 @@ function addRecipe(
 ) as void {
   // Actual recipe
   recipes.addShaped(recipeName, R, [
-    [(E | R.anyDamage()).marked('0'), A.marked('1'), A.marked('2')],
+    [(E | R.onlyDamaged()).marked('0'), A.marked('1'), A.marked('2')],
     [A.marked('3'), A.marked('4'), A.marked('5')],
     [A.marked('6'), A.marked('7'), A.marked('8')],
   ],
