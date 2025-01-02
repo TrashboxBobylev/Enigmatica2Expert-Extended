@@ -4,21 +4,18 @@
 
 - [ ] ✏️ `Benitoite`, `Anglesite` fix benefication
 - [ ] `Flux Anodizers` should output more ore when working with Netherending Ores
-- [ ] 𝓩𝒮 fix `format.zs` mutating lists `[T]` => `T[]`
 - [ ] 𝓩𝒮 Fix `/perf chunks` not correct with position of blocks https://i.imgur.com/ktLcvSn.png
-- [ ] 𝓩𝒮 Remove `item names` on Craft.zs recipe creation (since Intellisense)
 - [ ] 📀 Buff Forestry circuits speed bonus 25% => 100%
 - [ ] Add 5% of max durab on combining ThW stones
 - [ ] cinnabar clusters can only be made in the crucible/thaumatorium and not via an alchemist's stone in a crystalization chamber
-- [ ] Downgrade DML to avoid Dragon model cant work
+- [x] Downgrade DML to avoid Dragon model cant work
 - [ ] end/nether `draconium ore` make smelt into default ore variant to line up with other end/nether ores
-- [ ] increase will output of blood magic Flux cleanse ritual
 - [ ] Make Singularities sucking in items in inventory
 - [ ] TOP remove "(Level: )" text
 - [ ] TOP localize mining levels
-- [ ] 📖 "Ratlantis World Generation" remove AnyDamage
-- [ ] 🟢 Add https://legacy.curseforge.com/minecraft/mc-mods/better-quest-pop-up
+- [x] 📖 "Ratlantis World Generation" remove AnyDamage
 - [ ] 🟢 Add https://legacy.curseforge.com/minecraft/mc-mods/sound-physics-remixin
+- [ ] 🟢 Add https://legacy.curseforge.com/minecraft/mc-mods/enchantment-descriptions
 
 ---
 
