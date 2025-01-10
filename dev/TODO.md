@@ -8,14 +8,17 @@
 - [ ] 📀 Buff Forestry circuits speed bonus 25% => 100%
 - [ ] Add 5% of max durab on combining ThW stones
 - [ ] cinnabar clusters can only be made in the crucible/thaumatorium and not via an alchemist's stone in a crystalization chamber
-- [x] Downgrade DML to avoid Dragon model cant work
 - [ ] end/nether `draconium ore` make smelt into default ore variant to line up with other end/nether ores
-- [ ] Make Singularities sucking in items in inventory
+- [ ] ✨ Make Singularities sucking in items in inventory
 - [ ] TOP remove "(Level: )" text
-- [ ] TOP localize mining levels
-- [x] 📖 "Ratlantis World Generation" remove AnyDamage
-- [ ] 🟢 Add https://legacy.curseforge.com/minecraft/mc-mods/sound-physics-remixin
-- [ ] 🟢 Add https://legacy.curseforge.com/minecraft/mc-mods/enchantment-descriptions
+- [x] TOP localize mining levels
+- [ ] Animals chapter trophy causing shader crash
+- [x] Make `ME controller` reward Rare
+- [ ] Add shader guide `B:shaders.enabled=true`
+- [ ] Fix `Magma Crucible` cant melt Rotten Flesh
+- [ ] Add https://www.curseforge.com/minecraft/mc-mods/noisethreader
+- [x] `printing ingredients` quest add double-layered capacitor
+- [ ] hot mercury is supposed to make blocks of sugar when it flows into liquid starlight, but it just makes an air block instead
 
 ---
 
