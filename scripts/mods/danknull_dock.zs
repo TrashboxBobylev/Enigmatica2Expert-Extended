@@ -42,7 +42,7 @@ for i, catalyst in catalystRequirments {
 }
 
 // Consuming item mechanic
-events.onPlayerInteractBlock(function (e as PlayerInteractBlockEvent) {
+events.register(function (e as PlayerInteractBlockEvent) {
   val world = e.world;
   if (world.remote || e.canceled) return;
 
