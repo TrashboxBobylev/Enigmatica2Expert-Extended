@@ -8,12 +8,9 @@
 			TrophyColorGreen: 151,
 			TrophyShowsTooltip: 1b,
 			TrophyItem: {
-				Damage: 0s,
-				Count: 1b,
-				id: "draconicevolution:mob_soul",
-				tag: {
-					EntityName: "minecraft:cow"
-				}
+				id: "rats:compressed_rat",
+				Count: 1,
+				Damage: 0s
 			},
 			TrophyName: "§cAnimals Master Trophy§r"
 		},
@@ -79,12 +76,9 @@
 				TrophyColorGreen: 151,
 				TrophyShowsTooltip: 1b,
 				TrophyItem: {
-					Damage: 0s,
-					Count: 1b,
-					id: "draconicevolution:mob_soul",
-					tag: {
-						EntityName: "minecraft:cow"
-					}
+					id: "rats:compressed_rat",
+					Count: 1,
+					Damage: 0s
 				},
 				TrophyName: "§cAnimals Master Trophy§r"
 			},
