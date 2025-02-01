@@ -1,33 +1,29 @@
 {
-	x: -4.1d,
+	x: -3.1d,
 	y: 21.3d,
 	text: [
-		"{q.utils.air_charm.desc}"
+		"{q.utils.villager_contract.desc}"
 	],
 	dependencies: [
 		"a6a64aad"
 	],
 	tasks: [{
-		uid: "a0d9672c",
+		uid: "8109d671",
 		type: "item",
 		items: [{
-			tag: {},
-			id: "cyclicmagic:charm_air"
+			item: "villagercontracts:contract"
 		}],
+		ignore_damage: 1b,
 		ignore_nbt: 1b
 	}],
 	rewards: [{
-		uid: "10e7b2e8",
-		type: "custom",
-		title: "{e2ee.quest.common}",
-		icon: {
+		uid: "7f1a6eb5",
+		type: "item",
+		item: {
 			tag: {
 				type: "common"
 			},
 			id: "ftbquests:lootcrate"
-		},
-		tags: [
-			"loot"
-		]
+		}
 	}]
 }

@@ -441,6 +441,7 @@ q.utils.solidifier.desc=Crafting machine. Merges items and liquids. Has unique r
 q.utils.ender_book.desc=Teleport waypoint book. Uses XP per distance from the destination. \n\nOnly works in the same dimension.
 q.utils.automated_user.desc=Right or Left-click on blocks once per second or slower.
 q.utils.air_charm.desc=Walk on air! Uses durability.
+q.utils.villager_contract.desc=Allow to change any villager to another profession.
 q.utils.magma_anvil.desc=Repairs items for 200mb lava / 1 durability point.\n\nSome items would be crafted only with 0 durability and will need to be repaired here to function.
 q.utils.ender_wing.desc=Teleport on spawn. Has personal spawn teleport version.\n\nCrafted with 1 use left, needs to be repaired to use.
 q.utils.powered_diamond_an.desc=Repairs items using 32,000 RF/T
