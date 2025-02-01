@@ -2,9 +2,9 @@
 
 🚧✅❌⚠️ List of priorities:
 
+- [ ] 🟢 Add https://www.curseforge.com/minecraft/mc-mods/noisethreader
 - [ ] ✏️ Add 5% of max durab on combining ThW stones
-- [ ] 🛈 Add shader guide botania.cfg: `B:shaders.enabled=true`
-- [ ] ✏️ Remake VillagerContract item, Implement https://github.com/Krutoy242/Enigmatica2Expert-Extended/issues/437
+- [ ] 🛈 Add shader guide botania.cfg: `B:shaders.enabled=true`, DraconicEvolution.cfg: `B:useCrystalShaders=true`
 - [ ] ✏️ `Benitoite`, `Anglesite` fix benefication
 - [ ] 📀 `Flux Anodizers` should output more ore when working with Netherending Ores
 - [ ] 𝓩𝒮 Fix `/perf chunks` not correct with position of blocks https://i.imgur.com/ktLcvSn.png
@@ -12,15 +12,18 @@
 - [ ] ✏️ cinnabar clusters can only be made in the crucible/thaumatorium and not via an alchemist's stone in a crystalization chamber
 - [ ] ✏️ end/nether `draconium ore` make smelt into default ore variant to line up with other end/nether ores
 - [ ] ✨ Make Singularities sucking in items in inventory
-- [ ] 🖼️ TOP remove "(Level: )" text
-- [ ] 📖 `Animals chapter trophy` causing shader crash, replace item on stand
+- [x] 📖 `Animals chapter trophy` causing shader crash, replace item on stand
 - [ ] ✏️ Fix `Magma Crucible` cant melt Rotten Flesh
-- [ ] 🟢 Add https://www.curseforge.com/minecraft/mc-mods/noisethreader
-- [ ] 💧 `Hot Mercury` is supposed to make blocks of sugar when it flows into liquid starlight, but it just makes an air block instead
-- [ ] 𝓩𝒮 Fix `Axing` trait output unexisting double slabs on breaking
+- [x] 💧 `Hot Mercury` is supposed to make blocks of sugar when it flows into liquid starlight, but it just makes an air block instead
 - [ ] ✨ Download slideashow screenshots from external sources to descrease size of client zip
-- [ ] ✨ Idea: for endgame run difficulty is always 0 for some dimensions.
 - [ ] ❓ Ask `Aragolt` for perf command feedback
+- [x] 🚧 Remove version number duplicate on GH release message
+- [x] 📖 Villager Contract add quest
+- [x] Disable Ender Guardians spawn since bugged sometimes
+- [ ] Geese still dupe armor
+- [ ] 📖 quest `Molten Salt Reactor`: the two blocks with quantity of 2 should be fuel vessel ports and coolant heater ports instead of fuel cell port and reactor vent
+- [ ] Add Stymphalian Birds drop
+- [ ] Add `Ender Guardian` build mob recipe
 
 ---
 
@@ -151,6 +154,7 @@ Planned non-urgent changes, or just good ideas:
 
 ### Other
 
+- [ ] ✨ Idea: for endgame run difficulty is always 0 for some dimensions.
 - [ ] 📀 [(Filled) Tin Can] fix not restoring nutrients
 - [ ] 📀 Speed up Dragon Forge
 - [ ] ✏️ `High Oven` does not provide x2 of fluid for Osmium Ore
@@ -197,7 +201,6 @@ Planned non-urgent changes, or just good ideas:
 - [ ] 🌎 fix Tropical Gardens Spawn In OTG Frozen Ocean
 - [ ] 🕸 Create issues about IC2 Reactor in compact machine and cables disconnection
 - [ ] 🐛 If Conarm armor have huge durability (>65,000), when it get damage over 50% its repairing to 100% and become unbreakable. On some cases it void armor from inventory instead
-- [ ] 📖 sort TC book By Material Power, need fix: https://github.com/Project-RT/RandomTweaker/issues/67
 - [ ] ✏️ Apiarist Villagers should sell Combs cor Cacoa. Seems like its impossible to remove Apiarist trades with `vtt` mod
 - [ ] 🌍 fix Mercury Have Water
 - [ ] 🔨 fix Invincible Combo `Strength Of Will` + `Runic Shield`
