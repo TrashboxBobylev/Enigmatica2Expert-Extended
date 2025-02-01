@@ -252,7 +252,7 @@ static armorStaged as IData[string] =
       {id:"twilightforest:arctic_chestplate"},
       {id:"twilightforest:arctic_leggings"},
       {id:"twilightforest:arctic_boots"},
-      {id:"twilightforest:ice_sword"},
+      {id:"iceandfire:dread_sword"},
       {id:"twilightforest:knightmetal_shield"}
   ]},
   armor_ironwood:{
