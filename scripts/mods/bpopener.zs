@@ -35,6 +35,7 @@ addEntry(<littletiles:container>, false);
 addEntry(<openblocks:dev_null>, true);
 addEntry(<rftools:storage_module_tablet:1>, false);
 addEntry(<thermalexpansion:satchel>, false);
+addEntry(<thaumcraft:hand_mirror>, false);
 addEntry(<travelersbackpack:travelers_backpack>, false);
 addEntry(<botania:flowerbag>, false);
 addEntry(<aeadditions:terminal.universal.wireless>, false);
