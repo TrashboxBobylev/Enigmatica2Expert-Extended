@@ -16,7 +16,8 @@
 				orb: "bloodmagic:magician"
 			},
 			id: "bloodmagic:blood_orb"
-		}]
+		}],
+		ignore_nbt: 1b
 	}],
 	rewards: [{
 		uid: "0ff5bef8",

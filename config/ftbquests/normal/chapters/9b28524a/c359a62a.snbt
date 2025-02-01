@@ -16,7 +16,8 @@
 				orb: "bloodmagic:apprentice"
 			},
 			id: "bloodmagic:blood_orb"
-		}]
+		}],
+		ignore_nbt: 1b
 	}],
 	rewards: [{
 		uid: "acf5e8a8",
