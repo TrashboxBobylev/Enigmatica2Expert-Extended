@@ -429,6 +429,8 @@ Some of the changes from the `Extended` version [[1]](https://github.com/Enigmat
 
 [![Migrate to Java 22](https://img.youtube.com/vi/bXXuKDeFGsQ/0.jpg)](https://www.youtube.com/embed/bXXuKDeFGsQ)
 
+[Also text guide on E2EE Discord server](https://discord.com/channels/911676461050642432/1215301438297735168).
+
 ### Modpack Review (English)
 
 [![Modpack Review](https://img.youtube.com/vi/NAmwHIhZ6yM/0.jpg)](https://www.youtube.com/embed/NAmwHIhZ6yM)
