@@ -163,7 +163,7 @@ return list.map(({ groups: { id, display, items } }) => {
   add(<entity:iceandfire:seaserpent>                  , [<iceandfire:sea_serpent_fang> * 520, <iceandfire:sea_serpent_scales_blue> * 122, <iceandfire:sea_serpent_scales_bronze> * 119, <iceandfire:sea_serpent_scales_deepblue> * 79, <iceandfire:sea_serpent_scales_green> * 136, <iceandfire:sea_serpent_scales_purple> * 99, <iceandfire:sea_serpent_scales_red> * 105, <iceandfire:sea_serpent_scales_teal> * 87, <iceandfire:seaserpent_skull> * 3]); // Sea Serpent
   add(<entity:iceandfire:siren>                       , [<iceandfire:shiny_scales> * 292, <iceandfire:siren_tear> * 2, <minecraft:prismarine_crystals> * 294, <minecraft:prismarine_shard> * 147]); // Siren
 # add(<entity:iceandfire:snowvillager>                , []); // Shaman
-# add(<entity:iceandfire:stymphalianbird>             , []); // Stymphalian Bird
+  add(<entity:iceandfire:stymphalianbird>             , [<iceandfire:stymphalian_skull> * 3, <iceandfire:stymphalian_bird_feather> * 300, <minecraft:iron_ingot> * 200, <thermalfoundation:material:163> * 200]); // Stymphalian Bird
   add(<entity:industrialforegoing:pink_slime>         , [<industrialforegoing:pink_slime> * 100]); // Pink Slime
   add(<entity:mekanism:babyskeleton>                  , [<minecraft:arrow> * 103, <minecraft:bone> * 104, <minecraft:bow> * 13, <minecraft:skull> * 3]); // Baby Skeleton
   add(<entity:minecraft:bat>                          , [<actuallyadditions:item_misc:15> * 7, <minecraft:leather> * 79]); // Bat
