@@ -1,5 +1,6 @@
 [main/ERROR] [mixin]: Failed reading REFMAP JSON from : java.lang.NullPointerException Cannot invoke "org.spongepowered.asm.mixin.refmap.ReferenceMapper.setResourceName(String)" because "mapper" is null
 [main/ERROR] [mixin]: Critical problem: mixins.stellar_core_forge_asmmodparser.json:MixinASMModParser from mod unknown-owner target net.minecraftforge.fml.common.discovery.asm.ASMModParser was loaded too early.
+[main/ERROR] [LoliASM]: Optifine is installed. On demand sprites won't be activated as Optifine already has Smart Animations.
 [Client thread/WARN] [mixin]: Method overwrite conflict for hashCode in mixins.vintagefix.json:blockstates.FastMapStateHolderMixin from mod unknown-owner, previously written by github.kasuminova.stellarcore.mixin.minecraft.blockstateimpl.MixinStateImplementation. Skipping method.
 [Client thread/WARN] [mixin]: @Mixin target mcp.mobius.waila.api.impl.MetaDataProvider was not found mixins.tweakedlib.top.json:MetaDataProviderMixin from mod tweakedlib-2.0.1.jar
 [Client thread/WARN] [mixin]: Static binding violation: PRIVATE @Overwrite method func_76615_h in mixins.alfheim.json:ChunkMixin from mod unknown-owner cannot reduce visibiliy of PUBLIC target method, visibility will be upgraded.
@@ -26,4 +27,5 @@ Outputs:
 net.minecraft.item.ItemStack: [[1xitem.thaumadditions:salt_essence@0 thaumadditions:salt_essence]]
 Inputs:
 net.minecraft.item.ItemStack: [[1xitem.thaumadditions:salt_essence@0 thaumadditions:salt_essence]]
-  [...]
+  [...]
+[Client thread/WARN] [Had Enough Items]: Sending runtime to plugin: li.cil.oc.integration.jei.ModPluginOpenComputers took 111 ms
