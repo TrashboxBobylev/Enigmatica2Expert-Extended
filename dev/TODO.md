@@ -24,6 +24,7 @@
 - [ ] 📖 quest `Molten Salt Reactor`: the two blocks with quantity of 2 should be fuel vessel ports and coolant heater ports instead of fuel cell port and reactor vent
 - [ ] Add Stymphalian Birds drop
 - [ ] Add `Ender Guardian` build mob recipe
+- [ ] Retrospectively fix UU matter negative amount
 
 ---
 
