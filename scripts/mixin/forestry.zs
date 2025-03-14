@@ -48,7 +48,7 @@ zenClass MixinFermenterRecipeManager {
 zenClass MixinTileRainTank {
     #mixin Static
     #mixin ModifyConstant {method: "<clinit>", constant: {intValue: 10}}
-    function increaseCapacity(value as int) as int {
+    function increaseFluidPerOperation(value as int) as int {
         return 30000;
     }
 }
