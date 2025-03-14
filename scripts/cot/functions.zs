@@ -28,6 +28,7 @@ function abs(n as double) as double { return n < 0 ? -n : n; }
   drops.add(<contenttweaker:benitoite>);
   for i in 0 .. fortune { drops.add(<contenttweaker:benitoite> % 50); }
 };
+
 // ------------------------------------------
 // Conglomerates
 // ------------------------------------------
@@ -97,6 +98,7 @@ val lifeRecipes = {
   }
   if (hadEffect) createParticles(world, p, EnumParticleTypes.END_ROD, 10);
 };
+
 // ------------------------------------------
 // Coral
 // ------------------------------------------
