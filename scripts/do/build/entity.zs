@@ -223,7 +223,7 @@ function add(entity as IEntityDefinition, volume as string[][], map as IItemStac
     ~ '\n  "catalyst": "engineersdecor:sign_caution",'
     ~ '\n  "catalyst-nbt": "{display:{LocName:\\"tooltips.lang.not_compact_recipe\\"}}",'
     ~ '\n'
-    ~ '  ' ~ s.replaceAll('\n(.)', '\n  $1')
+    ~ s.replaceAll('\n(.)', '\n  $1')
     ~ '\n}\n'
     );
   }
