@@ -1,5 +1,6 @@
 #modloaded backpackdisplay
 #sideonly client
+#reloadable
 
 import mods.backpackdisplay.BackpackDisplay.addBackDisplay;
 import crafttweaker.item.IItemStack;
