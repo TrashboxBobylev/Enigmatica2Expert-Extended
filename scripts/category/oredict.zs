@@ -638,6 +638,8 @@ addItems(<ore:itemXP>, [
 ]);
 
 // Add oredict for benefication
+add(<ore:oreBenitoite>, <contenttweaker:ore_benitoite>);
+add(<ore:oreAnglesite>, <contenttweaker:ore_anglesite>);
 add(<ore:gemBenitoite>, <contenttweaker:benitoite>);
 add(<ore:gemAnglesite>, <contenttweaker:anglesite>);
 
