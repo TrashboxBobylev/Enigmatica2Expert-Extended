@@ -609,6 +609,14 @@ add(<ore:blockSugarcane>, <quark:reed_block>);
 add(<ore:blockSugar>, <quark:sugar_block>);
 add(<ore:blockFlesh>, <thaumcraft:flesh_block>);
 
+// Make draconic ore Nether/End variants like all other Nether/End ores
+removeItems(<ore:oreDraconium>, [
+  <draconicevolution:draconium_ore>,
+  <draconicevolution:draconium_ore:1>,
+  <draconicevolution:draconium_ore:2>,
+]);
+add(<ore:oreDraconium>, <draconicevolution:draconium_ore>);
+
 // Rearrange items in Dye Oredict to better integration
 // with AA [Lens Of Color]
 removeItems(<ore:dyeBrown>, [<enderio:item_material:49>, <industrialforegoing:fertilizer>]);
