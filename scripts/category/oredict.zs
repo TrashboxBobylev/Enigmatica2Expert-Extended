@@ -660,6 +660,10 @@ add(<ore:aliencrystalYellow>, <advancedrocketry:crystal:4>);
 add(<ore:aliencrystalOrange>, <advancedrocketry:crystal:5>);
 add(<ore:sandOxidisedFerric>, <advancedrocketry:hotturf>);
 
+// Coil copies
+add(<ore:coilGold>, <nuclearcraft:turbine_dynamo_coil:3>);
+add(<ore:coilAluminum>, <nuclearcraft:turbine_dynamo_coil:2>);
+
 // Sequoia
 addItems(<ore:logSequoia>, [
   <forestry:logs.1:3>,
