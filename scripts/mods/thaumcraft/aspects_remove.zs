@@ -146,6 +146,7 @@ val removeItemAspectList = [
 <thermalfoundation:material:22>,
 ] as IItemStack[];
 for item in removeItemAspectList {
+  if (isNull(item)) continue;
   item.removeAspects(all);
 }
 

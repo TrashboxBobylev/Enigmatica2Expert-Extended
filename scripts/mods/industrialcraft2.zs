@@ -455,53 +455,6 @@ mods.actuallyadditions.Compost.addRecipe(<ic2:crop_res:2>, <minecraft:wool:13>, 
 // Scrap making from seed bags
 scripts.process.crush(<ic2:crop_seed_bag>, <ic2:crafting:23>, 'only: Macerator', null, null);
 
-function addScrapCrush(source as IItemStack, amount as int) as void {
-  scripts.process.crush(
-    source,
-    <ic2:crafting:23> * amount,
-    'only: Macerator SagMill',
-    [<ic2:crafting:23> * (amount / 2), <ic2:crafting:23> * (amount / 4)],
-    [0.5f, 0.5f]);
-}
-
-function addPieceCrush(source as IItemStack, amount as int) as void {
-  val itemStr = source.definition.id
-    + (source.damage != 0 ? ':' ~ source.damage : '');
-  val piece = <littletiles:blocklittletiles>.withTag({
-    bBox: [3, 3, 3, 5, 5, 5] as int[],
-    grid: 8,
-    tile: { block: itemStr }, block: itemStr});
-
-  val pieceAmount = min(64, amount);
-  scripts.process.crush(
-    source,
-    piece * pieceAmount,
-    'only: Macerator SagMill',
-    [piece * (pieceAmount / 2), piece * (pieceAmount / 4)],
-    [0.5f, 0.5f]);
-
-  val piece64 = <littletiles:blocklittletiles>.withTag({
-    bBox: [7, 7, 7, 8, 8, 8] as int[],
-    tile: { block: itemStr }, block: itemStr});
-
-  if (amount > 64) {
-    val piece64Amount = amount / 64;
-    scripts.process.crush(
-      piece,
-      piece64 * piece64Amount,
-      'only: Macerator SagMill',
-      [piece64 * (piece64Amount / 2), piece64 * (piece64Amount / 4)],
-      [0.5f, 0.5f]);
-  }
-
-  addScrapCrush(amount > 64 ? piece64 : piece, 64);
-}
-
-addScrapCrush(<rats:garbage_pile>, 16);
-addScrapCrush(<nuclearcraft:wasteland_earth>, 32);
-addPieceCrush(<trinity:radioactive_earth>, 64);
-addPieceCrush(<trinity:radioactive_earth2>, 4096);
-
 // --------------------------------------------------------------------------------------------
 // CROPS
 // --------------------------------------------------------------------------------------------

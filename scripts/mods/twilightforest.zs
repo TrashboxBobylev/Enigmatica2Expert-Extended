@@ -3,7 +3,6 @@
 import crafttweaker.item.IIngredient;
 import crafttweaker.item.IItemStack;
 import crafttweaker.item.WeightedItemStack;
-import loottweaker.vanilla.loot.Functions;
 import crafttweaker.entity.IEntityDefinition;
 
 scripts.lib.loot.tweak('twilightforest:entities/helmet_crab', 'fish', 'minecraft:fish', null, [<harvestcraft:crabrawitem>], [1, 3]);
@@ -21,16 +20,6 @@ val toRemove = [
 for item in toRemove {
   Purge(item);
 }
-
-// Add Little Blueprints to Aurora caches
-loottweaker.LootTweaker
-  .getTable('twilightforest:structures/aurora_cache/common')
-  .getPool('main')
-  .addItemEntryHelper(<littletiles:recipeadvanced>, 1, 0, [Functions.setCount(2, 6)], []);
-loottweaker.LootTweaker
-  .getTable('twilightforest:structures/aurora_room/common')
-  .getPool('main')
-  .addItemEntryHelper(<littletiles:recipeadvanced>, 1, 0, [Functions.setCount(1, 3)], []);
 
 /////////////////////////////////////////
 // Better Questing Ram Drop
