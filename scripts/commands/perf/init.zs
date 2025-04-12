@@ -28,4 +28,12 @@ x.addSubCommand(
   }
 );
 
+x.addSubCommand(
+  'entities',
+  'information about §lloaded entities',
+  function (command as ZenCommand, server as IServer, sender as ZenUtilsCommandSender, args as string[]) as IData {
+    return scripts.commands.perf.entities.show(getCommandSenderAsPlayer(sender));
+  }
+);
+
 x.register();
