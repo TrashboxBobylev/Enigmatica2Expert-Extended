@@ -42,10 +42,10 @@ Forbidder()
 .onOpen('cofh.thermaldynamics.gui.container.ContainerDuctConnection')
 .value(2)
 
-.stack(<nuclearcraft:water_source>).value(2).events('pickup place look')
+.stack(<nuclearcraft:water_source>).value(2).events('pickup place interact')
 .stack(<openblocks:hang_glider>).value(2).events('use')
-.stack(<nuclearcraft:water_source_compact>).value(3).events('pickup place look')
-.stack(<nuclearcraft:water_source_dense>).value(4).events('pickup place look')
+.stack(<nuclearcraft:water_source_compact>).value(3).events('pickup place interact craft')
+.stack(<nuclearcraft:water_source_dense>).value(4).events('pickup place interact craft')
 .stack(<scannable:scanner>).onOpen('li.cil.scannable.common.container.ContainerScanner').value(8).events('pickup')
 
 .stacks('conduits', [
@@ -85,12 +85,13 @@ Forbidder()
   <enderstorage:ender_storage>,
   <enderstorage:ender_storage:1>,
 ])
-.value(20).events('pickup craft place look')
+.onOpen('codechicken.enderstorage.container.ContainerEnderItemStorage')
+.value(20).events('pickup craft place interact')
 
 .stack(<gendustry:imprinter>).onOpen('net.bdew.gendustry.machines.imprinter.ContainerImprinter').value(40).events('pickup craft')
 .stack(<gendustry:replicator>).onOpen('net.bdew.gendustry.machines.replicator.ContainerReplicator').value(60).events('pickup craft')
 
-.stack(<appliedenergistics2:controller>).value(100).events('pickup craft place look replicate')
+.stack(<appliedenergistics2:controller>).value(100).events('pickup craft place interact replicate')
 
 .stacks('fluxnetworks', [
   <fluxnetworks:fluxpoint>,

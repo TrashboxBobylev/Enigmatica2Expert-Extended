@@ -71,25 +71,32 @@ zenClass Forbidder {
 
     // Check for existing events
     for event in evts {
-     if (!(['pickup', 'open', 'look', 'craft', 'place', 'use', 'hold', 'replicate'] as string[] has event))
+     if (!(['pickup', 'open', 'look', 'craft', 'place', 'use', 'hold', 'replicate', 'interact'] as string[] has event))
       logger.logWarning('Acquire error: trying to add absent acquiring event: "'~event~'"');
     }
 
+    val blockEvents = ['place', 'look', 'interact'] as string[];
     for stack in stacks {
       for event in evts { pushRegistry(event, stack); }
 
-      if (evts has 'place' || evts has 'look') {
+      // Fill special map for block events
+      var hasBlockEvt = false;
+      for evtName in blockEvents {
+        if(evts has evtName) {
+          hasBlockEvt = true;
+          break;
+        }
+      }
+      if (hasBlockEvt) {
         val block = stack.asBlock();
         if (!isNull(block)) {
           val blockDef = block.definition;
           if (!isNull(blockDef)) {
-            if (evts has 'place') {
-              if(isNull(blockDefRegistry.place)) blockDefRegistry['place'] = {};
-              blockDefRegistry.place[blockDef] = true;
-            }
-            if (evts has 'look') {
-              if(isNull(blockDefRegistry.look)) blockDefRegistry['look'] = {};
-              blockDefRegistry.look[blockDef] = true;
+            for evtName in blockEvents {
+              if (evts has evtName) {
+                if(isNull(blockDefRegistry[evtName])) blockDefRegistry[evtName] = {};
+                blockDefRegistry[evtName][blockDef] = true;
+              }
             }
           }
         }

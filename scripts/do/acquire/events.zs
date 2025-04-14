@@ -20,8 +20,9 @@ function pushRegistry(evtName as string, stack as IItemStack) as void {
 
 function checkAcquire(evtName as string, player as IPlayer, stack as IItemStack) as void {
   if (isNull(player) || player.creative || player.spectator) return;
+  if (evtName != 'open' && isNull(registry[evtName])) return;
   val stackAnyAmount = stack.anyAmount();
-  if (evtName != 'open' && (isNull(registry[evtName]) || isNull(registry[evtName][stackAnyAmount]))) return;
+  if (evtName != 'open' && isNull(registry[evtName][stackAnyAmount])) return;
   onAcquire(evtName, player, stackAnyAmount);
 }
 
@@ -35,16 +36,23 @@ events.register(function (e as crafttweaker.event.PlayerCraftedEvent) {
 events.register(function (e as crafttweaker.event.PlayerTickEvent) {
   if (e.player.world.remote || e.phase != 'END') return;
 
+  if (e.player.world.provider.worldTime % 10 == 0 && !isNull(e.player.native.openContainer)) {
+    checkContainer(e.player, toString(e.player.native.openContainer));
+  }
+
   onHold(e.player);
   onLook(e.player);
 });
 
 function onHold(player as IPlayer) as void {
   if (isNull(player.mainHandHeldItem)) return;
+  if (isNull(registry.hold)) return;
   checkAcquire('hold', player, player.mainHandHeldItem);
 }
 
 function onLook(player as IPlayer) as void {
+  if (isNull(registry.look)) return;
+
   val normal = player.lookingDirection.scale(25);
   val trace = player.getRayTrace(25, 1.0f, false, true, false);
   if (isNull(trace) || trace.isEntity || trace.isMiss || !trace.isBlock) return;
@@ -62,14 +70,16 @@ events.register(function (e as crafttweaker.event.PlayerOpenContainerEvent) {
   if (isNull(e.player.world) || e.player.world.remote) return;
 
   val serialized = e.container as string;
-  val class = serialized.split('@')[0];
+  utils.log('~~opened container: ' ~ serialized);
+  checkContainer(e.player, e.container);
+});
 
-  // utils.log('~~opened container: ' ~ serialized);
-
+function checkContainer(player as IPlayer, containerSerialized as string) as void {
+  val class = containerSerialized.split('@')[0];
   val stack = stringRegistry[class];
   if(isNull(stack)) return;
-  checkAcquire('open', e.player, stack);
-});
+  checkAcquire('open', player, stack);
+}
 
 events.register(function (e as crafttweaker.event.PlayerPickupItemEvent) {
   if (isNull(e.player.world) || e.player.world.remote || isNull(e.item) || isNull(e.item.item)) return;
@@ -89,4 +99,14 @@ events.register(function (e as crafttweaker.event.BlockPlaceEvent) {
   if (isNull(itemBlock)) return;
 
   checkAcquire('place', e.player, itemBlock);
+});
+
+events.register(function (e as crafttweaker.event.PlayerInteractEvent) {
+  if (e.world.remote || isNull(e.player) || isNull(e.block) || isNull(e.block.definition)) return;
+  if (isNull(blockDefRegistry.interact) || isNull(blockDefRegistry.interact[e.block.definition])) return;
+
+  val itemBlock = e.block.getItem(e.world, e.position, e.blockState);
+  if (isNull(itemBlock)) return;
+
+  checkAcquire('interact', e.player, itemBlock);
 });
