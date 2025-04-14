@@ -1,10 +1,10 @@
-#priority 950
 #modloaded bloodmagic requious
+#priority 950
 
-import mods.requious.AssemblyRecipe;
 import crafttweaker.item.IIngredient;
 import crafttweaker.item.IItemStack;
 import mods.randomtweaker.jei.IJeiUtils;
+import mods.requious.AssemblyRecipe;
 
 // -----------------------------------------------------------------------
 // -----------------------------------------------------------------------
@@ -66,15 +66,14 @@ function addMeteor(catalyst as IItemStack, cost as int, oreList as IIngredient[]
 
 // -----------------------------------------------------------------------
 
-val p = mods.jei.JEI.createJei('le_vulcanos_frigius', 'Le Vulcanos Frigius');
-p.setBackground(IJeiUtils.createBackground(4*18, 1*18));
-p.addRecipeCatalyst(<bloodmagic:ritual_diviner>.withTag({current_ritual: "cobblestone"}));
+var p = mods.jei.JEI.createJei('le_vulcanos_frigius', 'Le Vulcanos Frigius');
+p.setBackground(IJeiUtils.createBackground(4 * 18, 1 * 18));
+p.addRecipeCatalyst(<bloodmagic:ritual_diviner>.withTag({current_ritual: 'cobblestone'}));
 p.addRecipeCatalyst(<bloodmagic:arcane_ashes>);
-p.setIcon(<bloodmagic:ritual_diviner>.withTag({current_ritual: "cobblestone"}));
+p.setIcon(<bloodmagic:ritual_diviner>.withTag({current_ritual: 'cobblestone'}));
 p.addSlot(IJeiUtils.createItemSlot('input', 0, 0, true, false));
-p.addSlot(IJeiUtils.createItemSlot('input', 18, 0, true, false));
 p.addElement(IJeiUtils.createArrowElement(24, 1, 0));
-p.addSlot(IJeiUtils.createItemSlot('output', 3*18, 0, false, false));
+p.addSlot(IJeiUtils.createItemSlot('output', 3 * 18, 0, false, false));
 p.setModid('bloodmagic');
 p.register();
 
