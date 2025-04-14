@@ -4,14 +4,13 @@
 #sideonly client
 
 import crafttweaker.data.IData;
-import mods.ctintegration.util.ArrayUtil;
 import mods.zenutils.NetworkHandler;
-import mods.zenutils.StaticString;
-import mods.zenutils.StringList;
 
+import scripts.commands.build.isClose;
 import scripts.commands.perf.loaders.message;
 import scripts.commands.perf.loaders.tpMessage;
-import scripts.commands.build.isClose;
+import scripts.commands.perf.util.sortArrayBy;
+import scripts.commands.perf.util.naturalInt;
 
 // ⓪➀➁➂➃➄➅➆➇➈➉
 
@@ -84,17 +83,9 @@ function getGroups(chunks as int[]) as int[][] {
   }
 
   // Gather score and indexes together to sort them
-  val dataList = StringList.empty();
-  for i, count in neighbours {
-    dataList.add(
-      `${sortableInt(count)} ${sortableInt(1073741823 - chunks[i * 2])}:${sortableInt(1073741823 - chunks[i * 2 + 1])} ${i}`);
-  }
-  val sortedData = dataList.toArray();
-  ArrayUtil.sort(sortedData);
-  ArrayUtil.reverse(sortedData);
-  utils.log(`🌍 Chunk sorted data "neughbours_score distance_value index": \n${StaticString.join(sortedData, '\n')}`);
-  val sortedIndexes = intArrayOf(sortedData.length, -1);
-  for i, line in sortedData { sortedIndexes[i] = line.split(' ')[2] as int; }
+  val sortedIndexes = sortArrayBy(neighbours, function(count as int, i as int) as string {
+    return `${naturalInt(count)} ${naturalInt(1073741823 - chunks[i * 2])}:${naturalInt(1073741823 - chunks[i * 2 + 1])} ${i}`;
+  });
 
   // Group indexes
   var groups = [] as int[][];
@@ -157,10 +148,6 @@ function minMaxing(minMax as int[], x as int, z as int) as void {
   if (z < minMax[1]) minMax[1] = z;
   if (x > minMax[2]) minMax[2] = x;
   if (z > minMax[3]) minMax[3] = z;
-}
-
-function sortableInt(n as int) as string {
-  return StaticString.repeat(0, 10 - (`${n}`).length) ~ n;
 }
 
 zenClass Messenger {
