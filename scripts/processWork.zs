@@ -253,7 +253,7 @@ function workEx(machineNameAnyCase as string, exceptionsAnyCase as string,
     }
 
     if (machineName == 'eu2crusher') {
-      if (strict) { mods.extrautils2.Crusher.remove(outputItem0); }
+      if (strict) { mods.extrautils2.Crusher.remove(inputIngr0.itemArray[0]); }
 
       for ii in inputIngr0.itemArray {
         if (haveExtra) {

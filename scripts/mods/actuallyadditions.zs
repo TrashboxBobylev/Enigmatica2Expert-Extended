@@ -379,9 +379,6 @@ scripts.process.crush(<ore:blockQuartzBlack>, <actuallyadditions:item_dust:7> * 
 // Missed Crushed Emerald recipe
 scripts.process.crush(<ore:gemEmerald>, <actuallyadditions:item_dust:3>, 'Only: Grindstone AEGrinder', null, null);
 
-// Manually add silver secondary output
-scripts.process.crush(<ore:oreGold>, <thermalfoundation:material:1> * 2, 'strict: eu2crusher', [<contenttweaker:dust_tiny_silver>], [1.0f]);
-
 // Recycle Quark crystals
 function recycleCrystal(input as IItemStack, output as IItemStack) {
   scripts.process.crush(input, output, 'Macerator Grindstone AEGrinder ThermalCentrifuge mekCrusher MekEnrichment SagMill', null, null);
