@@ -6,7 +6,7 @@
 		"{q.gates.gate_deep_mob_lea.desc}"
 	],
 	dependencies: [
-		"5672d99b"
+		"1bd15ee4"
 	],
 	tasks: [{
 		uid: "f66967d0",

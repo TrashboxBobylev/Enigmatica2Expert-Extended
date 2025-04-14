@@ -103,6 +103,6 @@ craft.remake(<xnet:redstone_proxy>, ['pretty',
   '  ♥  ',
   '♥ F ♥',
   '  ♥  '], {
-  '♥': <astralsorcery:blockblackmarble>,
+  '♥': <psi:material:3>,
   'F': <xnet:facade>, // Facade
 });

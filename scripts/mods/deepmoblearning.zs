@@ -14,9 +14,9 @@ utils.addEnchRecipe(<deepmoblearning:glitch_infused_sword>,
 
 recipes.remove(<deepmoblearning:soot_covered_plate> * 8);
 recipes.addShaped(<deepmoblearning:soot_covered_plate> * 4, [
-  [null, <astralsorcery:blockblackmarble>, null],
+  [null, <psi:material:3>, null],
   [<biomesoplenty:crystal>, <tconstruct:large_plate>.withTag({ Material: 'black_quartz' }), <biomesoplenty:crystal>],
-  [null, <astralsorcery:blockblackmarble>, null]]);
+  [null, <psi:material:3>, null]]);
 
 remakeEx(<deepmoblearning:extraction_chamber>, [
   [<ore:sheetTitaniumIridium>, <mekanism:glowpanel:11>, <ore:sheetTitaniumIridium>],
@@ -28,7 +28,7 @@ remakeEx(<deepmoblearning:simulation_chamber>, [
 
 craft.reshapeless(<patchouli:guide_book>.withTag({"patchouli:book": "deepmoblearning:book"}), 'AB', {
   A: <minecraft:book>,
-  B: <astralsorcery:blockblackmarble>,
+  B: <psi:material:3>,
 });
 
 craft.remake(<deepmoblearning:deep_learner>, ['pretty',
@@ -38,7 +38,7 @@ craft.remake(<deepmoblearning:deep_learner>, ['pretty',
   '□': <deepmoblearning:soot_covered_plate>,
   '♥': <minecraft:repeater>,
   'G': <ore:paneGlass>,
-  'S': <astralsorcery:blockblackmarble>,
+  'S': <psi:material:3>,
 });
 
 # [Soot-covered Machine Casing]*2 from [3D Print][+3]
@@ -87,7 +87,7 @@ craft.remake(<deepmoblearning:data_model_blank>, ['pretty',
   '* M *',
   'M ♥ M',
   '* M *'], {
-  '♥': <astralsorcery:blockblackmarble>,
+  '♥': <psi:material:3>,
   '*': <ore:itemPulsatingCrystal>, // Pulsating Crystal
   'M': <randomthings:ingredient:13>,
 });
