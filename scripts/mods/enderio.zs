@@ -810,7 +810,7 @@ for block, result in {
   <mekanism:basicblock:8>         : { <enderio:item_material:2>: 16 },
 
   <libvulpes:structuremachine>    : { <enderio:item_material:68>: 10 },
-  <appliedenergistics2:controller>: { <enderio:item_material:68>: 16 },
+  <appliedenergistics2:controller>: { <enderio:item_material:68>: 64 },
 } as int[IItemStack][IItemStack] {
   for output, amount in result {
     mods.inworldcrafting.ExplosionCrafting.explodeBlockRecipe(output * amount, block);
