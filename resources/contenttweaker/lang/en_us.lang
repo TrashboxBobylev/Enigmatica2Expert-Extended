@@ -555,6 +555,7 @@ tooltips.lang.dropper_into_world=§cDropped into the world on death
 tooltips.lang.power_tier_7=§cPower Tier 7, §4any IC2 cable explodes
 tooltips.lang.fluid.corium=§aObtainable by melting down a Fission Reactor
 tooltips.lang.vanilla_tools=§4Vanilla tools don't work. Use Tinkers' Construct tools
+tooltips.lang.cosmetic_equipment=§eCosmetic gear. Better use TConstruct materials.
 tooltips.lang.ae_lag=§cDo not put this into AE storage system or it will cause lag.
 tooltips.lang.dont_put_into_ae=§cDo not put this into AE storage system or you will not be able to take it out and lags will occur.
 tooltips.lang.tcon.diamond=§bUse as §lDiamond§r modifier
