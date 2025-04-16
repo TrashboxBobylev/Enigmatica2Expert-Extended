@@ -1,4 +1,3 @@
-#loader crafttweaker
 #reloadable
 
 import crafttweaker.item.IItemStack;
