@@ -3,7 +3,7 @@
 import mods.randomtweaker.tconstruct.IBook.changeMaterialItem;
 import mods.randomtweaker.tconstruct.IBook.setMaterialPriority;
 
-// changeMaterialItem('sunnarium', <minecraft:double_plant>);
+changeMaterialItem('sunnarium', <minecraft:double_plant>);
 // changeMaterialItem('dark_matter', ???);
 // changeMaterialItem('red_matter', ???);
 changeMaterialItem('fusewood', <botania:shimmerwoodplanks>);
