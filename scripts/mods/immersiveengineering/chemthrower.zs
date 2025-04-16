@@ -1,5 +1,5 @@
 #modloaded immersiveengineering alfinivia biomesoplenty
-#priority 900
+#priority -100
 
 import crafttweaker.block.IBlockState;
 import crafttweaker.item.IItemStack;
@@ -70,6 +70,20 @@ addChemthrowerEffect(<fluid:ic2construction_foam>, false, false,
     val target = pos.getOffset(side, 1);
     if (world.isAirBlock(target) || world.getBlockState(target).material.replaceable) {
       world.setBlockState(<blockstate:ic2:foam:type=normal>, target);
+    }
+  }
+);
+
+addChemthrowerEffect(<fluid:xu_demonic_metal>, false, false,
+  // IChemEntityEffect
+  function (target,shooter,throwerstack,fluid) {},
+
+  // IChemBlockEffect
+  function (world as IWorld, pos as IBlockPos, side as IFacing, shooter as IPlayer, throwerstack as IItemStack, fluid as ILiquidStack) as void {
+    if (world.remote) return;
+    
+    if (scripts.do.portal_spread.tick.currentDirection.update(0, -1)) {
+      scripts.do.portal_spread.tick.spreadBlock(world, pos, true);
     }
   }
 );
