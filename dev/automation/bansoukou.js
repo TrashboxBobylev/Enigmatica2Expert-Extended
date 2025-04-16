@@ -265,7 +265,7 @@ function decompile(unpatchedFilePath, patchedFilePath) {
 
 function decompileFile(source, target) {
   execSyncInherit(
-    '"C:/Program Files/Java/jdk-13.0.2/bin/java.exe"'
+    '"D:/Program Files/Java/zulu-24/bin/java.exe"'
     + ' -jar'
     + ' cfr-0.152.jar'
     + ` "${source}"`

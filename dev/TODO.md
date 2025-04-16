@@ -2,8 +2,11 @@
 
 🚧✅❌⚠️ List of priorities:
 
+- [ ] 🟢 Add https://www.curseforge.com/minecraft/mc-mods/random-complement
+- [ ] 🟢 Add https://www.curseforge.com/minecraft/mc-mods/extended-crafting-terminals-for-applied
+- [ ] Draconium Ore pieces cant be turned into ore (onloy on server) https://github.com/Krutoy242/Enigmatica2Expert-Extended/commit/f8d85415782be0d7234c037f232b8ee5ab9ac0eb
+- [ ] Idea: Difficulty cant grow if you didnt died
 - [ ] 🦆 Geese still dupe armor
-- [ ] 🏹 Fix projectiles accumulated on chunk borders, such as Scythe or Beam Laser
 - [ ] 𝓩𝒮 `/perf` improvments:
   > - [ ] Group chunks by dimension
   > - [ ] Split big reports to pages
@@ -18,6 +21,8 @@
 Planned non-urgent changes, or just good ideas:
 
 ### "Performance ⚡"
+- [ ] ⚡ Fix projectiles accumulated on chunk borders, such as Scythe or Beam Laser
+- [ ] ⚡ Remove Openblock's `Vacuum Hoppers` since they cause lags
 - [ ] ⚡ Improve performance of Replicator tick with crystal and other requirments
 - [ ] ⚡ Disallow to connect `Storage Bus` to ISS - can cause 10% TPS strain
 - [ ] ⚡ `OTG` should probably be optional mod when game starting since it laggy
@@ -91,6 +96,7 @@ Planned non-urgent changes, or just good ideas:
 - [ ] ✏️ Add usage of `Perfect Fuel` in NCO (with `flux goo` as sub-product)
 
 ### "Endgame" expansion
+- [ ] ✏️ Replace `ET Crystal Blocks` in recipes to crystals, since blocks is just more time to wait
 - [ ] ✏️ Add `Garbage Singularity`
 - [ ] 🌍 Teleport player to Alien Forest with Blood Magic TP ritual
 - [ ] ✏️ Add `Machine Frame Singularity`
@@ -145,6 +151,10 @@ Planned non-urgent changes, or just good ideas:
 
 ### Other
 
+- [ ] 🌍 Idea: fountains from Chemical Spreader projectiles that spread functionable fluid, transforming landscape around
+- [ ] 🟡 Integrate `My Precious`: add to Dungeon loot, add in Loot Boxes
+- [ ] 💡 Idea: items doesnt have borders if already acquired
+- [ ] 💡 Idea: Chain commands with `& /`
 - [ ] 🔵 integrate **Legendary Tooltips** (probably some kind of special item category tooltips)
 - [ ] 🔨 Little Tiles remove limits (but how? Its already have big limits)
 - [ ] 🔵 Integrate more textures with `Lumenized` (contributor's help welcomed here)
