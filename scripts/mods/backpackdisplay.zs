@@ -203,3 +203,11 @@ addBackDisplay(<randomthings:enderletter>, function(item) {
 
   return result;
 });
+
+/*
+Rubble
+*/
+addBackDisplay(<my_precious:rubble>, function(item) {
+  if (isNull(item.tag) || isNull(item.tag.StoredItem)) return null;
+  return [IItemStack.fromData(item.tag.StoredItem)] as IItemStack[];
+});
