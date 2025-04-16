@@ -4,6 +4,12 @@
 import crafttweaker.block.IBlockState;
 import crafttweaker.item.IItemStack;
 import crafttweaker.liquid.ILiquidStack;
+import crafttweaker.player.IPlayer;
+import crafttweaker.world.IBlockPos;
+import crafttweaker.world.IFacing;
+import crafttweaker.world.IWorld;
+
+import mods.alfinivia.ImmersiveEngineering.addChemthrowerEffect;
 
 // -----------------------------------------------------
 // Basalt remake for Basalt Sediment Alt
@@ -31,12 +37,12 @@ for liquid, conversions in throwerRecipes {
     }
   }
 
-  mods.alfinivia.ImmersiveEngineering.addChemthrowerEffect(liquid, false, false,
+  addChemthrowerEffect(liquid, false, false,
     // IChemEntityEffect
     function (target,shooter,throwerstack,fluid) {},
 
     // IChemBlockEffect
-    function (world,pos,side,shooter,throwerstack,fluid) {
+    function (world as IWorld, pos as IBlockPos, side as IFacing, shooter as IPlayer, throwerstack as IItemStack, fluid as ILiquidStack) as void {
       if (world.remote) return;
       val blockState = world.getBlockState(pos);
       for inputs, outputs in throwerRecipes[liquid] {
