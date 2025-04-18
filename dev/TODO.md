@@ -7,6 +7,8 @@
 - [ ] Draconium Ore pieces cant be turned into ore (onloy on server) https://github.com/Krutoy242/Enigmatica2Expert-Extended/commit/f8d85415782be0d7234c037f232b8ee5ab9ac0eb
 - [ ] Idea: Difficulty cant grow if you didnt died
 - [ ] 🦆 Geese still dupe armor
+- [ ] Replace Blocks with Crystals for ET recipes (to descrease time need for next tier)
+- [ ] 📀 change of `Trick: Ebony and Ivory` spell from "The End dimension" to "The End biome"
 - [ ] 𝓩𝒮 `/perf` improvments:
   > - [ ] Group chunks by dimension
   > - [ ] Split big reports to pages
@@ -45,6 +47,9 @@ Planned non-urgent changes, or just good ideas:
 - [ ] 📖 Suggest IC2 reactors schemas
 - [ ] 📖 Add note that Mana Enchanter can put Airtight Seal on TCon armor
 - [ ] 📖 Add quest about Troll smashing tools
+- [ ] 📖 `Portal Spread` add quest
+- [ ] 📖 `Conglomerate of Coal` add info about using as Portal catalyst
+- [ ] 📖 Note that `Singularities` consume items in inventory
 
 ### "Battle" expansion
 - [ ] ✏️ Buff EU saber - give it more damage? But better split entities in two.
@@ -58,7 +63,6 @@ Planned non-urgent changes, or just good ideas:
 - [ ] 🍐 Fix Papaya manual tree harvesting with custom interract event https://github.com/Krutoy242/Enigmatica2Expert-Extended/issues/426
 - [ ] ✏️ Make necessary to tame and breed animals: `Amphitere, Cocatrice, Hippocampus, Hyppogryph, Boars, `
 - [ ] ✏️ Rework size changing potions on mobs
-- [ ] ✏️ `Woodweave singularity` add required amount
 - [ ] ✏️ Rework Entity melting in Smeltery, migrate from Barrel Milking, add JEI category
 - [ ] ✏️ Use `Mulch` as ingredient
 - [ ] ✏️ Use `Gorgon Head` as ingredient
@@ -81,7 +85,6 @@ Planned non-urgent changes, or just good ideas:
 - [ ] ✏️ Milk Questing Ram to color essence
 - [ ] 🔄 Add `Cow Hacker` feature. Buff cow with 2-3 special potions based on their UUID to turn it into drop generator.
 - [ ] ✏️ Dragon Ice better craft isages
-- [ ] ✏️ Add `Meat Singularity`
 - [ ] 🔨 Ironwood Add material. Drop Armor from mobs on hit
 - [ ] 🧩 nerf Cake Flower, Buff Game Of Life One
 
@@ -96,27 +99,28 @@ Planned non-urgent changes, or just good ideas:
 - [ ] ✏️ Add usage of `Perfect Fuel` in NCO (with `flux goo` as sub-product)
 
 ### "Endgame" expansion
-- [ ] ✏️ Replace `ET Crystal Blocks` in recipes to crystals, since blocks is just more time to wait
-- [ ] ✏️ Add `Garbage Singularity`
-- [ ] 🌍 Teleport player to Alien Forest with Blood Magic TP ritual
-- [ ] ✏️ Add `Machine Frame Singularity`
-- [ ] ✏️ Craft `Ultimate Singularity` as diversity from other singularities
-- [ ] ✏️ Tweak Botania Extended Crafting Tables recipes to non-tech
+- [x] ✏️ Add `Machine Case Singularity`
+- [x] ✏️ Add `Meat Singularity`
+- [x] ✏️ Add `Garbage Singularity`
+- [x] ✏️ Add `Ball singularity`
+- [x] ✏️ Add `Ultimate Singularity` as diversity from other singularities
+- [x] ✏️ `Critical Matter Cluster` add usages and mechanics (obtained with shift+right click of World Breaker)
+- [x] ✏️ Some QMD / NCO craft MUST use <opencomputers:print>
+- [x] 🌍 AdvRock geodes should contain modded ores (use <geodeOres> XML tag)
+- [x] ✏️ Nerf IO spike metals (carapace with `Bedrock cobblestone` + `Bedrock Ore` inside instead of pure blocks)
+- [ ] ✏️ Move all Extended Crafting methods to endgame - its late gamemod and shouldnt be used in early/mid
+- [ ] ✏️ `Creative Impetus` add recipe
+- [ ] 📖 Add new `Conflux V` level based on 100% trophy completion
 - [ ] ✏️ Integrate `Orbital Laser Drill` better. It can mine ores on planet orbits for skyblock
-- [ ] ✏️ `Critical Matter Cluster` add usages and mechanics (obtained with shift+right click of World Breaker)
-- [ ] 📖 Add new `Conflux VI` level based on 100% trophy completion
+- [ ] ✨ Idea: reaching 1000 difficulty instantly advance player to endgame powers: `AS knowledge, TC research no warp, `
+- [ ] 🌍 Teleport player to Alien Forest with Blood Magic TP ritual
+- [ ] ✏️ Tweak Botania Extended Crafting Tables recipes to non-tech
 - [ ] 🌍 Alien Forest add JER data
 - [ ] ✏️ RFTools `Dimension building` make cheaper by balancing possible dimlets
-- [ ] ✏️ Some QMD / NCO craft MUST use <opencomputers:print>
-- [ ] 🌍 AdvRock geodes should contain modded ores (use <geodeOres> XML tag)
-- [ ] ✏️ Nerf IO spike metals (carapace with `Bedrock cobblestone` + `Bedrock Ore` inside instead of pure blocks)
-- [ ] ✏️ Creative Impetus add recipe
 - [ ] ✏️ Draconic Evolution infusion can use trillions RF
 - [ ] ✏️ Add ![](https://is.gd/OcNNZN "Uncrafting Grinder") as Endgame item, right before creative upgrade
 - [ ] ✏️ Add new crafting mechanic - melting blocks in world that cant be harvested, such as `Rock Crystal Ore, Swolen/Fibrous Taint, Vis Crystal, Grass Path, Porous stone, Antimatter, TF Tree Cores, TF Thorns, Trollstein, Foam, Block Mushrooms, Rat Hole`
-- [ ] ✏️ Move all Extended Crafting methods to endgame - its late gamemod and shouldnt be used in early/mid
 - [ ] 🧶 Feat: make some ores / materials only harvestable with Gluon Gun
-- [ ] Add `Ball singularity` https://www.reddit.com/r/feedthememes/comments/1er3fwn/putting_together_a_ball_tierlist_need_more_pls/
 - [ ] `Creative Draconic Capacitor` make it from QMD materials to suggest advancing in QMD
 
 ### "Multiplayer" expansion
@@ -131,7 +135,6 @@ Planned non-urgent changes, or just good ideas:
   * Table with more ideas: https://www.reddit.com/r/feedthememes/comments/jk9rag/the_political_compass_but_its_types_of_ftb_players/
 
 ### Mods
-- [ ] 🟢 Find how to work with Modrinth and install https://modrinth.com/mod/hit-indication
 - [ ] 🔴 Remove **Random Patches** since UT and Valkyrie now do most of its features
 - [ ] 🔴 Remove **XTones** and **Environmental Materials** since they are depricated by LittleTiles and Cathedral
 - [ ] 🟠 Do not update **AdvancedRocketry-1.12.2-2.1.4-9** to `2.1.5` since causing Skyblock generate overworld and unable to sleep on servers
@@ -179,7 +182,6 @@ Planned non-urgent changes, or just good ideas:
 - [ ] 🦊 Transormation powder turn `Fox` into `Foxhound`
 - [ ] 🟢 Integrate `villager-contracts`
 - [ ] ✨ Idea: `Experiment 115` farm. You need to grow cakes to full for using them in recipe.
-- [ ] ✨ Idea: reaching 1000 difficulty opening supreme power, instantly advance player to endgame powers
 - [ ] ✏️ Rethink EnderIO `Fluid Tank` recipe since glass cant be poured with iron after cast
 - [ ] ⭐ Make self-forbidding mechanism for Difficulty https://github.com/friendlyhj/ZenUtils/issues/53#issuecomment-2154922579
 - [ ] ⭐ Difficulty: descrease over time?
@@ -201,7 +203,6 @@ Planned non-urgent changes, or just good ideas:
 - [ ] 🏡 Fix one of the Recurrent Complex houses have lava that fire up whole building
 - [ ] ✏️ Empty Rod cant be seen on table
 - [ ] ⚒️ Make TE cache drop itself with content on break
-- [ ] ✏️ Add bar for diverse/charge singularity by making custon CoT item with durability + animation from Avaritia / ExtCrft
 - [ ] 🌍 Remove Poison Ivy from OTG generator. Its `biomesoplenty:plant_0:4` but i cant find where it defined
 - [ ] 🌍 `122 Kepler 0118` improve generation (right now its just plain graphite)
 - [ ] 🌎 fix Tropical Gardens Spawn In OTG Frozen Ocean
@@ -308,8 +309,19 @@ Planned non-urgent changes, or just good ideas:
 
 ---
 
+## TODO 2.0
+
+List of features and changes for `E2EE v2.0`, that breaking worlds and require fresh start
+
+- 🌍 Remove OTG `Origin` biome since unnatural
+
+---
+
+---
+
 ## Unable to
 
+- 🟢 Silently download mods from Modrinth - forbidden by CF policy (https://modrinth.com/mod/hit-indication)
 - ✏️ remove default furnace recipes from `arc furnace`. It seems like they are added by mods themselves, like Thermal or TConEvo
 - ✏️ fix 59% on Bees Output such as Combs. Impossible since this how Mod Tweaker adds them. Some recipes have -1% some dont.
 - ❌ fix I C2 Chainsaw Cant Cut TC trees. Impossible to change mining level with `MaterialChanger`
