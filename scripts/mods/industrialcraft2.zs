@@ -174,7 +174,7 @@ scripts.mods.extendedcrafting_engineering.remakeAlted(
   '■': <tconstruct:large_plate>.withTag({ Material: 'iron' }),
 }, 6, {
   '□': <ore:plateTitanium>,
-  '■': <ore:blockConstructionAlloy>,
+  '■': <ore:blockFakeIron>,
 });
 
 recipes.addShapedMirrored('Basic Machine Casing2',
