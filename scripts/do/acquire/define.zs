@@ -46,7 +46,7 @@ Forbidder()
 .stack(<openblocks:hang_glider>).value(2).events('use')
 .stack(<nuclearcraft:water_source_compact>).value(3).events('pickup place interact craft')
 .stack(<nuclearcraft:water_source_dense>).value(4).events('pickup place interact craft')
-.stack(<scannable:scanner>).onOpen('li.cil.scannable.common.container.ContainerScanner').value(8).events('pickup')
+.stack(<scannable:scanner>).onOpen('li.cil.scannable.common.container.ContainerScanner').value(8)
 
 .stacks('conduits', [
   <enderio:item_item_conduit>,
