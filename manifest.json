@@ -379,7 +379,7 @@
     {"projectID":633720,"fileID":3852709,"___name":"Crafting Tweaks Unofficial"              ,"downloadUrl":"https://edge.forgecdn.net/files/3852/709/CraftingTweaks_1.12.2-9.0.1.jar","required":true},
     {"projectID":633806,"fileID":6197064,"___name":"Fixeroo"                                 ,"downloadUrl":"https://edge.forgecdn.net/files/6197/64/Fixeroo-2.3.5-hotfix.1.jar","required":true},
     {"projectID":644875,"fileID":4307985,"___name":"Pointer"                                 ,"downloadUrl":"https://edge.forgecdn.net/files/4307/985/pointer-2.1.jar","required":true},
-    {"projectID":650242,"fileID":5272359,"___name":"File Director"                           ,"downloadUrl":"https://edge.forgecdn.net/files/5272/359/!mod-director-launchwrapper-1.8.3.jar","required":true},
+    {"projectID":650242,"fileID":6436962,"___name":"File Director"                           ,"downloadUrl":"https://edge.forgecdn.net/files/6436/962/!mod-director-launchwrapper-1.9.1.jar","required":true},
     {"projectID":653506,"fileID":6243556,"___name":"Tweaked Petroleum"                       ,"downloadUrl":"https://edge.forgecdn.net/files/6243/556/tweakedpetroleum-2.0.3.jar","required":true},
     {"projectID":658616,"fileID":4399994,"___name":"Baubley Elytra"                          ,"downloadUrl":"https://edge.forgecdn.net/files/4399/994/Baubley-Elytra-v1.3.3-mc1.12.2.jar","required":true},
     {"projectID":667524,"fileID":5275434,"___name":"Tweaked Petroleum: Gas Addon"            ,"downloadUrl":"https://edge.forgecdn.net/files/5275/434/tweakedpetroleumgas-2.0.0.jar","required":true},
@@ -441,6 +441,6 @@
     {"projectID":1153744,"fileID":5964549,"___name":"NoiseThreader"                           ,"downloadUrl":"https://edge.forgecdn.net/files/5964/549/NoiseThreader-1.0.0.jar","required":true},
     {"projectID":1179351,"fileID":6424586,"___name":"Keybind Unconflict"                      ,"downloadUrl":"https://edge.forgecdn.net/files/6424/586/keybindunconflict-1.0.2.jar","required":true},
     {"projectID":1234162,"fileID":6378222,"___name":"Lumenized"                               ,"downloadUrl":"https://edge.forgecdn.net/files/6378/222/Lumenized-1.0.3.jar","required":true},
-    {"projectID":1242239,"fileID":6426908,"___name":"Tinkers' Antique"                        ,"downloadUrl":"https://edge.forgecdn.net/files/6426/908/TinkersAntique-1.12.2-2.13.0.194.jar","required":true}
+    {"projectID":1242239,"fileID":6429979,"___name":"Tinkers' Antique"                        ,"downloadUrl":"https://edge.forgecdn.net/files/6429/979/TinkersAntique-1.12.2-2.13.0.195.jar","required":true}
   ]
 }
