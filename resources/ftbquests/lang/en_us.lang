@@ -1853,3 +1853,5 @@ q.bragging_rights.infinity_boots.desc=Infinite Protection!
 q.bragging_rights.nature_s_ruin.desc=The most powerful axe in the game.
 q.bragging_rights.planet_eater.desc=The most powerful shovel in the game.
 q.bragging_rights.hoe_of_the_green_e.desc=The most powerful hoe in the game.
+q.gates.conflux_v.name=Conflux V
+q.gates.conflux_v.desc=The maximum number of §lloaded chunks§r through FTBUtilities increases.\nYour name becomes §d§lPurple§r.\n\nMax claimed chunks: §62000§r\nMax loaded chunks:   §6300§r\n\n§7Chunks are loaded always.§r

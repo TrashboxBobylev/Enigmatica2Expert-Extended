@@ -47,7 +47,7 @@ events.onCustomReward(function (e as mods.zenutils.ftbq.CustomRewardEvent) {
   /**
   * Conflux rewards
   */
-  for k in 'i ii iii iv'.split(' ') {
+  for k in 'i ii iii iv v'.split(' ') {
     if (e.reward.tags has 'conflux_' ~ k) {
       e.player.addGameStage('conflux_' ~ k);
       server.commandManager.executeCommandSilent(server,
@@ -129,7 +129,7 @@ events.onCustomTask(function (e as mods.zenutils.ftbq.CustomTaskEvent) {
 events.onPlayerLoggedIn(function (e as crafttweaker.event.PlayerLoggedInEvent) {
   if (e.player.world.remote) return;
 
-  for k in 'i ii iii iv'.split(' ') {
+  for k in 'i ii iii iv v'.split(' ') {
     val conflux = 'conflux_' ~ k;
     if (e.player.hasGameStage(conflux))
       server.commandManager.executeCommandSilent(server,
