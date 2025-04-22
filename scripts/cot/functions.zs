@@ -14,8 +14,10 @@ import crafttweaker.world.IWorld;
 import mods.contenttweaker.BlockPos;
 import mods.contenttweaker.BlockState;
 import mods.contenttweaker.MutableItemStack;
+import mods.contenttweaker.VanillaFactory;
 import mods.contenttweaker.World;
 import native.net.minecraft.util.EnumParticleTypes;
+import crafttweaker.data.IData;
 
 function abs(n as double) as double { return n < 0 ? -n : n; }
 
@@ -283,3 +285,48 @@ mods.extendedcrafting.CompressionCrafting.addRecipe(<contenttweaker:garbage_sing
   <rats:garbage_pile>, 10000, <rats:idol_of_ratlantis>, 2000000, 100000);
 
 // ------------------------------------------
+function createBedrockOre(world as World, contentId as string, contentProp as string, pos as BlockPos) as void {
+  val state = IBlockState.getBlockState(contentId, contentProp);
+  if (isNull(state) || isNull(state.block) || isNull(state.block.definition)) {
+    logger.logWarning('[Cot TE]: trying to create Bedrock Ore with wrong content: id: "'~contentId~'" prop: "'~toString(contentProp)~'"');
+  }
+  world.setBlockState(IBlockState.getBlockState('bedrockores:bedrock_ore', []), {
+    oreId: state.block.definition.numericalId,
+    oreMeta: state.meta,
+    amount: 1,
+  }, pos);
+}
+
+VanillaFactory.putTileEntityTickFunction(1, function(tileEntity, world, pos) {
+  if (world.remote) return;
+  val data as IData = tileEntity.data;
+
+  // TE spawned wrongly
+  if (!(data has 'name')) {
+    // logger.logWarning(
+    //   '[Cot TE]: Tile entity appear to have no required NBT tags! pos: '
+    //   ~ '[' ~ pos.x~':'~pos.z~'] data: '~ data as string ~'');
+    // world.setBlockState(<blockstate:minecraft:bedrock>, pos);
+    val states = [
+      'variant=energetic_alloy',
+      'variant=redstone_alloy',
+      'variant=conductive_iron',
+      'variant=soularium',
+      'variant=dark_steel',
+      'variant=electrical_steel',
+    ] as string[];
+    createBedrockOre(world, 'enderio:block_alloy', states[world.random.nextInt(states.length)], pos);
+    return;
+  }
+
+  if (!isNull(data) && data has 'time') {
+    val time = data.time.asInt();
+    if (time <= 0) {
+      createBedrockOre(world, data.name, data.prop, pos);
+      return;
+    }
+    tileEntity.updateCustomData({time: time - 1});
+  } else {
+    tileEntity.updateCustomData({time: world.random.nextInt(5) + 5});
+  }
+});
