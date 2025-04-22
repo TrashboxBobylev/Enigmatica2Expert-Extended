@@ -5,6 +5,7 @@ import crafttweaker.item.IItemStack;
 import crafttweaker.liquid.ILiquidStack;
 import crafttweaker.item.WeightedItemStack;
 import mods.ic2.ScrapBox;
+import mods.requious.AssemblyRecipe;
 
 import scripts.jei.mod.ic2.addCrop;
 
@@ -19,6 +20,38 @@ import scripts.jei.mod.ic2.addCrop;
 <ic2:rsh_condensator>.maxStackSize = 1;
 
 Purge(<ic2:te:76>); // Electrolyzer
+
+//////////////////////////////////////////////////////////////////////
+// JEI
+//////////////////////////////////////////////////////////////////////
+val x = <assembly:crafting_hints>;
+x.addJEIRecipe(AssemblyRecipe.create(function (c) {
+  c.addItemOutput('output1', <ic2:resource>);
+})
+  .requireFluid('fluid_in', <fluid:ic2pahoehoe_lava> * 1000)
+);
+
+x.addJEIRecipe(AssemblyRecipe.create(function (c) {
+  c.addFluidOutput('fluid_out', <fluid:ic2steam> * 1000);})
+  .requireFluid('fluid_in', <fluid:water> * 10)
+  .requireItem('input0', <ic2:te:34>));
+
+x.addJEIRecipe(AssemblyRecipe.create(function (c) {
+  c.addFluidOutput('fluid_out', <fluid:ic2superheated_steam> * 1000);})
+  .requireFluid('fluid_in', <fluid:water> * 10)
+  .requireItem('input0', <ic2:te:34>));
+
+x.addJEIRecipe(AssemblyRecipe.create(function (c) {
+  c.addItemOutput('output1', <ic2:foam> * 10);})
+  .requireFluid('fluid_in', <fluid:ic2construction_foam> * 1000)
+  .requireItem('input0', <ic2:foam_sprayer>));
+
+x.addJEIRecipe(AssemblyRecipe.create(function (c) {
+  c.addItemOutput('output1', <ic2:foam:1> * 10);})
+  .requireFluid('fluid_in', <fluid:ic2construction_foam> * 1000)
+  .requireItem('input5', <ic2:scaffold:2> * 10)
+  .requireItem('input0', <ic2:foam_sprayer>));
+//////////////////////////////////////////////////////////////////////
 
 // Hydrated Coal Dust recipe consumes containers that can store 1000mB + liquid, this fixes that
 recipes.addShapeless('ic2_hydrated_coal_dust_liquid_fix', <ic2:dust:3>, [<ore:dustCoal>, LiquidIngr('water')]);

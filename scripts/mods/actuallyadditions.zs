@@ -2,9 +2,30 @@
 
 import crafttweaker.item.IIngredient;
 import crafttweaker.item.IItemStack;
+import mods.requious.AssemblyRecipe;
 
 Purge(<actuallyadditions:block_grinder>);
 Purge(<actuallyadditions:block_grinder_double>);
+
+val x = <assembly:crafting_hints>;
+x.addJEIRecipe(AssemblyRecipe.create(function (c) {
+  c.addFluidOutput('fluid_out', <liquid:canolaoil> * 80);
+})
+  .requireItem('input0', <actuallyadditions:block_canola_press>)
+  .requireItem('input5', <actuallyadditions:item_misc:13>)
+);
+x.addJEIRecipe(AssemblyRecipe.create(function (c) {
+  c.addFluidOutput('fluid_out', <liquid:refinedcanolaoil> * 80);
+})
+  .requireFluid('fluid_in', <liquid:canolaoil> * 80)
+  .requireItem('input0', <actuallyadditions:block_fermenting_barrel>)
+);
+x.addJEIRecipe(AssemblyRecipe.create(function (c) {
+  c.addFluidOutput('fluid_out', <liquid:blockfluidantimatter> * 1000);
+})
+  .requireFluid('fluid_in', <liquid:lifeessence> * 1000)
+  .requireItem('input0', <cyclicmagic:ender_lightning>)
+);
 
 // Black Quartz Block recipe remakes
 // Black Quartz Pillar

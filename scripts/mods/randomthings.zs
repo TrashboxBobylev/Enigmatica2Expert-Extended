@@ -5,6 +5,9 @@ import crafttweaker.item.IIngredient;
 // Defined by hammering
 recipes.remove(<randomthings:ingredient:5>);
 
+// Custom mechanics changed by Mixins
+scripts.jei.crafting_hints.add1to1(<thaumcraft:cluster:1>, <minecraft:gold_ingot> * 8, <entity:randomthings:goldenchicken>.asIngr());
+
 // Add hints with Spectre trees mechanics
 scripts.jei.crafting_hints.addInsOutCatl(
   [<randomthings:ingredient:2>, <ore:treeSapling>],

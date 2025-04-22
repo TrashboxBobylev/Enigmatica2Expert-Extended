@@ -7,6 +7,14 @@ import crafttweaker.item.WeightedItemStack;
 import loottweaker.LootTweaker;
 import loottweaker.vanilla.loot.Functions;
 import thaumcraft.aspect.CTAspectStack;
+import mods.requious.AssemblyRecipe;
+
+// Taint to Flux Goo
+<assembly:crafting_hints>.addJEIRecipe(AssemblyRecipe.create(function (c) {
+  c.addFluidOutput('fluid_out', <fluid:flux_goo> * 1000);
+})
+  .requireItem('input5', <thaumcraft:bottle_taint>)
+);
 
 // Add durability to scribbing tools
 <thaumcraft:scribing_tools>.maxDamage = 600;
