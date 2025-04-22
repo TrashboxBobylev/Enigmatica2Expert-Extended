@@ -429,7 +429,7 @@ craft.remake(<conarm:armor_trim>.withTag({ Material: 'aethium' }), ['pretty',
   'A I A'], {
   'A': <tconstruct:shard>.withTag({ Material: 'aethium' }), // Aethium Shard
   'I': <environmentaltech:interconnect>, // Interconnect
-  'L': <ore:blockLitherite>,
+  'L': <ore:crystalLitherite>,
   'p': <environmentaltech:modifier_piezo>,
 });
 

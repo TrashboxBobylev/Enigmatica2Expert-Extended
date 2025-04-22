@@ -476,7 +476,7 @@ craft.make(<storagedrawers:upgrade_creative:1>, ['pretty',
   '◘': <thermalexpansion:frame:148>, // Resonant Cell Frame (Full)
   'S': <threng:material:14>, // Speculative Processor
   '1': <nae2:material:4>, // 16384k ME Storage Component
-  '■': <ore:blockAethium>, // Aethium
+  '■': <ore:crystalAethium>, // Aethium
   'C': <draconicevolution:crafting_injector:3>, // Chaotic Injector
   '◊': <ore:gemBenitoite>, // Benitoite
   'r': <tconstruct:large_plate>.withTag({ Material: 'red_matter' }),

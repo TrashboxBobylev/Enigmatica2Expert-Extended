@@ -80,7 +80,7 @@ mods.botania.ElvenTrade.removeRecipe(<botania_tweaks:ultimate_extended_crafty_cr
 //   '■': <extendedcrafting:trimmed:4>,           // Block of Black Iron
 //   '*': <ore:crystalDraconium>,                 // Draconium Crystal
 //   'A': <advancedrocketry:ic:2>,                // Advanced Circuit
-//   'e': <ore:blockAethium>,                     // Aethium
+//   'e': <ore:crystalkAethium>,                     // Aethium
 //   'V': <vaultopic:vice>,                       // V.I.C.E. (Vaultopic Item Crafting Entity)
 //   '◙': <thermalexpansion:frame:148>,           // Resonant Cell Frame (Full)
 //   '▀': <ore:blockEnderium>,                    // Block of Enderium
