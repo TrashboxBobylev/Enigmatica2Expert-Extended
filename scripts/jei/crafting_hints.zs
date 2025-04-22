@@ -2,6 +2,7 @@
 
 #modloaded requious
 #priority 975
+#ignoreBracketErrors
 #reloadable
 
 import crafttweaker.item.IIngredient;

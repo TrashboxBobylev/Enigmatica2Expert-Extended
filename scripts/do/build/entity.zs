@@ -187,6 +187,9 @@ static builds as MobBuild[] = [] as MobBuild[];
 
 function add(entity as IEntityDefinition, volume as string[][], map as IItemStack[string], spawnFnc as function(IWorld,Position3f)void = null) as MobBuild {
   val m =  MobBuild();
+
+  if (isNull(entity)) return m;
+
   m.entity = entity;
   m.volume = volume;
   m.map = map;
@@ -198,6 +201,7 @@ function add(entity as IEntityDefinition, volume as string[][], map as IItemStac
     s ~= '\n"input-types": {\n';
     var k = 0;
     for c, item in map {
+      if (isNull(item)) continue;
       val block = item.asBlock();
       s ~= (k == 0 ? '' : ',\n') ~ '  "' ~ c ~ '": { "id": "' ~ block.definition.id ~ '", "ignore-meta": true }';
       k += 1;

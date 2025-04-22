@@ -1,5 +1,6 @@
 #modloaded requious
 #priority -150
+#ignoreBracketErrors
 
 import crafttweaker.data.IData;
 import crafttweaker.item.IIngredient;

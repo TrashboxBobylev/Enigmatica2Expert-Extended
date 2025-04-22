@@ -1,6 +1,7 @@
-#modloaded ctintegration draconicevolution
+#modloaded ctintegration
 #reloadable
 #priority -6000
+#ignoreBracketErrors
 
 import crafttweaker.block.IBlock;
 import crafttweaker.block.IBlockState;

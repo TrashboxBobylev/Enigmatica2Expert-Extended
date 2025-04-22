@@ -3,6 +3,7 @@
 #ignoreBracketErrors
 #priority -100
 
+import crafttweaker.block.IBlockState;
 import crafttweaker.entity.IEntity;
 import crafttweaker.item.IIngredient;
 import crafttweaker.item.IItemStack;
@@ -118,8 +119,9 @@ function canPlaceCoral(world as World, p as IBlockPos) as bool {
   if (world.remote) return;
 
   if(world.getBlockState(p.up()).block.definition.id != 'minecraft:water') {
+    val state as IBlockState = <blockstate:randomthings:biomestone>;
     world.destroyBlock(p, false);
-    world.setBlockState(<blockstate:randomthings:biomestone>, p);
+    world.setBlockState(state, p);
     return;
   }
 
