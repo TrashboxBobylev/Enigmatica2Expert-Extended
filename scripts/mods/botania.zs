@@ -169,6 +169,17 @@ mods.thaumcraft.Infusion.registerRecipe(
     'D': <cyclicmagic:dice>, // Dice
   }).spiral(1));
 
+for relic in [
+  <botania:infinitefruit>,
+  <botania:kingkey>,
+  <botania:flugeleye>,
+  <botania:lokiring>,
+  <botania:odinring>,
+  <botania:thorring>,
+] as IItemStack[] {
+  recipes.addShapeless(relic, [utils.fakeIngredient(utils.reuse(relic), relic.anyDamage()), <botania:dice>]);
+}
+
 // Livingrock
 mods.botania.PureDaisy.removeRecipe(<botania:livingrock>);
 mods.botania.PureDaisy.addRecipe(<thaumcraft:stone_arcane>, <botania:livingrock>);
