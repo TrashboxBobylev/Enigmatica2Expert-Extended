@@ -4,6 +4,8 @@ import crafttweaker.item.IIngredient;
 import crafttweaker.item.IItemStack;
 import mods.requious.AssemblyRecipe;
 
+mods.jei.JEI.hideCategory('actuallyadditions.crushing');
+
 Purge(<actuallyadditions:block_grinder>);
 Purge(<actuallyadditions:block_grinder_double>);
 
