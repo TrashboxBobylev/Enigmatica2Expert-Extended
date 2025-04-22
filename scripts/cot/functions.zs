@@ -278,4 +278,9 @@ for i, id in singularIDs {
   val cotItem = native.youyihj.zenutils.api.cotx.brackets.BracketHandlerCoTItem.getItemRepresentation(fullId);
   cotItem.onItemUpdate = getSingularityUpdateFunc(ore, recipeFunction);
 }
+
+// Special crafting case for Garbage Singularity
+mods.extendedcrafting.CompressionCrafting.addRecipe(<contenttweaker:garbage_singularity>,
+  <rats:garbage_pile>, 10000, <rats:idol_of_ratlantis>, 2000000, 100000);
+
 // ------------------------------------------

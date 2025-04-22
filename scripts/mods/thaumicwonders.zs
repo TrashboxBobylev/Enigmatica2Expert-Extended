@@ -234,7 +234,7 @@ mods.thaumcraft.Infusion.registerRecipe(
 craft.remake(<thaumicwonders:creative_essentia_jar>, ['pretty',
   'B D V D B',
   'S I M I S',
-  'S M l M S',
+  'T M l M T',
   'S I M I S',
   'B D A D B'], {
   'B': <bloodmagic:decorative_brick:1>, // Bloodstone Brick
@@ -245,4 +245,5 @@ craft.remake(<thaumicwonders:creative_essentia_jar>, ['pretty',
   'M': utils.tryCatch('thaumadditions:jar_mithminite', <extrautils2:snowglobe:1>), // Mithminite Fortified Jar
   'l': <botania:blackholetalisman>, // Black Hole Talisman
   'A': <thaumicwonders:alkahest_vat>, // Alkahest Vat
+  'T': <contenttweaker:meat_singularity>,
 });

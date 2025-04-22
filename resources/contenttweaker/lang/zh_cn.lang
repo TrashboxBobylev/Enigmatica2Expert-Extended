@@ -186,6 +186,11 @@ item.contenttweaker.knowledge_absorber.name=知识吸收器
 
 item.contenttweaker.woodweave_singularity.name=§c木纹奇点
 item.contenttweaker.fish_singularity.name=§3鱼类奇点
+item.contenttweaker.ball_singularity.name=§b球体奇点
+item.contenttweaker.meat_singularity.name=§4肉类奇点
+item.contenttweaker.garbage_singularity.name=§7垃圾奇点
+item.contenttweaker.machine_case_singularity.name=§5机械壳体奇点
+item.contenttweaker.ultimate_singularity.name=§d终极奇点
 item.contenttweaker.supremium_boots_base.name=终极精华靴子核心基底
 item.contenttweaker.supremium_chest_base.name=终极精华胸甲核心基底
 item.contenttweaker.supremium_helmet_base.name=终极精华头盔核心基底

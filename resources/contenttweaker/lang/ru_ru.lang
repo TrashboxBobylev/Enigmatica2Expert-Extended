@@ -186,6 +186,11 @@ item.contenttweaker.knowledge_absorber.name=Поглотитель Знаний
 
 item.contenttweaker.woodweave_singularity.name=§cДревоплетённая Сингулярность
 item.contenttweaker.fish_singularity.name=§3Рыбная Сингулярность
+item.contenttweaker.ball_singularity.name=§bСингулярность из шаров
+item.contenttweaker.meat_singularity.name=§4Мясная сингулярность
+item.contenttweaker.garbage_singularity.name=§7Мусорная сингулярность
+item.contenttweaker.machine_case_singularity.name=§5Сингулярность машинного каркаса
+item.contenttweaker.ultimate_singularity.name=§dАбсолютная сингулярность
 item.contenttweaker.supremium_boots_base.name=Основание Ядра Супремиумных Ботинок
 item.contenttweaker.supremium_chest_base.name=Основание Ядра Супремиумного Нагрудника
 item.contenttweaker.supremium_helmet_base.name=Основание Ядра Супремиумного Шлема

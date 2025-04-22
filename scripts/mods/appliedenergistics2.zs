@@ -655,7 +655,7 @@ for i, inputs in storCompIngrs {
 recipes.addHiddenShapeless(
   'singularity_tag_clearing',
   <appliedenergistics2:material:48> * 2,
-  [<ore:singularityEntangled>, <ore:singularityEntangled>]
+  [<ore:itemEntangled>, <ore:itemEntangled>]
 );
 // and JEI recipe hint for it, it's added at both server and client to prevent strange data syncing issue
 recipes.addShapeless(

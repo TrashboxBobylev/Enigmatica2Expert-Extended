@@ -2,6 +2,7 @@
 #modloaded avaritia
 
 import crafttweaker.item.IItemStack;
+import crafttweaker.item.IIngredient;
 
 // *======= Recipes =======*
 
@@ -20,17 +21,17 @@ mods.avaritia.ExtremeCrafting.remove(<avaritia:infinity_hoe>);
 
 // Infinity Ingot
 mods.avaritia.ExtremeCrafting.remove(<avaritia:resource:6>);
-mods.extendedcrafting.TableCrafting.addShaped(0, <avaritia:resource:6>, [
-  [<ore:ingotCosmicNeutronium>, <ore:ingotCosmicNeutronium>, <ore:ingotCosmicNeutronium>, <ore:ingotCosmicNeutronium>, <ore:ingotCosmicNeutronium>, <ore:ingotCosmicNeutronium>, <ore:ingotCosmicNeutronium>, <ore:ingotCosmicNeutronium>, <ore:ingotCosmicNeutronium>],
-  [<ore:ingotCosmicNeutronium>, <ore:ingotCrystalMatrix>, <avaritia:resource:5>, <avaritia:resource:5>, <extendedcrafting:singularity_ultimate>, <avaritia:resource:5>, <avaritia:resource:5>, <ore:ingotCrystalMatrix>, <ore:ingotCosmicNeutronium>],
-  [<ore:ingotCosmicNeutronium>, <avaritia:resource:5>, <ore:ingotCrystalMatrix>, <ore:ingotCrystalMatrix>, <avaritia:resource:5>, <ore:ingotCrystalMatrix>, <ore:ingotCrystalMatrix>, <avaritia:resource:5>, <ore:ingotCosmicNeutronium>],
-  [<ore:ingotCosmicNeutronium>, <ore:ingotCrystalMatrix>, <avaritia:resource:5>, <avaritia:resource:5>, <extendedcrafting:singularity_ultimate>, <avaritia:resource:5>, <avaritia:resource:5>, <ore:ingotCrystalMatrix>, <ore:ingotCosmicNeutronium>],
-  [<ore:ingotCosmicNeutronium>, <ore:ingotCosmicNeutronium>, <ore:ingotCosmicNeutronium>, <ore:ingotCosmicNeutronium>, <ore:ingotCosmicNeutronium>, <ore:ingotCosmicNeutronium>, <ore:ingotCosmicNeutronium>, <ore:ingotCosmicNeutronium>, <ore:ingotCosmicNeutronium>],
-  [null, null, null, null, null, null, null, null, null],
-  [null, null, null, null, null, null, null, null, null],
-  [null, null, null, null, null, null, null, null, null],
-  [null, null, null, null, null, null, null, null, null],
-]);
+craft.make(<avaritia:resource:6>, ['pretty',
+  '▬ ▬ ▬ ▬ ▬ ▬ ▬ ▬ ▬',
+  '▬ * I I s I I * ▬',
+  '▬ I * * I * * I ▬',
+  '▬ * I I s I I * ▬',
+  '▬ ▬ ▬ ▬ ▬ ▬ ▬ ▬ ▬'], {
+  '▬': <ore:ingotCosmicNeutronium>,
+  '*': <ore:ingotCrystalMatrix>,
+  'I': <avaritia:resource:5>,
+  's': <contenttweaker:ultimate_singularity>,
+});
 
 // [Neutron Collector] from [Glitch Infused Ingot][+4]
 mods.avaritia.ExtremeCrafting.remove(<avaritia:neutron_collector>);
@@ -168,6 +169,56 @@ mods.extendedcrafting.TableCrafting.addShapeless(
 /**/
   ]);
 
+val armorIngrs = {
+  '▬': <ore:ingotCosmicNeutronium>,
+  '-': <ore:ingotInfinity>,
+  'I': <avaritia:resource:5>,
+  'M': <avaritia:matter_cluster:*>,
+  'r': <draconicevolution:draconic_helm:*>,
+  'c': <draconicevolution:draconic_chest:*>,
+  'D': <draconicevolution:draconic_legs:*>,
+  'a': <draconicevolution:draconic_boots:*>,
+} as IIngredient[string];
+
+craft.remake(<avaritia:infinity_helmet>, ['pretty',
+  '    ▬ ▬ ▬ ▬ ▬  ',
+  '  ▬ - - - - - ▬',
+  '  ▬   I M I   ▬',
+  '  ▬ - - r - - ▬',
+  '  ▬ - - - - - ▬',
+  '  ▬ -   -   - ▬'], armorIngrs
+);
+craft.remake(<avaritia:infinity_chestplate>, ['pretty',
+  '  ▬ ▬       ▬ ▬  ',
+  '▬ ▬ ▬       ▬ ▬ ▬',
+  '▬ ▬ ▬       ▬ ▬ ▬',
+  '  ▬ - - M - - ▬  ',
+  '  ▬ - - - - - ▬  ',
+  '  ▬ - - c - - ▬  ',
+  '  ▬ - - - - - ▬  ',
+  '  ▬ - - - - - ▬  ',
+  '    ▬ ▬ ▬ ▬ ▬    '], armorIngrs
+);
+craft.remake(<avaritia:infinity_pants>, ['pretty',
+  '▬ ▬ ▬ ▬ ▬ ▬ ▬ ▬ ▬',
+  '▬ - - - D - - - ▬',
+  '▬ - ▬ M ▬ M ▬ - ▬',
+  '▬ - ▬       ▬ - ▬',
+  '▬ I ▬       ▬ I ▬',
+  '▬ - ▬       ▬ - ▬',
+  '▬ - ▬       ▬ - ▬',
+  '▬ - ▬       ▬ - ▬',
+  '▬ ▬ ▬       ▬ ▬ ▬'], armorIngrs
+);
+craft.remake(<avaritia:infinity_boots>, ['pretty',
+  '  ▬ ▬ ▬   ▬ ▬ ▬  ',
+  '  ▬ - ▬   ▬ - ▬  ',
+  '  ▬ - ▬   ▬ - ▬  ',
+  '▬ ▬ - ▬   ▬ - ▬ ▬',
+  '▬ - - ▬ M ▬ - - ▬',
+  '▬ ▬ ▬ ▬ a ▬ ▬ ▬ ▬'], armorIngrs
+);
+
 // Neutronium Ingot
 val ni = <ore:ingotCosmicNeutronium>;
 // Infinity Catalyst
@@ -176,63 +227,6 @@ val ic = <avaritia:resource:5>;
 val ii = <ore:ingotInfinity>;
 // Crystal Matrix
 val cm = <ore:blockCrystalMatrix>;
-
-// Infinity Armor
-mods.extendedcrafting.TableCrafting.addShaped(0,
-  <avaritia:infinity_helmet>,
-  [
-    [null, null, ni, ni, ni, ni, ni, null, null],
-    [null, ni, ii, ii, ii, ii, ii, ni, null],
-    [null, ni, null, ic, ii, ic, null, ni, null],
-    [null, ni, ii, ii, <draconicevolution:draconic_helm>.anyDamage(), ii, ii, ni, null],
-    [null, ni, ii, ii, ii, ii, ii, ni, null],
-    [null, ni, ii, null, ii, null, ii, ni, null],
-    [null, null, null, null, null, null, null, null, null],
-    [null, null, null, null, null, null, null, null, null],
-    [null, null, null, null, null, null, null, null, null],
-  ]);
-
-mods.extendedcrafting.TableCrafting.addShaped(0,
-  <avaritia:infinity_chestplate>,
-  [
-    [null, ni, ni, null, null, null, ni, ni, null],
-    [ni, ni, ni, null, null, null, ni, ni, ni],
-    [ni, ni, ni, null, null, null, ni, ni, ni],
-    [null, ni, ii, ii, ii, ii, ii, ni, null],
-    [null, ni, ii, ii, ii, ii, ii, ni, null],
-    [null, ni, ii, ii, <draconicevolution:draconic_chest>.anyDamage(), ii, ii, ni, null],
-    [null, ni, ii, ii, ii, ii, ii, ni, null],
-    [null, ni, ii, ii, ii, ii, ii, ni, null],
-    [null, null, ni, ni, ni, ni, ni, null, null],
-  ]);
-
-mods.extendedcrafting.TableCrafting.addShaped(0,
-  <avaritia:infinity_pants>,
-  [
-    [ni, ni, ni, ni, ni, ni, ni, ni, ni],
-    [ni, ii, ii, ii, <draconicevolution:draconic_legs>.anyDamage(), ii, ii, ii, ni],
-    [ni, ii, ni, ni, ni, ni, ni, ii, ni],
-    [ni, ii, ni, null, null, null, ni, ii, ni],
-    [ni, ic, ni, null, null, null, ni, ic, ni],
-    [ni, ii, ni, null, null, null, ni, ii, ni],
-    [ni, ii, ni, null, null, null, ni, ii, ni],
-    [ni, ii, ni, null, null, null, ni, ii, ni],
-    [ni, ni, ni, null, null, null, ni, ni, ni],
-  ]);
-
-mods.extendedcrafting.TableCrafting.addShaped(0,
-  <avaritia:infinity_boots>,
-  [
-    [null, ni, ni, ni, null, ni, ni, ni, null],
-    [null, ni, ii, ni, null, ni, ii, ni, null],
-    [null, ni, ii, ni, null, ni, ii, ni, null],
-    [ni, ni, ii, ni, null, ni, ii, ni, ni],
-    [ni, ii, ii, ni, null, ni, ii, ii, ni],
-    [ni, ni, ni, ni, <draconicevolution:draconic_boots>.anyDamage(), ni, ni, ni, ni],
-    [null, null, null, null, null, null, null, null, null],
-    [null, null, null, null, null, null, null, null, null],
-    [null, null, null, null, null, null, null, null, null],
-  ]);
 
 // Infinity Sword
 mods.extendedcrafting.TableCrafting.addShaped(0,

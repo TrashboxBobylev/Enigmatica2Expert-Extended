@@ -119,7 +119,7 @@ mods.tconstruct.Casting.addBasinRecipe(<opencomputers:case1>, null, <liquid:elec
 // Anglesite - Highest tier of Tech mods crystals
 mods.extendedcrafting.CombinationCrafting.addRecipe(<contenttweaker:item_ore_anglesite>, 100000000, 1000000,
   <additionalcompression:gravelend_compressed:2>, [
-    <ore:singularityEntangled>,
+    <ore:itemEntangled>,
     <biomesoplenty:terrestrial_artifact>,
     <ore:clathrateGlowstone>,
     <ore:clathrateRedstone>,

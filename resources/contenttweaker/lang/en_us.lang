@@ -186,6 +186,11 @@ item.contenttweaker.knowledge_absorber.name=Knowledge Absorber
 
 item.contenttweaker.woodweave_singularity.name=§cWoodweave Singularity
 item.contenttweaker.fish_singularity.name=§3Fish Singularity
+item.contenttweaker.ball_singularity.name=§bBall Singularity
+item.contenttweaker.meat_singularity.name=§4Meat Singularity
+item.contenttweaker.garbage_singularity.name=§7Garbage Singularity
+item.contenttweaker.machine_case_singularity.name=§5Machine Case Singularity
+item.contenttweaker.ultimate_singularity.name=§dUltimate Singularity
 item.contenttweaker.supremium_boots_base.name=Supremium Boots Core Base
 item.contenttweaker.supremium_chest_base.name=Supremium Chestplate Core Base
 item.contenttweaker.supremium_helmet_base.name=Supremium Helmet Core Base

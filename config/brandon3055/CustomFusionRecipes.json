@@ -144,5 +144,25 @@
       "ore:dragonEgg",
       "draconicevolution:chaotic_core"
     ]
+  },
+  {
+    "mode": "REMOVE",
+    "result": "draconicevolution:reactor_core",
+    "catalyst": "draconicevolution:chaos_shard"
+  },
+  {
+    "mode": "ADD",
+    "result": "draconicevolution:reactor_core",
+    "catalyst": "draconicevolution:chaos_shard",
+    "energy": 448000000,
+    "tier": 3,
+    "ingredients": [
+      "draconicevolution:draconic_ingot",
+      "draconicevolution:draconic_ingot",
+      "tconevo:metal,1,5",
+      "tconevo:metal,1,5",
+      "contenttweaker:ball_singularity",
+      "contenttweaker:ball_singularity"
+    ]
   }
 ]

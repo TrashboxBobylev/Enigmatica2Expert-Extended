@@ -77,6 +77,11 @@ function buildSingularity(id as string, ore as string, charge as int = 30000) as
 
 buildSingularity('woodweave', 'plankFireproof', 30000);
 buildSingularity('fish', 'listAllfishraw', 3000);
+buildSingularity('ball', 'itemBall', 2000000000);
+buildSingularity('meat', 'listAllmeatraw', 300000);
+buildSingularity('garbage', 'garbage', 10000);
+buildSingularity('machine_case', 'machineCase', 20000000);
+buildSingularity('ultimate', 'singularity', 400000);
 
 scripts.lib.crossscript.setList('singularIDs', singularIDs);
 scripts.lib.crossscript.setList('singularOres', singularOres);
