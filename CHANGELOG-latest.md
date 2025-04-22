@@ -1,3 +1,34 @@
+# Changes in `v1.59.0` since `v1.59.0-beta`
+
+## ✨ New Features
+
+* <img src="https://i.imgur.com/0b5NrrL.png" align=right> [🖇](https://github.com/Krutoy242/Enigmatica2Expert-Extended/commit/d5fca25db83c95b353d5dc2932992d5872217754)✨Add glow to some custom ContentTweaker blocks
+
+## 🐛 Fixes
+
+* [🖇](https://github.com/Krutoy242/Enigmatica2Expert-Extended/commit/f48de4ef2e8bd7f555831b8b068a1e7e28e7b4d1)🐛Bug with PSI "Falling Block Silk Touch" spell not worked on ![](https://github.com/Krutoy242/mc-icons/raw/master/i/minecraft/lapis_ore__0.png "Lapis Lazuli Ore")
+  > Idea taken from modpack `IsolatedCrystal3`.
+
+#### Difficulty_rework
+
+* [🖇](https://github.com/Krutoy242/Enigmatica2Expert-Extended/commit/2120c7c419bf37d7ef6f4b1c1fee92aa76e6416f)💙![](https://github.com/Krutoy242/mc-icons/raw/master/i/scannable/scanner__0.png "Scanner") remove `pickup` trigger
+  > 
+
+#### Recipes
+
+* [🖇](https://github.com/Krutoy242/Enigmatica2Expert-Extended/commit/83abae1aafdd433229b55db791c9482100fb1976)✏️![](https://github.com/Krutoy242/mc-icons/raw/master/i/ic2/resource__12.png "Basic Machine Casing") in ![](https://github.com/Krutoy242/mc-icons/raw/master/i/extendedcrafting/table_basic__0.png "Engineering Table") now accept ![](https://github.com/Krutoy242/mc-icons/raw/master/i/minecraft/iron_block__0.png "Block of Iron")
+  > 
+
+## Mods changes
+### 🟡 Updated Mods
+
+Icon | Summary | Old / New
+----:|:--------|:---------
+<img src="https://media.forgecdn.net/avatars/thumbnails/1204/480/30/30/638782360981215463.png"           > |                          [**File Director**](https://www.curseforge.com/minecraft/mc-mods/filedirector)                | <nobr>!mod-director-launchwrapper-1.8.3</nobr><br><nobr>!mod-director-launchwrapper-1.9.1</nobr>
+<img src="https://media.forgecdn.net/avatars/thumbnails/1223/434/30/30/638801642158504721.png"           > |                       [**Tinkers' Antique**](https://www.curseforge.com/minecraft/mc-mods/tinkers-antique)             | <nobr>TinkersAntique-1.12.2-2.13.0.194</nobr><br><nobr>TinkersAntique-1.12.2-2.13.0.195</nobr>
+-----------
+
+
 # Changes in `v1.59.0-beta` since `v1.58.0-beta`
 
 ## ✨ New Features
