@@ -189,8 +189,9 @@
 			<fogColor>0,0,0.2</fogColor>
 			<generateCaves>true</generateCaves>
 			<generateCraters>true</generateCraters>
-			<generateGeodes>true</generateGeodes>
 			<generateVolcanos>true</generateVolcanos>
+			<generateGeodes>true</generateGeodes>
+			<geodeOres>oreRutile,oreCinnabar,oreRuby,oreMagnesium,oreRedstone,oreCopper</geodeOres>
 			<gravitationalMultiplier>60</gravitationalMultiplier>
 			<hasRings>true</hasRings>
 			<oceanBlock>tconstruct:molten_obsidian</oceanBlock>
@@ -208,6 +209,8 @@
 			<orbitalDistance>20</orbitalDistance>
 			<rotationalPeriod>100000</rotationalPeriod>
 			<generateCaves>true</generateCaves>
+			<generateGeodes>true</generateGeodes>
+			<geodeOres>oreEndRedstone,oreEndRuby,oreEndArdite,oreEndCobalt,oreEndCopper,oreAmethyst,oreEnderBiomeEssence</geodeOres>
 			<fillerBlock>minecraft:stone:5</fillerBlock>
 		</planet>
 		<planet name="KELT-1b" DIMID="117" customIcon="gasgiantred">
