@@ -75,8 +75,8 @@ function buildSingularity(id as string, ore as string, charge as int = 30000) as
   singularCharges += charge;
 }
 
-buildSingularity('woodweave', 'plankFireproof');
-buildSingularity('fish', 'listAllfishraw');
+buildSingularity('woodweave', 'plankFireproof', 30000);
+buildSingularity('fish', 'listAllfishraw', 3000);
 
 scripts.lib.crossscript.setList('singularIDs', singularIDs);
 scripts.lib.crossscript.setList('singularOres', singularOres);

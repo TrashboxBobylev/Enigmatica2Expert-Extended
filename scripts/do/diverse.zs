@@ -98,9 +98,11 @@ function addRecipe(
 function getPower(amountArr as int[]) as double {
   var power = 0.0;
   for v in amountArr { power += v; }
-  var diversePower = 0.0;
-  for v in amountArr { diversePower += mods.ctutils.utils.Math.log10(v) / 2; }
-  val diverseMult = pow(2.0, diversePower);
+  var diversePower = -1.0;
+  for v in amountArr {
+    diversePower += Math.log((1.0 - 1.0 / 100) + v as double / 100) + 1;
+  }
+  val diverseMult = pow(1.3, diversePower);
   power *= diverseMult;
   return power;
 }
