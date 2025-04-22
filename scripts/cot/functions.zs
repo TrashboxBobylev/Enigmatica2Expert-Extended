@@ -172,7 +172,7 @@ function slotToCoord(slot as int) as int[] {
 
 function getSingularityUpdateFunc(
   allIngredients as IIngredient,
-  recipeFunction as function(IItemStack[string])IItemStack
+  recipeFunction as function(IItemStack[string],bool)IItemStack
 ) as function(MutableItemStack,World,IEntity,int,bool)void {
   return function(stack as MutableItemStack, world as World, owner as IEntity, slot as int, isSelected as bool) as void {
 
@@ -212,7 +212,7 @@ function getSingularityUpdateFunc(
       // player.replaceItemInInventory(nextSlot, null);
       item.mutable().shrink(1);
 
-      result = recipeFunction({ '0': result, '1': item });
+      result = recipeFunction({ '0': result, '1': item }, false);
       consumed += 1;
       if (result.damage <= 0 || consumed >= 4) break;
     }
@@ -222,6 +222,60 @@ function getSingularityUpdateFunc(
   };
 }
 
-<cotItem:fish_singularity>.onItemUpdate = getSingularityUpdateFunc(<ore:listAllfishraw>, scripts.cot.recipes.fishRecipeFunction);
-<cotItem:woodweave_singularity>.onItemUpdate = getSingularityUpdateFunc(<ore:plankFireproof>, scripts.cot.recipes.woodweaveRecipeFunction);
+val singularIDs = scripts.lib.crossscript.getList('singularIDs');
+val singularOres = scripts.lib.crossscript.getList('singularOres');
+val singularCharges = scripts.lib.crossscript.getList('singularCharges');
+
+for i, id in singularIDs {
+  val fullId = `${id}_singularity`;
+  val item = <item:contenttweaker:${fullId}>;
+  val ore = oreDict[singularOres[i]];
+  val charge = singularCharges[i] as int;
+  val emptyIngr = utils.tryCatch('avaritia:singularity', <minecraft:nether_star>);
+
+  val recipeFunction as function(IItemStack[string],bool)IItemStack = scripts.do.diverse.addRecipe(
+    fullId,
+    emptyIngr,
+    item,
+    ore,
+    charge
+  );
+
+  val needPowerStr = mods.zenutils.StaticString
+    .format('%,d', charge)
+    .replaceAll(',', '§8,§6');
+
+  // Simulate crafting to find when "N types == N items each type"
+  var middlePoint = 0;
+  for i in 1 .. 100 {
+    val power = scripts.do.diverse.getPower(intArrayOf(i, i));
+    if (power > charge) {
+      middlePoint = i;
+      break;
+    }
+  }
+  
+  // Simulate crafting to find "1 item of each N types"
+  var endPoint = 0;
+  for i in 1 .. 100 {
+    val power = scripts.do.diverse.getPower(intArrayOf(i, 1));
+    if (power > charge) {
+      endPoint = i;
+      break;
+    }
+  }
+
+  utils.log(['~~', id, needPowerStr, middlePoint, endPoint]);
+
+  scripts.lib.tooltip.desc.jei(item,
+    'singularity',
+    ore.name,
+    needPowerStr,
+    middlePoint == 0 ? '?' : middlePoint,
+    endPoint == 0 ? '?' : endPoint
+  );
+
+  val cotItem = native.youyihj.zenutils.api.cotx.brackets.BracketHandlerCoTItem.getItemRepresentation(fullId);
+  cotItem.onItemUpdate = getSingularityUpdateFunc(ore, recipeFunction);
+}
 // ------------------------------------------

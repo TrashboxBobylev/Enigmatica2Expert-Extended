@@ -57,20 +57,31 @@ for craftMat in [
   buildItem(craftMat);
 }
 
-// Custom singularities
-var x = VanillaFactory.createExpandItem('woodweave_singularity');
-x.creativeTab = <creativetab:other>;
-x.maxDamage = 30000;
-x.noRepair = true;
-// x.attackSpeed = 0; // Changing this values not working for unknown reason
-// x.attackDamage = 0;
-x.register();
+// --------------------------------------------------------------------
+// Singularities
+// --------------------------------------------------------------------
+static singularIDs as string[] = [];
+static singularOres as string[] = [];
+static singularCharges as string[] = [];
+function buildSingularity(id as string, ore as string, charge as int = 30000) as void {
+  val x = VanillaFactory.createExpandItem(`${id}_singularity`);
+  x.creativeTab = <creativetab:other>;
+  x.maxDamage = 30000;
+  x.noRepair = true;
+  x.register();
 
-x = VanillaFactory.createExpandItem('fish_singularity');
-x.creativeTab = <creativetab:other>;
-x.maxDamage = 30000;
-x.noRepair = true;
-x.register();
+  singularIDs += id;
+  singularOres += ore;
+  singularCharges += charge;
+}
+
+buildSingularity('woodweave', 'plankFireproof');
+buildSingularity('fish', 'listAllfishraw');
+
+scripts.lib.crossscript.setList('singularIDs', singularIDs);
+scripts.lib.crossscript.setList('singularOres', singularOres);
+scripts.lib.crossscript.setList('singularCharges', singularCharges);
+// --------------------------------------------------------------------
 
 createBlockStone('compressed_skystone', 6, <blockmaterial:rock>);
 createBlockStone('compressed_andesite', 4, <blockmaterial:rock>);
@@ -251,7 +262,7 @@ buildItem('dust_tiny_gold');
 buildItem('dust_tiny_silver');
 buildItem('compressed_tallow');
 
-x = VanillaFactory.createExpandItem('bee_diversity');
+var x = VanillaFactory.createExpandItem('bee_diversity');
 x.setCreativeTab(<creativetab:other>);
 x.rarity = 'rare';
 x.register();

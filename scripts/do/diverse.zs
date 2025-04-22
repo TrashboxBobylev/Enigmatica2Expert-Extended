@@ -13,9 +13,10 @@ import crafttweaker.data.IData;
 import crafttweaker.item.IIngredient;
 import crafttweaker.item.IItemStack;
 import crafttweaker.recipes.ICraftingInfo;
+import mods.ctutils.utils.Math;
 
-function getRecipeFunction(result as IItemStack) as function(IItemStack[string])IItemStack {
-  return function (ins as IItemStack[string]) as IItemStack {
+function getRecipeFunction(result as IItemStack, charge as int) as function(IItemStack[string],bool)IItemStack {
+  return function (ins as IItemStack[string], considerAmount as bool) as IItemStack {
     if (isNull(ins) || isNull(result)) return null;
     val ins0 = ins['0'];
 
@@ -34,10 +35,12 @@ function getRecipeFunction(result as IItemStack) as function(IItemStack[string])
     }
 
     // Add new values
-    for i in 1 .. 9 {
+    var maxIndex = 0;
+    for k,v in ins { if (k as int > maxIndex) maxIndex = k as int; }
+    for i in 1 .. (maxIndex + 1) {
       val insi = ins[i];
       if (isNull(insi)) continue; // case for manual func usage
-      val amount = 1 /* insi.amount */;
+      val amount = considerAmount ? insi.amount : 1;
       val key = insi.definition.id ~ ':' ~ insi.damage;
       if (isNull(newMap[key])) {
         newMap[key] = amount;
@@ -54,7 +57,7 @@ function getRecipeFunction(result as IItemStack) as function(IItemStack[string])
     for _, v in newMap { values[i] = v as int; i += 1; }
     val power = getPower(values);
 
-    val ratio = power / result.maxDamage;
+    val ratio = power / charge;
 
     if (ratio >= 1.0) return result;
 
@@ -62,19 +65,24 @@ function getRecipeFunction(result as IItemStack) as function(IItemStack[string])
     var singularity = !isNull(ins0.tag.singularity) ? ins0.tag.singularity : {};
     for i, v in newMap { singularity += { [i]: v as int } as IData; }
 
+    val ratioTurned = 1.0 - ratio;
     return result
-      .updateTag({ singularity: singularity })
-      .withDamage((1.0 - ratio) * result.maxDamage);
-  } as function(IItemStack[string])IItemStack;
+      .updateTag({ singularity: singularity, charge: (ratio * charge) as int })
+      .withDamage(pow(ratioTurned, 0.25) * result.maxDamage);
+  } as function(IItemStack[string],bool)IItemStack;
 }
 
 function addRecipe(
   recipeName as string,
   empty as IItemStack, // Empty, zero-charged base ingredient
   result as IItemStack, // Result item, fully charged
-  all as IIngredient // All items that may be used as fuel
-) as function(IItemStack[string])IItemStack {
-  val recipeFunction = getRecipeFunction(result);
+  all as IIngredient, // All items that may be used as fuel
+  charge as int // Charge required
+) as function(IItemStack[string],bool)IItemStack {
+
+  result.anyDamage().addAdvancedTooltip(function (item) { return scripts.do.charge.chargeTooltip(item); });
+
+  val recipeFunction = getRecipeFunction(result, charge);
 
   // Actual recipe
   recipes.addShaped(recipeName, result, [
@@ -82,7 +90,7 @@ function addRecipe(
     [all.marked('3'), all.marked('4'), all.marked('5')],
     [all.marked('6'), all.marked('7'), all.marked('8')],
   ],
-  function (out, ins, cInfo) { return recipeFunction(ins); }, null);
+  function (out, ins, cInfo) { return recipeFunction(ins, false); }, null);
 
   return recipeFunction;
 }
@@ -106,4 +114,45 @@ function getMapLength(map as IData) as int {
 function getItemFromString(itemStr as string) as IItemStack {
   val split = itemStr.split(':');
   return itemUtils.getItem(split[0] ~ ':' ~ split[1], split[2] as int);
+}
+
+if (utils.DEBUG) {
+  print('### scripts.do.diverse power depending on input:');
+  for i in 1 .. 40 {
+    val power = getPower(intArrayOf(i, i));
+    print('~~power '~i~' items of '~i~' types: '~ power as int);
+    // if (power > 30000) break;
+  }
+
+  for i in 2 .. 40 {
+    val power = getPower(intArrayOf(i, 1));
+    print('~~power '~1~' items of '~i~' types: '~ power as int);
+    // if (power > 30000) break;
+  }
+
+  for i in 2 .. 40 {
+    val arr = intArrayOf(i, 1);
+    for j in 1 .. i {
+      arr[j] = j+1;
+    }
+    val power = getPower(arr);
+    print('~~power 1,2,3..'~i~' items of '~i~' types: '~ power as int);
+    // if (power > 30000) break;
+  }
+
+  for i in 2 .. 40 {
+    val arr = intArrayOf(i, 1);
+    arr[0] = i*10;
+    val power = getPower(arr);
+    print('~~power '~1~' items of '~i~' types + '~i*10~' of single item: '~ power as int);
+    // if (power > 30000) break;
+  }
+
+  for i in 2 .. 40 {
+    val arr = intArrayOf(i, 2);
+    arr[0] = i*20;
+    val power = getPower(arr);
+    print('~~power '~2~' items of '~i~' types + '~i*20~' of single item: '~ power as int);
+    // if (power > 30000) break;
+  }
 }

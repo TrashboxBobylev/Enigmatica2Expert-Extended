@@ -27,8 +27,9 @@ function addSingularity(item as IItemStack) as void {
   });
 }
 
-addSingularity(<contenttweaker:woodweave_singularity:*>);
-addSingularity(<contenttweaker:fish_singularity:*>);
+for id in scripts.lib.crossscript.getList('singularIDs') {
+  addSingularity(<item:contenttweaker:${id}_singularity:*>);
+}
 
 // -----------------------------------------------------------------------------------
 

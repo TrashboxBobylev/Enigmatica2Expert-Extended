@@ -215,28 +215,6 @@ mods.enderio.CombustionGen.addFuel(<fluid:perfect_fuel>, 20000, 1500000);
 mods.thermalexpansion.MagmaticDynamo.addFuel(<fluid:perfect_fuel>, 2000000000);
 
 // -------------------------------------------------------------------
-// Singularities
-// -------------------------------------------------------------------
-var needPowerStr = mods.zenutils.StaticString.format('%,d', <contenttweaker:woodweave_singularity>.maxDamage).replaceAll(',', '§8,§6');
-scripts.lib.tooltip.desc.jei(<contenttweaker:woodweave_singularity>, 'singularity.woodweave', needPowerStr);
-
-static woodweaveRecipeFunction as function(IItemStack[string])IItemStack = scripts.do.diverse.addRecipe(
-  'Woodweave Singularity',
-  <avaritia:singularity>,
-  <contenttweaker:woodweave_singularity>,
-  <ore:plankFireproof>
-);
-
-needPowerStr = mods.zenutils.StaticString.format('%,d', <contenttweaker:fish_singularity>.maxDamage).replaceAll(',', '§8,§6');
-scripts.lib.tooltip.desc.jei(<contenttweaker:fish_singularity>, 'singularity.fish', needPowerStr);
-static fishRecipeFunction as function(IItemStack[string])IItemStack = scripts.do.diverse.addRecipe(
-  'Fish Singularity',
-  <avaritia:singularity>,
-  <contenttweaker:fish_singularity>,
-  <ore:listAllfishraw>
-);
-
-// -------------------------------------------------------------------
 
 /*
 # Knowledge absorber craft
