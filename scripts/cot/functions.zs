@@ -118,7 +118,7 @@ function canPlaceCoral(world as World, p as IBlockPos) as bool {
 <cotBlock:compressed_coral>.onRandomTick = function (world as World, p as BlockPos, blockState as BlockState) {
   if (world.remote) return;
 
-  if(world.getBlockState(p.up()).block.definition.id != 'minecraft:water') {
+  if (world.getBlockState(p.up()).block.definition.id != 'minecraft:water') {
     val state as IBlockState = <blockstate:randomthings:biomestone>;
     world.destroyBlock(p, false);
     world.setBlockState(state, p);
@@ -174,8 +174,7 @@ function getSingularityUpdateFunc(
   allIngredients as IIngredient,
   recipeFunction as function(IItemStack[string],bool)IItemStack
 ) as function(MutableItemStack,World,IEntity,int,bool)void {
-  return function(stack as MutableItemStack, world as World, owner as IEntity, slot as int, isSelected as bool) as void {
-
+  return function (stack as MutableItemStack, world as World, owner as IEntity, slot as int, isSelected as bool) as void {
     // skip each second frame to prevent item duping
     if (world.provider.worldTime % 2 == 0) return;
 
@@ -254,7 +253,7 @@ for i, id in singularIDs {
       break;
     }
   }
-  
+
   // Simulate crafting to find "1 item of each N types"
   var endPoint = 0;
   for i in 1 .. 100 {

@@ -2,10 +2,6 @@
 #modloaded crafttweakerutils
 #priority 9000
 
-import crafttweaker.item.IItemStack;
-import crafttweaker.player.IPlayer;
-import crafttweaker.world.IBlockPos;
-import crafttweaker.world.IWorld;
 import mods.contenttweaker.AxisAlignedBB;
 import mods.contenttweaker.BlockMaterial;
 import mods.contenttweaker.Color;
@@ -14,7 +10,6 @@ import mods.contenttweaker.ItemFood;
 import mods.contenttweaker.MaterialSystem;
 import mods.contenttweaker.SoundType;
 import mods.contenttweaker.VanillaFactory;
-import mods.ctutils.utils.Math.abs;
 
 mods.contenttweaker.VanillaFactory.createCreativeTab('other', <item:minecraft:coal:1>).register();
 
@@ -377,17 +372,17 @@ mm.register();
 mods.contenttweaker.VanillaFactory.createCreativeTab('coins_tab', <item:thermalfoundation:coin:64>).register();
 
 function buildCoin(name as string, glowing as bool = false) {
-  val item = VanillaFactory.createExpandItem('coin_' ~ name) as Item;
+  val item = VanillaFactory.createExpandItem(`coin_${name}`) as Item;
   item.setCreativeTab(<creativetab:coins_tab>);
   item.glowing = glowing;
-  item.textureLocation = mods.contenttweaker.ResourceLocation.create('contenttweaker:items/coin/' ~ name);
+  item.textureLocation = mods.contenttweaker.ResourceLocation.create(`contenttweaker:items/coin/${name}`);
   item.register();
 }
 
 function buildFoodyCoin(name as string, foodValue as int, foodSaturation as float) {
-  val item = VanillaFactory.createItemFood('coin_' ~ name, foodValue) as ItemFood;
+  val item = VanillaFactory.createItemFood(`coin_${name}`, foodValue) as ItemFood;
   item.setCreativeTab(<creativetab:coins_tab>);
-  item.textureLocation = mods.contenttweaker.ResourceLocation.create('contenttweaker:items/coin/' ~ name);
+  item.textureLocation = mods.contenttweaker.ResourceLocation.create(`contenttweaker:items/coin/${name}`);
   item.saturation = foodSaturation;
   item.register();
 }

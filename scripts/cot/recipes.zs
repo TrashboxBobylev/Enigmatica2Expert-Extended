@@ -40,7 +40,7 @@ craft.remake(<exnihilocreatio:item_mesh:1>, ['pretty',
 // Compressed
 val B = <ore:stoneBasalt>;
 recipes.addShapeless(<contenttweaker:compressed_basalt>, [B, B, B, B, B, B, B, B, B]);
-recipes.addShapeless(utils.tryCatch("chisel:basalt2", 7, <quark:basalt>) * 9, [<contenttweaker:compressed_basalt>]);
+recipes.addShapeless(utils.tryCatch('chisel:basalt2', 7, <quark:basalt>) * 9, [<contenttweaker:compressed_basalt>]);
 utils.compact(<contenttweaker:compressed_basalt>, <contenttweaker:compressed_basalt_double>);
 
 val C = <biomesoplenty:coral:*>;
