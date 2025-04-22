@@ -130,6 +130,27 @@ craft.make(<qmd:boots_hev>, ['pretty',
   'R   R'], ingrs
 );
 
+craft.remake(<qmd:part:9> * 4, ['pretty',
+  'B 3 B',
+  'B E B',
+  'B N B'], {
+  'B': <qmd:accelerator_cavity:4>,
+  '3': <opencomputers:print>,
+  'E': <ore:processorElite>,
+  'N': <ore:magnetNeodymium>,
+});
+
+craft.remake(<qmd:part:10> * 4, ['pretty',
+  'A 3 A',
+  '□ / □',
+  '□ r □'], {
+  'A': <ore:processorAdvanced>,
+  '3': <opencomputers:print>,
+  '□': <ore:plateSilver>,
+  '/': <ore:rodNdYAG>,
+  'r': <qmd:discharge_lamp:6>,
+});
+
 // [Tungsten Filament] from [Tungsten Ingot]
 scripts.process.alloy([<endreborn:item_ingot_wolframium>, <ore:dustTungsten>],
   <qmd:source>.withTag({ particle_storage: { particle_amount: 50000000, particle_capacity: 50000000 } }),
