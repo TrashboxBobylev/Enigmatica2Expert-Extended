@@ -55,9 +55,8 @@ function getBlockSturdity(state as IBlockState) as double {
   return (pow(max(0, def.hardness), 0.5) + 1) * (max(0, def.getHarvestLevel(state)) + 1);
 }
 
-// This function should be called once
-// warding `/ct reload`
-function postInit() as void {
+// Run only on initializing game
+if(scriptStatus() == 0) {
   for inputId, tuple in burntRecipes {
     val item = itemUtils.getItem(inputId);
     if (isNull(item)) {
