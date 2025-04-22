@@ -6,7 +6,7 @@
  */
 
 // Zenutils required to run late CoT function and use <cotBlock:> bracket handlers
-#modloaded zenutils
+#modloaded zenutils requious
 
 // Need to be set between Utils and build_mob.add() users
 #priority 950

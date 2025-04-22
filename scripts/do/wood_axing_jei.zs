@@ -1,4 +1,4 @@
-#modloaded jei
+#modloaded jei requious
 #priority -2
 
 import crafttweaker.item.IIngredient;

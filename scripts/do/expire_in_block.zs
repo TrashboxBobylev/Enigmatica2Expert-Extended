@@ -1,4 +1,4 @@
-#modloaded jei
+#modloaded jei requious
 #priority 10
 
 import crafttweaker.entity.IEntityItem;

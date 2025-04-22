@@ -1,6 +1,8 @@
 /*
 Jikanacea (Echinacea + jikan[time]) - extends durration of time in a bottle effect
 */
+
+#modloaded randomtweaker botania
 #loader contenttweaker
 
 import crafttweaker.entity.IEntity;

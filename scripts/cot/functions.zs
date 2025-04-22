@@ -1,4 +1,4 @@
-#modloaded contenttweaker
+#modloaded contenttweaker randomtweaker crafttweakerutils
 #reloadable
 #ignoreBracketErrors
 #priority -100

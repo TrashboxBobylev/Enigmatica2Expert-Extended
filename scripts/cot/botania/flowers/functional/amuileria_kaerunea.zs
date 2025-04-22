@@ -2,6 +2,7 @@
 Amuileria kaerunea (Aquilegia caerulea + Kaminari[thunder]) - crafting with lightning
 */
 
+#modloaded randomtweaker botania
 #loader contenttweaker
 
 import crafttweaker.item.IItemStack;

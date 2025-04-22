@@ -1,4 +1,4 @@
-#modloaded requious
+#modloaded requious advancedrocketry
 #reloadable
 
 import crafttweaker.entity.IEntityDefinition;

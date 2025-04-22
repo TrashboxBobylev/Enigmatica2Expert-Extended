@@ -1,6 +1,8 @@
 /*
 Echinacenko (Echinacea + kenko[health]) - provides nutritions to player
 */
+
+#modloaded randomtweaker botania
 #loader contenttweaker
 
 import crafttweaker.data.IData;

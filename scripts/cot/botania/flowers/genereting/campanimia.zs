@@ -58,6 +58,7 @@ Mana generations numbers:
 50 -> 258377
 51 -> 297066
 */
+#modloaded randomtweaker botania
 #loader contenttweaker
 
 import crafttweaker.block.IBlock;

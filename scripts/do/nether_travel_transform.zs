@@ -5,6 +5,7 @@ Spawn entities when entity item travel into Nether
 */
 
 #modloaded requious
+#ignoreBracketErrors
 
 // List of recipes
 val netherPortalEntityConversion = {

@@ -1,4 +1,4 @@
-#modloaded jei
+#modloaded jei advancedrocketry
 #priority 1
 #reloadable
 

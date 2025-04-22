@@ -1,4 +1,4 @@
-#modloaded requious
+#modloaded requious ic2
 #priority -1400
 #reloadable
 

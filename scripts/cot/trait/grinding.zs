@@ -29,7 +29,7 @@ There is synergy with:
   `,
 }) */
 
-#modloaded ctintegration crafttweakerutils zenutils
+#modloaded ctintegration crafttweakerutils zenutils conarm
 #loader contenttweaker
 
 import crafttweaker.block.IBlock;

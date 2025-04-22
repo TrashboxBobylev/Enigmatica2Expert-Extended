@@ -1,4 +1,4 @@
-#modloaded zenutils ctintegration
+#modloaded zenutils ctintegration ftblib
 #priority -1500
 #reloadable
 #sideonly client
