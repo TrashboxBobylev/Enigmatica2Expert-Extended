@@ -347,20 +347,26 @@ scripts.do.entity_kill_entity.add('minecraft:slime', 'iceandfire:if_cockatrice',
 
 // Dragon Scales
 val listConversionScales as IItemStack[] = [
-  <ic2:plate:10>,  <iceandfire:dragonscales_red>,
-  <ic2:plate:14>,  <iceandfire:dragonscales_green>,
-  <ic2:plate:9>,   <iceandfire:dragonscales_bronze>,
-  <ic2:plate:15>,  <iceandfire:dragonscales_gray>,
-  <ic2:plate:16>,  <iceandfire:dragonscales_blue>,
-  <ic2:plate:17>,  <iceandfire:dragonscales_white>,
-  <ic2:plate:13>,  <iceandfire:dragonscales_sapphire>,
-  <ic2:plate:12>,  <iceandfire:dragonscales_silver>,
+  <ic2:plate:10>,  <iceandfire:dragonscales_red>, <iceandfire:dragonscale_red>,
+  <ic2:plate:14>,  <iceandfire:dragonscales_green>, <iceandfire:dragonscale_green>,
+  <ic2:plate:9>,   <iceandfire:dragonscales_bronze>,  <iceandfire:dragonscale_bronze>,
+  <ic2:plate:15>,  <iceandfire:dragonscales_gray>, <iceandfire:dragonscale_gray>,
+  <ic2:plate:16>,  <iceandfire:dragonscales_blue>, <iceandfire:dragonscale_blue>,
+  <ic2:plate:17>,  <iceandfire:dragonscales_white>, <iceandfire:dragonscale_white>,
+  <ic2:plate:13>,  <iceandfire:dragonscales_sapphire>, <iceandfire:dragonscale_sapphire>,
+  <ic2:plate:12>,  <iceandfire:dragonscales_silver>, <iceandfire:dragonscale_silver>,
 ];
 
 for i, input in listConversionScales {
-  if (i % 2 != 0) continue;
+  if (i % 3 != 0) continue;
+
+  // Plate -> Scale
   val output = listConversionScales[i + 1];
   mods.rats.recipes.addArcheologistRatRecipe(input, output);
+
+  // Scale Block -> Plate
+  val block = listConversionScales[i + 2];
+  mods.rats.recipes.addArcheologistRatRecipe(block, input);
 
   // [Dragon Scales] from [Dragon Scale]
   recipes.addShapeless(output, [<mysticalagradditions:stuff:3>, input]);
