@@ -20,7 +20,7 @@ events.onEntityJoinWorld(function(event as EntityJoinWorldEvent) {
     if (entity instanceof IEntityItem) {
         val entityItem as IEntityItem = entity;
         val item = entityItem.item;
-        if (metaRemoveBlocks.matches(item)) {
+        if (!isNull(item) && metaRemoveBlocks.matches(item)) {
             item.mutable().withDamage(0);
         }
     }
