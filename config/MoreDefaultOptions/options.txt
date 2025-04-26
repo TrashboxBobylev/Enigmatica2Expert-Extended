@@ -83,6 +83,7 @@ key_enderio.keybind.stepassist:0
 key_enderio.keybind.tnt:24
 key_enderio.keybind.top:0
 key_enderio.keybind.yetawrenchmode:0
+key_flare.key.open_tick_tracking_menu:0
 key_FpsReducer.key.forceIdle:197
 key_FpsReducer.key.guiOpen:0
 key_gui.xaero_alternative_list_players:0
@@ -414,5 +415,12 @@ modelPart_right_pants_leg:true
 modelPart_hat:true
 key_gui.xaero_toggle_tracked_players_on_map:0
 
+key_flare.key.start_client_sampling:0
+key_flare.key.start_sampling:0
+key_flare.key.stop_client_sampling:0
+key_flare.key.stop_sampling:0
+key_key.hitindication.toggle_block_indicators:80
+key_key.hitindication.toggle_edge_of_screen_mode:71
+key_key.hitindication.toggle_hit_indication:72
 key_key.toggleVisible:0
-key_of.key.zoom:-97
+key_of.key.zoom:-97
