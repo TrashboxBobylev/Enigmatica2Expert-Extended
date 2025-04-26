@@ -172,7 +172,6 @@ desc.jei(<ic2:wrench>, 'ic2wrench');
 
 // Thermal Expansion Resonant Machine Frame (Full)
 desc.jei(<thermalexpansion:frame:148>, 'requires.rf', '100.000.000');
-desc.jei(<computercraft:printout>.withTag({ pages: 1 }), "§fPrint with §eComputer Craft§r's §bPrinter");
 
 // Tool Forge
 desc.tooltipRaw(<tconstruct:toolforge>.anyDamage(), desc.local('forge_from_metal'));
