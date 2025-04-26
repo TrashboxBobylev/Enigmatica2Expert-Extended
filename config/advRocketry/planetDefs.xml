@@ -248,6 +248,13 @@
 			<generateCaves>true</generateCaves>
 		</planet>
 		<planet name="Asteroid Belt" DIMID="124">
+			<skyColor>0.2,0.205,0.21</skyColor>
+			<fogColor>0.1,0.1,0.1</fogColor>
+			<fillerBlock>advancedrocketry:vitrifiedsand</fillerBlock>
+			<atmosphereDensity>0</atmosphereDensity>
+			<gravitationalMultiplier>1</gravitationalMultiplier>
+			<orbitalDistance>90</orbitalDistance>
+			<rotationalPeriod>18000000</rotationalPeriod>
 			<genType>2</genType>
 		</planet>
 		<planet name="Caveland" DIMID="125">
