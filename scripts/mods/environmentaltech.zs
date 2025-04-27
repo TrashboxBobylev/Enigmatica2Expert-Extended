@@ -382,9 +382,10 @@ craft.remake(<environmentaltech:modifier_flight_speed>, ['pretty',
 
 // [Clear Laser Lens] from [Hardened Enderium Glass]
 recipes.removeByRecipeName('environmentaltech:m_multiblocks/m_void/lens_clear');
-craft.make(<environmentaltech:laser_lens>, ['pretty',
+craft.make(<environmentaltech:laser_lens> * 2, ['pretty',
   '■   ■',
-  '■ ■ ■',
+  '■ B ■',
   '■   ■'], {
   '■': <thermalfoundation:glass_alloy:*>, // Hardened Enderium Glass
+  'B': <biomesoplenty:jar_filled:1>,
 });
