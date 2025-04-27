@@ -7,6 +7,8 @@ scripts.lib.dropt.addDrop(<advancedrocketry:geode>, <thermalfoundation:geode>);
 utils.makeExtremelyDurable(<advancedrocketry:geode>);
 utils.makeExtremelyDurable(<advancedrocketry:vitrifiedsand>);
 
+<advancedrocketry:crystal>.asBlock().definition.resistance = 20;
+
 // Rename basalt as it not oredicted and have different uses
 <advancedrocketry:basalt>.displayName = game.localize('e2ee.tile.basalt_sediment');
 
