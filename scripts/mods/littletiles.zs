@@ -34,13 +34,13 @@ val ingrs = {
 } as IIngredient[string];
 
 craft.remake(<littletiles:hammer>,             [' ` ', ' #`', '#  '], ingrs);
-craft.remake(<littletiles:recipeadvanced> * 4, ['P P', ' M ', 'P P'], ingrs);
 craft.remake(<littletiles:saw>,                ['  #', ' #╱', '#╱ '], ingrs);
 craft.remake(<littletiles:container>,          [' ` ', 'w w', ' w '], ingrs);
 craft.remake(<littletiles:wrench>,             ['  `', ' # ', 'w  '], ingrs);
 craft.remake(<littletiles:chisel>,             ['  `', ' # ', '#  '], ingrs);
 craft.remake(<littletiles:colortube>,          [' w ', ' #w', '#  '], ingrs);
 craft.remake(<littletiles:grabber>,            [' w ', 'wOw', ' # '], ingrs);
+craft.reshapeless(<littletiles:recipeadvanced> * 4, 'PM', ingrs);
 
 // Melt Water blocks
 scripts.process.melt(<littletiles:lttransparentcoloredblock:5>, <liquid:water> * 1000);

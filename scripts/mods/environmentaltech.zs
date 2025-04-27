@@ -221,8 +221,9 @@ for i in 0 .. 6 {
     D  : <environmentaltech:diode>,
     R  : <ic2:iridium_reflector>,
     E  : <ic2:nuclear:10>,
-    L  : <ore:blockVividAlloy>,
-    '╱': <tconstruct:clear_glass:*>,
+    L  : <ore:ingotVividAlloy>,
+    '∏': <computercraft:printout:*>,
+    '╱': <randomthings:biomeglass>,
   } as IIngredient[string];
 
   // -------------------------------------------
@@ -251,7 +252,7 @@ for i in 0 .. 6 {
     if (i == 4) {
       craft.remake(void_miner, ['𝓹',
         'B B C B B',
-        'B ╱ C ╱ B',
+        'B ╱ ∏ ╱ B',
         'R R P R R',
         'B E H E B',
         'I I H I I'], evtIngrs);
@@ -261,7 +262,7 @@ for i in 0 .. 6 {
       craft.remake(void_miner, ['𝓹',
         'B B B C B B B',
         'B ╱ ╱ C ╱ ╱ B',
-        'B ╱ ╱ C ╱ ╱ B',
+        'B ╱ ╱ ∏ ╱ ╱ B',
         'B R R P R R B',
         'B E E H E E B',
         'B L L H L L B',
