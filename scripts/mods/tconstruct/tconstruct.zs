@@ -149,6 +149,7 @@ val pressPlates = {
   flint           : <excompressum:compressed_block:5>,
   osgloglas       : <ore:blockOsgloglas>,
   black_quartz    : <ore:blockQuartzBlack>,
+  void_crystal    : <actuallyadditions:block_crystal:3>,
   heavy           : <ore:blockHeavy>,
   constantan      : <ore:blockConstantan>,
   manyullyn       : <ore:blockManyullyn>,
