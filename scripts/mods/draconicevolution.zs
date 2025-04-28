@@ -171,7 +171,7 @@ scripts.mods.extendedcrafting_engineering.remakeAlted(
   '* G *',
   '□ Ϟ □'], {
   'D': <draconicevolution:draconic_core>,
-  '▬': <ore:ingotCobalt60>,
+  '▬': <contenttweaker:elektron60_ingot>,
   '*': <ore:crystalLitherite>,
   'G': <gendustry:genetics_processor>,
   '□': <ore:plateElite>,
