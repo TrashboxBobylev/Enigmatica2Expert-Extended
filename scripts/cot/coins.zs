@@ -243,7 +243,7 @@ val gemMap = {
   <environmentaltech:litherite_crystal>  : { energyData: 675000, blockItem: { id: 'environmentaltech:pladium', Damage: 0 }}, // Pladium
   <environmentaltech:ionite_crystal>     : { energyData: 800000, blockItem: { id: 'environmentaltech:ionite', Damage: 0 }}, // Ionite
   <environmentaltech:aethium_crystal>    : { energyData: 1000000, blockItem: { id: 'environmentaltech:aethium', Damage: 0 }}, // Aethium
-  <environmentaltech:lonsdaleite_crystal>: { energyData: 353335, blockItem: { id: 'environmentaltech:lonsdaleite', Damage: 0 }}, // Lonsdaleite
+  <environmentaltech:lonsdaleite_crystal>: { energyData: 700000, blockItem: { id: 'environmentaltech:lonsdaleite', Damage: 0 }}, // Lonsdaleite
 
   <extrautils2:suncrystal>               : { energyData: 735940}, // Sun Crystal
   <astralsorcery:itemcraftingcomponent:4>: { energyData: 112500}, // Resonant Gem

@@ -46,12 +46,15 @@ recipes.addShapedMirrored('Nanobot Beacon',
     [<environmentaltech:erodium_crystal>, <cyclicmagic:beacon_potion>, <environmentaltech:erodium_crystal>],
     [<environmentaltech:interconnect>, <environmentaltech:diode>, <environmentaltech:interconnect>]]);
 
-// Lonsdaleite
-recipes.addShapedMirrored('Lonsdaleite',
-  <environmentaltech:lonsdaleite_crystal> * 3,
-  [[<ore:gemQuartzBlack>, <ore:dustWither>, <ore:gemQuartzBlack>],
-    [<ore:dustWither>, <ore:ingotBlackIron>, <ore:dustWither>],
-    [<ore:gemQuartzBlack>, <ore:dustWither>, <ore:gemQuartzBlack>]]);
+craft.remake(<environmentaltech:lonsdaleite_crystal> * 10, ['pretty',
+  '  B a',
+  '  * B',
+  '□    '], {
+  'B': <randomthings:ingredient:13>,
+  'a': <thermalfoundation:material:833>,
+  '*': <tconstruct:large_plate>.withTag({Material: "void_crystal"}),
+  '□': <ore:plateCarbon>,
+});
 
 // Connector
 scripts.mods.extendedcrafting_engineering.remakeAlted(
