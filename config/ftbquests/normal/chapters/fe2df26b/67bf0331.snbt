@@ -12,5 +12,15 @@
 	tasks: [{
 		uid: "67e31243",
 		type: "checkmark"
+	}],
+	rewards: [{
+		uid: "d4fdd492",
+		type: "item",
+		item: {
+			tag: {
+				type: "uncommon"
+			},
+			id: "ftbquests:lootcrate"
+		}
 	}]
 }
