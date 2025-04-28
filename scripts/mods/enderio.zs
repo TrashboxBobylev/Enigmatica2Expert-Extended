@@ -163,14 +163,13 @@ scripts.mods.extendedcrafting_engineering.remakeAlted(
   '¤': <ore:gearEnderium>,
 });
 
-// [End Steel Chassis] from [Quartzburnt][+2]
-craft.remake(<enderio:item_material:66>, ['pretty',
-  'E ◊ E',
+craft.remake(<enderio:item_material:66> * 2, ['pretty',
+  '▬ ◊ ▬',
   '◊ Q ◊',
-  'E ◊ E'], {
-  'E': <enderio:block_end_iron_bars>, // End Steel Bars
-  '◊': <ore:gemXorcite>, // Xorcite Shard
-  'Q': <extrautils2:decorativesolid:7>, // Quartzburnt
+  '▬ ◊ ▬'], {
+  '▬': <ore:ingotEndSteel>,
+  '◊': <ore:gemXorcite>,
+  'Q': <extrautils2:decorativesolid:7>,
 });
 
 // [Basic Capacitor] from [Redstone Conductance Coil][+3]
