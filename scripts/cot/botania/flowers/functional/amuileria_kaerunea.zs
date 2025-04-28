@@ -1,87 +1,124 @@
 #modloaded randomtweaker botania
+#priority 900
 #reloadable
 
+import crafttweaker.item.IIngredient;
+import crafttweaker.item.IItemDefinition;
 import crafttweaker.item.IItemStack;
 import crafttweaker.util.Math;
 import crafttweaker.world.IBlockPos;
 import crafttweaker.world.IWorld;
 import mods.randomtweaker.cote.SubTileEntityInGame;
+import native.net.minecraft.entity.effect.EntityLightningBolt;
 import native.net.minecraft.util.EnumParticleTypes;
 import native.net.minecraft.world.WorldServer;
 
-static recipesLigthningFlower as IItemStack[string] = {
-} as IItemStack[string];
-
 static manaCostPerLightning as int = 1000;
 
-val amuileria_kaerunea = <cotSubTile:amuileria_kaerunea>;
+// Actual Ingredient => Result recipes
+static recipeMap as IItemStack[IIngredient] = {};
 
-amuileria_kaerunea.onUpdate = function (subtile, world, pos) {
-  if (!world.worldInfo.isThundering()) return;
-  if (world.isRemote()) return;
-  if (world.worldInfo.worldTotalTime % 100 == 17) charge(world, pos, subtile);
+// Fast input definition lookup map for performance
+static lookupMap as bool[IItemDefinition] = {};
+
+for input, output in {
+  <item:appliedenergistics2:material:0> : <item:appliedenergistics2:material:1>,
+  <item:appliedenergistics2:material:10>: <item:appliedenergistics2:material:1>,
+} as IItemStack[IItemStack] {
+  add(input, output);
+}
+
+function add(input as IIngredient, output as IItemStack) as void {
+  recipeMap[input] = output;
+  for item in input.items { lookupMap[item.definition] = true; }
+
+  if (scriptStatus() == 0) { // Run only on initializing game
+    scripts.jei.crafting_hints.addInsOutCatl([input], output, <botania:specialflower>.withTag({type: 'amuileria_kaerunea'}));
+  }
+}
+
+<cotSubTile:amuileria_kaerunea>.onUpdate = function (subtile, world, pos) {
+  if (world.remote
+    || !world.worldInfo.isThundering()
+    || world.worldInfo.worldTotalTime % 100 != 17
+  ) {
+    return;
+  }
+
+  charge(world, pos, subtile);
 };
 
 events.onEntityItemDeath(function (e as mods.zenutils.event.EntityItemDeathEvent) {
-  val world = e.item.world;
-  if (world.isRemote()) return;
-  val damageSource = e.damageSource;
-  if (isNull(damageSource)) return;
-  if (damageSource.damageType != 'lightningBolt') return;
+  if (e.item.world.remote
+    || isNull(e.damageSource)
+    || e.damageSource.damageType != 'lightningBolt'
+  ) {
+    return;
+  }
+
+  // Raw input check
   val item = e.item;
-  if (isNull(item) || isNull(item.item) || isNull(item.item.name)) return;
-  if (!(recipesLigthningFlower has item.item.name)) return;
-  val newEntity = recipesLigthningFlower[item.item.name].withAmount(item.item.amount).createEntityItem(world, item.x as float, item.y as float, item.z as float);
-  world.spawnEntity(newEntity);
+  if (isNull(item)
+    || isNull(item.item)
+    || isNull(item.item.definition)
+    || !(lookupMap has item.item.definition)
+  ) {
+    return;
+  }
+
+  // More precipes ingredient check
+  for input, output in recipeMap {
+    if (!(input has item.item)) continue;
+
+    val entityItem = output
+      .withAmount(item.item.amount)
+      .createEntityItem(e.item.world, item.x as float, item.y as float, item.z as float);
+    entityItem.isInvulnerable = true;
+
+    e.item.world.spawnEntity(entityItem);
+    break;
+  }
 });
 
 function charge(world as IWorld, pos as IBlockPos, subtile as SubTileEntityInGame) as void {
   if (isNull(subtile.data.charge)) subtile.setCustomData({charge: 0});
   if (subtile.data.charge < 4) {
-    subtile.setCustomData({charge: (subtile.data.charge as int + 1)});
+    subtile.setCustomData({charge: 1 + subtile.data.charge});
+    (world.native as WorldServer).spawnParticle(EnumParticleTypes.END_ROD, 0.5 + pos.x, 0.5 + pos.y, 0.5 + pos.z, 20, 0.25, 0.25, 0.25, 0, 0);
     return;
   }
 
-  var makeThunder = false;
   if (subtile.getMana() < manaCostPerLightning) return;
+
+  var makeThunder = false;
   for item in world.getEntityItems() {
     if (isNull(item)
       || isNull(item.item)
-      || Math.abs(item.x - pos.x - 0.5) > 2
       || Math.abs(item.y - pos.y) > 1
+      || Math.abs(item.x - pos.x - 0.5) > 2
       || Math.abs(item.z - pos.z - 0.5) > 2
       || !item.alive
-      || !(recipesLigthningFlower has item.item.name)) {
+      || !(lookupMap has item.item.definition)
+    ) {
       continue;
     }
-    item.updateNBT({amuileria: 1});
-    makeThunder = true;
-    continue;
+
+    for input, _ in recipeMap {
+      if (input has item.item) {
+        makeThunder = true;
+        break;
+      }
+    }
+
+    if (makeThunder) break;
   }
 
   if (makeThunder) {
-    server.commandManager.executeCommandSilent(server, `/summon minecraft:lightning_bolt ${pos.x} ${pos.y} ${pos.z}`);
+    val lightning = EntityLightningBolt(world, pos.x, pos.y, pos.z, false);
+    world.native.addWeatherEffect(lightning);
     subtile.setCustomData({charge: 0});
   }
   else {
     (world.native as WorldServer).spawnParticle(EnumParticleTypes.CRIT_MAGIC, 0.5f + pos.x, 1.2 + pos.y, 0.5f + pos.z, 5, 0.4, 0.4, 0.4, 0, 0);
   }
-}
-
-val lightningRecipes = {
-  <item:appliedenergistics2:material:0> : <item:appliedenergistics2:material:1>,
-  <item:appliedenergistics2:material:10>: <item:appliedenergistics2:material:1>,
-} as IItemStack[IItemStack];
-
-for item, result in lightningRecipes {
-  registerThunderRecipe(item, result);
-  scripts.jei.crafting_hints.addInsOutCatl([item], result, <botania:specialflower>.withTag({type: 'amuileria_kaerunea'}));
-}
-
-function registerThunderRecipe(item as IItemStack, result as IItemStack) as void {
-  if (recipesLigthningFlower has item.name) {
-    return;
-  }
-  recipesLigthningFlower[item.name] = result;
-  if (!(recipesLigthningFlower has result.name)) recipesLigthningFlower[result.name] = result;
 }
