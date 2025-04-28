@@ -838,6 +838,14 @@
     </alloying>
   </recipe>
   <!-- Recipe below generated automatically. Do not make changes or they gonna be rewritten. -->
+  <recipe name="Elektron60-Alloy Ingot">
+    <alloying energy="10000">
+      <input name="ingotMagnesium26"/>
+      <input name="ingotCobalt60"/>
+      <output name="contenttweaker:elektron60_ingot" amount="4"/>
+    </alloying>
+  </recipe>
+  <!-- Recipe below generated automatically. Do not make changes or they gonna be rewritten. -->
   <recipe name="Enderium Base">
     <alloying energy="10000">
       <input name="ingotPulsatingIron"/>
