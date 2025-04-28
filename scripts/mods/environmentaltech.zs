@@ -56,6 +56,22 @@ craft.remake(<environmentaltech:lonsdaleite_crystal> * 10, ['pretty',
   '□': <ore:plateCarbon>,
 });
 
+craft.remake(<environmentaltech:lightning_rod>, [
+  'E',
+  '▬',
+  '▬'], {
+  'E': <ore:itemEndSteelMachineChassi>,
+  '▬': <ore:ingotConductiveIron>,
+});
+
+craft.remake(<environmentaltech:lightning_rod_insulated>, ['pretty',
+  '  S  ',
+  'S / S',
+  '  S  '], {
+  'S': <minecraft:sea_lantern>,
+  '/': <environmentaltech:lightning_rod>,
+});
+
 // Connector
 scripts.mods.extendedcrafting_engineering.remakeAlted(
   <environmentaltech:connector>, ['pretty',
