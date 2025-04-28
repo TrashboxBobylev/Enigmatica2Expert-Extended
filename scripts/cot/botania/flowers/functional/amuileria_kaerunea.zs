@@ -24,6 +24,10 @@ static lookupMap as bool[IItemDefinition] = {};
 for input, output in {
   <item:appliedenergistics2:material:0> : <item:appliedenergistics2:material:1>,
   <item:appliedenergistics2:material:10>: <item:appliedenergistics2:material:1>,
+  <thermalfoundation:bait:1>: <thermalfoundation:bait:2>,
+  <thermalfoundation:fertilizer:1>: <thermalfoundation:fertilizer:2>,
+  <appliedenergistics2:quartz_ore>: <appliedenergistics2:charged_quartz_ore>,
+  <harvestcraft:creeperwingsitem>: <rats:charged_creeper_chunk>,
 } as IItemStack[IItemStack] {
   add(input, output);
 }
