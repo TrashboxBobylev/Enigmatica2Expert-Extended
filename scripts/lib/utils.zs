@@ -91,17 +91,12 @@ zenClass Utils {
    * Idea from:
    * https://github.com/DoremySwee/Art-of-Enigma/blob/2465b90209ced64f5a1ca65ffdd17b6d60e2206c/scripts/recipes/libs/Misc.zs#L47-L67
    */
-  function tempName(ins as IIngredient, local as string) as IIngredient {
+  function tempName(ins as IIngredient, local as string, colorID as int = 6) as IIngredient {
     var result as IIngredient = null;
     for i in ins.items {
-      var tag = {
-        'display'           : { LocName: local },
-        'Quark:RuneColor'   : 6,
-        'Quark:RuneAttached': 1 as byte,
-      } as IData + shimmerTag;
-      if (i.hasTag) tag = i.tag.deepUpdate(tag);
-      if (isNull(result)) result = i.updateTag(tag, false);
-      else result |= i.updateTag(tag, false);
+      val item = locName(shine(i, colorID), local);
+      if (isNull(result)) result = item;
+      else result |= item;
     }
 
     // Guard for uninitialized oredicts
@@ -412,6 +407,21 @@ zenClass Utils {
   val shimmerTag as IData = { ench: [{}] };
   function shiningTag(color as int) as IData {
     return { enchantmentColor: color } as IData + shimmerTag;
+  }
+
+  function shine(item as IItemStack, colorID as int = 6) as IItemStack {
+    if (isNull(item)) return null;
+    return item.withTag(item.tag.deepUpdate(shimmerTag + {
+        'Quark:RuneColor'   : colorID,
+        'Quark:RuneAttached': 1 as byte,
+      }, mods.zenutils.DataUpdateOperation.MERGE));
+  }
+
+  function locName(item as IItemStack, local as string) as IItemStack {
+    if (isNull(item)) return null;
+    return item.withTag(item.tag.deepUpdate(shimmerTag + {
+        display: { LocName: local },
+      }, mods.zenutils.DataUpdateOperation.MERGE));
   }
 
   function addEnchRecipe(output as IItemStack, ench as crafttweaker.enchantments.IEnchantmentDefinition, inputs as IIngredient[][]) as void {
