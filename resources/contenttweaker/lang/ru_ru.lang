@@ -10,6 +10,8 @@ entity.twilightforest.castle_guardian.name=Хранитель замка
 # --------------------------------------
 description.crt.reuse=§a§o(Не будет потрачено!)§r
 description.crt.consume=§6§o(Будет потрачено!)§r
+description.crt.charged=%s §3§o(Заряжено)§r
+description.crt.encrusted=%s §6§o(Инкрустировано)§r
 
 # --------------------------------------
 # CoT new content

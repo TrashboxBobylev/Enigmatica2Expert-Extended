@@ -10,6 +10,8 @@ entity.twilightforest.castle_guardian.name=城堡守护者
 # --------------------------------------
 description.crt.reuse=§a§o(不会被消耗！)§r
 description.crt.consume=§6§o(会被消耗！)§r
+description.crt.charged=%s §3§o（已充能）§r
+description.crt.encrusted=%s §6§o（已镶嵌）§r
 
 # --------------------------------------
 # CoT new content

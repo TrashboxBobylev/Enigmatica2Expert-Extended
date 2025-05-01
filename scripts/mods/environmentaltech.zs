@@ -160,6 +160,51 @@ recipes.removeByRecipeName('environmentaltech:m_multiblocks/interconnect');
 
 // ######################################################################
 //
+// Recreate Structure Frames
+//
+// ######################################################################
+val frameIngrs = [
+  <environmentaltech:litherite_crystal>, <actuallyadditions:item_crystal_empowered:4>,
+  <environmentaltech:erodium_crystal>, <actuallyadditions:item_crystal_empowered:1>,
+  <environmentaltech:kyronite_crystal>, <actuallyadditions:item_crystal_empowered>,
+  <environmentaltech:pladium_crystal>, <actuallyadditions:item_crystal_empowered:3>,
+  <environmentaltech:ionite_crystal>, <actuallyadditions:item_crystal_empowered:2>,
+  <environmentaltech:aethium_crystal>, <biomesoplenty:terrestrial_artifact>,
+] as IIngredient[];
+
+// Quark frame codes depending on tier
+val frameColor = [5, 9, 14, 10, 3, 1] as int[];
+
+for i in 0 .. 6 {
+  val localPure = i == 0
+    ? 'tile.environmentaltech.interconnect.name'
+    : 'tile.environmentaltech.structure_frame_' ~ i ~ '.name';
+  val localCharged = 'description.crt.charged.evt_frame_' ~ i;
+  val localEncrusted = 'description.crt.encrusted.evt_frame_' ~ i;
+  game.setLocalization(localCharged, mods.zenutils.I18n.format(game.localize('description.crt.charged'), game.localize(localPure)));
+  game.setLocalization(localEncrusted, mods.zenutils.I18n.format(game.localize('description.crt.encrusted'), game.localize(localPure)));
+
+  val pureFrame = i == 0
+    ? <environmentaltech:interconnect>
+    : <item:environmentaltech:structure_frame_${i}>;
+  val chargedFrame = utils.shine(utils.locName(pureFrame, localCharged), 8);
+  val encrustedFrame = utils.shine(utils.locName(pureFrame, localEncrusted), frameColor[i]);
+
+  // Step 1
+  scripts.cot.botania.flowers.functional.amuileria_kaerunea.add(pureFrame, chargedFrame);
+  mods.thermalexpansion.Infuser.addRecipe(chargedFrame, pureFrame, 20000);
+
+  // Step 2
+  scripts.process.alloy([chargedFrame, frameIngrs[i * 2]], encrustedFrame, 'only: Induction', [<thermalfoundation:material:865>]);
+
+  // Step 3
+  val nextFrame = <item:environmentaltech:structure_frame_${i + 1}>;
+  recipes.remove(nextFrame);
+  scripts.process.alloy([encrustedFrame, frameIngrs[i * 2 + 1]], nextFrame, 'only: Induction', [<thermalfoundation:material:866>]);
+}
+
+// ######################################################################
+//
 // Solar panels 1-6
 //
 // ######################################################################
