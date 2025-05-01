@@ -133,9 +133,9 @@ function mash(input as IIngredient, output as IItemStack, exceptions as string =
 
 // Alloy two or more metals into one
 // [📦+] → 📦
-function alloy(input as IIngredient[], output as IItemStack, exceptions as string = null) {
+function alloy(input as IIngredient[], output as IItemStack, exceptions as string = null, extra as IItemStack[] = null, extraChance as float[] = null, opts as IData = null) {
   work(['alloyFurnace', 'induction', 'alloySmelter', 'ArcFurnace', 'AdvRockArc', 'kiln'],
-    exceptions, input, null, [output], null, null, null);
+    exceptions, input, null, [output], null, extra, extraChance, opts);
 }
 
 // Takes plant or seed and grow it
