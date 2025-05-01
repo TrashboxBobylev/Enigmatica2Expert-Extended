@@ -75,14 +75,16 @@ craft.remake(<environmentaltech:lightning_rod_insulated>, ['pretty',
 // Connector
 scripts.mods.extendedcrafting_engineering.remakeAlted(
   <environmentaltech:connector>, ['pretty',
-    '♥ ■ ♥',
-    '■ ▬ ■',
-    '♥ ■ ♥'], {
-    '♥': <ore:ingotSignalum>,
-    '■': <ore:blockTin>,
-    '▬': <ore:ingotAlubrass>,
+    '▬ □ ▬',
+    '■ I ■',
+    '▬ □ ▬'], {
+    '▬': <ore:ingotSignalum>,
+    '□': <ore:plateDenseTin>,
+    '■': <ore:blockAlubrass>,
+    'I': <ore:itemInfinityGoop>,
   }, 4, {
-    '♥': <ore:crystalRedstone>,
+    '▬': <ore:clathrateRedstone>,
+    '□': <ore:blockMithril>,
     '■': <ore:blockMithril>,
   });
 
@@ -116,13 +118,13 @@ recipes.addShapeless('Litherite Block -> Crystal',
   <environmentaltech:litherite_crystal> * 9,
   [<ore:blockLitherite>]);
 
-// [Interconnect] from [Connector][+1]
-craft.remake(<environmentaltech:interconnect>, ['pretty',
-  '⌃ C ⌃',
-  'C ⌃ C',
-  '⌃ C ⌃'], {
-  '⌃': <ore:blockQuartzBlack>, // Block of Black Quartz
-  'C': <environmentaltech:connector>, // Connector
+craft.remake(<environmentaltech:interconnect> * 2, ['pretty',
+  '* C *',
+  'C □ C',
+  '* C *'], {
+  '*': <tconstruct:large_plate>.withTag({Material: "void_crystal"}),
+  'C': <environmentaltech:connector>,
+  '□': <ore:plateMithril>,
 });
 
 remake('environmentaltech modifier_speed',
