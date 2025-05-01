@@ -86,6 +86,12 @@ zenClass Utils {
     return null;
   }
 
+  function fakeIngredient(displayed as IIngredient, actual as IIngredient) as IIngredient {
+    return displayed.only(function (item) {
+      return actual.matches(item);
+    });
+  }
+
   /**
    * Name that only display over ingredient but not actually require it on craft
    * Idea from:
@@ -102,9 +108,7 @@ zenClass Utils {
     // Guard for uninitialized oredicts
     if (isNull(result)) return ins;
 
-    return result.only(function (item) {
-      return ins.matches(item);
-    });
+    return fakeIngredient(result, ins);
   }
 
   function reuse(ins as IIngredient) as IIngredient {
