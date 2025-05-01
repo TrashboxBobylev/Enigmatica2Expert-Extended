@@ -44,7 +44,7 @@ function add(input as IIngredient, output as IItemStack) as void {
 <cotSubTile:amuileria_kaerunea>.onUpdate = function (subtile, world, pos) {
   if (world.remote
     || !world.worldInfo.isThundering()
-    || world.worldInfo.worldTotalTime % 100 != 17
+    || world.worldInfo.worldTotalTime % 20 != 0
   ) {
     return;
   }
