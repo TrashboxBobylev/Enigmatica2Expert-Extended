@@ -87,9 +87,11 @@ zenClass Utils {
   }
 
   function fakeIngredient(displayed as IIngredient, actual as IIngredient) as IIngredient {
-    return displayed.only(function (item) {
-      return actual.matches(item);
-    });
+    return actual;
+    // TODO: Fix not working in recipes
+    // return displayed.only(function (item) {
+    //   return actual has item;
+    // });
   }
 
   /**
