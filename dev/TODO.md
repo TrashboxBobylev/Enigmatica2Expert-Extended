@@ -2,17 +2,43 @@
 
 🚧✅❌⚠️ List of priorities:
 
-- [ ] 🟢 Add https://www.curseforge.com/minecraft/mc-mods/random-complement
-- [ ] 🟢 Add https://www.curseforge.com/minecraft/mc-mods/extended-crafting-terminals-for-applied
+- [ ] 📖 Fix FTBQuest .js script removing titles
+- [x] Revert screenshot migration
+- [ ] Integrate new `TCon Fluids`: Blazing Blood, Venom, Calcium, Green Slime, 
 - [ ] Draconium Ore pieces cant be turned into ore (onloy on server) https://github.com/Krutoy242/Enigmatica2Expert-Extended/commit/f8d85415782be0d7234c037f232b8ee5ab9ac0eb
 - [ ] Idea: Difficulty cant grow if you didnt died
 - [ ] 🦆 Geese still dupe armor
-- [ ] Replace Blocks with Crystals for ET recipes (to descrease time need for next tier)
+- [x] Replace Blocks with Crystals for ET recipes (to descrease time need for next tier)
 - [ ] 📀 change of `Trick: Ebony and Ivory` spell from "The End dimension" to "The End biome"
+- [x] Fix `Compressed Furnaces` wrong name in TOP
+- [ ] 📖 `Interdiction Pulsar` add to some quest reward and describe how to use
+- [ ] `Tungsten Ore` higher mining level
 - [ ] 𝓩𝒮 `/perf` improvments:
   > - [ ] Group chunks by dimension
   > - [ ] Split big reports to pages
   > - [ ] Add command mention in quest book
+
+### "Endgame" expansion
+- [x] ✏️ `Evt Crystal Blocks` should decay into lower variants
+- [ ] 🌌 Idea: `Sound Singularity` - crafted with different sounds
+- [ ] 🌍 Populate Wasteland (4598) with removed Ores but make them extremely durable
+- [ ] 📀 Remove ability of `Auto Breaker` (AA) to break any harvest level blocks
+- [ ] Make recipe of `Wateland Portal` but unable to be made from inside of Wateland
+- [ ] `Creative Power Input Plug` add recipe
+- [x] ✏️ Move all Extended Crafting methods to endgame - its late gamemod and shouldnt be used in early/mid
+- [x] 📖 Add new `Conflux V` level based on 100% trophy completion
+- [ ] 🧶 Feat: make some ores / materials only harvestable with Gluon Gun
+- [ ] ✏️ `Creative Impetus` add recipe
+- [ ] ✏️ Integrate `Orbital Laser Drill` better. It can mine ores on planet orbits for skyblock
+- [ ] ✨ Idea: reaching 1000 difficulty instantly advance player to endgame powers: `AS knowledge, TC research no warp, ∞ saturation, reach++, ∞ break`
+- [ ] 🌍 Teleport player to Alien Forest with Blood Magic TP ritual
+- [ ] ✏️ Tweak Botania `Extended Crafting Tables` recipes to non-tech
+- [ ] 🌍 Alien Forest add JER data
+- [ ] ✏️ RFTools `Dimension building` make cheaper by balancing possible dimlets
+- [ ] ✏️ Draconic Evolution infusion can use trillions RF
+- [ ] ✏️ Add ![](https://is.gd/OcNNZN "Uncrafting Grinder") as Endgame item, right before creative upgrade
+- [ ] ✏️ Add new crafting mechanic - melting blocks in world that cant be harvested, such as `Rock Crystal Ore, Swolen/Fibrous Taint, Vis Crystal, Grass Path, Porous stone, Antimatter, TF Tree Cores, TF Thorns, Trollstein, Foam, Block Mushrooms, Rat Hole`
+- [ ] `Creative Draconic Capacitor` make it from QMD materials to suggest advancing in QMD
 
 ---
 
@@ -98,32 +124,8 @@ Planned non-urgent changes, or just good ideas:
 - [ ] ✏️ QMD atmosphere collector for other dims
 - [ ] ✏️ Add usage of `Perfect Fuel` in NCO (with `flux goo` as sub-product)
 
-### "Endgame" expansion
-- [x] ✏️ Add `Machine Case Singularity`
-- [x] ✏️ Add `Meat Singularity`
-- [x] ✏️ Add `Garbage Singularity`
-- [x] ✏️ Add `Ball singularity`
-- [x] ✏️ Add `Ultimate Singularity` as diversity from other singularities
-- [x] ✏️ `Critical Matter Cluster` add usages and mechanics (obtained with shift+right click of World Breaker)
-- [x] ✏️ Some QMD / NCO craft MUST use <opencomputers:print>
-- [x] 🌍 AdvRock geodes should contain modded ores (use <geodeOres> XML tag)
-- [x] ✏️ Nerf IO spike metals (carapace with `Bedrock cobblestone` + `Bedrock Ore` inside instead of pure blocks)
-- [ ] ✏️ Move all Extended Crafting methods to endgame - its late gamemod and shouldnt be used in early/mid
-- [ ] ✏️ `Creative Impetus` add recipe
-- [ ] 📖 Add new `Conflux V` level based on 100% trophy completion
-- [ ] ✏️ Integrate `Orbital Laser Drill` better. It can mine ores on planet orbits for skyblock
-- [ ] ✨ Idea: reaching 1000 difficulty instantly advance player to endgame powers: `AS knowledge, TC research no warp, `
-- [ ] 🌍 Teleport player to Alien Forest with Blood Magic TP ritual
-- [ ] ✏️ Tweak Botania Extended Crafting Tables recipes to non-tech
-- [ ] 🌍 Alien Forest add JER data
-- [ ] ✏️ RFTools `Dimension building` make cheaper by balancing possible dimlets
-- [ ] ✏️ Draconic Evolution infusion can use trillions RF
-- [ ] ✏️ Add ![](https://is.gd/OcNNZN "Uncrafting Grinder") as Endgame item, right before creative upgrade
-- [ ] ✏️ Add new crafting mechanic - melting blocks in world that cant be harvested, such as `Rock Crystal Ore, Swolen/Fibrous Taint, Vis Crystal, Grass Path, Porous stone, Antimatter, TF Tree Cores, TF Thorns, Trollstein, Foam, Block Mushrooms, Rat Hole`
-- [ ] 🧶 Feat: make some ores / materials only harvestable with Gluon Gun
-- [ ] `Creative Draconic Capacitor` make it from QMD materials to suggest advancing in QMD
-
 ### "Multiplayer" expansion
+- [ ] Reward with 1 DankNull panel in several quests to promote sharing
 - [ ] Think if i could make a script to keep 100% modpack completion after new quests are added
 - [ ] 💬 Chat names should have special unicode symbols to show Conflux level and "accomplishments" (including Discord support)
 - [ ] 💬 `Accomplishments` ⚜✳✴❇ mechanic:
@@ -134,13 +136,16 @@ Planned non-urgent changes, or just good ideas:
   * Ideas for goals: Mined blocks, Jumps, Deaths.
   * Table with more ideas: https://www.reddit.com/r/feedthememes/comments/jk9rag/the_political_compass_but_its_types_of_ftb_players/
 
+### Skyblock expansion
+
+- [ ] Skyblock: Make `Porouse Stone` and `AA Ore Laser` unavoidable in skyblock
+
 ### Mods
 - [ ] 🔴 Remove **Random Patches** since UT and Valkyrie now do most of its features
 - [ ] 🔴 Remove **XTones** and **Environmental Materials** since they are depricated by LittleTiles and Cathedral
 - [ ] 🟠 Do not update **AdvancedRocketry-1.12.2-2.1.4-9** to `2.1.5` since causing Skyblock generate overworld and unable to sleep on servers
 - [ ] 🟠 Do not update **ae2-uel-v0.56.6** since its breaking plus + button craftings
 - [ ] 🟠 Do not update **JAOPCA** - uncompatible with JAOPCACustom
-- [ ] 🟠 Do not update **spark** (not working propertly)
 - [ ] 🟠 Do not update **Advanced Rocketry - Reworked** until fixed https://github.com/dercodeKoenig/AdvancedRocketry/issues/50
 - [ ] 🟢 Add **everlastingabilities** when someone integrate it
 - [ ] 🟢 Add **Fancier Particles** (note gitignore) when fixed: https://github.com/Red-Studio-Ragnarok/Fancier-Block-Particles/issues/12
@@ -154,6 +159,7 @@ Planned non-urgent changes, or just good ideas:
 
 ### Other
 
+- [ ] Add speed boost to IE Concrete via chisel `src/main/java/team/chisel/client/handler/BlockSpeedHandler.java`
 - [ ] 🌍 Idea: fountains from Chemical Spreader projectiles that spread functionable fluid, transforming landscape around
 - [ ] 🟡 Integrate `My Precious`: add to Dungeon loot, add in Loot Boxes
 - [ ] 💡 Idea: items doesnt have borders if already acquired
@@ -344,9 +350,6 @@ Items that should have more uses:
 
 ### Tier 2
 
-![](http://tinyurl.com/Printed-Page "Printed Page")
-![](https://git.io/JLhhL "Infinity Reagent")
-![](https://git.io/JGGh7 "Mana Infused Ingot")
 ![](https://git.io/JnN1t "Sun Crystal")
 ![](https://git.io/JRLSJ "Ice Shard")
 ![](https://git.io/JRnDa "Tar")
@@ -363,7 +366,7 @@ Items that should have more uses:
 ![](https://git.io/JtDnO "Chemical Thrower")
 ![](http://tinyurl.com/Blue-Fire-Jar "Blue Fire Jar")
 ![](http://tinyurl.com/Radiator-Block "Radiator Block")
-Sound based ingredient
+🔊Sound based ingredient
 
 ---
 
