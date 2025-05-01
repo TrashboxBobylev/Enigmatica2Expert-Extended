@@ -331,7 +331,17 @@ function addDragonForgeRecipe(input1 as IItemStack, input2 as IItemStack, output
 }
 
 recipes.removeByRecipeName('avaritia:items/resource/crystal_matrix_ingot');
-addDragonForgeRecipe(<minecraft:nether_star>, <ore:gemDilithium>.firstItem, <avaritia:resource:1>);
+addDragonForgeRecipe(<extendedcrafting:material:49>, <ore:gemDilithium>.firstItem, <avaritia:resource:1>);
+
+mods.advancedrocketry.RecipeTweaker
+  .forMachine('PrecisionLaserEtcher')
+  .builder()
+  .input(<extendedcrafting:material:49>)
+  .input(<ore:gemDilithium>)
+  .outputs(<avaritia:resource:1>)
+  .power(100000)
+  .timeRequired(5)
+  .build();
 
 // Oredicting recipe
 // [Compressed Crafting Table] from [Crafting Table]

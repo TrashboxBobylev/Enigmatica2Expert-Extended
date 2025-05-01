@@ -258,9 +258,6 @@ mods.iceandfire.recipes.addIceDragonForgeRecipe(
 // Alt for non-dragon players
 scripts.processUtils.avdRockXmlRecipeEx('Crystallizer', [<cyclicmagic:heart_toxic>], [<fluid:lifeessence> * 1000], [<scalinghealth:heartcontainer>], null, { power: 100000, timeRequired: 20 });
 
-// [Crystal Matrix Ingot] from [Diamond Lattice][+1]
-scripts.processUtils.avdRockXmlRecipeEx('PrecisionLaserEtcher', [<ore:netherStar>, <ore:gemDilithium>], null, [<avaritia:resource:1>], null, { power: 100000, timeRequired: 20 });
-
 // [Fire Dragonsteel Ingot] from [Fire Dragon Blood][+1]
 scripts.process.alloy([
   <ore:ingotThermoconducting>,    // Thermoconducting Alloy
