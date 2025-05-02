@@ -73,7 +73,7 @@ key_enderio.keybind.fovstore:0
 key_enderio.keybind.fovunreset:0
 key_enderio.keybind.glidertoggle:37
 key_enderio.keybind.gogglesofrevealing:0
-key_enderio.keybind.inventory:23
+key_enderio.keybind.inventory:23:CONTROL
 key_enderio.keybind.jump:0
 key_enderio.keybind.magnet:0
 key_enderio.keybind.nightvision:25
@@ -320,7 +320,7 @@ key_oreexcavation.key.excavate:-96
 key_oreexcavation.key.shape:0
 key_pi.key.et_gui:23
 key_pi.key.et_world:23:CONTROL
-key_pi.key.open_pi:23
+key_pi.key.open_pi:0
 key_ping.key.alert:75
 key_ping.key.goto:0
 key_ping.key.look:0
@@ -423,4 +423,4 @@ key_key.hitindication.toggle_block_indicators:80
 key_key.hitindication.toggle_edge_of_screen_mode:71
 key_key.hitindication.toggle_hit_indication:72
 key_key.toggleVisible:0
-key_of.key.zoom:-97
+key_of.key.zoom:-97
