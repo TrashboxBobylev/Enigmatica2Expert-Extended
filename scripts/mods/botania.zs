@@ -177,7 +177,7 @@ for relic in [
   <botania:odinring>,
   <botania:thorring>,
 ] as IItemStack[] {
-  recipes.addShapeless(relic, [utils.fakeIngredient(utils.reuse(relic), relic.anyDamage()), <botania:dice>]);
+  recipes.addShapeless(relic, [relic.anyDamage().reuse(), <botania:dice>]);
 }
 
 // Livingrock
