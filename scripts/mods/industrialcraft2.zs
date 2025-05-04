@@ -604,7 +604,6 @@ mods.nuclearcraft.Melter.addRecipe(<ore:coal> | <ore:dustCoal>, <liquid:coal> * 
 furnace.setFuel(<ic2:dust:16>, 0);
 mods.mekanism.chemical.oxidizer.removeRecipe(<gas:sulfurdioxide>, <ic2:dust:16>);
 mods.mekanism.enrichment.removeRecipe(<ic2:dust:16>);
-mods.nuclearcraft.Melter.addRecipe(<ore:dustSulfur>, <liquid:sulfur> * 100);
 
 // -----------------------------------------
 // Other new recipes for crop res
