@@ -31,7 +31,6 @@ org.spongepowered.asm.mixin.transformer.throwables.InvalidMixinException: @Shado
 [Client thread/WARN] [draconicevolution]: Found empty mod doc folder D:\mc\E2E-E\config\brandon3055\ProjectIntelligence\ModDocs\enderio
 [Client thread/WARN] [draconicevolution]: Found empty mod doc folder D:\mc\E2E-E\config\brandon3055\ProjectIntelligence\ModDocs\projectintelligence
 [Client thread/WARN] [draconicevolution]: Found empty mod doc folder D:\mc\E2E-E\config\brandon3055\ProjectIntelligence\ModDocs\thaumicenergistics
-[DE Contributors DL Thread/ERROR] [draconicevolution]: Failed to download contributors list
 [Client thread/WARN] [net.minecraft.network.datasync.EntityDataManager]: defineId called for: class net.minecraft.entity.item.EntityMinecartFurnace from class com.lothrazar.cyclicmagic.item.minecart.EntityGoldFurnaceMinecart
 [Client thread/WARN] [mixin]: Mixin apply for mod UniversalTweaks-1.12.2-1.15.1.jar failed mixins.mods.cookingforblockheads.json:UTTileOvenMixin from mod UniversalTweaks-1.12.2-1.15.1.jar -> net.blay09.mods.cookingforblockheads.tile.TileOven: org.spongepowered.asm.mixin.transformer.throwables.InvalidMixinException @Shadow method update in mixins.mods.cookingforblockheads.json:UTTileOvenMixin from mod UniversalTweaks-1.12.2-1.15.1.jar was not located in the target class net.blay09.mods.cookingforblockheads.tile.TileOven. Using refmap universaltweaks.refmap.json
 org.spongepowered.asm.mixin.transformer.throwables.InvalidMixinException: @Shadow method update in mixins.mods.cookingforblockheads.json:UTTileOvenMixin from mod UniversalTweaks-1.12.2-1.15.1.jar was not located in the target class net.blay09.mods.cookingforblockheads.tile.TileOven. Using refmap universaltweaks.refmap.json
@@ -69,4 +68,4 @@ Outputs:
 net.minecraft.item.ItemStack: [[1xitem.thaumadditions:salt_essence@0 thaumadditions:salt_essence]]
 Inputs:
 net.minecraft.item.ItemStack: [[1xitem.thaumadditions:salt_essence@0 thaumadditions:salt_essence]]
-  [...]
+  [...]

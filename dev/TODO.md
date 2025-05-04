@@ -3,14 +3,11 @@
 🚧✅❌⚠️ List of priorities:
 
 - [ ] 📖 Fix FTBQuest .js script removing titles
-- [x] Revert screenshot migration
 - [ ] Integrate new `TCon Fluids`: Blazing Blood, Venom, Calcium, Green Slime, 
 - [ ] Draconium Ore pieces cant be turned into ore (onloy on server) https://github.com/Krutoy242/Enigmatica2Expert-Extended/commit/f8d85415782be0d7234c037f232b8ee5ab9ac0eb
 - [ ] Idea: Difficulty cant grow if you didnt died
 - [ ] 🦆 Geese still dupe armor
-- [x] Replace Blocks with Crystals for ET recipes (to descrease time need for next tier)
 - [ ] 📀 change of `Trick: Ebony and Ivory` spell from "The End dimension" to "The End biome"
-- [x] Fix `Compressed Furnaces` wrong name in TOP
 - [ ] 📖 `Interdiction Pulsar` add to some quest reward and describe how to use
 - [ ] `Tungsten Ore` higher mining level
 - [ ] 𝓩𝒮 `/perf` improvments:
@@ -19,14 +16,12 @@
   > - [ ] Add command mention in quest book
 
 ### "Endgame" expansion
-- [x] ✏️ `Evt Crystal Blocks` should decay into lower variants
 - [ ] 🌌 Idea: `Sound Singularity` - crafted with different sounds
 - [ ] 🌍 Populate Wasteland (4598) with removed Ores but make them extremely durable
 - [ ] 📀 Remove ability of `Auto Breaker` (AA) to break any harvest level blocks
 - [ ] Make recipe of `Wateland Portal` but unable to be made from inside of Wateland
 - [ ] `Creative Power Input Plug` add recipe
 - [x] ✏️ Move all Extended Crafting methods to endgame - its late gamemod and shouldnt be used in early/mid
-- [x] 📖 Add new `Conflux V` level based on 100% trophy completion
 - [ ] 🧶 Feat: make some ores / materials only harvestable with Gluon Gun
 - [ ] ✏️ `Creative Impetus` add recipe
 - [ ] ✏️ Integrate `Orbital Laser Drill` better. It can mine ores on planet orbits for skyblock
@@ -159,6 +154,7 @@ Planned non-urgent changes, or just good ideas:
 
 ### Other
 
+- [ ] Add `Sulfur Dioxide/Trioxide` in fluid dictionary
 - [ ] Add speed boost to IE Concrete via chisel `src/main/java/team/chisel/client/handler/BlockSpeedHandler.java`
 - [ ] 🌍 Idea: fountains from Chemical Spreader projectiles that spread functionable fluid, transforming landscape around
 - [ ] 🟡 Integrate `My Precious`: add to Dungeon loot, add in Loot Boxes
