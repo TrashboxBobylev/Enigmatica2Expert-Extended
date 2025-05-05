@@ -2,38 +2,29 @@
 
 🚧✅❌⚠️ List of priorities:
 
-- [ ] 📖 Fix FTBQuest .js script removing titles
+- [ ] Revert screenshots
+- [ ] TCon set `deconstructXPRequirement` and describe in quests
 - [ ] Integrate new `TCon Fluids`: Blazing Blood, Venom, Calcium, Green Slime, 
 - [ ] Draconium Ore pieces cant be turned into ore (onloy on server) https://github.com/Krutoy242/Enigmatica2Expert-Extended/commit/f8d85415782be0d7234c037f232b8ee5ab9ac0eb
-- [ ] Idea: Difficulty cant grow if you didnt died
-- [ ] 🦆 Geese still dupe armor
-- [ ] 📀 change of `Trick: Ebony and Ivory` spell from "The End dimension" to "The End biome"
-- [ ] 📖 `Interdiction Pulsar` add to some quest reward and describe how to use
-- [ ] `Tungsten Ore` higher mining level
-- [ ] 𝓩𝒮 `/perf` improvments:
-  > - [ ] Group chunks by dimension
-  > - [ ] Split big reports to pages
-  > - [ ] Add command mention in quest book
 
 ### "Endgame" expansion
+
+- [ ] `Asteroid Belt` add `bedrockore` with 2,000,000,000 ores to practically make resources passivable
+- [ ] 🌟 Vetrified Sand drop items that can be combined with UU-Matter items to get any craftable item in game
 - [ ] 🌌 Idea: `Sound Singularity` - crafted with different sounds
 - [ ] 🌍 Populate Wasteland (4598) with removed Ores but make them extremely durable
-- [ ] 📀 Remove ability of `Auto Breaker` (AA) to break any harvest level blocks
 - [ ] Make recipe of `Wateland Portal` but unable to be made from inside of Wateland
 - [ ] `Creative Power Input Plug` add recipe
-- [x] ✏️ Move all Extended Crafting methods to endgame - its late gamemod and shouldnt be used in early/mid
 - [ ] 🧶 Feat: make some ores / materials only harvestable with Gluon Gun
 - [ ] ✏️ `Creative Impetus` add recipe
 - [ ] ✏️ Integrate `Orbital Laser Drill` better. It can mine ores on planet orbits for skyblock
 - [ ] ✨ Idea: reaching 1000 difficulty instantly advance player to endgame powers: `AS knowledge, TC research no warp, ∞ saturation, reach++, ∞ break`
-- [ ] 🌍 Teleport player to Alien Forest with Blood Magic TP ritual
-- [ ] ✏️ Tweak Botania `Extended Crafting Tables` recipes to non-tech
-- [ ] 🌍 Alien Forest add JER data
-- [ ] ✏️ RFTools `Dimension building` make cheaper by balancing possible dimlets
-- [ ] ✏️ Draconic Evolution infusion can use trillions RF
+- [ ] ✏️ `Ultimate Extended Crafty Crate` add recipes
 - [ ] ✏️ Add ![](https://is.gd/OcNNZN "Uncrafting Grinder") as Endgame item, right before creative upgrade
+- [ ] ✏️ `Draconic Evolution` add recipes that use trillions RF
 - [ ] ✏️ Add new crafting mechanic - melting blocks in world that cant be harvested, such as `Rock Crystal Ore, Swolen/Fibrous Taint, Vis Crystal, Grass Path, Porous stone, Antimatter, TF Tree Cores, TF Thorns, Trollstein, Foam, Block Mushrooms, Rat Hole`
 - [ ] `Creative Draconic Capacitor` make it from QMD materials to suggest advancing in QMD
+- [ ] ✏️ RFTools `Dimension building` rework - make cheaper by balancing possible dimlets
 
 ---
 
@@ -57,6 +48,7 @@ Planned non-urgent changes, or just good ideas:
 - Vanilla Chests
 
 ### Quests and Docs expansion
+- [ ] 📖 `Interdiction Pulsar` add to some quest reward and describe how to use
 - [ ] 📖 Add PSI spells into quest rewards or loot boxes
 - [ ] 📖 Add Skyblock quest about Terraformer
 - [ ] 📖 Add Blast Furnace heat source
@@ -79,6 +71,7 @@ Planned non-urgent changes, or just good ideas:
 - [ ] ✏️ `Compressed` mobs should be bigger
 
 ### "Flora & Fauna" expansion
+- [ ] ✨ Idea: Flower that regenerate ore in `bedrockore`
 - [ ] 💡 Feature idea: animal totem that work when you place mobs on each other in right sequence (cow-sheep-chicken for example)
 - [ ] 🌱 Add NC and QMD radioactive items mutating IC2 crops to increase / descrease their stats
 - [ ] 🍐 Fix Papaya manual tree harvesting with custom interract event https://github.com/Krutoy242/Enigmatica2Expert-Extended/issues/426
@@ -154,6 +147,11 @@ Planned non-urgent changes, or just good ideas:
 
 ### Other
 
+- [ ] ✨ Idea: Difficulty cant grow if you didnt died
+- [ ] 🌍 Teleport player to AlienJungle with Blood Magic TP ritual
+- [ ] 🌍 AlienJungle add JER data
+- [ ] 𝓩𝒮 `/perf` improvments: Group chunks by dimension, Split big reports to pages, Add command mention in quest book
+- [ ] 📀 change of `Trick: Ebony and Ivory` spell from "The End dimension" to "The End biome"
 - [ ] Add `Sulfur Dioxide/Trioxide` in fluid dictionary
 - [ ] Add speed boost to IE Concrete via chisel `src/main/java/team/chisel/client/handler/BlockSpeedHandler.java`
 - [ ] 🌍 Idea: fountains from Chemical Spreader projectiles that spread functionable fluid, transforming landscape around
@@ -311,7 +309,7 @@ Planned non-urgent changes, or just good ideas:
 
 ---
 
-## TODO 2.0
+## TODO `E2EE v2.0`
 
 List of features and changes for `E2EE v2.0`, that breaking worlds and require fresh start
 
