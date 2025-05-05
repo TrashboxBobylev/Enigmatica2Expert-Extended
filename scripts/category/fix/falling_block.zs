@@ -8,6 +8,7 @@ Idea taken from modpack `IsolatedCrystal3`.
 */
 
 #reloadable
+#ignoreBracketErrors
 
 import crafttweaker.event.EntityJoinWorldEvent;
 import crafttweaker.entity.IEntityItem;
