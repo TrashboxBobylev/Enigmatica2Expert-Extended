@@ -4,7 +4,7 @@
 	x: 14.6d,
 	y: 7.2d,
 	shape: "square",
-	description: "This quest require finish at least 22 chapters with trophies.",
+	description: "{q.gates.conflux_v.subtitle}",
 	text: [
 		"{q.gates.conflux_v.desc}"
 	],
