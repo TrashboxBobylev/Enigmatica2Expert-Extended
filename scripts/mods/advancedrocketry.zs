@@ -4,9 +4,8 @@ import crafttweaker.data.IData;
 import crafttweaker.item.IItemStack;
 
 scripts.lib.dropt.addDrop(<advancedrocketry:geode>, <thermalfoundation:geode>);
-utils.makeExtremelyDurable(<advancedrocketry:geode>);
-utils.makeExtremelyDurable(<advancedrocketry:vitrifiedsand>);
-
+<advancedrocketry:geode>.asBlock().definition.resistance = 160;
+<advancedrocketry:vitrifiedsand>.asBlock().definition.resistance = 160;
 <advancedrocketry:crystal>.asBlock().definition.resistance = 20;
 
 // Rename basalt as it not oredicted and have different uses

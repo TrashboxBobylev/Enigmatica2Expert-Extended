@@ -494,15 +494,5 @@ zenClass Utils {
     ) as SoundEvent;
     world.native.playSound(null, pos, soundRes, SoundCategory.AMBIENT, volume, pitch);
   }
-
-  // Make block barely breakable
-  function makeExtremelyDurable(item as IItemStack) as void {
-    if (isNull(item)) return;
-    val asBlock = item.asBlock();
-    if (isNull(asBlock)) return;
-    asBlock.definition.resistance = 160;
-    asBlock.definition.hardness = 200;
-    asBlock.definition.setHarvestLevel('pickaxe', 14);
-  }
 }
 global utils as Utils = Utils();
