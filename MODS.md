@@ -455,7 +455,6 @@ Icon | Summary
 <img src="https://media.forgecdn.net/avatars/thumbnails/1223/434/30/30/638801642158504721.png"           > |                       [**Tinkers' Antique**](https://www.curseforge.com/minecraft/mc-mods/tinkers-antique)              <sup><sub>TinkersAntique-1.12.2-2.13.0.198.1.jar           </sub></sup><br>Unofficial take of Tinkers&#x27; Construct 2 for 1.12.2 ⛏️ A little of this, a little of that, a lot of tinkering, and a lot of tools
 -----------
 
-
 ## 🔴 Removed from `E2E` Mods
 
 Mods that exists in `E2E` but __was removed__ in `E2E-Extended`
