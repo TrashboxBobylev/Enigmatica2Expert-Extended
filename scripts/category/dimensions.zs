@@ -45,7 +45,7 @@ function isForbidTravel(player as IPlayer, dimension as int) as bool {
   val isNether = dimension == -1;
   if (player.hasGameStage('skyblock')) {
     // Show message that player playing skyblock and cant visit any dims
-    if (isNether || restrictedDims has dimension) {
+    if (!isAllowedDim(dimension)) {
       player.sendRichTextMessage(fromTranslation('tooltips.dim_stages.restricted'));
       return true;
     }
@@ -65,6 +65,15 @@ function isForbidTravel(player as IPlayer, dimension as int) as bool {
   return false;
 }
 
+// Allow listed dimensions and any of RFTools dimensions
+static allowedDims as int[] = [0,-1,144,-343800852,2,-2,3];
+function isAllowedDim(dimId as int) as bool {
+  if (allowedDims has dimId) return true;
+  val providerType = native.net.minecraftforge.common.DimensionManager.getProviderType(dimId);
+  if(isNull(providerType)) return false;
+  return toString(providerType.getId()) == 'rftools_dimension';
+}
+
 events.onEntityTravelToDimension(function (e as crafttweaker.event.EntityTravelToDimensionEvent) {
   if (e.entity.world.isRemote()) return;
   if (!e.entity instanceof IPlayer) return;
@@ -81,47 +90,3 @@ events.onPlayerChangedDimension(function (e as crafttweaker.event.PlayerChangedD
     }).start();
   }
 });
-
-// We need to use Restricted dims to allow RFTools generated dimensions
-static restrictedDims as int[] = [
-/* Inject_js(
-[...new Set(
-getCSV('config/tellme/dimensions-csv.csv')
-.filter(l=>
-  ![0,144,-343800852,2,-2,3].includes(parseInt(l.ID)) // Allowed dims
-  && l.name !== 'rftools_dimension'
-)
-.concat([{ID:200}]) // Hardcoded dimensions (OTG ones)
-.map(l=>`  ${l.ID},`)
-)]
-) */
-  1,
-  14676,
-  -1,
-  19,
-  -11325,
-  4598,
-  -8,
-  7,
-  100,
-  101,
-  102,
-  103,
-  105,
-  106,
-  108,
-  109,
-  110,
-  111,
-  112,
-  114,
-  122,
-  123,
-  120,
-  121,
-  124,
-  125,
-  4,
-  200,
-/**/
-] as int[];
