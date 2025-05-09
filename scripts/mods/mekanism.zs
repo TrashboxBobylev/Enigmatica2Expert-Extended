@@ -404,14 +404,14 @@ craft.remake(<mekanism:gasupgrade>, ['pretty',
 );
 
 // Atomic disassembler
-recipes.removeShaped(<mekanism:atomicdisassembler>);
-val anyDragonsteelRod = <tconstruct:tough_tool_rod>.withTag({ Material: 'dragonsteel_ice' })
-| <tconstruct:tough_tool_rod>.withTag({ Material: 'dragonsteel_fire' });
-recipes.addShaped(<mekanism:atomicdisassembler>, [
-  [<ore:ingotPlatinum>, <mekanism:tierinstaller:3>, <ore:ingotPlatinum>],
-  [<ore:ingotPlatinum>, anyDragonsteelRod, null],
-  [null, anyDragonsteelRod, null],
-]);
+craft.remake(<mekanism:atomicdisassembler>, ['pretty',
+  '▬ E ▬',
+  '▬ -  ',
+  '  -  '], {
+  '▬': <ore:ingotVividAlloy>,
+  'E': <mekanism:tierinstaller:2>,
+  '-': <ore:dragonsteelIngot>,
+});
 
 mods.mekanism.enrichment.removeRecipe(<appliedenergistics2:crystal_seed>, <appliedenergistics2:material:10>);
 mods.mekanism.enrichment.removeRecipe(<appliedenergistics2:crystal_seed:600>, <appliedenergistics2:material:11>);
