@@ -2,6 +2,8 @@
 
 🚧✅❌⚠️ List of priorities:
 
+- [ ] High Oven recipes missed in HEI
+- [ ] Remove ChatFlow
 - [ ] Revert screenshots
 - [ ] TCon set `deconstructXPRequirement` and describe in quests
 - [ ] Integrate new `TCon Fluids`: Blazing Blood, Venom, Calcium, Green Slime, 
@@ -147,6 +149,7 @@ Planned non-urgent changes, or just good ideas:
 
 ### Other
 
+- [ ] 🌍 Bio planet bog should have Peat under the ground
 - [ ] ✨ Idea: Difficulty cant grow if you didnt died
 - [ ] 🌍 Teleport player to AlienJungle with Blood Magic TP ritual
 - [ ] 🌍 AlienJungle add JER data

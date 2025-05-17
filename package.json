@@ -1,7 +1,7 @@
 {
   "type": "module",
   "private": true,
-  "packageManager": "pnpm@9.5.0",
+  "packageManager": "pnpm@10.10.0",
   "files": [
     "./**/*js"
   ],
@@ -11,7 +11,7 @@
     "🧱build": "tsx dev/make_pack.js",
     "dev": "concurrently --prefix-colors auto \"npm:dev:* --silent\"",
     "dev:bansoukou": "tsx dev/automation/bansoukou.js",
-    "dev:benchmark": "node E:/dev/mc-benchmark/dist/mc-benchmark.js > dev/benchmarks/latest.md",
+    "dev:benchmark": "npx mc-benchmark > dev/benchmarks/latest.md",
     "dev:conflicts": "tsx dev/automation/recipe_conflicts.js",
     "dev:entities": "tsx dev/automation/entities.js",
     "dev:errors": "tsx mc-tools/packages/errors/src/cli.ts --config=dev/tools/mct-errors-config.yml --output=dev/tools/unresolved-errors.log",
@@ -67,7 +67,7 @@
     "language-name-map": "^0.3.0",
     "lodash": "^4.17.21",
     "log-update": "^6.0.0",
-    "mc-benchmark": "^1.0.9",
+    "mc-benchmark": "^2.1.0",
     "memoizee": "^0.4.17",
     "minimist": "^1.2.8",
     "nbt-ts": "^1.3.6",
