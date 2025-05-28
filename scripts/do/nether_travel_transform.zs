@@ -25,7 +25,7 @@ val nehterTravelBlacklist = {
 
 events.onEntityTravelToDimension(function (e as crafttweaker.event.EntityTravelToDimensionEvent) {
   val world = e.entity.world;
-  if (e.entity.world.isRemote()) return;
+  if (e.entity.world.remote) return;
   if (e.dimension != -1 as int) return;
 
   // Wasps cant travel to Nether

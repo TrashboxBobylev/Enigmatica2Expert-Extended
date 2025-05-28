@@ -22,7 +22,7 @@ val echinacenko = VanillaFactory.createSubTileFunctional('echinacenko', 0xFF00FF
 echinacenko.maxMana = 1000;
 echinacenko.range = 4;
 echinacenko.onUpdate = function (subtile, world, pos) {
-  if (world.isRemote()
+  if (world.remote
     || world.worldInfo.worldTotalTime % 100 != 13) {
     return;
   }

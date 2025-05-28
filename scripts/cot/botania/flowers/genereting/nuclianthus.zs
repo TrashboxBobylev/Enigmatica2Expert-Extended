@@ -45,7 +45,7 @@ nuclianthus.maxMana = 10000;
 nuclianthus.passiveFlower = false;
 nuclianthus.range = 1;
 nuclianthus.onUpdate = function (subtile, world, pos) {
-  if (world.isRemote()) return;
+  if (world.remote) return;
   isWorking(subtile) ? generate(world, pos, subtile) : pickUpFuel(world, pos, subtile);
 };
 nuclianthus.register();

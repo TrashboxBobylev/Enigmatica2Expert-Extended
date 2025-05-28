@@ -21,7 +21,7 @@ antirrhift.maxMana = 0;
 antirrhift.passiveFlower = false;
 antirrhift.range = 4;
 antirrhift.onUpdate = function (subtile, world, pos) {
-  if (world.isRemote()) return;
+  if (world.remote) return;
   if (!subtile.isValidBinding()) return;
   // get mana buffer
   val nWorld = world as World;

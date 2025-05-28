@@ -156,7 +156,7 @@ function runAutomation(player as IPlayer) as void {
 }
 
 events.onPlayerLoggedIn(function (e as crafttweaker.event.PlayerLoggedInEvent) {
-  if (e.player.world.isRemote()) return;
+  if (e.player.world.remote) return;
   if (!debugUtils.firstTime(e.player.world.time)) return;
 
   e.player.world.catenation().sleep(100).then(function (world, ctx) {

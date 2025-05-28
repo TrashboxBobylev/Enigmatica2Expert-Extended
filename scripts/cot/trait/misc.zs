@@ -188,7 +188,7 @@ static spectreUpdateTime as int = 80;
 static hasPotioncore as bool = loadedMods.contains('potioncore');
 
 function spectreMechanic(world as IWorld, player as IPlayer, level as int) as void {
-  if (world.isRemote()) return;
+  if (world.remote) return;
   if (isNull(player)) return;
   val levelMult = hasPotioncore ? 1 : 3;
   val newEffect = hasPotioncore ? <potion:potioncore:reach> : <potion:cyclicmagic:magnet>;
@@ -283,11 +283,11 @@ grindingTrait.color = 0x444450;
 grindingTrait.localizedName = game.localize('e2ee.tconstruct.material.grinding.name');
 grindingTrait.localizedDescription = game.localize('e2ee.tconstruct.material.grinding.description');
 grindingTrait.onFalling = function (trait, armor, player, event) {
-  if (event.entityLivingBase.world.isRemote()) return;
+  if (event.entityLivingBase.world.remote) return;
   scripts.cot.trait.grinding.onFalling(armor, player);
 };
 grindingTrait.onAbility = function (trait, level, world, player) {
-  if (world.isRemote()) return;
+  if (world.remote) return;
   scripts.cot.trait.grinding.onAbility(trait, level, world, player);
 };
 grindingTrait.register();

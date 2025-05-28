@@ -7,7 +7,7 @@ import crafttweaker.item.IItemStack;
 // Deny this by costom event
 events.onAllowDespawn(function (e as crafttweaker.event.EntityLivingSpawnEvent) {
   if (
-    e.world.isRemote()
+    e.world.remote
     || !(e.entity instanceof crafttweaker.entity.IEntityAnimal)
     || e.entityLivingBase.definition.id != 'rats:rat'
   ) return;

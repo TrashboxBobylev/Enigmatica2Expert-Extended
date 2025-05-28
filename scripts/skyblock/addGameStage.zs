@@ -6,7 +6,7 @@ import crafttweaker.data.IData;
 import crafttweaker.player.IPlayer;
 
 events.onPlayerLoggedIn(function (e as crafttweaker.event.PlayerLoggedInEvent) {
-  if (e.player.world.isRemote()) return;
+  if (e.player.world.remote) return;
 
   val data as IData = e.player.data.enigmatica;
   val logCount = (!isNull(data) && !isNull(data.logCount)) ? data.logCount.asInt() + 1 : 1;

@@ -74,7 +74,7 @@ campanimia.maxMana = 300000;
 campanimia.passiveFlower = false;
 campanimia.range = 1;
 campanimia.onUpdate = function (subtile, world, pos) {
-  if (world.isRemote()) return;
+  if (world.remote) return;
   if (world.worldInfo.worldTotalTime % 20 != 7) return;
   val cruciblesPos = getCruciblesPos(world, pos);
   if (cruciblesPos.length == 0) return;

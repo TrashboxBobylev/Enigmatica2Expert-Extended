@@ -9,7 +9,7 @@ This fix not working - event not fired at all
 # Without this fix components not returned always
 # https://github.com/Krutoy242/Enigmatica2Expert-Extended/issues/30
 events.onEntityLivingUseItem(function(e as crafttweaker.event.EntityLivingUseItemEvent.All){
-  if(!e.isPlayer || e.player.world.isRemote()) return;
+  if(!e.isPlayer || e.player.world.remote) return;
   e.player.sendMessage("§7Entering onEntityLivingUseItemStart");
   if(!e.player.isSneaking) return;
   e.player.sendMessage("§7Player Sneaking");
