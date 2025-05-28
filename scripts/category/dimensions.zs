@@ -86,7 +86,9 @@ events.onPlayerChangedDimension(function (e as crafttweaker.event.PlayerChangedD
   if (e.entity.world.remote) return;
   if (!e.player.creative && isForbidTravel(e.player, e.to)) {
     e.player.world.catenation().sleep(20).then(function (world, ctx) {
-      server.commandManager.executeCommandSilent(server, '/tpx ' ~ e.player.name ~ ' ' ~ e.from);
+      server.commandManager.executeCommandSilent(server, '/tpx ' ~ e.player.name ~ ' 3');
+      if (!isNull(e.player))
+        e.player.addPotionEffect(<potion:cyclicmagic:potion.slowfall>.makePotionEffect(40, 0));
     }).start();
   }
 });
