@@ -2,10 +2,7 @@
 
 🚧✅❌⚠️ List of priorities:
 
-- [ ] High Oven recipes missed in HEI
-- [ ] Remove ChatFlow
-- [ ] Revert screenshots
-- [ ] TCon set `deconstructXPRequirement` and describe in quests
+- [ ] High Oven recipes missed in HEI. Related https://github.com/Elite-Modding-Team/TinkersAntique/issues/58
 - [ ] Integrate new `TCon Fluids`: Blazing Blood, Venom, Calcium, Green Slime, 
 - [ ] Draconium Ore pieces cant be turned into ore (onloy on server) https://github.com/Krutoy242/Enigmatica2Expert-Extended/commit/f8d85415782be0d7234c037f232b8ee5ab9ac0eb
 
@@ -14,6 +11,9 @@
 - [ ] `Asteroid Belt` add `bedrockore` with 2,000,000,000 ores to practically make resources passivable
 - [ ] 🌟 Vetrified Sand drop items that can be combined with UU-Matter items to get any craftable item in game
 - [ ] 🌌 Idea: `Sound Singularity` - crafted with different sounds
+- [ ] 🌌 Add `Helmet/Chest/Leggins/Boots Singularity`
+- [ ] 🌌 Add `Pickaxe/Shovel/Hoe/Axe/Sword Singularity`
+- [ ] 🌌 Add `Durability Singularity` computing charge same manner as Burn singularity
 - [ ] 🌍 Populate Wasteland (4598) with removed Ores but make them extremely durable
 - [ ] Make recipe of `Wateland Portal` but unable to be made from inside of Wateland
 - [ ] `Creative Power Input Plug` add recipe
