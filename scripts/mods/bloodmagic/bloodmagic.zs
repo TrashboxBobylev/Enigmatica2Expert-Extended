@@ -4,6 +4,15 @@
 import crafttweaker.item.IItemStack;
 import crafttweaker.item.IIngredient;
 
+<bloodmagic:living_armour_helmet>.maxDamage = 900;
+<bloodmagic:living_armour_chest>.maxDamage = 900;
+<bloodmagic:living_armour_leggings>.maxDamage = 900;
+<bloodmagic:living_armour_boots>.maxDamage = 900;
+<bloodmagic:sentient_armour_helmet>.maxDamage = 1200;
+<bloodmagic:sentient_armour_chest>.maxDamage = 1200;
+<bloodmagic:sentient_armour_leggings>.maxDamage = 1200;
+<bloodmagic:sentient_armour_boots>.maxDamage = 1200;
+
 // Add JEI hint for custom Imperfect zombie feature
 scripts.jei.crafting_hints.fill(
   null,

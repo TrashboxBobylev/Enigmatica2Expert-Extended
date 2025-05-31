@@ -113,6 +113,13 @@ if (await pressEnterOrEsc(`Generate Changelog? ENTER / ESC.`)) {
   await git.add('manifest.json')
 
   replaceInFileSync({
+    files: 'config/endermodpacktweaks/modpack.cfg',
+    from : /^(\s*S\s*:\s*"\[\d+\] Modpack Version"\s*=\s*).*$/m,
+    to   : `$1${nextVersion}`,
+  })
+  await git.add('config/endermodpacktweaks/modpack.cfg')
+
+  replaceInFileSync({
     files: serverSetupConfig,
     from : /^( {2}modpackUrl\s*:\s*)(.+)$/m,
     to   : `$1https://github.com/Krutoy242/Enigmatica2Expert-Extended/releases/download/${nextVersion}/${zipBaseName}.zip`,
