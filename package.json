@@ -7,7 +7,9 @@
   ],
   "scripts": {
     "automate": "tsx mc-tools/packages/run/src/cli.ts dev/tools/mct-run.json",
-    "bansoukou-prune": "node \"dev/_other/advancement-fix.js\" -r",
+    "bansoukou-prune": "node dev/_other/advancement-fix.js -r",
+    "bansoukou4-Cleanroom": "node dev/_other/bansoukou_helper.js",
+    "⚡dobious-perf": "sed -i 's/listAllPartMaterials=true/listAllPartMaterials=false/' config/tconstruct.cfg && git update-index --assume-unchanged config/tconstruct.cfg && sed -i 's/NBTTagImprovements=true/NBTTagImprovements=false/' config/stellar_core.cfg && git update-index --assume-unchanged config/stellar_core.cfg",
     "🧱build": "tsx dev/make_pack.js",
     "dev": "concurrently --prefix-colors auto \"npm:dev:* --silent\"",
     "dev:bansoukou": "tsx dev/automation/bansoukou.js",
