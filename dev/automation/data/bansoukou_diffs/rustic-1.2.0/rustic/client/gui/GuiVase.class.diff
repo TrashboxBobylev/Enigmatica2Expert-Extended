@@ -1,4 +1,13 @@
-@@ -32,18 +32,20 @@ public class GuiVase
+@@ -10,8 +10,6 @@
+  *  net.minecraft.util.ResourceLocation
+  *  net.minecraftforge.fml.common.Optional$Interface
+  *  net.minecraftforge.fml.common.Optional$InterfaceList
+- *  rustic.common.tileentity.ContainerVase
+- *  rustic.common.tileentity.TileEntityVase
+  *  vazkii.quark.api.IChestButtonCallback
+  *  vazkii.quark.api.IItemSearchBar
+  */
+@@ -34,18 +32,20 @@ public class GuiVase
  extends GuiContainer
  implements IItemSearchBar,
  IChestButtonCallback {
@@ -23,7 +32,7 @@
      }
  
      public void func_73863_a(int mouseX, int mouseY, float partialTicks) {
-@@ -54,12 +56,43 @@ IChestButtonCallback {
+@@ -56,12 +56,43 @@ IChestButtonCallback {
  
      protected void func_146979_b(int mouseX, int mouseY) {
          this.field_146289_q.func_78276_b(this.te.func_145748_c_().func_150260_c(), 8, 6, 0x404040);

@@ -36,7 +36,7 @@ heldItemTooltips:true
 chatHeightFocused:1.0
 chatHeightUnfocused:0.44366196
 chatScale:1.0
-chatWidth:1.0
+chatWidth:1.1
 mipmapLevels:0
 forceUnicodeFont:false
 reducedDebugInfo:false
@@ -210,7 +210,7 @@ key_key.jei.showRecipe:19
 key_key.jei.showUses:22
 key_key.jei.toggleBookmarkOverlay:0
 key_key.jei.toggleCheatMode:0
-key_key.jei.toggleEditMode:0
+key_key.jei.toggleEditMode:35
 key_key.jei.toggleOverlay:24:CONTROL
 key_key.jeiutilities.displayRecipe:29
 key_key.jeiutilities.pickBookmark:-98
@@ -237,6 +237,7 @@ key_key.music_player_previous:79
 key_key.music_player_toggle:80
 key_key.next_item.desc:0
 key_key.nutrition:49
+key_key.open_advanced_extended_wireless_crafting_terminal:0
 key_key.open_danknull.desc:0
 key_key.open_menu:19
 key_key.open_wireless_crafting_terminal.desc:18:CONTROL
@@ -422,5 +423,9 @@ key_flare.key.stop_sampling:0
 key_key.hitindication.toggle_block_indicators:80
 key_key.hitindication.toggle_edge_of_screen_mode:71
 key_key.hitindication.toggle_hit_indication:72
+key_key.open_basic_extended_wireless_crafting_terminal:0
+key_key.open_elite_extended_wireless_crafting_terminal:0
+key_key.open_ultimate_extended_wireless_crafting_terminal:0
 key_key.toggleVisible:0
+key_keybind.endermodpacktweaks.toggle:0
 key_of.key.zoom:-97

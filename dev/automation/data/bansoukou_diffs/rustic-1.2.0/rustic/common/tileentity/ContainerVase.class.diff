@@ -6,7 +6,12 @@
   *  net.minecraft.entity.player.EntityPlayer
   *  net.minecraft.inventory.Container
   *  net.minecraft.inventory.IInventory
-@@ -16,7 +15,6 @@
+@@ -12,12 +11,10 @@
+  *  net.minecraftforge.items.CapabilityItemHandler
+  *  net.minecraftforge.items.IItemHandler
+  *  net.minecraftforge.items.SlotItemHandler
+- *  rustic.common.tileentity.TileEntityVase
+  */
  package rustic.common.tileentity;
  
  import invtweaks.api.container.ChestContainer;
@@ -14,7 +19,7 @@
  import net.minecraft.entity.player.EntityPlayer;
  import net.minecraft.inventory.Container;
  import net.minecraft.inventory.IInventory;
-@@ -42,18 +40,28 @@ extends Container {
+@@ -43,18 +40,28 @@ extends Container {
          return this.te;
      }
  
@@ -47,7 +52,7 @@
              this.func_75146_a(new Slot(playerInventory, row, x, y));
          }
      }
-@@ -61,8 +69,8 @@ extends Container {
+@@ -62,8 +69,8 @@ extends Container {
      private void addOwnSlots() {
          IItemHandler itemHandler = (IItemHandler)this.te.getCapability(CapabilityItemHandler.ITEM_HANDLER_CAPABILITY, null);
          int slotIndex = 0;
@@ -58,7 +63,7 @@
                  int x = 8 + col * 18;
                  int y = row * 18 + 17;
                  this.func_75146_a((Slot)new SlotItemHandler(itemHandler, slotIndex, x, y));
-@@ -71,14 +79,13 @@ extends Container {
+@@ -72,14 +79,13 @@ extends Container {
          }
      }
  
@@ -76,7 +81,7 @@
                  return ItemStack.field_190927_a;
              }
              if (itemstack1.func_190926_b()) {
-@@ -87,7 +94,7 @@ extends Container {
+@@ -88,7 +94,7 @@ extends Container {
                  slot.func_75218_e();
              }
          }

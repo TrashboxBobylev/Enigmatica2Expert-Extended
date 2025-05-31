@@ -118,3 +118,5 @@ config/opencomputers/gregtech.recipes
 config/opencomputers/hardmode.recipes
 config/advRocketry/weights.json
 config/creativecore.json
+config/ometweaks/modules.cfg
+config/relauncher.json
