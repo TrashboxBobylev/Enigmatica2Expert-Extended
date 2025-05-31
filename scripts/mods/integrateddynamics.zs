@@ -1,4 +1,5 @@
 #modloaded integrateddynamics
+#ignoreBracketErrors
 
 /*
 # Aluminum / Osmium Squeezer Compatibility

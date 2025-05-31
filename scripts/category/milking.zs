@@ -2,7 +2,7 @@
   Extract seed issue from gender-specific animals
 */
 
-#modloaded tconstruct
+#modloaded tconstruct contenttweaker
 #reloadable
 
 import crafttweaker.data.IData;

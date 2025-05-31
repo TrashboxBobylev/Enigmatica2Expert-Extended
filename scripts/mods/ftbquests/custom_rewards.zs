@@ -1,4 +1,4 @@
-#modloaded ftbquests
+#modloaded ftbquests gamestages
 #reloadable
 #priority -2000
 

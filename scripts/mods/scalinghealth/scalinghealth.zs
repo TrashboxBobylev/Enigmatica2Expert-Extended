@@ -1,4 +1,4 @@
-#modloaded scalinghealth
+#modloaded scalinghealth rats
 
 import crafttweaker.item.IIngredient;
 
