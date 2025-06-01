@@ -4,6 +4,7 @@ import crafttweaker.data.IData;
 import crafttweaker.item.IItemStack;
 
 scripts.lib.dropt.addDrop(<advancedrocketry:geode>, <thermalfoundation:geode>);
+scripts.lib.dropt.addDrop(<advancedrocketry:vitrifiedsand>, <qmd:isotope:5>);
 <advancedrocketry:geode>.asBlock().definition.resistance = 160;
 <advancedrocketry:vitrifiedsand>.asBlock().definition.resistance = 160;
 <advancedrocketry:crystal>.asBlock().definition.resistance = 20;
