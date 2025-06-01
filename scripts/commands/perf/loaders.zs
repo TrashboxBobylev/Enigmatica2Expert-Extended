@@ -63,6 +63,10 @@ function forEachChunkLoader(world as IWorld, callback as function(TileEntity)voi
 }
 
 function isChunkLoader(te as TileEntity) as bool {
+  // TODO: Fix partially modpack mod count
+  // We could use stringified classes to avoid NPE on mod removal
+  // But this still wont help for pointers
+  // val str = toString(te);
   return te instanceof native.ic2.core.block.machine.tileentity.TileEntityChunkloader
     || te instanceof native.com.rwtema.extrautils2.tile.TileChunkLoader
     || te instanceof native.lumien.randomthings.tileentity.TileEntityEnderAnchor
