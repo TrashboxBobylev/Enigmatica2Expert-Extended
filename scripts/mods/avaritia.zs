@@ -4,6 +4,13 @@
 import crafttweaker.item.IItemStack;
 import crafttweaker.item.IIngredient;
 
+val anyAvaritiaMatterTools = <avaritia:infinity_hoe> |
+  <avaritia:infinity_axe> |
+  <avaritia:infinity_pickaxe>.withTag({hammer: 1 as byte}) |
+  <avaritia:infinity_shovel>.withTag({destroyer: 1 as byte});
+scripts.jei.crafting_hints.addInsOutCatl([], <avaritia:matter_cluster>, anyAvaritiaMatterTools);
+scripts.jei.crafting_hints.addInsOutCatl([], <avaritia:matter_cluster>.withTag({clusteritems: {total: 4096}}), anyAvaritiaMatterTools);
+
 // *======= Recipes =======*
 
 mods.avaritia.ExtremeCrafting.remove(<avaritia:ultimate_stew>);
