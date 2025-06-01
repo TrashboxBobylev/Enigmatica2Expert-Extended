@@ -377,7 +377,6 @@ else {
 
 // Sic-Sic ingots
 scripts.process.fill(<exnihilocreatio:item_mesh:2>, <fluid:sic_vapor> * 1000, <nuclearcraft:part:13> * 4, 'only: NCInfuser Transposer');
-scripts.process.alloy([<ore:bouleSilicon>, <ore:fiberSiliconCarbide>], <nuclearcraft:alloy:14>, 'only: advrockarc');
 
 // Unify Silicon
 <ore:itemSilicon>.remove(<nuclearcraft:gem:6>);
@@ -645,14 +644,10 @@ Purge(<nuclearcraft:heat_exchanger_controller>);
 Purge(<nuclearcraft:condenser_controller>);
 Purge(<nuclearcraft:heat_exchanger_casing>);
 Purge(<nuclearcraft:heat_exchanger_glass>);
-Purge(<nuclearcraft:heat_exchanger_vent>);
 Purge(<nuclearcraft:heat_exchanger_tube_copper>);
 Purge(<nuclearcraft:heat_exchanger_tube_hard_carbon>);
 Purge(<nuclearcraft:heat_exchanger_tube_thermoconducting>);
 Purge(<nuclearcraft:heat_exchanger_computer_port>);
-Purge(<nuclearcraft:condenser_tube_copper>);
-Purge(<nuclearcraft:condenser_tube_hard_carbon>);
-Purge(<nuclearcraft:condenser_tube_thermoconducting>);
 
 // Alloy furnace meant to be only for blocks
 // Remove all ingot and nugget recipes that have blocks
