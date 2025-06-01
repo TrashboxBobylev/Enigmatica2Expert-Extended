@@ -285,7 +285,7 @@ mods.extendedcrafting.CompressionCrafting.addRecipe(<contenttweaker:garbage_sing
   <rats:garbage_pile>, 10000, <rats:idol_of_ratlantis>, 2000000, 100000);
 
 // ------------------------------------------
-function createBedrockOre(world as World, contentId as string, contentProp as string, pos as BlockPos) as void {
+function createBedrockOre(world as World, contentId as string, contentProp as string, amount as int, pos as BlockPos) as void {
   val state = IBlockState.getBlockState(contentId, contentProp);
   if (isNull(state) || isNull(state.block) || isNull(state.block.definition)) {
     logger.logWarning('[Cot TE]: trying to create Bedrock Ore with wrong content: id: "'~contentId~'" prop: "'~toString(contentProp)~'"');
@@ -293,7 +293,7 @@ function createBedrockOre(world as World, contentId as string, contentProp as st
   world.setBlockState(IBlockState.getBlockState('bedrockores:bedrock_ore', []), {
     oreId: state.block.definition.numericalId,
     oreMeta: state.meta,
-    amount: 1,
+    amount: amount,
   }, pos);
 }
 
@@ -315,14 +315,14 @@ VanillaFactory.putTileEntityTickFunction(1, function(tileEntity, world, pos) {
       'variant=dark_steel',
       'variant=electrical_steel',
     ] as string[];
-    createBedrockOre(world, 'enderio:block_alloy', states[world.random.nextInt(states.length)], pos);
+    createBedrockOre(world, 'enderio:block_alloy', states[world.random.nextInt(states.length)], 1, pos);
     return;
   }
 
   if (!isNull(data) && data has 'time') {
     val time = data.time.asInt();
     if (time <= 0) {
-      createBedrockOre(world, data.name, data.prop, pos);
+      createBedrockOre(world, data.name, data.prop, isNull(data.amount) ? 1 : data.amount, pos);
       return;
     }
     tileEntity.updateCustomData({time: time - 1});
