@@ -4,32 +4,42 @@
 // from: ("block": "([^"]+)",\n.+\n.+)\n.+\n.+\n\s+"itemStack": "\2",\n\s+"fortunes": \{\n(\s+"\d+": 1(\.0)?,?\n){4}\s+\}\n\s+\}\n\s+\],
 // to: $1
 
-// @ts-check
+import simplify from 'simplify-js'
 
 import {
   config,
   loadJson,
   loadText,
-  saveObjAsJson,
+  saveText,
 } from '../lib/utils.js'
 
-const worldgenJsonPath = 'config/jeresources/world-gen.json'
-const worldGen = loadJson(worldgenJsonPath)
+interface WorldGenEntry {
+  block     : string
+  dim       : string
+  distrib   : string
+  dropsList?: Drop[]
+  silktouch?: boolean
+}
 
+interface Drop {
+  fortunes : { 0?: number, 1?: number, 2?: number, 3?: number }
+  itemStack: string
+}
+
+const worldgenJsonPath = 'config/jeresources/world-gen.json'
+const worldGen: WorldGenEntry[] = loadJson(worldgenJsonPath)
+
+///////////////////////////////////////////////////////////////////////
+// Populate manual entries
 ///////////////////////////////////////////////////////////////////////
 
 worldGen.splice(0, worldGen.length, ...worldGen.filter(o => o.dim !== 'Block Drops'))
 
-function addMeta(item) {
+function addMeta(item: string) {
   return item.replace(/(:[a-z]+)$/i, '$1:0')
 }
 
-/**
- * @param {string} input
- * @param {string | string[]} outputs
- * @param {number[] | number[][]} [chances]
- */
-function simple(input, outputs, chances) {
+function simple(input: string, outputs: string | string[], chances?: any[]) {
   /** @type {number[][]} */
   const chance = !chances
     ? [[]]
@@ -140,7 +150,159 @@ for (const garden of [
 ;[...loadText('crafttweaker.log')
   .matchAll(/Modify drop; Block: (?<block>.+) Drop: (?<stack>.+) (?<luck>\[.*\])/g),
 ].forEach(({ groups: { block, stack, luck } }) =>
-  simple(block, stack, eval(luck).slice(0, 4).map(([o]) => o)))
+  simple(block, stack, parse2DArray(luck).slice(0, 4).map(([o]) => o)))
+
+function parse2DArray(input: string): number[][] {
+  // Normalize the input string
+  const normalized = input
+    .trim()
+    .replace(/^\[|\]$/g, '') // remove leading/trailing brackets
+    .replace(/\],\s*\[/g, '];[') // normalize separators
+    .replace(/,\s*\]/g, ']') // remove trailing commas before closing bracket
+    .replace(/\[,/g, '[') // fix empty entries like "[,2,2]" => "[2,2]"
+
+  // Split the string into subarrays
+  const arrayStrings = normalized
+    .split(';')
+    .map(str => str.trim())
+    .filter(str => str.length > 0)
+
+  // Parse each subarray
+  const result: number[][] = arrayStrings.map((sub) => {
+    const match = sub.match(/\[(.*?)\]/)
+    if (!match) throw new Error(`Invalid format in segment: ${sub} for input: ${input}`)
+    const elements = match[1]
+      .split(',')
+      .map(el => el.trim())
+      .filter(el => el !== '')
+      .map(el => Number(el))
+    return elements
+  })
+
+  return result
+}
 
 ///////////////////////////////////////////////////////////////////////
-saveObjAsJson(worldGen, worldgenJsonPath)
+// Cleanup
+///////////////////////////////////////////////////////////////////////
+
+function shortenValue(v:number) {
+  if (!v) return String(v)
+  const list = [
+    v.toPrecision(2).replace(/\.0+$/, '').replace(/([1-9])0+$/, '$1'),
+    v.toExponential(1),
+  ].sort((a, b) => a.length - b.length)
+  return list[0]
+}
+
+worldGen.forEach((wg) => {
+  // Remove default silk touch value
+  if (wg.silktouch === false) delete wg.silktouch
+
+  // Descrease the precision
+  const levels = wg.distrib
+    .replace(/;$/, '')
+    .split(';')
+    .map(s => s.split(',').map(Number) as [number, number])
+    // .map(([l, v]) => [l, shortenValue(v)])
+
+  wg.distrib = clenDistrib(clenDistrib(clenDistrib(simplifyDistrib(levels))))
+    .map(l => l.join(',')).join(';')
+
+  wg.dropsList?.forEach((d) => {
+    // Descrease precision of fortunes
+    [0, 1, 2, 3].filter(n => d.fortunes[n]).forEach(n =>
+      d.fortunes[n] = Number(d.fortunes[n].toPrecision(2))
+    )
+
+    if (Object.entries(d.fortunes).every((v, _, arr) => v[1] === arr[0][1])) {
+      d.fortunes = Object.fromEntries([Object.entries(d.fortunes)[0]])
+    }
+
+    if (!Object.values(d.fortunes).length)
+      delete d.fortunes
+  })
+
+  // Clean Remove Drop List
+  if (wg.dropsList?.length) {
+    wg.dropsList = wg.dropsList.filter(d => !(
+      // Remove air
+      d.itemStack === 'minecraft:air:0'
+
+      // Remove same block
+      || (
+        d.itemStack === wg.block
+        && fortuneSame(d.fortunes)
+        && d.fortunes['0'] === 1
+      )
+    ))
+
+    // Remove same item with different NBT tags flooding drops
+    const groups:{ [id: string]: Drop[] } = {}
+    wg.dropsList.forEach(d => (groups[getID(d.itemStack)] ??= []).push(d))
+    Object.entries(groups).forEach(([id, d]) => {
+      if (d.length > 1 && wg.dropsList.length > 8) {
+        groups[id] = [{...d.shift(), itemStack: id}]
+      }
+    })
+    wg.dropsList = Object.entries(groups).map(([_, d]) => d).flat()
+
+    // if (wg.dropsList.length > 8) console.log('Too big dropsList: ', wg.dropsList.length, wg.block)
+
+    if (!wg.dropsList.length) delete wg.dropsList
+  }
+})
+
+function getID(itemStack:string) {
+  const m = itemStack.match(/^[^:]+:[^:]+(:\d+)?/)
+  if (!m) throw new Error(`No ID for item: ${itemStack}`)
+  return m[0]
+}
+
+function fortuneSame(fortunes: Drop['fortunes']) {
+  return  [0, 1, 2, 3].map(n => fortunes[n]).every((v, _, arr) => v === arr[0])
+}
+
+function clenDistrib(arr: [number, string][]) {
+  if (arr.length < 3) return arr // nothing to remove
+
+  const result = [arr[0]]
+
+  for (let i = 1; i < arr.length - 1; i++) {
+    const [al, av] = arr[i - 1].map(Number)
+    const [bl, bv] = arr[i].map(Number)
+    const [cl, cv] = arr[i + 1].map(Number)
+
+    // Point in the middle of surroundings
+    const sameLevel = (al + cl) / 2 === bl
+    const targetv = (av + cv) / 2
+    if (sameLevel && targetv === bv) continue
+
+    // Skip if difference less than 2%
+    if (sameLevel && Math.abs((targetv - bv) / bv) <= 0.02) continue
+
+    result.push(arr[i])
+  }
+
+  result.push(arr[arr.length - 1])
+  return result
+}
+
+function simplifyDistrib(distrib: [number, number | string][]) {
+  const maxV = Math.max(...distrib.map(([,v]) => Number(v)))
+  const mult = 80 / maxV // Size of graph is 128:40
+
+  const simplified = simplify(
+    distrib.map(([l, v]) => ({x: l, y: Number(v) * mult})),
+    0.9,
+    true
+  )
+
+  return simplified.map(o => [o.x, shortenValue(o.y / mult)] as [number, string])
+}
+
+const stringified = `${JSON.stringify(worldGen, null, 2).trimEnd()}\n`
+  .replace(/"fortunes": \{(\n[^}]+)\}/g, (m, r) => `"fortunes": {${r.replace(/\s+/g, ' ')}}`)
+
+///////////////////////////////////////////////////////////////////////
+saveText(stringified, worldgenJsonPath)
