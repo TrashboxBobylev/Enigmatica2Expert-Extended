@@ -1090,3 +1090,21 @@ for inputs, output in {
   scripts.process.alloy(inputs, output, 'only: ArcFurnace Kiln');
   scripts.process.alloy([inputs[0] * (inputs[0].amount * 9), inputs[1] * (inputs[1].amount * 9)], output * (output.amount * 9), 'only: AdvRockArc');
 }
+
+// Wasteland portals spawn in BoP worlds
+// but not in OTG ones, so there is the recipe
+mods.thaumcraft.Infusion.registerRecipe(
+  "wasteland_portal", # Name
+  "INFUSION", # Research
+  <nuclearcraft:wasteland_portal>, # Output
+  1, # Instability
+  [<aspect:perditio> * 40, Aspect.exitium * 40],
+  <trinity:solid_trinitite>, # Central Item
+  Grid(["pretty",
+  "s Q s",
+  "P   P",
+  "s Q s"], {
+  "s": <ore:compressed2xSand>,
+  "Q": <nuclearcraft:wasteland_earth>,
+  "P": <thaumcraft:stone_porous>,
+}).spiral(1));
