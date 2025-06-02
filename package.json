@@ -20,7 +20,7 @@
     "dev:ftbq_cleanup": "tsx mc-tools/scripts/ftbq_cleanup.ts",
     "dev:inject_js": "tsx dev/automation/Inject_JS.js",
     "dev:jei": "tsx dev/automation/jei.js",
-    "dev:jer": "tsx dev/automation/jer.js",
+    "dev:jer": "tsx dev/automation/jer.ts",
     "dev:manifest": "tsx mc-tools/packages/manifest/src/cli.ts --verbose --ignore=dev/.devonly.ignore --key=secrets/~cf_api_key.txt",
     "dev:misc": "tsx dev/automation/misc.js --keep-cache",
     "dev:modlist": "tsx mc-tools/packages/modlist/src/cli.ts --old=../E2E-unchanged/minecraftinstance.json --verbose --ignore=dev/.devonly.ignore --key=secrets/~cf_api_key.txt --template=dev/tools/modlist_template.md --sort=addonID",
