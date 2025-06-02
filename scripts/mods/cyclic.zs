@@ -219,6 +219,9 @@ for i, l in packagerList {
 
 */
 
+Hydrator.removeShapedRecipe(<minecraft:brown_mushroom_block>);
+Hydrator.removeShapedRecipe(<minecraft:red_mushroom_block>);
+
 Hydrator.addRecipe(<thermalexpansion:florb>.withTag({ Fluid: 'water' }), [<thermalexpansion:florb>], 1000);
 
 // Asphalt Concrete
