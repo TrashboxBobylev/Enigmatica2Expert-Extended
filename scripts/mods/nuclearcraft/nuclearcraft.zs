@@ -613,6 +613,8 @@ scripts.process.compress(<ore:dustVilliaumite>  , <nuclearcraft:gem:3>); // [Vil
 scripts.process.compress(<ore:dustCarobbiite>   , <nuclearcraft:gem:4>); // [Carobbiite]
 scripts.process.compress(<ore:dustStrontium90> * 9, <qmd:strontium_90_block>); // [Strontium-90 Block]
 scripts.process.compress(<ore:dustWitherite>    , <trinity:gem_witherite>); // [Witherite]
+scripts.process.compress(<ore:dustSteel>, <ore:sinteredSteel>.firstItem);
+scripts.process.compress(<ore:dustZirconia>, <ore:sinteredZirconia>.firstItem);
 
 // ------------------------------------------------------------
 // Fluid Extractor replacement
