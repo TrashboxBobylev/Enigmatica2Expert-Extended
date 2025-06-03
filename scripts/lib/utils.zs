@@ -5,6 +5,7 @@
  * @link https://github.com/Krutoy242
  */
 
+#modloaded zenutils
 #priority 4000
 #reloadable
 

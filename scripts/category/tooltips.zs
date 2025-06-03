@@ -1,4 +1,4 @@
-#modloaded jei
+#modloaded jei ctintegration
 #ignoreBracketErrors
 #reloadable
 

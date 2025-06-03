@@ -6,6 +6,7 @@
  * @link https://github.com/Krutoy242
  */
 
+#modloaded zenutils
 #priority 3000
 #ignoreBracketErrors
 

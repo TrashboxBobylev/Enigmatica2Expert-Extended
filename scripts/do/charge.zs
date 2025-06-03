@@ -5,6 +5,7 @@ with other items again and again untill treshold reached
 
 */
 
+#modloaded zenutils
 #reloadable
 #priority 2100
 
