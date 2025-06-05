@@ -3,10 +3,10 @@
 #sideonly client
 
 import crafttweaker.item.IItemStack;
-
 import mods.bpopener.BPOpener.addEntry;
 
-function add(item as IItemStack, shift as bool = false) {
+function add(item as IItemStack, shift as bool = false) as void {
+  if (isNull(item)) return;
   addEntry(item, shift);
 }
 

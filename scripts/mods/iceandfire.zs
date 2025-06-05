@@ -1,4 +1,4 @@
-#modloaded iceandfire
+#modloaded iceandfire tconstruct
 
 import crafttweaker.item.IItemStack;
 
