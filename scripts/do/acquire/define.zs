@@ -78,7 +78,7 @@ Forbidder()
   <enderio:item_endergy_conduit:11>,
 ])
 .onOpen('crazypants.enderio.conduits.gui.ExternalConnectionContainer')
-.value(10).events('pickup craft')
+.value(10).events('place interact', [<blockstate:enderio:block_conduit_bundle>])
 
 // Ender Storage doesnt have container event
 .stacks('enderstorage', [
