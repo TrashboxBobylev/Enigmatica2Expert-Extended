@@ -177,25 +177,6 @@ desc.jei(<thermalexpansion:frame:148>, 'requires.rf', '100.000.000');
 desc.tooltipRaw(<tconstruct:toolforge>.anyDamage(), desc.local('forge_from_metal'));
 desc.tooltipRaw(<conarm:armorforge>.anyDamage(), desc.local('forge_from_metal'));
 
-// Space Ores
-for item in [
-  <thermalfoundation:ore_fluid:4>,
-  <thermalfoundation:ore_fluid:3>,
-  <thermalfoundation:ore_fluid:2>,
-  <libvulpes:ore0>,
-  <thermalfoundation:ore:7>,
-  <thermalfoundation:ore:8>,
-  <rftools:dimensional_shard_ore>,
-  <mysticalagriculture:prosperity_ore>,
-  <draconicevolution:draconium_ore:1>,
-  <draconicevolution:draconium_ore:2>,
-  <thermalfoundation:material:893>,
-  <thermalfoundation:material:894>,
-  <thermalfoundation:material:895>,
-] as IItemStack[] {
-  desc.jei(item, 'space_gen');
-}
-
 // Mekanism Factories
 desc.both(<mekanism:machineblock:5>, 'mekanism_factories');
 desc.both(<mekanism:machineblock:6>, 'mekanism_factories');

@@ -526,7 +526,6 @@ tooltips.lang.removed.crash=§4Removed because it crashes the server
 
 tooltips.lang.requires.rf=Requires %s RF to make.
 tooltips.lang.craftable=Craftable.
-tooltips.lang.space_gen=This ore only generates on other planets.
 tooltips.lang.mekanism_factories=Factories are made by upgrading Machines in-world with Basic/Advanced/Elite Tier Installers.
 tooltips.lang.mekanism_t_ultimate=§dOnly works on Bins, Energy Cubes, Tanks and Gas Tanks
 tooltips.lang.ic2wrench=You can safely break IC2 machines with a Pickaxe.

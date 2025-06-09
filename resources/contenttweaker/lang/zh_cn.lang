@@ -526,7 +526,6 @@ tooltips.lang.removed.crash=§4已被禁用，因为其会导致服务端崩溃
 
 tooltips.lang.requires.rf=需要消耗 %s RF 制作。
 tooltips.lang.craftable=可合成
-tooltips.lang.space_gen=只在其他星球上自然生成。
 tooltips.lang.mekanism_factories=工厂是通过对世界内的机器方块使用基础/高级/精英工厂安装器得到的。
 tooltips.lang.mekanism_t_ultimate=§d只对箱柜、能量立方、储罐、气体储罐有效。
 tooltips.lang.ic2wrench=现在 IC2 机器可以放心地用镐挖掘，机器不会损毁。
