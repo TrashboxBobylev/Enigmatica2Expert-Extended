@@ -1683,6 +1683,7 @@ q.applied_energetics.pattern_expansion_.desc=Добавляет +9 слотов 
 q.applied_energetics.crafting_unit.name=Ремесленная единица
 q.applied_energetics.crafting_unit.desc=Чтобы быть допустимым процессором для крафтинга, должны быть соблюдены два правила:\n\n 1. ЦП должен быть кубоидом, полностью состоящим из перечисленных выше частей; air или другие блоки недопустимы.\n\n 2. ЦП должен содержать как минимум 1 компонент хранения.\n
 q.applied_energetics.me_fluid_assembler.desc=Ассемблер жидкости ведет себя как молекулярный ассемблер, позволяя обрабатывать жидкости, используя те, что находятся в ячейках хранения жидкости.
+q.applied_energetics.crafting_station.desc=Совет по созданию шаблона:\n\n- Создайте §6{tile.tconstruct.tooltables.craftingstation.name}§r из РАЗНЫХ типов досок, чтобы получить его без NBT-данных
 q.applied_energetics.me_level_maintainer.desc=Средство обслуживания уровня ME используется для поддержания некоторого количества элемента в сети ME. Это достигается путем запроса автопроизводства для предметов, количество которых ниже определенного порога.\n\n
 q.applied_energetics.packaged_ex_crafting.name=Packaged Ex Crafting
 q.applied_energetics.packaged_ex_crafting.desc=Packaged Ex Crafting - аддон, добавляющий возможности использования AE + ExtendedCrafting.

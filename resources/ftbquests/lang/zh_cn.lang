@@ -1683,6 +1683,7 @@ q.applied_energetics.pattern_expansion_.desc=为ME接口增加9个样板槽位�
 q.applied_energetics.crafting_unit.name=合成单元
 q.applied_energetics.crafting_unit.desc=有效的合成处理单元（CPU）需要遵守两个规则：\n\n1. CPU需要是一个立方体，完全由列出的方块组成；空气或其他方块都不可行。\n\n2. CPU必须包含至少1个存储部件。\n
 q.applied_energetics.me_fluid_assembler.desc=ME流体装配室就像分子装配室一样，但是允许合成中使用ME网络中存储的流体参与合成。
+q.applied_energetics.crafting_station.desc=模板制作提示：\n\n- 使用§6不同种类的木板§r合成 §6{tile.tconstruct.tooltables.craftingstation.name}§r，可避免带有 NBT 数据
 q.applied_energetics.me_level_maintainer.desc=ME指令缓存器会尝试维持ME网络中某些物品的数量。当低于设定的阈值时，它会请求自动合成。\n\n
 q.applied_energetics.packaged_ex_crafting.name=包裹式防爆工艺
 q.applied_energetics.packaged_ex_crafting.desc=打包的防爆工艺--增加AE+ExtendedCrafting使用功能的附加组件。
