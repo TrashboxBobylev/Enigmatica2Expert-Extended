@@ -2,15 +2,20 @@
 #priority -1300
 #modloaded zenutils ctintegration scalinghealth
 
+import crafttweaker.block.IBlock;
 import crafttweaker.block.IBlockDefinition;
+import crafttweaker.block.IBlockState;
 import crafttweaker.item.IItemStack;
 import crafttweaker.player.IPlayer;
+import crafttweaker.world.IBlockPos;
 import crafttweaker.world.IVector3d;
+import crafttweaker.world.IWorld;
 
 import scripts.do.acquire.consequences.onAcquire;
 
 static registry as bool[IItemStack][string] = {} as bool[IItemStack][string];
 static blockDefRegistry as bool[IBlockDefinition][string] = {} as bool[IBlockDefinition][string];
+static blockDefAliasRegistry as IItemStack[IBlockDefinition] = {} as IItemStack[IBlockDefinition];
 static stringRegistry as IItemStack[string] = {} as IItemStack[string];
 
 function pushRegistry(evtName as string, stack as IItemStack) as void {
@@ -24,6 +29,23 @@ function checkAcquire(evtName as string, player as IPlayer, stack as IItemStack)
   val stackAnyAmount = stack.anyAmount();
   if (evtName != 'open' && isNull(registry[evtName][stackAnyAmount])) return;
   onAcquire(evtName, player, stackAnyAmount);
+}
+
+function checkAcquireBlock(
+  evtName as string,
+  player as IPlayer,
+  state as IBlockState,
+  position as IBlockPos
+) as void {
+  if (player.world.remote || isNull(player) || isNull(state) || isNull(state.block)) return;
+  val blockDef = state.block.definition;
+  if (isNull(blockDef) || isNull(blockDefRegistry[evtName]) || isNull(blockDefRegistry[evtName][blockDef])) return;
+
+  var itemBlock = blockDefAliasRegistry[blockDef];
+  if (isNull(itemBlock)) itemBlock = state.block.getItem(player.world, position, state);
+  if (isNull(itemBlock)) return;
+
+  checkAcquire(evtName, player, itemBlock);
 }
 
 ////////////////////////////////////////////////////////////////////////////////////////////
@@ -58,12 +80,7 @@ function onLook(player as IPlayer) as void {
   if (isNull(trace) || trace.isEntity || trace.isMiss || !trace.isBlock) return;
 
   val blockState = player.world.getBlockState(trace.blockPos);
-  if (isNull(blockDefRegistry.look) || isNull(blockDefRegistry.look[blockState.block.definition])) return;
-
-  val itemBlock = blockState.block.getItem(player.world, trace.blockPos, blockState);
-  if (isNull(itemBlock)) return;
-
-  checkAcquire('look', player, itemBlock);
+  checkAcquireBlock('look', player, blockState, trace.blockPos);
 }
 
 events.register(function (e as crafttweaker.event.PlayerOpenContainerEvent) {
@@ -92,21 +109,9 @@ events.register(function (e as crafttweaker.event.PlayerRightClickItemEvent) {
 });
 
 events.register(function (e as crafttweaker.event.BlockPlaceEvent) {
-  if (e.world.remote || isNull(e.current) || isNull(e.player)) return;
-  if (isNull(blockDefRegistry.place) || isNull(blockDefRegistry.place[e.current.block.definition])) return;
-
-  val itemBlock = e.current.block.getItem(e.world, e.position, e.current);
-  if (isNull(itemBlock)) return;
-
-  checkAcquire('place', e.player, itemBlock);
+  checkAcquireBlock('place', e.player, e.current, e.position);
 });
 
 events.register(function (e as crafttweaker.event.PlayerInteractEvent) {
-  if (e.world.remote || isNull(e.player) || isNull(e.block) || isNull(e.block.definition)) return;
-  if (isNull(blockDefRegistry.interact) || isNull(blockDefRegistry.interact[e.block.definition])) return;
-
-  val itemBlock = e.block.getItem(e.world, e.position, e.blockState);
-  if (isNull(itemBlock)) return;
-
-  checkAcquire('interact', e.player, itemBlock);
+  checkAcquireBlock('interact', e.player, e.blockState, e.position);
 });

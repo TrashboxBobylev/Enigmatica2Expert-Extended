@@ -3,10 +3,13 @@
 #modloaded zenutils ctintegration scalinghealth
 
 import crafttweaker.block.IBlockDefinition;
+import crafttweaker.block.IBlockState;
 import crafttweaker.item.IItemStack;
+import crafttweaker.block.IBlock;
 
 import scripts.do.acquire.events.pushRegistry;
 import scripts.do.acquire.events.blockDefRegistry;
+import scripts.do.acquire.events.blockDefAliasRegistry;
 import scripts.do.acquire.events.stringRegistry;
 
 /*Inject_js(
@@ -23,6 +26,7 @@ import scripts.do.acquire.events.stringRegistry;
 /**/
 
 zenClass Forbidder {
+  static blockEvents = ['place', 'look', 'interact'] as string[];
 
   var stacks as IItemStack[];
   var futile as bool = false;
@@ -64,7 +68,7 @@ zenClass Forbidder {
     return this;
   }
 
-  function events(onEvents as string) as Forbidder {
+  function events(onEvents as string, blockstates as IBlockState[] = null) as Forbidder {
     if (futile) return this;
 
     val evts = onEvents.split('\\s+');
@@ -75,11 +79,21 @@ zenClass Forbidder {
       logger.logWarning('Acquire error: trying to add absent acquiring event: "'~event~'"');
     }
 
-    val blockEvents = ['place', 'look', 'interact'] as string[];
     for stack in stacks {
       for event in evts { pushRegistry(event, stack); }
+    }
 
-      // Fill special map for block events
+    // Register explicitely defined states
+    val hasExplicitStates = !isNull(blockstates) && blockstates.length > 0;
+    if (hasExplicitStates) {
+      blockDefAliasRegistry[blockstates[0].block.definition] = stacks[0];
+      for state in blockstates {
+        regBlock(state.block, evts);
+      }
+    }
+
+    for stack in stacks {
+      // Find if its block event
       var hasBlockEvt = false;
       for evtName in blockEvents {
         if(evts has evtName) {
@@ -87,20 +101,20 @@ zenClass Forbidder {
           break;
         }
       }
-      if (hasBlockEvt) {
-        val block = stack.asBlock();
-        if (!isNull(block)) {
-          val blockDef = block.definition;
-          if (!isNull(blockDef)) {
-            for evtName in blockEvents {
-              if (evts has evtName) {
-                if(isNull(blockDefRegistry[evtName])) blockDefRegistry[evtName] = {};
-                blockDefRegistry[evtName][blockDef] = true;
-              }
-            }
-          }
-        }
+      if (!hasBlockEvt) continue;
+
+      val block = stack.asBlock();
+      if (isNull(block) && !hasExplicitStates) {
+        // Its a block event, has no block representation
+        // and no fallback blockstates
+        logger.logWarning('Acquire error: registering acquiring for item '~stack.commandString
+          ~', and its a block event, but no block representation found'
+          ~', and no fallback blockstates found too.');
+        continue;
       }
+
+      // Fill special map for block events
+      regBlock(block, evts);
     }
     return this;
   }
@@ -111,5 +125,20 @@ zenClass Forbidder {
         stringRegistry[classPath] = stack;
       }
     return this;
+  }
+
+  /////////////////////////////////////
+  // Private fields
+  /////////////////////////////////////
+  function regBlock(block as IBlock, evts as string[]) as void {
+    val blockDef = block.definition;
+    if (!isNull(blockDef)) {
+      for evtName in blockEvents {
+        if (evts has evtName) {
+          if(isNull(blockDefRegistry[evtName])) blockDefRegistry[evtName] = {};
+          blockDefRegistry[evtName][blockDef] = true;
+        }
+      }
+    }
   }
 }
