@@ -74,7 +74,7 @@ return list.map(({ groups: { id, display, items } }) => {
 }*/
 # add(<entity:astralsorcery:entityflare>              , []); // Flare
 # add(<entity:astralsorcery:entityliquidspark>        , []); // Liquid Spark
-  add(<entity:betteranimalsplus:badger>               , [<randomthings:fertilizeddirt> * 157, <rats:garbage_pile> * 188, <twilightforest:uberous_soil> * 250]); // Badger
+  add(<entity:betteranimalsplus:badger>               , [<randomthings:fertilizeddirt> * 157, <rats:garbage_pile> * 188]); // Badger
   add(<entity:betteranimalsplus:blackbear>            , [utils.get('betteranimalsplus:bear_skin_black', 0, 90), utils.get('betteranimalsplus:bear_skin_kermode', 0, 9), utils.get('betteranimalsplus:bearhead_2', 0, 9), utils.get('betteranimalsplus:bearhead_3', 0, 1), <minecraft:fish:1> * 102]); // Black Bear
   add(<entity:betteranimalsplus:boar>                 , [utils.get('betteranimalsplus:boarhead_1', 0, 1), utils.get('betteranimalsplus:boarhead_2', 0, 1), utils.get('betteranimalsplus:boarhead_3', 0, 2), utils.get('betteranimalsplus:boarhead_4', 0, 2), <minecraft:porkchop> * 213]); // Boar
   add(<entity:betteranimalsplus:bobbit_worm>          , [<iceandfire:sea_serpent_scales_bronze> * 21]); // Bobbit Worm
