@@ -220,6 +220,7 @@ static list as IItemStack[][string] = {
     <mekanism:jetpack>,
     <minecraft:potion>.withTag({ Potion: 'potioncore:flight' }),
     <rftools:flight_module>,
+    <thaumictinkerer:kami_chest>,
   ],
 
   miner: [
