@@ -227,7 +227,6 @@ remakeSlimeSlings('Red', <tconstruct:slimesling:3>, <tconstruct:slime_congealed:
 remakeSlimeSlings('Magma', <tconstruct:slimesling:4>, <tconstruct:slime_congealed:4>);
 
 // Remake some metals to able be melted only under amplyfiing tube
-mods.mechanics.addTubeRecipe([<thaumcraft:amber_block>] as IItemStack[], <liquid:amber> * 1000);
 mods.mechanics.addTubeRecipe([<biomesoplenty:crystal>] as IItemStack[], <liquid:crystal> * 1000);
 
 // Remove other Fluid Amber Recipes

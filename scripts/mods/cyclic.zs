@@ -11,16 +11,6 @@ recipes.addShapeless('Cyclic Guide',
   <guideapi:cyclicmagic-guide>,
   [<minecraft:book>, <cyclicmagic:carbon_paper>]);
 
-// [Redstone Clock] from [Ectoplasm][+2]
-craft.remake(<cyclicmagic:clock>, ['pretty',
-  '■ ♥ ■',
-  '♥ E ♥',
-  '■ ♥ ■'], {
-  '■': <ore:blockPearl>, // Pearl Block
-  '♥': <randomthings:advancedredstonetorch_on>, // Advanced Redstone Torch
-  'E': <randomthings:ingredient:2>, // Ectoplasm
-});
-
 // Speed Charm + Elytra is too OP
 <cyclicmagic:charm_speed>.maxDamage = 100;
 
@@ -94,16 +84,6 @@ mods.tconstruct.Casting.addTableRecipe(<cyclicmagic:ender_pearl_mounted>, <endre
 recipes.remove(<cyclicmagic:soulstone>);
 mods.rockytweaks.Anvil.addRecipe(<cyclicmagic:ender_pearl_reuse>, <cyclicmagic:crystallized_obsidian>, <cyclicmagic:soulstone>, 45);
 mods.rockytweaks.Anvil.addRecipe(<cyclicmagic:ender_pearl_mounted>, <cyclicmagic:crystallized_obsidian>, <cyclicmagic:soulstone>, 45);
-
-// [Crystallized Amber] from [Chorus Glass][+3]
-craft.remake(<cyclicmagic:crystallized_amber>, ['pretty',
-  'M W',
-  '■ C'], {
-  'M': <tconstruct:materials:19>, // Mending Moss
-  'W': <randomthings:weatheregg>, // Weather Egg <Sun>
-  '■': <ore:blockAmber>, // Amber Block
-  'C': <integratedterminals:chorus_glass>, // Chorus Glass
-});
 
 // [Crystallized Obsidian] from [Chorus Glass][+3]
 craft.remake(<cyclicmagic:crystallized_obsidian>, ['pretty',
@@ -270,10 +250,6 @@ recipes.remove(<cyclicmagic:stone_pebble>);
 // Remove bugged recipe (Apple + Biomass => null)
 // Solidifier.removeShapedRecipe(null); # Cant remove sadly =(
 
-// Remake crystallized items to be bit harder
-Solidifier.removeShapedRecipe(<cyclicmagic:crystallized_amber>);
-Solidifier.addRecipe(<cyclicmagic:crystallized_amber>, [<randomthings:weatheregg>], 'amber', 1000);
-
 Solidifier.removeShapedRecipe(<cyclicmagic:crystallized_obsidian>);
 Solidifier.addRecipe(<cyclicmagic:crystallized_obsidian>, [<randomthings:weatheregg:1>], 'crystal', 1000);
 
@@ -337,16 +313,6 @@ craft.remake(<cyclicmagic:plate_push> * 8, ['pretty',
   'c': <ore:clay>, // Clay
   'd': <ore:dyeLime>,
   '▬': <ore:ingotIron>, // Iron Ingot
-});
-
-// [Empty Sack of Holding] from [Propolis][+2]
-craft.remake(<cyclicmagic:chest_sack_empty>, ['pretty',
-  '  s  ',
-  'B P B',
-  'B B B'], {
-  'P': <forestry:propolis:*>, // Propolis
-  'B': <ore:pelt>, // Brown Wolf Pelt
-  's': <ore:string>, // String
 });
 
 // [Ender Book] from [Tome of Knowledge][+3]

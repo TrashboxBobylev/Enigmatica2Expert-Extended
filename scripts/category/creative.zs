@@ -582,10 +582,6 @@ craft.remake(<extrautils2:passivegenerator:6>, ['pretty',
   '∞': <contenttweaker:machine_case_singularity>,
 });
 
-
-// Add later
-recipes.remove(<cyclicmagic:uncrafting_block>);
-
 // [Uncrafting Table] from [Creative Modifier][+11]
 craft.remake(<twilightforest:uncrafting_table>, ['pretty',
   '▄ ■ h ■ ▄',
