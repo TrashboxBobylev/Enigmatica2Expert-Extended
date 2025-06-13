@@ -184,6 +184,7 @@ tile.contenttweaker.conglomerate_of_life.name=Конгломерат Жизни
 tile.contenttweaker.conglomerate_of_coal.name=Конгломерат Угля
 tile.contenttweaker.conglomerate_of_sun.name=Конгломерат Солнца
 tile.contenttweaker.silicon_block.name=Силиконовый блок
+tile.contenttweaker.bedrockore.name=Бедроковая руда
 item.contenttweaker.knowledge_absorber.name=Поглотитель Знаний
 
 item.contenttweaker.woodweave_singularity.name=§cДревоплетённая Сингулярность

@@ -184,6 +184,7 @@ tile.contenttweaker.conglomerate_of_life.name=Conglomerate Of Life
 tile.contenttweaker.conglomerate_of_coal.name=Conglomerate Of Coal
 tile.contenttweaker.conglomerate_of_sun.name=Conglomerate Of Sun
 tile.contenttweaker.silicon_block.name=Silicon Block
+tile.contenttweaker.bedrockore.name=Bedrock Ore
 item.contenttweaker.knowledge_absorber.name=Knowledge Absorber
 
 item.contenttweaker.woodweave_singularity.name=§cWoodweave Singularity

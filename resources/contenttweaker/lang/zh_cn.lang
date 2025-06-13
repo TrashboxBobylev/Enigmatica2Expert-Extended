@@ -184,6 +184,7 @@ tile.contenttweaker.conglomerate_of_life.name=生命团块
 tile.contenttweaker.conglomerate_of_coal.name=煤炭团块
 tile.contenttweaker.conglomerate_of_sun.name=耀阳团块
 tile.contenttweaker.silicon_block.name=硅块
+tile.contenttweaker.bedrockore.name=基岩矿石
 item.contenttweaker.knowledge_absorber.name=知识吸收器
 
 item.contenttweaker.woodweave_singularity.name=§c木纹奇点
