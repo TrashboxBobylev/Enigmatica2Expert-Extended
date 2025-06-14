@@ -277,7 +277,14 @@ mods.actuallyadditions.Empowerer.addRecipe(<actuallyadditions:block_crystal_empo
 
 // *======= BallOfFur =======*
 
-// Weight of standart AA drops
+/*
+
+Default drops:
+https://github.com/Ellpeck/ActuallyAdditions/blob/1.12.2/src/main/java/de/ellpeck/actuallyadditions/mod/recipe/HairyBallHandler.java
+
+*/
+
+// Weight of default AA drops
 var weight = 100 + 2 + 1 + 80 + 60 + 10 + 40 + 60 + 30 + 70 + 40 + 40 + 10 + 6 + 30 + 2 + 20 + 10 + 3 + 40 + 50 + 30 + 4 + 20;
 
 val listCatFur as string[] = [
