@@ -52,7 +52,6 @@ xml_to_js(loadText('config/advRocketry/asteroidConfig.xml')).elements[0].element
 )) */
 addAsteroid('Iridium Enriched'     , [25, 100, 0.8, 3, 1, 0.2], [{ <minecraft:iron_ore>: 25 }, { <thermalfoundation:ore:7>: 25 }]);
 addAsteroid('Draconium'            , [64, 75, 0.7, 5, 1, 0.5] , [{ <draconicevolution:draconium_ore>: 100 }, { <advancedrocketry:moonturf>: 25 }, { <advancedrocketry:moonturf_dark>: 25 }]);
-addAsteroid('Prosperity'           , [64, 75, 0.7, 5, 1, 0.5] , [{ <mysticalagriculture:prosperity_ore>: 100 }, { <advancedrocketry:moonturf>: 25 }, { <advancedrocketry:moonturf_dark>: 25 }]);
 addAsteroid('Dimensional Shard'    , [64, 75, 0.7, 5, 1, 0.5] , [{ <rftools:dimensional_shard_ore>: 100 }, { <advancedrocketry:moonturf>: 25 }, { <advancedrocketry:moonturf_dark>: 25 }]);
 addAsteroid('Mana Infused'         , [64, 75, 0.7, 5, 1, 0.5] , [{ <thermalfoundation:ore:8>: 100 }, { <advancedrocketry:moonturf>: 25 }, { <advancedrocketry:moonturf_dark>: 25 }]);
 addAsteroid('Destabilized Redstone', [64, 75, 0.7, 5, 1, 0.5] , [{ <thermalfoundation:ore_fluid:2>: 100 }, { <advancedrocketry:moonturf>: 25 }, { <advancedrocketry:moonturf_dark>: 25 }]);
@@ -85,7 +84,6 @@ config('config/advRocketry/advancedRocketry.cfg')
 ) */
   <ore:oreClathrateGlowstone>,
   <ore:oreDraconium>,
-  <ore:oreProsperity>,
   <ore:oreAstralStarmetal>,
   <ore:oreDilithium>,
   <ore:oreIridium>,

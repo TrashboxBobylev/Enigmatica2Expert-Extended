@@ -5,7 +5,7 @@
 <entity:emberroot:fairies>.clearDrops();
 
 scripts.lib.loot.tweak('emberroot:entity/golem_blue'     , 'main', 'minecraft:iron_nugget' , null, [<extrautils2:unstableingots:1>]        , [2, 4]);
-scripts.lib.loot.tweak('emberroot:entity/golem_green'    , 'main', 'minecraft:gunpowder'   , null, [<mysticalagriculture:crafting:39>]     , [2, 8]);
+scripts.lib.loot.tweak('emberroot:entity/golem_green'    , 'main', 'minecraft:gunpowder'   , null, [<tconstruct:nuggets:5>]     , [2, 8]);
 scripts.lib.loot.tweak('emberroot:entity/golem_orange'   , 'main', 'minecraft:coal'        , null, [<mekanism:nugget:3>]                   , [3, 14]);
 scripts.lib.loot.tweak('emberroot:entity/golem_purple'   , 'main', 'minecraft:spider_eye'  , null, [<mechanics:heavy_nugget>]              , [5, 24]);
 scripts.lib.loot.tweak('emberroot:entity/golem_red'      , 'main', 'minecraft:redstone'    , null, [<enderio:item_alloy_nugget:4>]         , [1, 4]);

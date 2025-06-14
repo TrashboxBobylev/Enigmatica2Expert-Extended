@@ -222,7 +222,7 @@ val gemMap = {
   <appliedenergistics2:material:12>: { energyData: 59065 }, // Pure Fluix
   <appliedenergistics2:material:11>: { energyData: 37125 }, // Pure Quartz
   <rats:rat_diamond>               : { energyData: 166670 }, // Rat Diamond
-  <mysticalagriculture:crafting:5> : { energyData: 40000, blockItem: { id: 'mysticalagriculture:storage', Damage: 5 }}, // Prosperity Shard
+  <mysticalagriculture:crafting:5> : { energyData: 400000, blockItem: { id: 'mysticalagriculture:storage', Damage: 5 }}, // Prosperity Shard
   <nuclearcraft:gem:5>             : { energyData: 320000}, // Boron Arsenide
 
   <enderio:item_material:14>: { energyData: 546000}, // Pulsating Crystal

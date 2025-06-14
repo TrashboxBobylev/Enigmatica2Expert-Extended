@@ -350,7 +350,7 @@ val crystals = [
 ] as IItemStack[];
 
 // Infusion crystals
-val prospetry = <mysticalagriculture:crafting:5>;
+val prospetry = <mysticalagriculture:crafting:5> | <mysticalagriculture:crafting:39>;
 for i in 0 .. 5 {
   craft.remake(crystals[i + 1], ['ABA','BCB','ABA'], {
     A: prospetry,
@@ -559,7 +559,7 @@ craft.shapeless(<minecraft:ender_pearl> * 6, 'AAA', { A: <mysticalagriculture:en
 // Base essence harder to use more magic
 recipes.removeByRecipeName('mysticalagriculture:crafting_16');
 scripts.process.solution(
-  [<ore:blockProsperity>, <ore:nuggetManasteel>, <ore:dustAstralStarmetal>],
+  [<ore:shardProsperity>, <ore:nuggetManasteel>, <ore:dustAstralStarmetal>],
   [<liquid:brass> * 144],
   [<liquid:base_essence> * 1440],
   [0.5, 0.5, 0.5, 3300], 'only: highoven'
@@ -568,16 +568,14 @@ scripts.process.solution(
 // [Base Essence Ingot] from [Stardust][+3]
 scripts.processUtils.avdRockXmlRecipe('ElectricArcFurnace', [
   <ore:ingotBrass> * 4,  // Alchemical Brass Ingot
-  <ore:blockProsperity> * 2,
+  <ore:shardProsperity> * 2,
   <ore:nuggetManasteel> * 2,
   <ore:dustAstralStarmetal> * 2,  // Stardust
 ], null, [<mysticalagriculture:crafting:32> * 40], null);
 
 // [Base Crafting Seed] Harder to encourage Villager Trades
 craft.remake(<mysticalagriculture:crafting:16>, ['pretty',
-  'l l l',
-  'l s l',
-  'l l l'], {
+  'l s l'], {
   'l': <ore:shardProsperity>,
   's': <ore:seed>,
 });
@@ -670,14 +668,10 @@ craft.make(<quark:slime_bucket>, ['pretty',
 });
 
 // [Mystical String] from [Industrial Hemp Fiber][+1]
-craft.remake(<mysticalagriculture:crafting:23>, [
-  'PHP'], {
+craft.reshapeless(<mysticalagriculture:crafting:23>, 'HP', {
   'P': <ore:shardProsperity>, // Prosperity Shard
   'H': <ore:fiberHemp>,       // Industrial Hemp Fiber
 });
-
-// "Purification" or [Prosperity Shard Shard] into pure shards
-scripts.do.expire_in_block.set(<tconstruct:shard>.withTag({ Material: 'ma.prosperity' }),  { 'cyclicmagic:fire_dark': <mysticalagriculture:crafting:5> });
 
 // Adventure way to obtain Prudentium Essence
 scripts.do.entity_kill_entity.add('minecraft:slime', 'betteranimalsplus:feralwolf', <mysticalagriculture:crafting:2>);
