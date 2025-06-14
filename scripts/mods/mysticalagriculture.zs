@@ -364,6 +364,9 @@ for i in 0 .. 5 {
   });
 }
 
+// 🚒 Inworld crafting
+furnace.addRecipe(<mysticalagriculture:prosperity_ore>, <astralsorcery:blockcustomore>, 1.0);
+
 // ######################################################################
 //
 // Harder Supremium armor

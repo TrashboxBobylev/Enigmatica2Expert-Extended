@@ -436,6 +436,10 @@ craft.make(<botania:blackholetalisman>, ['pretty',
 // [Dilithium Crystal] from [Dilithium Dust]
 mods.botania.ManaInfusion.addInfusion(<libvulpes:productgem>, <ore:dustDilithium>, 10000);
 
+// 🚒 Inworld crafting
+recipes.remove(<botania:bifrostperm>);
+furnace.addRecipe(<botania:bifrostperm>, <botania:bifrost>, 1.0);
+
 // ////////////////////////////////////////////////////////////////
 // Rods rework
 // ////////////////////////////////////////////////////////////////
