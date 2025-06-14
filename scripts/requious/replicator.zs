@@ -48,8 +48,12 @@ scripts.lib.offline.op.setRegistry.set('stat_replications', function(player as I
 
 // Define offline difficulty get/set
 // Required for scripts.lib.offline.get() and set() calls
-scripts.lib.offline.op.getRegistry.set('difficulty', function(player as IPlayer, value as string) as string {return player.difficulty as string;});
-scripts.lib.offline.op.setRegistry.set('difficulty', function(player as IPlayer, value as string) as string {player.difficulty = value as double; return null;});
+scripts.lib.offline.op.getRegistry.set('difficulty', function(player as IPlayer, value as string) as string {
+  return player.difficulty as string;
+});
+scripts.lib.offline.op.setRegistry.set('difficulty', function(player as IPlayer, value as string) as string {
+  player.difficulty = value; return null;
+});
 
 /*
  █████╗ ███████╗███████╗███████╗███╗   ███╗██████╗ ██╗  ██╗   ██╗

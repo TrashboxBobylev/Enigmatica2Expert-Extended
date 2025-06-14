@@ -124,6 +124,12 @@ events.onCustomTask(function (e as mods.zenutils.ftbq.CustomTaskEvent) {
       ) ? 0 : 1;
     };
   }
+  if (e.task.hasTag('omnipotence')) {
+    e.checkTimer = 10;
+    e.checker = function (player, currentProgress) {
+      return player.difficulty >= 1000 ? 1 : 0;
+    };
+  }
 });
 
 events.onPlayerLoggedIn(function (e as crafttweaker.event.PlayerLoggedInEvent) {
