@@ -49,7 +49,22 @@ zenClass MixinTileRainTank {
     #mixin Static
     #mixin ModifyConstant {method: "<clinit>", constant: {intValue: 10}}
     function increaseFluidPerOperation(value as int) as int {
-        return 30000;
+        return 500000;
+    }
+
+    #mixin ModifyConstant {method: "dumpFluidBelow", constant: {intValue: 50}}
+    function dumpBelowPerOperation(value as int) as int {
+        return 50000;
+    }
+
+    #mixin ModifyConstant {method: "updateServerSide", constant: {intValue: 20}}
+    function descreaseInterval(value as int) as int {
+        return 5;
+    }
+
+    #mixin ModifyConstant {method: "<init>", constant: {intValue: 30000}}
+    function increaseCapacity(value as int) as int {
+        return 500000000;
     }
 }
 
