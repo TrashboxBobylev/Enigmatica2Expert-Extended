@@ -583,7 +583,7 @@ tooltips.lang.backpack.Pigman=§a提供防火药水效果。
 tooltips.lang.backpack.Rainbow=§a冲刺时会在身后留下一条尾迹。\n§a附加跳跃提升于速度效果 - 酷吧？
 tooltips.lang.backpack.Slime=§a提供一个惊为天人的，而且一点用没有的能力。\n§a玩家奔跑时会在背后留下一条粘液粒子尾迹，\n§a而且每走一步都会发出那粘滑的声音。
 tooltips.lang.backpack.Squid=§a泡水时获得水下呼吸效果。
-tooltips.lang.backpack.Sunflower=§a处在阳光下时能缓慢回复饥饿值。\n§a至少不会饿死了。
+tooltips.lang.backpack.Sunflower=§a处在阳光下时能缓慢回复饥饿值。\n§a同时恢复营养值！
 tooltips.lang.backpack.Wolf=§a会检查附近的狼的状态。\n§a如果对应的狼正对你抱有敌意，\n§a它立马就会临时健忘，忘掉对你的敌意。\n§a另外，在满月的时候\n§a你能获得狼人的力量！
 tooltips.lang.sponge.removed_with=§6可以通过海绵从盔甲上移除。§r
 tooltips.lang.sponge.can_remove=§6能从盔甲上卸下喷气背包。§r
@@ -678,6 +678,11 @@ item.contenttweaker.blade_core.name=稀土涡轮机转子叶片芯
 item.contenttweaker.steel_mould.name=超轻不锈钢粗模
 item.contenttweaker.alloy_mould.name=超轻高超不锈钢粗模
 item.contenttweaker.sic_mould.name=超轻矩阵合金粗模
+
+# --------------------------------------
+# Potion Descriptions
+# --------------------------------------
+description.potion.saturation=恢复饥饿值和营养状态
 
 # --------------------------------------
 # Enchantment Descriptions

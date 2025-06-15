@@ -583,7 +583,7 @@ tooltips.lang.backpack.Pigman=§aProvides fire resistance.
 tooltips.lang.backpack.Rainbow=§aCreates a trail of notes behind player, while sprinting.\n§aAlso gives jump boost and speed - isn't it cool?
 tooltips.lang.backpack.Slime=§aHas an incredibly useless "ability".\n§aMakes the player leave a slimy trail of\n§aparticles whenever is running,\n§aand make that splishy splashy squishy\n§asound on each step as well!
 tooltips.lang.backpack.Squid=§aGrants water breathing effect while being in water.
-tooltips.lang.backpack.Sunflower=§aWill feed you while you stay in the sun, slowly.\n§aAt the very least you shouldn't starve.
+tooltips.lang.backpack.Sunflower=§aWill feed you while you stay in the sun, slowly.\n§aAlso restores nutrition!
 tooltips.lang.backpack.Wolf=§aChecks around for any wolves that may lurk around.\n§aIf any of them gets mad at you,\n§ait will promptly forget about the whole deal.\n§aAlso if it's full moon,\n§ayou'll gain werewolf strength!
 tooltips.lang.sponge.removed_with=§6Can be removed from armor with a Sponge.§r
 tooltips.lang.sponge.can_remove=§6Can remove jetpacks from armor.§r
@@ -678,6 +678,11 @@ item.contenttweaker.blade_core.name=Turbine Rotor Actinide Blade Core
 item.contenttweaker.steel_mould.name=Ultra Light Edelstahl Mould
 item.contenttweaker.alloy_mould.name=Ultra Light Edle Elektronlegierung Mould
 item.contenttweaker.sic_mould.name=Ultra Light Matrix-Legierung Mould
+
+# --------------------------------------
+# Potion Descriptions
+# --------------------------------------
+description.potion.saturation=Restores hunger and nutrients
 
 # --------------------------------------
 # Enchantment Descriptions
