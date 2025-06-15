@@ -118,7 +118,7 @@ mods.tconstruct.Casting.addBasinRecipe(<opencomputers:case1>, null, <liquid:elec
 
 // Anglesite - Highest tier of Tech mods crystals
 mods.extendedcrafting.CombinationCrafting.addRecipe(<contenttweaker:item_ore_anglesite>, 100000000, 1000000,
-  <additionalcompression:gravelend_compressed:2>, [
+  <additionalcompression:gravelend_compressed:1>, [
     <ore:itemEntangled>,
     <biomesoplenty:terrestrial_artifact>,
     <ore:clathrateGlowstone>,
@@ -167,7 +167,7 @@ val benitoiteIngrs = [
 
 mods.extendedcrafting.CombinationCrafting.addRecipe(
   <contenttweaker:item_ore_benitoite>, 100000000, 1000000,
-  <additionalcompression:gravelnether_compressed:2>,
+  <additionalcompression:gravelnether_compressed:1>,
   benitoiteIngrs
 );
 
@@ -177,7 +177,7 @@ mods.thaumcraft.Infusion.registerRecipe(
   <contenttweaker:item_ore_benitoite>, // Output
   15, // Instability
   [<aspect:sanguis> * 1000, <aspect:mana> * 1000, <aspect:draco> * 1000],
-  <additionalcompression:gravelnether_compressed:2>, // CentralItem
+  <additionalcompression:gravelnether_compressed:1>, // CentralItem
   benitoiteIngrs
 );
 
