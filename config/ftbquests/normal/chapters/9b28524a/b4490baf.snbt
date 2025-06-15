@@ -1,7 +1,7 @@
 {
 	icon: {
-		tag: {},
-		id: "bloodmagic:living_armour_chest"
+		id: "bloodmagic:living_armour_chest",
+		tag: {}
 	},
 	x: 2.5d,
 	y: 6.833333333333333d,
@@ -23,8 +23,8 @@
 		uid: "6e792140",
 		type: "item",
 		items: [{
-			tag: {},
-			id: "bloodmagic:living_armour_chest"
+			id: "bloodmagic:living_armour_chest",
+			tag: {}
 		}],
 		ignore_nbt: 1b
 	},

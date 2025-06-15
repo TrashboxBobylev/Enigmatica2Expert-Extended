@@ -19,10 +19,10 @@
 		uid: "9fcc900c",
 		type: "item",
 		item: {
+			id: "ftbquests:lootcrate",
 			tag: {
 				type: "uncommon"
-			},
-			id: "ftbquests:lootcrate"
+			}
 		}
 	}]
 }

@@ -7,193 +7,193 @@
 		count: 64
 	},
 	{
-		item: {
-			tag: {
-				MaxH: 20,
-				"Quark:RuneAttached": 1b,
-				Genome: {
-					Chromosomes: [{
-						Slot: 0b,
-						UID0: "gendustry.bee.narcissistic",
-						UID1: "gendustry.bee.selfish"
-					},
-					{
-						Slot: 1b,
-						UID0: "forestry.speedFastest",
-						UID1: "forestry.speedFastest"
-					},
-					{
-						Slot: 2b,
-						UID0: "forestry.lifespanShortest",
-						UID1: "forestry.lifespanShortest"
-					},
-					{
-						Slot: 3b,
-						UID0: "forestry.fertilityMaximum",
-						UID1: "forestry.fertilityMaximum"
-					},
-					{
-						Slot: 4b,
-						UID0: "forestry.toleranceBoth5",
-						UID1: "forestry.toleranceBoth5"
-					},
-					{
-						Slot: 5b,
-						UID0: "forestry.boolTrue",
-						UID1: "forestry.boolTrue"
-					},
-					{
-						Slot: 6b,
-						UID0: "forestry.toleranceBoth5",
-						UID1: "forestry.toleranceBoth5"
-					},
-					{
-						Slot: 7b,
-						UID0: "forestry.boolTrue",
-						UID1: "forestry.boolTrue"
-					},
-					{
-						Slot: 8b,
-						UID0: "forestry.boolTrue",
-						UID1: "forestry.boolTrue"
-					},
-					{
-						Slot: 9b,
-						UID0: "forestry.flowersWheat",
-						UID1: "forestry.flowersCacti"
-					},
-					{
-						Slot: 10b,
-						UID0: "forestry.floweringMaximum",
-						UID1: "forestry.floweringFastest"
-					},
-					{
-						Slot: 11b,
-						UID0: "forestry.territoryLargest",
-						UID1: "forestry.territoryLarger"
-					},
-					{
-						Slot: 12b,
-						UID0: "forestry.effectExploration",
-						UID1: "forestry.effectFertile"
-					}]
-				},
-				Health: 20,
-				IsAnalyzed: 1b,
-				"Quark:RuneColor": 16,
-				display: {
-					Name: "§kUltimate Bee"
-				}
-			},
-			id: "forestry:bee_drone_ge"
-		},
-		count: 64,
 		icon: {
+			id: "forestry:bee_drone_ge",
+			Count: 64,
 			tag: {
 				MaxH: 20,
-				"Quark:RuneAttached": 1b,
-				Genome: {
-					Chromosomes: [{
-						Slot: 0b,
-						UID0: "gendustry.bee.narcissistic",
-						UID1: "gendustry.bee.selfish"
-					},
-					{
-						Slot: 1b,
-						UID0: "forestry.speedFastest",
-						UID1: "forestry.speedFastest"
-					},
-					{
-						Slot: 2b,
-						UID0: "forestry.lifespanShortest",
-						UID1: "forestry.lifespanShortest"
-					},
-					{
-						Slot: 3b,
-						UID0: "forestry.fertilityMaximum",
-						UID1: "forestry.fertilityMaximum"
-					},
-					{
-						Slot: 4b,
-						UID0: "forestry.toleranceBoth5",
-						UID1: "forestry.toleranceBoth5"
-					},
-					{
-						Slot: 5b,
-						UID0: "forestry.boolTrue",
-						UID1: "forestry.boolTrue"
-					},
-					{
-						Slot: 6b,
-						UID0: "forestry.toleranceBoth5",
-						UID1: "forestry.toleranceBoth5"
-					},
-					{
-						Slot: 7b,
-						UID0: "forestry.boolTrue",
-						UID1: "forestry.boolTrue"
-					},
-					{
-						Slot: 8b,
-						UID0: "forestry.boolTrue",
-						UID1: "forestry.boolTrue"
-					},
-					{
-						Slot: 9b,
-						UID0: "forestry.flowersWheat",
-						UID1: "forestry.flowersCacti"
-					},
-					{
-						Slot: 10b,
-						UID0: "forestry.floweringMaximum",
-						UID1: "forestry.floweringFastest"
-					},
-					{
-						Slot: 11b,
-						UID0: "forestry.territoryLargest",
-						UID1: "forestry.territoryLarger"
-					},
-					{
-						Slot: 12b,
-						UID0: "forestry.effectExploration",
-						UID1: "forestry.effectFertile"
-					}]
-				},
-				Health: 20,
-				IsAnalyzed: 1b,
 				"Quark:RuneColor": 16,
+				Health: 20,
 				display: {
 					Name: "§kUltimate Bee"
+				},
+				"Quark:RuneAttached": 1b,
+				IsAnalyzed: 1b,
+				Genome: {
+					Chromosomes: [{
+						UID1: "gendustry.bee.selfish",
+						UID0: "gendustry.bee.narcissistic",
+						Slot: 0b
+					},
+					{
+						UID1: "forestry.speedFastest",
+						UID0: "forestry.speedFastest",
+						Slot: 1b
+					},
+					{
+						UID1: "forestry.lifespanShortest",
+						UID0: "forestry.lifespanShortest",
+						Slot: 2b
+					},
+					{
+						UID1: "forestry.fertilityMaximum",
+						UID0: "forestry.fertilityMaximum",
+						Slot: 3b
+					},
+					{
+						UID1: "forestry.toleranceBoth5",
+						UID0: "forestry.toleranceBoth5",
+						Slot: 4b
+					},
+					{
+						UID1: "forestry.boolTrue",
+						UID0: "forestry.boolTrue",
+						Slot: 5b
+					},
+					{
+						UID1: "forestry.toleranceBoth5",
+						UID0: "forestry.toleranceBoth5",
+						Slot: 6b
+					},
+					{
+						UID1: "forestry.boolTrue",
+						UID0: "forestry.boolTrue",
+						Slot: 7b
+					},
+					{
+						UID1: "forestry.boolTrue",
+						UID0: "forestry.boolTrue",
+						Slot: 8b
+					},
+					{
+						UID1: "forestry.flowersCacti",
+						UID0: "forestry.flowersWheat",
+						Slot: 9b
+					},
+					{
+						UID1: "forestry.floweringFastest",
+						UID0: "forestry.floweringMaximum",
+						Slot: 10b
+					},
+					{
+						UID1: "forestry.territoryLarger",
+						UID0: "forestry.territoryLargest",
+						Slot: 11b
+					},
+					{
+						UID1: "forestry.effectFertile",
+						UID0: "forestry.effectExploration",
+						Slot: 12b
+					}]
 				}
-			},
+			}
+		},
+		item: {
 			id: "forestry:bee_drone_ge",
-			Count: 64
-		}
+			tag: {
+				MaxH: 20,
+				"Quark:RuneColor": 16,
+				Health: 20,
+				display: {
+					Name: "§kUltimate Bee"
+				},
+				"Quark:RuneAttached": 1b,
+				IsAnalyzed: 1b,
+				Genome: {
+					Chromosomes: [{
+						UID1: "gendustry.bee.selfish",
+						UID0: "gendustry.bee.narcissistic",
+						Slot: 0b
+					},
+					{
+						UID1: "forestry.speedFastest",
+						UID0: "forestry.speedFastest",
+						Slot: 1b
+					},
+					{
+						UID1: "forestry.lifespanShortest",
+						UID0: "forestry.lifespanShortest",
+						Slot: 2b
+					},
+					{
+						UID1: "forestry.fertilityMaximum",
+						UID0: "forestry.fertilityMaximum",
+						Slot: 3b
+					},
+					{
+						UID1: "forestry.toleranceBoth5",
+						UID0: "forestry.toleranceBoth5",
+						Slot: 4b
+					},
+					{
+						UID1: "forestry.boolTrue",
+						UID0: "forestry.boolTrue",
+						Slot: 5b
+					},
+					{
+						UID1: "forestry.toleranceBoth5",
+						UID0: "forestry.toleranceBoth5",
+						Slot: 6b
+					},
+					{
+						UID1: "forestry.boolTrue",
+						UID0: "forestry.boolTrue",
+						Slot: 7b
+					},
+					{
+						UID1: "forestry.boolTrue",
+						UID0: "forestry.boolTrue",
+						Slot: 8b
+					},
+					{
+						UID1: "forestry.flowersCacti",
+						UID0: "forestry.flowersWheat",
+						Slot: 9b
+					},
+					{
+						UID1: "forestry.floweringFastest",
+						UID0: "forestry.floweringMaximum",
+						Slot: 10b
+					},
+					{
+						UID1: "forestry.territoryLarger",
+						UID0: "forestry.territoryLargest",
+						Slot: 11b
+					},
+					{
+						UID1: "forestry.effectFertile",
+						UID0: "forestry.effectExploration",
+						Slot: 12b
+					}]
+				}
+			}
+		},
+		count: 64
 	},
 	{
 		icon: {
+			id: "industrialforegoing:infinity_drill",
 			tag: {
 				Energy: 9223372036854775807L,
-				Special: 0b,
 				Fluid: {
-					Amount: 0,
-					FluidName: "biofuel"
+					FluidName: "biofuel",
+					Amount: 0
 				},
+				Special: 0b,
 				Selected: "ARTIFACT"
-			},
-			id: "industrialforegoing:infinity_drill"
+			}
 		},
 		item: {
+			id: "industrialforegoing:infinity_drill",
 			tag: {
 				Energy: 9223372036854775807L,
-				Special: 0b,
 				Fluid: {
-					Amount: 0,
-					FluidName: "biofuel"
+					FluidName: "biofuel",
+					Amount: 0
 				},
+				Special: 0b,
 				Selected: "ARTIFACT"
-			},
-			id: "industrialforegoing:infinity_drill"
+			}
 		}
 	},
 	{
@@ -201,7 +201,12 @@
 	},
 	{
 		item: {
+			id: "rats:rat_upgrade_combined",
 			tag: {
+				enchantmentColor: 2651799,
+				display: {
+					Name: "Holy Upgrade"
+				},
 				Items: [{
 					Slot: 0b,
 					Count: 1b,
@@ -225,27 +230,22 @@
 					Count: 1b,
 					id: "rats:rat_upgrade_archeologist",
 					Damage: 0s
-				}],
-				enchantmentColor: 2651799,
-				display: {
-					Name: "Holy Upgrade"
-				}
-			},
-			id: "rats:rat_upgrade_combined"
+				}]
+			}
 		}
 	},
 	{
 		item: {
+			id: "draconicevolution:wyvern_bow",
 			tag: {
-				Energy: 16000000,
 				DEUpgrades: {
 					arrowDmg: 2b,
 					arrowSpeed: 2b,
-					rfCap: 2b,
-					drawSpeed: 2b
-				}
-			},
-			id: "draconicevolution:wyvern_bow"
+					drawSpeed: 2b,
+					rfCap: 2b
+				},
+				Energy: 16000000
+			}
 		}
 	},
 	{
@@ -263,34 +263,34 @@
 	},
 	{
 		item: {
+			id: "openblocks:tank",
 			tag: {
 				tank: {
-					Amount: 24000,
-					FluidName: "perfect_fuel"
+					FluidName: "perfect_fuel",
+					Amount: 24000
 				}
-			},
-			id: "openblocks:tank"
+			}
 		}
 	},
 	{
 		icon: {
+			id: "openblocks:tank",
+			Count: 64,
 			tag: {
 				tank: {
-					Amount: 24000,
-					FluidName: "ic2uu_matter"
+					FluidName: "ic2uu_matter",
+					Amount: 24000
 				}
-			},
-			Count: 64,
-			id: "openblocks:tank"
+			}
 		},
 		item: {
+			id: "openblocks:tank",
 			tag: {
 				tank: {
-					Amount: 24000,
-					FluidName: "ic2uu_matter"
+					FluidName: "ic2uu_matter",
+					Amount: 24000
 				}
-			},
-			id: "openblocks:tank"
+			}
 		},
 		count: 64
 	},
@@ -306,11 +306,22 @@
 	},
 	{
 		item: {
+			id: "enderio:item_stellar_alloy_pickaxe",
 			tag: {
+				enderio.darksteel.upgrade.travel: {
+					level: 0
+				},
 				enderio.darksteel.upgrade.direct: {
 					level: 0
 				},
+				enderio.darksteel.upgrade.energyUpgrade: {
+					level: 4,
+					energy: 2500000
+				},
 				enderio.darksteel.upgrade.spoon: {
+					level: 0
+				},
+				enderio.darksteel.upgrade.depth: {
 					level: 0
 				},
 				enderio.darksteel.upgrade.carpet: {
@@ -318,19 +329,8 @@
 				},
 				enderio.darksteel.upgrade.tnt: {
 					level: 4
-				},
-				enderio.darksteel.upgrade.depth: {
-					level: 0
-				},
-				enderio.darksteel.upgrade.travel: {
-					level: 0
-				},
-				enderio.darksteel.upgrade.energyUpgrade: {
-					energy: 2500000,
-					level: 4
 				}
-			},
-			id: "enderio:item_stellar_alloy_pickaxe"
+			}
 		}
 	},
 	{
@@ -347,14 +347,14 @@
 	},
 	{
 		item: {
+			id: "ic2:crystal_memory",
 			tag: {
 				Pattern: {
 					Count: 1b,
 					id: "extendedcrafting:material",
 					Damage: 13s
 				}
-			},
-			id: "ic2:crystal_memory"
+			}
 		}
 	},
 	{
@@ -367,15 +367,15 @@
 	},
 	{
 		item: {
+			id: "draconicevolution:draconic_shovel",
 			tag: {
-				Energy: 256000000,
 				DEUpgrades: {
 					digSpeed: 3b,
-					rfCap: 3b,
-					digAOE: 3b
-				}
-			},
-			id: "draconicevolution:draconic_shovel"
+					digAOE: 3b,
+					rfCap: 3b
+				},
+				Energy: 256000000
+			}
 		}
 	},
 	{
@@ -391,25 +391,25 @@
 	},
 	{
 		icon: {
+			id: "mekanism:basicblock2",
+			Count: 4,
 			tag: {
+				tier: 3,
 				mekData: {
 					energyStored: 5.12E11d
-				},
-				tier: 3
+				}
 			},
-			Damage: 3s,
-			Count: 4,
-			id: "mekanism:basicblock2"
+			Damage: 3s
 		},
 		item: {
+			id: "mekanism:basicblock2",
 			tag: {
+				tier: 3,
 				mekData: {
 					energyStored: 5.12E11d
-				},
-				tier: 3
+				}
 			},
-			Damage: 3s,
-			id: "mekanism:basicblock2"
+			Damage: 3s
 		},
 		count: 4
 	},
@@ -423,21 +423,11 @@
 	},
 	{
 		item: {
+			id: "randomthings:enderletter",
 			tag: {
 				EnderLetterContent: {
-					slot2: {
-						id: "draconicevolution:wyvern_legs",
-						Count: 1,
-						Damage: 0s,
-						tag: {
-							Energy: 16000000,
-							DEUpgrades: {
-								rfCap: 2b,
-								shieldCap: 2b,
-								moveSpeed: 2b,
-								shieldRec: 2b
-							}
-						}
+					slot5: {
+						empty: 1b
 					},
 					slot4: {
 						empty: 1b
@@ -445,59 +435,69 @@
 					slot3: {
 						id: "draconicevolution:wyvern_boots",
 						Count: 1,
-						Damage: 0s,
 						tag: {
-							Energy: 16000000,
 							DEUpgrades: {
-								jumpBoost: 2b,
-								rfCap: 2b,
+								shieldRec: 2b,
 								shieldCap: 2b,
-								shieldRec: 2b
-							}
-						}
+								rfCap: 2b,
+								jumpBoost: 2b
+							},
+							Energy: 16000000
+						},
+						Damage: 0s
 					},
-					slot8: {
-						empty: 1b
+					slot2: {
+						id: "draconicevolution:wyvern_legs",
+						Count: 1,
+						tag: {
+							DEUpgrades: {
+								moveSpeed: 2b,
+								shieldRec: 2b,
+								shieldCap: 2b,
+								rfCap: 2b
+							},
+							Energy: 16000000
+						},
+						Damage: 0s
 					},
 					slot1: {
 						id: "draconicevolution:wyvern_chest",
 						Count: 1,
-						Damage: 0s,
 						tag: {
-							Energy: 16000000,
 							DEUpgrades: {
-								rfCap: 2b,
+								shieldRec: 2b,
 								shieldCap: 2b,
-								shieldRec: 2b
-							}
-						}
+								rfCap: 2b
+							},
+							Energy: 16000000
+						},
+						Damage: 0s
 					},
 					slot0: {
 						id: "draconicevolution:wyvern_helm",
 						Count: 1,
-						Damage: 0s,
 						tag: {
-							Energy: 16000000,
 							DEUpgrades: {
-								rfCap: 2b,
+								shieldRec: 2b,
 								shieldCap: 2b,
-								shieldRec: 2b
-							}
-						}
+								rfCap: 2b
+							},
+							Energy: 16000000
+						},
+						Damage: 0s
 					},
-					slot6: {
-						empty: 1b
-					},
-					slot5: {
+					slot8: {
 						empty: 1b
 					},
 					slot7: {
 						empty: 1b
+					},
+					slot6: {
+						empty: 1b
 					}
 				},
 				receiver: "Lucky pal"
-			},
-			id: "randomthings:enderletter"
+			}
 		}
 	}],
 	loot_crate: {
@@ -507,8 +507,8 @@
 		glow: 1b,
 		drops: {
 			boss: 0,
-			monster: 0,
-			passive: 0
+			passive: 0,
+			monster: 0
 		}
 	}
 }

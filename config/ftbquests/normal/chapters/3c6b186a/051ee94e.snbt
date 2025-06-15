@@ -31,12 +31,12 @@
 			item: "ic2:te 1 58"
 		},
 		{
+			id: "minecraft:spawn_egg",
 			tag: {
 				EntityTag: {
 					id: "rats:rat"
 				}
-			},
-			id: "minecraft:spawn_egg"
+			}
 		}],
 		ignore_damage: 1b,
 		ignore_nbt: 1b
@@ -45,10 +45,10 @@
 		uid: "f0d84e98",
 		type: "item",
 		item: {
+			id: "ftbquests:lootcrate",
 			tag: {
 				type: "common"
-			},
-			id: "ftbquests:lootcrate"
+			}
 		}
 	}]
 }

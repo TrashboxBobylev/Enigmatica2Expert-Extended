@@ -1,32 +1,32 @@
 {
 	loot_size: 1,
 	rewards: [{
-		item: {
-			tag: {
-				capacity: 2048000000,
-				energy: 0,
-				maxTransfer: 102400000,
-				energyStorage: {
-					capacity: 2048000000L,
-					energy: 0L
-				}
-			},
-			id: "nuclearcraft:lithium_ion_battery_elite"
-		},
-		count: 2,
 		icon: {
+			id: "nuclearcraft:lithium_ion_battery_elite",
+			Count: 2,
 			tag: {
-				capacity: 2048000000,
-				energy: 0,
 				maxTransfer: 102400000,
 				energyStorage: {
 					capacity: 2048000000L,
 					energy: 0L
-				}
-			},
+				},
+				capacity: 2048000000,
+				energy: 0
+			}
+		},
+		item: {
 			id: "nuclearcraft:lithium_ion_battery_elite",
-			Count: 2
-		}
+			tag: {
+				maxTransfer: 102400000,
+				energyStorage: {
+					capacity: 2048000000L,
+					energy: 0L
+				},
+				capacity: 2048000000,
+				energy: 0
+			}
+		},
+		count: 2
 	},
 	{
 		icon: "nuclearcraft:turbine_rotor_blade_extreme 4",

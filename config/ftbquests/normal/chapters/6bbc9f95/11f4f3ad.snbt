@@ -25,10 +25,10 @@
 		type: "item",
 		title: "Seal Symbol",
 		items: [{
+			id: "thaumadditions:seal_symbol",
 			tag: {
 				Aspect: ""
-			},
-			id: "thaumadditions:seal_symbol"
+			}
 		}],
 		ignore_nbt: 1b
 	}],

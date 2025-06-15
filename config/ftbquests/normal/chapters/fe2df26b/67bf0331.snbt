@@ -17,10 +17,10 @@
 		uid: "d4fdd492",
 		type: "item",
 		item: {
+			id: "ftbquests:lootcrate",
 			tag: {
 				type: "uncommon"
-			},
-			id: "ftbquests:lootcrate"
+			}
 		}
 	}]
 }

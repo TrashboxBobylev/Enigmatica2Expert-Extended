@@ -1,9 +1,8 @@
 {
 	title: "{q.animals.the_chapter_is_com.name}",
 	icon: {
+		id: "simple_trophies:trophy",
 		tag: {
-			TrophyColorRed: 168,
-			TrophyColorBlue: 140,
 			TrophyVariant: "gold",
 			TrophyColorGreen: 151,
 			TrophyShowsTooltip: 1b,
@@ -12,9 +11,10 @@
 				Count: 1,
 				Damage: 0s
 			},
+			TrophyColorBlue: 140,
+			TrophyColorRed: 168,
 			TrophyName: "§cAnimals Master Trophy§r"
-		},
-		id: "simple_trophies:trophy"
+		}
 	},
 	x: 5.1d,
 	y: 3.75d,
@@ -69,9 +69,8 @@
 		team_reward: 1b,
 		auto: "enabled",
 		item: {
+			id: "simple_trophies:trophy",
 			tag: {
-				TrophyColorRed: 168,
-				TrophyColorBlue: 140,
 				TrophyVariant: "gold",
 				TrophyColorGreen: 151,
 				TrophyShowsTooltip: 1b,
@@ -80,9 +79,10 @@
 					Count: 1,
 					Damage: 0s
 				},
+				TrophyColorBlue: 140,
+				TrophyColorRed: 168,
 				TrophyName: "§cAnimals Master Trophy§r"
-			},
-			id: "simple_trophies:trophy"
+			}
 		}
 	},
 	{

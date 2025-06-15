@@ -19,10 +19,10 @@
 		uid: "808054db",
 		type: "item",
 		item: {
+			id: "ftbquests:lootcrate",
 			tag: {
 				type: "rare"
-			},
-			id: "ftbquests:lootcrate"
+			}
 		}
 	}]
 }

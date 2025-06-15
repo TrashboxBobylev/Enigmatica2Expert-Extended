@@ -71,10 +71,10 @@
 		uid: "e80d5a87",
 		type: "item",
 		item: {
+			id: "ftbquests:lootcrate",
 			tag: {
 				type: "common"
-			},
-			id: "ftbquests:lootcrate"
+			}
 		},
 		count: 2
 	}]
