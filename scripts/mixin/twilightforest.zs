@@ -115,6 +115,7 @@ zenClass MixinContainerTFUncrafting {
     #mixin Static
     #mixin Inject {method: "getRecipesFor", at: {value: "RETURN"}, cancellable: true}
     function filterRecipes(item as ItemStack, cir as CallbackInfoReturnable) as void {
+        // Group all output by "mod:id:meta" key
         val recipes as IRecipe[] = cir.getReturnValue() as IRecipe[];
         val recipeMap as [IRecipe][string] = {};
         for recipe in recipes {
@@ -126,25 +127,27 @@ zenClass MixinContainerTFUncrafting {
             var entry as [IRecipe] = recipeMap[registryKey];
             entry += recipe;
         }
+
         var filterRecipes as [IRecipe] = [] as [IRecipe];
         for key, recipeList in recipeMap {
             if (recipeList.length == 1) {
+                // Single item in group
                 filterRecipes += recipeList[0];
-                continue;
-            }
-            val firstOutput = recipeList[0].recipeOutput;
-            var allMatch as bool = true;
-            for recipe in recipeList {
-                val currentOutput = recipe.recipeOutput;
-                if (ItemStack.areItemStackTagsEqual(firstOutput, currentOutput)) {
-                    continue;
-                }
-                allMatch = false;
-                break;
-            }
-            if (allMatch) {
+            } else {
+                // Keep only recipes with the same output (no NBT difference)
+                val firstOutput = recipeList[0].recipeOutput;
+                var allMatch = true;
                 for recipe in recipeList {
-                    filterRecipes += recipe;
+                    val currentOutput = recipe.recipeOutput;
+                    if (!ItemStack.areItemStackTagsEqual(firstOutput, currentOutput)) {
+                        allMatch = false;
+                        break;
+                    }
+                }
+                if (allMatch) {
+                    for recipe in recipeList {
+                        filterRecipes += recipe;
+                    }
                 }
             }
         }
