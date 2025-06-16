@@ -62,11 +62,12 @@ for craftMat in [
 static singularIDs as string[] = [];
 static singularOres as string[] = [];
 static singularCharges as string[] = [];
-function buildSingularity(id as string, ore as string, charge as int = 30000) as void {
+function buildSingularity(id as string, ore as string, charge as int = 30000, glowing as bool = false) as void {
   val x = VanillaFactory.createExpandItem(`${id}_singularity`);
   x.creativeTab = <creativetab:other>;
   x.maxDamage = 30000;
   x.noRepair = true;
+  x.glowing = glowing;
   x.register();
 
   singularIDs += id;
@@ -80,7 +81,7 @@ buildSingularity('ball', 'itemBall', 2000000000);
 buildSingularity('meat', 'listAllmeatraw', 300000);
 buildSingularity('garbage', 'garbage', 10000);
 buildSingularity('machine_case', 'machineCase', 20000000);
-buildSingularity('ultimate', 'singularity', 400000);
+buildSingularity('ultimate', 'singularity', 400000, true);
 
 scripts.lib.crossscript.setList('singularIDs', singularIDs);
 scripts.lib.crossscript.setList('singularOres', singularOres);
