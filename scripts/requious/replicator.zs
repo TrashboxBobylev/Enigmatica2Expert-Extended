@@ -348,8 +348,10 @@ function tick(m as MachineContainer) as void {
   val ownerUUID = m.getString('ownerUUID');
   if (isNull(ownerUUID) || ownerUUID == '') return pushErr(m, '§0Need\n§0 player ☻');
 
+  // Get difficulty based on player's one + dimension changes
+  val dfclty = scripts.lib.mod.scalinghealth.getPlayerDimDifficulty(ownerUUID, m.world.dimension);
+
   // 🎯 Update penalty text each tick
-  val dfclty = scripts.lib.offline.op.get(ownerUUID, 'difficulty', 0, 1000) as double;
   if (dfclty < 0 || !isNull(scripts.lib.fake.userUUIDs[ownerUUID]))
     return pushErr(m, '§0No fakes\n§0 allowed ☹');
   updatePenaltyText(m, dfclty);

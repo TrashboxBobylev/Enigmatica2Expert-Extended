@@ -95,7 +95,7 @@ return "// Done!"
   */
   if (e.reward.tags has 'loot') {
     val amount = e.reward.icon.amount;
-    val diff = e.player.difficulty;
+    val diff = scripts.lib.mod.scalinghealth.getPlayerDimDifficulty(e.player.getUUID(), e.player.world.dimension);
     e.player.give(e.reward.icon * (
       diff < 1.0 ? amount + 1 // Mostly zero difficulty +1 chest
       : diff > 1000 ? max(1, amount - 1) // max difficulty -1 chest
