@@ -9,6 +9,7 @@
 		"68b9a584",
 		"60b8a626"
 	],
+	min_width: 400,
 	tasks: [{
 		uid: "7061f759",
 		type: "stat",
