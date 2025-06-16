@@ -61,12 +61,13 @@ events.onCustomReward(function (e as mods.zenutils.ftbq.CustomRewardEvent) {
     }
   }
 
-  /*
-    Regexp to replace all loot chest rewards:
-
-rewards: \[\{\n\s+uid: "(\w+)",\s+type: "item",\s+item: \{\s+id: "ftbquests:lootcrate",\s+tag: \{\s+type: "(\w+)"(?:\s+\}){3}\]
-
-rewards: [{
+/*Inject_js{
+globSync('config/ftbquests/normal/chapters/*'+'/*.snbt')
+    .forEach((f) => {
+      const text = loadText(f)
+      const replaced = text.replace(
+        /rewards: \[\{\n\s+uid: "(\w+)",\s+type: "item",\s+item: \{\s+id: "ftbquests:lootcrate",\s+tag: \{\s+type: "(\w+)"(?:\s+(?:\},?|count: \d+)){3,4}\]/g,
+      `rewards: [{
 		uid: "$1",
 		type: "custom",
 		title: "{e2ee.quest.$2}",
@@ -80,9 +81,14 @@ rewards: [{
 		tags: [
 			"loot"
 		]
-	}]
-
-  */
+	}]`
+      )
+      if (text !== replaced) saveText(replaced, f)
+    })
+return "// Done!"
+}*/
+// Done!
+/**/
 
   /**
   * Give loot crates based on player's difficulty level
