@@ -4,6 +4,8 @@ import crafttweaker.item.IIngredient;
 import crafttweaker.item.IItemStack;
 import crafttweaker.liquid.ILiquidStack;
 
+<blockstate:nuclearcraft:ore>.block.definition.hardness = 24; // Harvest level defined in mod config
+
 // Use Cyclic's Ender Pouch instead
 Purge(<nuclearcraft:portable_ender_chest>);
 

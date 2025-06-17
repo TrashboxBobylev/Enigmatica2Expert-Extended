@@ -7,6 +7,8 @@ import crafttweaker.liquid.ILiquidStack;
 
 <tconstruct:throwball>.maxStackSize = 64;
 
+<blockstate:tconstruct:ore>.block.definition.hardness = 18; // Harvest level defined in mod config
+
 mods.tconstruct.Melting.addEntityMelting(<entity:iceandfire:hippocampus>, <fluid:liquid_helium> * 20);
 
 // Melt vanilla items since autimatic calculation is disabled
