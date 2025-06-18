@@ -478,7 +478,8 @@ zenClass Utils {
   // Handle special cases when `asBlock` not propertly working
   function getStateFromItem(item as IItemStack) as IBlockState {
     if (isNull(item)) return null;
-    val block = item.asBlock();
+    val trueItem = item.damage == 32767 ? item.withDamage(0) : item;
+    val block = trueItem.asBlock();
     if (isNull(block)) return null;
     val def = block.definition;
     val state = def.getStateFromMeta(block.meta);
