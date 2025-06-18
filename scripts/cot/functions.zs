@@ -266,8 +266,6 @@ for i, id in singularIDs {
     }
   }
 
-  utils.log(['~~', id, needPowerStr, middlePoint, endPoint]);
-
   scripts.lib.tooltip.desc.jei(item,
     'singularity',
     ore.name,
