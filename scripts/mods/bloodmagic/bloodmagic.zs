@@ -14,32 +14,28 @@ import crafttweaker.item.IIngredient;
 <bloodmagic:sentient_armour_boots>.maxDamage = 1200;
 
 // Add JEI hint for custom Imperfect zombie feature
+var previevRitual as IItemStack = <littletiles:multitiles>.withTag({tiles: [{
+    bBox: [0, 0, 0, 1, 1, 1] as int[], tile: {block: "bloodmagic:ritual_stone"}
+  }, {
+    bBox: [0, 1, 0, 1, 2, 1] as int[], tile: {block: "minecraft:coal_block"}
+  }], min: [0, 0, 0] as int[], size: [1, 2, 1] as int[], grid: 1, count: 2});
 scripts.jei.crafting_hints.fill(
   null,
   <liquid:lifeessence>,
   <scalinghealth:crystalshard> * 3,
-  utils.tryCatch(<littletiles:multitiles>.withTag({
-    tiles: [{
-      bBox: [0, 0, 0, 1, 1, 1] as int[], tile: {block: "bloodmagic:ritual_stone"}
-    }, {
-      bBox: [0, 1, 0, 1, 2, 1] as int[], tile: {block: "minecraft:coal_block"}
-    }], min: [0, 0, 0] as int[], size: [1, 2, 1] as int[], grid: 1, count: 2})
-  , <bloodmagic:ritual_stone>)
+  isNull(previevRitual) ? <bloodmagic:ritual_stone>: previevRitual
 );
 
+previevRitual = <littletiles:multitiles>.withTag({tiles: [{
+    boxes: [[0, 0, 1, 1, 1, 2] as int[], [1, 0, 0, 2, 1, 1] as int[], [1, 0, 2, 2, 1, 3] as int[], [2, 0, 1, 3, 1, 2] as int[]], tile: {block: "bloodmagic:ritual_stone:2"}
+  }, {
+    bBox: [1, 0, 1, 2, 1, 2] as int[], tile: {block: "bloodmagic:ritual_stone"}
+  }], min: [0, 0, 0] as int[], size: [3, 1, 3] as int[], grid: 1, count: 5});
 <assembly:crafting_hints>.addJEIRecipe(mods.requious.AssemblyRecipe.create(function (c) {
   c.addFluidOutput('fluid_out', <fluid:pyrotheum> * 1000);
 })
   .requireFluid('fluid_in', <liquid:lifeessence> * 500)
-  .requireItem('input0', 
-  utils.tryCatch(<littletiles:multitiles>.withTag({
-    tiles: [{
-      boxes: [[0, 0, 1, 1, 1, 2] as int[], [1, 0, 0, 2, 1, 1] as int[], [1, 0, 2, 2, 1, 3] as int[], [2, 0, 1, 3, 1, 2] as int[]], tile: {block: "bloodmagic:ritual_stone:2"}
-    }, {
-      bBox: [1, 0, 1, 2, 1, 2] as int[], tile: {block: "bloodmagic:ritual_stone"}
-    }], min: [0, 0, 0] as int[], size: [3, 1, 3] as int[], grid: 1, count: 5})
-  , <bloodmagic:ritual_stone>)
-  )
+  .requireItem('input0', isNull(previevRitual) ? <bloodmagic:ritual_stone>: previevRitual)
 );
 
 // Blood Orb Oredicts
