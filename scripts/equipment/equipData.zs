@@ -379,17 +379,17 @@ static defaultWeaponMats as int[string]$orderly = {
   'dark_matter'         : 483,
   'fireproof'           : 490,
   'erodium'             : 523,
-  'gelid_gem'           : 537,
+  'gelid_gem'           : 532,
   'kyronite'            : 538,
-  'draconic_metal'      : 578,
+  'draconic_metal'      : 573,
   'pladium'             : 587,
-  'gelid_enderium'      : 641,
+  'gelid_enderium'      : 636,
   'ma.supremium'        : 664,
-  'red_matter'          : 701,
+  'red_matter'          : 691,
   'ionite'              : 706,
   'aethium'             : 783,
-  'chaotic_metal'       : 1052,
-  'infinity_metal'      : 20117,
+  'chaotic_metal'       : 1042,
+  'infinity_metal'      : 20107,
 /**/
 } as int[string]$orderly;
 
