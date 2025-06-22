@@ -232,7 +232,7 @@ for i, id in singularIDs {
   val item = <item:contenttweaker:${fullId}>;
   val ore = oreDict[singularOres[i]];
   val charge = singularCharges[i] as int;
-  val emptyIngr = utils.tryCatch('avaritia:singularity', <minecraft:nether_star>);
+  val emptyIngr = <avaritia:singularity> ?? <minecraft:nether_star>;
 
   val recipeFunction as function(IItemStack[string],bool)IItemStack = scripts.do.diverse.addRecipe(
     fullId,

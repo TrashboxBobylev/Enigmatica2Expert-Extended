@@ -496,7 +496,7 @@ craft.remake(<actuallyadditions:item_water_removal_ring>, ['pretty',
   '☼ R ☼',
   'S ☼ S'], {
   'R': <actuallyadditions:item_misc:6>, // Ring
-  'S': utils.tryCatch('openblocks:sponge', <minecraft:sponge>), // Sponge
+  'S': <openblocks:sponge> ?? <minecraft:sponge>, // Sponge
   '☼': <ore:crystalPalis>, // Palis Crystal
 });
 

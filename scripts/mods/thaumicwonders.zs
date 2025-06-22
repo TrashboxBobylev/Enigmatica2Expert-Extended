@@ -220,13 +220,13 @@ mods.thaumcraft.Infusion.registerRecipe(
   <thaumcraft:crucible>, // CentralItem
   [
     <thaumicaugmentation:material:5>,
-    utils.tryCatch('thaumadditions:aura_disperser', <deepmoblearning:pristine_matter_enderman>),
+    <thaumadditions:aura_disperser> ?? <deepmoblearning:pristine_matter_enderman>,
     <thaumicaugmentation:material:5>,
-    utils.tryCatch('thaumadditions:crystal_block', <deepmoblearning:pristine_matter_enderman>).withTag({ Aspect: 'visum' }),
+    <thaumadditions:crystal_block>.withTag({ Aspect: 'visum' }) ?? <deepmoblearning:pristine_matter_enderman>,
     <thaumicaugmentation:material:5>,
-    utils.tryCatch('thaumadditions:aura_disperser', <deepmoblearning:pristine_matter_enderman>),
+    <thaumadditions:aura_disperser> ?? <deepmoblearning:pristine_matter_enderman>,
     <thaumicaugmentation:material:5>,
-    utils.tryCatch('thaumadditions:aura_charger', <deepmoblearning:pristine_matter_enderman>),
+    <thaumadditions:aura_charger> ?? <deepmoblearning:pristine_matter_enderman>,
   ]
 );
 
@@ -242,7 +242,7 @@ craft.remake(<thaumicwonders:creative_essentia_jar>, ['pretty',
   'V': <thaumicwonders:void_beacon>, // Void Beacon
   'S': <thaumicaugmentation:starfield_glass:1>, // Starfield Glass (Dimensional Fracture)
   'I': <thaumicaugmentation:impetus_mirror>, // Impetus Mirror
-  'M': utils.tryCatch('thaumadditions:jar_mithminite', <extrautils2:snowglobe:1>), // Mithminite Fortified Jar
+  'M': <thaumadditions:jar_mithminite> ?? <extrautils2:snowglobe:1>, // Mithminite Fortified Jar
   'l': <botania:blackholetalisman>, // Black Hole Talisman
   'A': <thaumicwonders:alkahest_vat>, // Alkahest Vat
   'T': <contenttweaker:meat_singularity>,

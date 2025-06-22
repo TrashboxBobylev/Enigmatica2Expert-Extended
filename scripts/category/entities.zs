@@ -59,7 +59,7 @@ for tuple in [
   // Small worm
   { <iceandfire:iceandfire.deathworm_egg>: [
     <twilightforest:moonworm>,
-    utils.tryCatch('betteranimalsplus:goose_egg', <iceandfire:iceandfire.deathworm_egg>),
+    <betteranimalsplus:goose_egg> ?? <iceandfire:iceandfire.deathworm_egg>,
     <actuallyadditions:item_worm>,
   ] },
 

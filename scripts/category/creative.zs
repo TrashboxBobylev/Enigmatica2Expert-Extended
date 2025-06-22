@@ -1,3 +1,4 @@
+#ignoreBracketErrors
 #modloaded extendedcrafting plustic
 
 import crafttweaker.item.IIngredient;
@@ -72,7 +73,7 @@ val list = {
   '◙': <compactsolars:compact_solar_block:2>,
   'ж': <draconicevolution:crafting_injector:2>,
   'Ж': <draconicevolution:draconium_capacitor:1>,
-  '☑': utils.tryCatch('threng:material', 14, <gendustry:genetics_processor>), // Speculative Processor
+  '☑': <threng:material:14> ?? <gendustry:genetics_processor>, // Speculative Processor
   '☠': <extendedcrafting:material:13>,
   'ⱋ': <nae2:material:4>,
   '☒': <extrautils2:compressedcobblestone:7>,
@@ -411,7 +412,7 @@ recipes.addShapeless('creative Fluid Tank Frame', creativeFluidTankFrame, [
 list['⍤'] = <mekanism:gastank>.withTag({ tier: 4 });
 list['✝'] = <draconicevolution:crafting_injector:3>;
 list['♥'] = creativeFluidTankFrame;
-list['♀'] = utils.tryCatch('mctsmelteryio:upgrade', 4, <advancedrocketry:productsheet>);
+list['♀'] = <mctsmelteryio:upgrade:4> ?? <advancedrocketry:productsheet>;
 list['θ'] = <ic2:te:134>;
 list['◆'] = <enderio:item_capacitor_stellar>;
 list['∞'] = <contenttweaker:machine_case_singularity>;
@@ -431,7 +432,7 @@ recipes.addShapeless('Creative Tank Reset',
   <mekanism:machineblock2:11>.withTag({ tier: 4 }),
   [<mekanism:machineblock2:11>.withTag({ tier: 4 })]);
 
-list['τ'] = utils.tryCatch('notenoughrtgs:rtg_californium_compact', <nuclearcraft:rtg_californium>);
+list['τ'] = <notenoughrtgs:rtg_californium_compact> ?? <nuclearcraft:rtg_californium>;
 list['⁴'] = <environmentaltech:solar_cont_4>;
 list['⁵'] = <environmentaltech:solar_cont_5>;
 list['⁶'] = <environmentaltech:solar_cont_6>;

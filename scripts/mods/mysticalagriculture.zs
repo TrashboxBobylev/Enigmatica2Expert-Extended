@@ -253,7 +253,7 @@ function addTieredRecipe(
 // *======= Seeds Tier 1 =======*
 curr_tier = 1;
 addTieredRecipe(<mysticalagriculture:nature_seeds>,         [<mysticalagriculture:crafting:6>, <ore:ingotInferium>], null);
-addTieredRecipe(itemUtils.getItem('mysticalcreations:creosolite_seeds'), [utils.tryCatch(utils.get('openblocks:tank', 0, 1, { tank: { FluidName: 'creosote', Amount: 24000 } }), Bucket('creosote')),<ore:runeEarthB>], null);
+addTieredRecipe(itemUtils.getItem('mysticalcreations:creosolite_seeds'), [<openblocks:tank>.withTag({ tank: { FluidName: 'creosote', Amount: 24000 } }) ?? Bucket('creosote'), <ore:runeEarthB>], null);
 
 // *======= Seeds Tier 2 =======*
 curr_tier = 2;

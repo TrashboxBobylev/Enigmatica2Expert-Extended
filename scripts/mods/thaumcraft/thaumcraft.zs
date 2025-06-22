@@ -1,3 +1,4 @@
+#ignoreBracketErrors
 #modloaded thaumcraft loottweaker randomtweaker
 
 import crafttweaker.data.IData;
@@ -79,15 +80,13 @@ function getAnyVisCrystal(key as string = '8', col as int = 0x333333, matchNBTCh
 }
 
 function getAnyVisSalt(key as string = '8', col as int = 0x333333) as IItemStack {
-  val salt = itemUtils.getItem('thaumadditions:salt_essence');
-  return isNull(salt)
-    ? <thaumcraft:salis_mundus>
-    : salt.withTag(
-      utils.shiningTag(col) + {
-        Aspects: [{ key: 'ordo', amount: 1 }],
-        display: { Name: '§' ~ key ~ '§lAny Vis Salt' },
-      } as IData,
-      false);
+  return <thaumadditions:salt_essence>.withTag(
+    utils.shiningTag(col) + {
+      Aspects: [{ key: 'ordo', amount: 1 }],
+      display: { Name: '§' ~ key ~ '§lAny Vis Salt' },
+    } as IData,
+    false)
+    ?? <thaumcraft:salis_mundus>;
 }
 
 /*
@@ -730,7 +729,7 @@ craft.remake(<thaumcraft:crimson_blade>, ['pretty',
   'п F C п      ',
   'F п   п      '], {
   '□': <ore:plateMithminite>, // Mithminite Plate
-  'T': utils.tryCatch('thaumadditions:taintkin', <thaumcraft:taint_soil>), // Taintkin
+  'T': <thaumadditions:taintkin> ?? <thaumcraft:taint_soil>, // Taintkin
   'п': <ore:plateVoid>, // Void Metal Plate
   'B': <bloodmagic:bound_sword>.withTag({ Unbreakable: 1 as byte, activated: 1 as byte }, false), // Bound Blade
   'S': <avaritia:skullfire_sword>.anyDamage(), // Skullfire Sword
@@ -1189,12 +1188,12 @@ scripts.process.crushRock(<thaumicaugmentation:stone>,
   'only: rockCrusher');
 
 scripts.process.crushRock(<thaumicaugmentation:stone:1>,
-  [<jaopca:item_dusttanzanite>, <jaopca:item_dustdimensionalshard>, utils.tryCatch(utils.get('thaumadditions:salt_essence', 0, 1, { Aspects: [{ amount: 1, key: 'vitium' }] }), <harvestcraft:saltitem>)],
+  [<jaopca:item_dusttanzanite>, <jaopca:item_dustdimensionalshard>, <thaumadditions:salt_essence>.withTag({ Aspects: [{ amount: 1, key: 'vitium' }] }) ?? <harvestcraft:saltitem>],
   [0.8, 0.2, 0.1],
   'only: rockCrusher');
 
 scripts.process.crushRock(<thaumicaugmentation:stone:2>,
-  [<jaopca:item_dusttanzanite>, <jaopca:item_dustdimensionalshard>, utils.tryCatch(utils.get('thaumadditions:salt_essence', 0, 1, { Aspects: [{ amount: 1, key: 'vitium' }] }), <harvestcraft:saltitem>)],
+  [<jaopca:item_dusttanzanite>, <jaopca:item_dustdimensionalshard>, <thaumadditions:salt_essence>.withTag({ Aspects: [{ amount: 1, key: 'vitium' }] }) ?? <harvestcraft:saltitem>],
   [0.8, 0.3, 0.1],
   'only: rockCrusher');
 
@@ -1217,7 +1216,7 @@ mods.astralsorcery.Altar.addConstellationAltarRecipe(
     + 'LERP'
     + 'HHGGGGHH'], {
     'K': <astralsorcery:itemknowledgeshare>, // Scroll of written expertise
-    'V': utils.tryCatch('thaumadditions:void_fruit', <thaumicwonders:void_beacon>), // Void fruit
+    'V': <thaumadditions:void_fruit> ?? <thaumicwonders:void_beacon>, // Void fruit
     'C': <thaumcraft:curiosity_band>, // Curiosity band
     'I': <thaumicaugmentation:material:3>, // Impetus Cell
     'G': <thaumicwonders:primordial_grain>, // Primordial grain

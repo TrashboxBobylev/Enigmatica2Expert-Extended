@@ -191,7 +191,7 @@ recipes.addShapedMirrored('Potentiometer', <draconicevolution:potentiometer>,
 // [Basic Energy Relay Crystal] from [Fluix Steel Ingot][+3]
 recipes.removeShaped(<draconicevolution:energy_crystal>);
 mods.bloodmagic.AlchemyTable.addRecipe(<draconicevolution:energy_crystal> * 4, [
-  <astralsorcery:blocklens>, <thermalfoundation:material:136>, <ore:ingotPlutonium242All>, utils.tryCatch('threng:material', <nuclearcraft:alloy:15>),
+  <astralsorcery:blocklens>, <thermalfoundation:material:136>, <ore:ingotPlutonium242All>, <threng:material> ?? <nuclearcraft:alloy:15>,
 ], 2000, 200, 2);
 scripts.processUtils.avdRockXmlRecipeEx('PrecisionLaserEtcher', [
   <advancedrocketry:vacuumlaser>, <ore:ingotMithril>, <ore:ingotPlutonium242All>, <ore:ingotFluixSteel>,

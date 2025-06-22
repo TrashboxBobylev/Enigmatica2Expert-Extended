@@ -31,7 +31,7 @@ recipes.addShaped('Cyclic Shears', <cyclicmagic:shears_obsidian>, [
 // Harder Sleeping mat
 recipes.remove(<cyclicmagic:sleeping_mat>);
 recipes.addShapeless('Cyclic Sleep Mat', <cyclicmagic:sleeping_mat>, [
-  utils.tryCatch('travelersbackpack:sleeping_bag_bottom', <minecraft:rabbit_hide>), <ore:leather>]);
+  <travelersbackpack:sleeping_bag_bottom> ?? <minecraft:rabbit_hide>, <ore:leather>]);
 
 // [Void_Charm] from [Slime_Cube][+3]
 craft.remake(<cyclicmagic:charm_void>, ['pretty',
@@ -148,7 +148,7 @@ val packagerList = [
   [<minecraft:concrete_powder:14> * 8], [sa, gr, <ore:dyeRed>.firstItem],
   [<minecraft:concrete_powder:15> * 8], [sa, gr, <ore:dyeBlack>.firstItem],
 
-  [utils.tryCatch('mctsmelteryio:iceball', <iceandfire:dragon_ice>)], [<minecraft:snow> * 2],
+  [<mctsmelteryio:iceball> ?? <iceandfire:dragon_ice>], [<minecraft:snow> * 2],
 
   [<nuclearcraft:part:1>], [<ore:plateLead>.firstItem, <ic2:casing:4>, <ore:ingotTough>.firstItem * 4, <minecraft:redstone> * 4],
   [<nuclearcraft:part>], [<ore:plateLead>.firstItem, <ic2:casing:4>, <ore:ingotGraphite>.firstItem * 2],

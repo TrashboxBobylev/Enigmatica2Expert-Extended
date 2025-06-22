@@ -100,7 +100,7 @@ craft.remake(<integrateddynamics:energy_battery>.withTag({ energy: 0, capacity: 
   '□ ♥ □',
   '□ ◘ □'], {
   '♥': <additionalcompression:dustredstone_compressed:1>,
-  '□': utils.tryCatch(utils.get('openblocks:tank', 0, 1, { tank: { FluidName: 'menrilresin', Amount: 24000 } }), Bucket('menrilresin')),
+  '□': <openblocks:tank>.withTag({tank: { FluidName: 'menrilresin', Amount: 24000 }}) ?? Bucket('menrilresin'),
   '◘': <integrateddynamics:crystalized_chorus_block>, // Block of Crystalized Chorus
 });
 

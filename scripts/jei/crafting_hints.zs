@@ -67,7 +67,7 @@ function special(output as IItemStack, input2d as IIngredient[][], condition as 
   val assRec = AssemblyRecipe.create(function (c) {
     c.addItemOutput('output1', output);
     c.addItemOutput('output2',
-      utils.tryCatch('engineersdecor:sign_caution', <minecraft:structure_void>)
+      (<engineersdecor:sign_caution> ?? <minecraft:structure_void>)
         .withDisplayName('§e§lCondition').withLore(['§e' ~ condition]));
   });
   for y, input1d in input2d {

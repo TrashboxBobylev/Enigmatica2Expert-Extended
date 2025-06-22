@@ -295,20 +295,6 @@ zenClass Utils {
     return out.withTag(newTag);
   };
 
-  // Try to get item by string. If fail - return second vaiant
-  function tryCatch(first as string, meta as int, second as IItemStack) as IItemStack {
-    val item = itemUtils.getItem(first, meta);
-    return isNull(item) ? second : item;
-  }
-
-  function tryCatch(first as string, second as IItemStack) as IItemStack {
-    return tryCatch(first, 0, second);
-  }
-
-  function tryCatch(first as IItemStack, second as IItemStack) as IItemStack {
-    return isNull(first) ? second : first;
-  }
-
   // Safe get item with nbt tag and amount
   function get(id as string) as IItemStack { return get(id, 0, 1, null); }
   function get(id as string, meta as short) as IItemStack { return get(id, meta, 1, null); }

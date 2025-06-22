@@ -100,7 +100,7 @@ craft.remake(<randomthings:spectrekey>, ['pretty',
 recipes.removeShaped(<randomthings:spectreanchor>);
 recipes.addShaped(<randomthings:spectreanchor>, [
   [<randomthings:ingredient:2>],
-  [utils.tryCatch('tombmanygraves:death_list', <minecraft:paper>)],
+  [<tombmanygraves:death_list> ?? <minecraft:paper>],
   [<extrautils2:ingredients:5>]]);
 
 // Spectre Ingot
@@ -207,7 +207,7 @@ val weatherIngrs = {
   'a': <ore:feather>,               // Feather
   'B': <ore:itemBeeswax>,           // Beeswax
   'C': <forestry:pollen:1>,         // Crystalline Pollen Cluster
-  'c': utils.tryCatch('mctsmelteryio:iceball', <iceandfire:dragon_ice>),
+  'c': <mctsmelteryio:iceball> ?? <iceandfire:dragon_ice>,
   'f': <minecraft:double_plant>,    // Poppy
   'l': <randomthings:ingredient:13>,// Blackout Powder
   'e': <ore:egg>,
