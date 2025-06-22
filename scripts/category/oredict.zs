@@ -737,6 +737,8 @@ removeItems(<ore:oreDraconium>, [
   <draconicevolution:draconium_ore:2>,
 ]);
 add(<ore:oreDraconium>, <draconicevolution:draconium_ore>);
+add(<ore:oreNetherDraconium>, <draconicevolution:draconium_ore:1>);
+add(<ore:oreEndDraconium>, <draconicevolution:draconium_ore:2>);
 
 // Rearrange items in Dye Oredict to better integration
 // with AA [Lens Of Color]
