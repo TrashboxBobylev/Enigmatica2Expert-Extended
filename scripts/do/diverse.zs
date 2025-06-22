@@ -68,7 +68,7 @@ function getRecipeFunction(result as IItemStack, charge as int) as function(IIte
     val ratioTurned = 1.0 - ratio;
     return result
       .updateTag({ singularity: singularity, charge: (ratio * charge) as int })
-      .withDamage(pow(ratioTurned, 4.0) * result.maxDamage);
+      .withDamage(max(1, pow(ratioTurned, 4.0) * result.maxDamage));
   } as function(IItemStack[string],bool)IItemStack;
 }
 
