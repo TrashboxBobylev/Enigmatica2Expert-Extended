@@ -248,6 +248,7 @@
 			<generateCaves>true</generateCaves>
 		</planet>
 		<planet name="Asteroid Belt" DIMID="124">
+			<artifact>avaritia:resource 6</artifact>
 			<skyColor>0.2,0.205,0.21</skyColor>
 			<fogColor>0.1,0.1,0.1</fogColor>
 			<fillerBlock>advancedrocketry:vitrifiedsand</fillerBlock>
