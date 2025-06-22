@@ -16,31 +16,68 @@ function isWildcarded(item as IItemStack) as bool {
   return item.damage == 32767;
 }
 
-function set(level as int, tool as string, ingr as IIngredient, hardness as int = -1) as void {
-  if (isNull(ingr)) return;
+function warnItem(item as IItemStack, text as string) as void {
+  if (!utils.DEBUG) return;
+  logger.logWarning('§3┌ §8'~text~':\n§3└ §6'~item.commandString~' §8"§7'~item.displayName~'§8"');
+}
+
+function set(level as int, tool as string, ingr as IIngredient, hardness as int = -1, supressHardnessWarn as bool = false) as bool {
+  if (isNull(ingr)) return false;
+  var success = false;
   for item in ingr.items {
+    if (scripts.lib.purge.purge.isPurged(item)) {
+      warnItem(item, 'Trying to change block properties for purged item');
+      continue;
+    }
+
     val state = utils.getStateFromItem(item);
 
     if (isNull(state) || isNull(state.block)) {
-      logger.logWarning('§8Trying to change block properties, but this item cant be converted to block: §6'~item.commandString~' §8"§7'~item.displayName~'§8"');
-      return;
+      warnItem(item, 'Trying to change block properties, but this item cant be converted to block');
+      continue;
     }
 
     val def = state.block.definition;
-    print('Setting harvest level for <'~def.id~':'~item.damage~'> "'~tool~'" '~level);
+    print('Setting harvest level for <'~def.id~':'~item.damage~'> "'~tool~'" '~level~' ['~hardness~']');
+
+    var hardnessToSet = hardness;
     if (isWildcarded(item)) {
-      // if (item.definition.subItems.length <= 1) logger.logWarning('§8Unnecessary wildcard: §6'~item.commandString);
       def.setHarvestLevel(tool, level);
     } else {
       def.setHarvestLevel(tool, level, state);
-      if (hardness != -1) {
-        if (!isNull(hardnessConflicts[def]) && hardnessConflicts[def] as int != hardness)
-          logger.logWarning('§8Changing hardness for already changed hardness for block definition: §6'~item.commandString~' §8"§7'~item.displayName~'§8" from '~hardnessConflicts[def]~' to '~hardness);
-        hardnessConflicts[def] = hardness;
+      if (hardness >= 0 && !isNull(hardnessConflicts[def]) && hardnessConflicts[def] as int != hardness) {
+        if (!supressHardnessWarn) warnItem(item, 'Trying to rewrite hardness §3'~hardnessConflicts[def]~'→'~hardness~' §8for block definition');
+        hardnessToSet = min(hardnessConflicts[def] as int, hardness);
       }
     }
-    if (hardness != -1) def.hardness = hardness;
+    if (hardnessToSet >= 0) {
+      def.hardness = hardnessToSet;
+      hardnessConflicts[def] = hardnessToSet;
+    }
+    success = true;
   }
+  return success;
+}
+
+function setMat(level as int, tool as string, oreBase as string, hardness as int = -1) as bool {
+  val          ore = set(        level     , tool, oreDict[      'ore'~oreBase          ],        hardness , true);
+  val    oreNether = set(min(12, level + 1), tool, oreDict['oreNether'~oreBase          ], harder(hardness), true);
+  val       oreEnd = set(min(12, level + 1), tool, oreDict[   'oreEnd'~oreBase          ], harder(hardness), true);
+  val        block = set(max( 0, level - 1), tool, oreDict[    'block'~oreBase          ], softer(hardness), true);
+  val blockCharged = set(min(12, level + 2), tool, oreDict[    'block'~oreBase~'Charged'], harder(hardness), true);
+  if (!(ore || oreNether || oreEnd || block) && utils.DEBUG) {
+    logger.logWarning('§3☐ §8Cannot find any item for the ore material: §6'~oreBase);
+  }
+}
+
+function harder(hardness as int) as int {
+  if (hardness < 0) return hardness;
+  return hardness + pow(1.2, hardness / 2);
+}
+
+function softer(hardness as int) as int {
+  if (hardness < 0) return hardness;
+  return max(0, hardness - pow(1.2, hardness / 2));
 }
 
 /*
@@ -67,8 +104,8 @@ set(0, 'pickaxe', <thermalfoundation:ore>);
 set(1, 'axe', <thaumcraft:log_greatwood:*>);
 set(1, 'axe', <thaumcraft:log_silverwood:*>);
 set(1, 'pickaxe', <appliedenergistics2:quartz_ore:*>);
-set(1, 'pickaxe', <immersiveengineering:ore:1>);
 set(1, 'shovel', <exnihilocreatio:block_endstone_crushed>);
+set(2, 'pickaxe', <actuallyadditions:block_crystal:*>, 1);
 set(2, 'pickaxe', <chisel:redstone:*>);
 set(2, 'pickaxe', <chisel:redstone1:*>);
 set(2, 'pickaxe', <environmentaltech:modifier_null:*>, 4);
@@ -83,13 +120,7 @@ set(2, 'pickaxe', <rftools:modular_storage:*>);
 set(2, 'pickaxe', <thermalfoundation:ore:1>);
 set(2, 'pickaxe', <thermalfoundation:storage>);
 set(3, '?axe', <astralsorcery:blockinfusedwood:*>, 4);
-set(3, 'pickaxe', <actuallyadditions:block_misc:3>, 2);
-set(3, 'pickaxe', <biomesoplenty:gem_ore:1>);
-set(3, 'pickaxe', <biomesoplenty:gem_ore:2>);
-set(3, 'pickaxe', <biomesoplenty:gem_ore:3>);
-set(3, 'pickaxe', <biomesoplenty:gem_ore:4>);
-set(3, 'pickaxe', <biomesoplenty:gem_ore:5>);
-set(3, 'pickaxe', <biomesoplenty:gem_ore:6>);
+set(3, 'pickaxe', <actuallyadditions:block_crystal_empowered:*>, 2);
 set(3, 'pickaxe', <extrautils2:compressedcobblestone>);
 set(3, 'pickaxe', <minecraft:end_stone:*>, 2);
 set(3, 'pickaxe', <minecraft:gold_block:*>, 4);
@@ -116,7 +147,6 @@ set(4, 'axe', <botania:livingwood1slab:*>, 8);
 set(4, 'axe', <botania:livingwood1slabfull:*>, 8);
 set(4, 'axe', <botania:livingwood1stairs:*>, 8);
 set(4, 'axe', <ore:logSequoia>, 8);
-set(4, 'pickaxe', <biomesoplenty:gem_block:*>, 8);
 set(4, 'pickaxe', <botania:livingrock:*>, 8);
 set(4, 'pickaxe', <botania:pool:*>, 8);
 set(4, 'pickaxe', <chisel:endstone:*>, 8);
@@ -128,7 +158,6 @@ set(4, 'pickaxe', <environmentaltech:aethium:*>, 12);
 set(4, 'pickaxe', <environmentaltech:modifier_piezo:*>, 12);
 set(4, 'pickaxe', <excompressum:compressed_block:7>);
 set(4, 'pickaxe', <iceandfire:chared_gravel:*>, 8);
-set(4, 'pickaxe', <libvulpes:ore0>, 8);
 set(4, 'pickaxe', <mekanism:oreblock:*>);
 set(4, 'pickaxe', <minecraft:diamond_block:*>, 8);
 set(4, 'pickaxe', <minecraft:diamond_ore:*>, 4);
@@ -166,8 +195,6 @@ set(5, 'pickaxe', <appliedenergistics2:smooth_sky_stone_chest:*>, 12);
 set(5, 'pickaxe', <appliedenergistics2:smooth_sky_stone_double_slab:*>, 12);
 set(5, 'pickaxe', <appliedenergistics2:smooth_sky_stone_slab:*>, 12);
 set(5, 'pickaxe', <appliedenergistics2:smooth_sky_stone_stairs:*>, 12);
-set(5, 'pickaxe', <chisel:quartz:*>, 4);
-set(5, 'pickaxe', <chisel:quartz1:*>, 4);
 set(5, 'pickaxe', <endreborn:block_wolframium_ore:*>, 2);
 set(5, 'pickaxe', <environmentaltech:erodium:*>, 18);
 set(5, 'pickaxe', <environmentaltech:modifier_accuracy:*>, 18);
@@ -182,8 +209,6 @@ set(5, 'pickaxe', <minecraft:emerald_block:*>, 3);
 set(5, 'pickaxe', <minecraft:glowstone:*>, 2);
 set(5, 'pickaxe', <minecraft:magma:*>, 3);
 set(5, 'pickaxe', <minecraft:obsidian:*>);
-set(5, 'pickaxe', <minecraft:quartz_block:*>, 4);
-set(5, 'pickaxe', <minecraft:quartz_ore:*>, 4);
 set(5, 'pickaxe', <minecraft:quartz_stairs:*>, 2);
 set(5, 'pickaxe', <mysticalagriculture:nether_inferium_ore>, 32);
 set(5, 'pickaxe', <mysticalagriculture:nether_prosperity_ore>, 32);
@@ -206,7 +231,6 @@ set(5, 'pickaxe', <thermalfoundation:storage_alloy>);
 set(5, 'pickaxe', <xnet:connector:*>, 12);
 set(5, null, <twilightforest:underbrick:*>, 12);
 set(6, 'pickaxe', <appliedenergistics2:charged_quartz_ore:*>, 3);
-set(6, 'pickaxe', <biomesoplenty:gem_ore>);
 set(6, 'pickaxe', <botania:pylon:*>, 18);
 set(6, 'pickaxe', <endreborn:block_essence_ore:*>, 18);
 set(6, 'pickaxe', <environmentaltech:ionite:*>, 24);
@@ -221,10 +245,13 @@ set(6, 'pickaxe', <extrautils2:compressedcobblestone:1>);
 set(6, 'pickaxe', <extrautils2:compresseddirt:2>);
 set(6, 'pickaxe', <extrautils2:compressednetherrack:2>);
 set(6, 'pickaxe', <iceandfire:chared_stone:*>, 18);
-set(6, 'pickaxe', <immersiveengineering:ore:5>);
 set(6, 'pickaxe', <mechanics:crushing_block:*>, 19);
 set(6, 'pickaxe', <mysticalagriculture:end_inferium_ore>, 48);
 set(6, 'pickaxe', <mysticalagriculture:end_prosperity_ore>, 48);
+set(6, 'pickaxe', <ore:blockBoron>, 20);
+set(6, 'pickaxe', <ore:blockLithium>, 20);
+set(6, 'pickaxe', <ore:blockMagnesium>, 20);
+set(6, 'pickaxe', <ore:blockThorium>, 20);
 set(6, 'pickaxe', <quark:crystal:*>, 18);
 set(6, 'pickaxe', <thaumcraft:metal_alchemical_advanced:*>, 18);
 set(6, 'pickaxe', <thaumcraft:metal_alchemical:*>, 18);
@@ -234,6 +261,7 @@ set(6, 'pickaxe', <thermalfoundation:storage:5>);
 set(6, 'pickaxe', <twilightforest:aurora_pillar:*>, 18);
 set(6, 'pickaxe', <twilightforest:aurora_slab:*>, 18);
 set(6, 'pickaxe', <xnet:controller:*>, 18);
+set(7, '?pickaxe', <draconicevolution:energy_crystal:*>, 5);
 set(7, 'axe', <advancedrocketry:alienwood:*>, 24);
 set(7, 'pickaxe', <biomesoplenty:biome_block:*>, 10);
 set(7, 'pickaxe', <botania:runealtar:*>, 24);
@@ -251,14 +279,11 @@ set(7, 'pickaxe', <extrautils2:compressednetherrack:3>);
 set(7, 'pickaxe', <rftools:dialing_device:*>, 24);
 set(7, 'pickaxe', <twilightforest:aurora_block:*>, 24);
 set(7, 'pickaxe', <xnet:advanced_connector:*>, 24);
-set(7, null, <avaritia:compressed_crafting_table:*>, 24);
-set(8, '?axe', <avaritia:double_compressed_crafting_table:*>, 32);
 set(8, 'pickaxe', <appliedenergistics2:controller:*>, 32);
 set(8, 'pickaxe', <botania:terraplate:*>, 32);
 set(8, 'pickaxe', <draconicevolution:dislocator_pedestal:*>, 32);
 set(8, 'pickaxe', <draconicevolution:dislocator_receptacle:*>, 32);
 set(8, 'pickaxe', <draconicevolution:draconic_spawner:*>, 32);
-set(8, 'pickaxe', <draconicevolution:draconium_block:*>, 32);
 set(8, 'pickaxe', <draconicevolution:grinder:*>, 32);
 set(8, 'pickaxe', <enderio:block_alloy_endergy:1>, 32);
 set(8, 'pickaxe', <environmentaltech:laser_core:*>, 40);
@@ -275,8 +300,6 @@ set(8, 'pickaxe', <extrautils2:compressedcobblestone:3>);
 set(8, 'pickaxe', <extrautils2:compressednetherrack:4>);
 set(8, 'pickaxe', <plustic:osgloglasblock:*>, 32);
 set(8, 'pickaxe', <rftools:builder:*>, 32);
-set(8, 'pickaxe', <thermalfoundation:ore:6>);
-set(8, 'pickaxe', <thermalfoundation:ore:8>);
 set(8, 'pickaxe', <thermalfoundation:storage_alloy:6>);
 set(8, 'pickaxe', <thermalfoundation:storage:8>);
 set(8, 'pickaxe', <twilightforest:deadrock:*>, 32);
@@ -293,13 +316,13 @@ set(9, 'pickaxe', <extendedcrafting:table_advanced:*>, 40);
 set(9, 'pickaxe', <extrautils2:compressedcobblestone:4>);
 set(9, 'pickaxe', <extrautils2:compressednetherrack:5>);
 set(9, 'pickaxe', <plustic:osmiridiumblock:*>, 40);
-set(9, 'pickaxe', <thermalfoundation:ore:7>);
 set(9, 'pickaxe', <thermalfoundation:storage_alloy:5>);
 set(9, 'pickaxe', <thermalfoundation:storage:6>);
 set(9, 'pickaxe', <wificharge:wirelesscharger:*>, 40);
 set(9, 'shovel', <advancedrocketry:moonturf_dark:*>, 40);
 set(9, 'shovel', <advancedrocketry:moonturf:*>, 40);
 set(10, 'pickaxe', <avaritia:extreme_crafting_table:*>, 50);
+set(10, 'pickaxe', <draconicevolution:crafting_injector:*>, 20);
 set(10, 'pickaxe', <enderio:block_alloy_endergy:2>);
 set(10, 'pickaxe', <environmentaltech:solar_cell_litherite:*>, 60);
 set(10, 'pickaxe', <environmentaltech:solar_cont_5:*>, 60);
@@ -307,14 +330,10 @@ set(10, 'pickaxe', <environmentaltech:structure_frame_6:*>, 60);
 set(10, 'pickaxe', <environmentaltech:void_ore_miner_cont_5:*>, 60);
 set(10, 'pickaxe', <environmentaltech:void_res_miner_cont_5:*>, 60);
 set(10, 'pickaxe', <extrautils2:compressedcobblestone:5>);
-set(10, 'pickaxe', <libvulpes:ore0:8>);
-set(10, 'pickaxe', <libvulpes:ore0>);
-set(10, 'pickaxe', <rftools:dimensional_shard_ore:*>, 50);
 set(10, 'pickaxe', <thermalfoundation:ore_fluid:2>);
 set(10, 'pickaxe', <thermalfoundation:ore_fluid:3>);
 set(10, 'pickaxe', <thermalfoundation:ore_fluid:4>);
 set(10, 'pickaxe', <thermalfoundation:storage_alloy:7>);
-set(10, 'pickaxe', <thermalfoundation:storage:7>);
 set(10, 'pickaxe', <twilightforest:castle_brick:*>, 50);
 set(10, 'pickaxe', <twilightforest:castle_door:*>, 50);
 set(10, 'pickaxe', <twilightforest:castle_pillar:*>, 50);
@@ -328,7 +347,6 @@ set(10, 'pickaxe', <twilightforest:castle_unlock:*>, 50);
 set(10, 'pickaxe', <twilightforest:force_field:*>, 50);
 set(11, 'pickaxe', <biomesoplenty:crystal:*>, 60);
 set(11, 'pickaxe', <draconicevolution:diss_enchanter:*>, 60);
-set(11, 'pickaxe', <draconicevolution:draconium_ore:*>, 60);
 set(11, 'pickaxe', <draconicevolution:infused_obsidian:*>, 60);
 set(11, 'pickaxe', <enderio:block_alloy_endergy:3>);
 set(11, 'pickaxe', <environmentaltech:solar_cell_pladium:*>, 72);
@@ -358,3 +376,21 @@ set(12, 'pickaxe', <extendedcrafting:storage>);
 set(12, 'pickaxe', <extendedcrafting:table_ultimate:*>, 72);
 set(12, 'pickaxe', <extrautils2:compressedcobblestone:7>);
 set(12, 'pickaxe', <wificharge:personalcharger:*>, 72);
+setMat(3, 'pickaxe', 'QuartzBlack', 2);
+setMat(4, 'pickaxe', 'Malachite');
+setMat(4, 'pickaxe', 'Peridot');
+setMat(4, 'pickaxe', 'Ruby');
+setMat(4, 'pickaxe', 'Sapphire');
+setMat(4, 'pickaxe', 'Tanzanite');
+setMat(4, 'pickaxe', 'Topaz');
+setMat(5, 'pickaxe', 'Quartz', 2);
+setMat(6, 'pickaxe', 'Amethyst');
+setMat(6, 'pickaxe', 'Uranium', 12);
+setMat(8, 'pickaxe', 'Mithril', 25);
+setMat(8, 'pickaxe', 'Platinum', 25);
+setMat(10, 'pickaxe', 'Iridium', 35);
+setMat(10, 'pickaxe', 'Titanium', 12);
+setMat(11, 'pickaxe', 'Dilithium', 30);
+setMat(11, 'pickaxe', 'DimensionalShard', 50);
+setMat(11, 'pickaxe', 'Draconium', 60);
+setMat(11, 'pickaxe', 'Trinitite', 30);
