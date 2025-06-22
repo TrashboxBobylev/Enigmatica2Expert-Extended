@@ -152,7 +152,7 @@ for tier, alienCrystal in alienCrystals {
     // Antideutron reaction
     mods.qmd.target_chamber.addRecipe(
       input, null,
-      (<particle:antideuteron> * 1000000) ^ pow(2, tier - 1),
+      (<particle:antideuteron> * 100000) ^ pow(2, tier - 1),
       evt_crystal, null,
       <particle:pion_minus> * 4, <particle:pion_naught> * 4, <particle:pion_plus> * 4,
       10000000 * pow(2, tier), 1, 2090000 * (tier + 1)
