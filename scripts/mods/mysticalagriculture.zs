@@ -1,4 +1,5 @@
 #modloaded mysticalagriculture
+#ignoreBracketErrors
 
 import crafttweaker.block.IBlockState;
 import crafttweaker.item.IIngredient;
@@ -1030,7 +1031,7 @@ recipes.removeByRecipeName('mysticalagriculture:wool');
 
 makeArcane(<minecraft:beef> * 8                                      , ['CCC']               , cowIngrs , []);
 makeArcane(<minecraft:leather> * 16                                  , ['CC', 'CC']          , cowIngrs , []);
-makeArcane(utils.get('betteranimalsplus:antler', 0, 8)               , ['CC', 'SS']          , cowIngrs , []);
+makeArcane(<betteranimalsplus:antler> * 8               , ['CC', 'SS']          , cowIngrs , []);
 makeArcane(<harvestcraft:venisonrawitem> * 8                         , ['CSC']               , cowIngrs , []);
 makeArcane(<harvestcraft:freshmilkitem> * 8                          , [' C ', 'C C' , ' C '], cowIngrs , []);
 makeArcane(<minecraft:wool> * 16                                     , ['SSS']               , cowIngrs , []);
@@ -1060,11 +1061,11 @@ val uniqChick = scripts.lib.unique.Unique([CE, CE, CE]);
 chickEss(uniqChick.next(), <minecraft:egg> * 8);
 chickEss(uniqChick.next(), <minecraft:feather> * 8);
 chickEss(uniqChick.next(), <minecraft:chicken> * 4);
-chickEss(uniqChick.next(), utils.get('betteranimalsplus:pheasant_egg', 0, 2), 40, [<aspect:aer>]);
-chickEss(uniqChick.next(), utils.get('betteranimalsplus:turkey_egg', 0, 2), 40, [<aspect:aer>]);
-chickEss(uniqChick.next(), utils.get('betteranimalsplus:goose_egg', 0, 2), 40, [<aspect:aer>]);
+chickEss(uniqChick.next(), <betteranimalsplus:pheasant_egg> * 2, 40, [<aspect:aer>]);
+chickEss(uniqChick.next(), <betteranimalsplus:turkey_egg> * 2, 40, [<aspect:aer>]);
+chickEss(uniqChick.next(), <betteranimalsplus:goose_egg> * 2, 40, [<aspect:aer>]);
 
-chickEss([[CE, <mysticalagriculture:gold_essence>, CE]], utils.get('betteranimalsplus:golden_goose_egg'), 20);
+chickEss([[CE, <mysticalagriculture:gold_essence>, CE]], <betteranimalsplus:golden_goose_egg>, 20);
 chickEss([[CE, <mysticalagriculture:copper_essence>, CE]], <iceandfire:stymphalian_bird_feather>, 40, [<aspect:aer> * 5]);
 chickEss([[CE, <mysticalagriculture:water_essence>, CE]], <iceandfire:amphithere_feather>, 40, [<aspect:aer> * 5]);
 chickEss([[CE, <mysticalagriculture:coal_essence>, CE]], <twilightforest:raven_feather>, 40, [<aspect:aer> * 5]);
