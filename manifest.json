@@ -306,7 +306,7 @@
     {"projectID":359407,"fileID":5108047,"___name":"Immersive Technology"                    ,"downloadUrl":"https://edge.forgecdn.net/files/5108/47/MCTImmersiveTechnology-1.12.2-1.9.102.jar","required":true},
     {"projectID":361276,"fileID":4756301,"___name":"Lootr (Forge & NeoForge)"                ,"downloadUrl":"https://edge.forgecdn.net/files/4756/301/lootr-1.12.2-0.6.2.jar","required":true},
     {"projectID":361427,"fileID":5630006,"___name":"Harder Branch Mining"                    ,"downloadUrl":"https://edge.forgecdn.net/files/5630/6/HarderBranchMining-1.12.2-2.0.0.17.jar","required":true},
-    {"projectID":362056,"fileID":6098453,"___name":"QMD"                                     ,"downloadUrl":"https://edge.forgecdn.net/files/6098/453/QMD-1.4.2-1.12.2.jar","required":true},
+    {"projectID":362056,"fileID":6681723,"___name":"QMD"                                     ,"downloadUrl":"https://edge.forgecdn.net/files/6681/723/QMD-1.5%20beta-1.12.2.jar","required":true},
     {"projectID":363856,"fileID":2886150,"___name":"Super Sound Muffler: Revived"            ,"downloadUrl":"https://edge.forgecdn.net/files/2886/150/supersoundmuffler-revived_1.12.2_1.0.2.10.jar","required":true},
     {"projectID":366140,"fileID":2898681,"___name":"Dynamic View[Forge]"                     ,"downloadUrl":"https://edge.forgecdn.net/files/2898/681/dynviewdist-1.12-1.3.jar","required":true},
     {"projectID":367831,"fileID":3543884,"___name":"AI Reducer"                              ,"downloadUrl":"https://edge.forgecdn.net/files/3543/884/AIReducer-1.12.2-0.3.0.jar","required":true},
