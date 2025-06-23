@@ -1,34 +1,26 @@
 [main/WARN] [FML]: The mod with loading plugin com.cleanroommc.configanytime.ConfigAnytimePlugin is in blacklist and won't be loaded. Check forge_early.cfg for more info.
 [main/WARN] [FML]: The mod with loading plugin zone.rong.mixinbooter.MixinBooterPlugin is in blacklist and won't be loaded. Check forge_early.cfg for more info.
-[main/ERROR] [Bansoukou]: Throwing
-java.io.FileNotFoundException: rustic-1.1.7.jar does not exist in mods folder!
-	at zone.rong.bansoukou.BansoukouCoreMod.getPatchFile(BansoukouCoreMod.java:198) [BansoukouCoreMod.class:1]
-	at zone.rong.bansoukou.BansoukouCoreMod.<init>(BansoukouCoreMod.java:61) [BansoukouCoreMod.class:1]
-	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62) ~[?:?]
-  [...]
 [main/WARN] [ModDirector[CORE]]: Successfully replaced CA certificates with updated ones!
 [main/ERROR] [mixin]: Critical problem: mixins.stellar_core_forge_asmmodparser.json:MixinASMModParser from mod unknown-owner target net.minecraftforge.fml.common.discovery.asm.ASMModParser was loaded too early.
 [Client thread/WARN] [mixin]: Method overwrite conflict for hashCode in mixins.vintagefix.json:blockstates.FastMapStateHolderMixin from mod unknown-owner, previously written by github.kasuminova.stellarcore.mixin.minecraft.blockstateimpl.MixinStateImplementation. Skipping method.
 [Client thread/WARN] [mixin]: @Mixin target vazkii.neat.HealthBarRenderer was not found mixins.rlmixins.neatshaders.json:neat.HealthBarRenderMixin from mod unknown-owner
 [Client thread/WARN] [mixin]: @Mixin target boni.dummy.network.DamageMessage$MessageHandlerClient$1 was not found mixins.rlmixins.dummypatch.json:dummy.DamageMessageMixin from mod unknown-owner
 [Client thread/WARN] [mixin]: @Mixin target boni.dummy.client.RenderFloatingNumber was not found mixins.rlmixins.dummypatch.json:dummy.RenderFloatingNumberMixin from mod unknown-owner
-[Client thread/ERROR] [FML]: Error adding mixin configuration for mixins.mi.actuallyadditions.defaultfarmerbehavior.fix.json
-org.spongepowered.asm.launch.MixinInitialisationError: Error initialising mixin config mixins.mi.actuallyadditions.defaultfarmerbehavior.fix.json
-	at org.spongepowered.asm.mixin.transformer.Config.create(Config.java:169) ~[Config.class:0.20.10+mixin.0.8.7]
-	at org.spongepowered.asm.mixin.Mixins.createConfiguration(Mixins.java:121) ~[Mixins.class:0.20.10+mixin.0.8.7]
-	at org.spongepowered.asm.mixin.Mixins.addConfiguration(Mixins.java:108) ~[Mixins.class:0.20.10+mixin.0.8.7]
-  [...]
 [Client thread/ERROR] [FML]: Error adding mixin configuration for mixins.integrated_proxy.mod.json
 org.spongepowered.asm.launch.MixinInitialisationError: Error initialising mixin config mixins.integrated_proxy.mod.json
 	at org.spongepowered.asm.mixin.transformer.Config.create(Config.java:169) ~[Config.class:0.20.10+mixin.0.8.7]
 	at org.spongepowered.asm.mixin.Mixins.createConfiguration(Mixins.java:121) ~[Mixins.class:0.20.10+mixin.0.8.7]
 	at org.spongepowered.asm.mixin.Mixins.addConfiguration(Mixins.java:108) ~[Mixins.class:0.20.10+mixin.0.8.7]
   [...]
-[Client thread/WARN] [mixin]: @Mixin target mcp.mobius.waila.api.impl.MetaDataProvider was not found mixins.tweakedlib.top.json:MetaDataProviderMixin from mod tweakedlib-2.0.1.jar
+[Client thread/ERROR] [FML]: Error adding mixin configuration for mixins.mi.actuallyadditions.defaultfarmerbehavior.fix.json
+org.spongepowered.asm.launch.MixinInitialisationError: Error initialising mixin config mixins.mi.actuallyadditions.defaultfarmerbehavior.fix.json
+	at org.spongepowered.asm.mixin.transformer.Config.create(Config.java:169) ~[Config.class:0.20.10+mixin.0.8.7]
+	at org.spongepowered.asm.mixin.Mixins.createConfiguration(Mixins.java:121) ~[Mixins.class:0.20.10+mixin.0.8.7]
+	at org.spongepowered.asm.mixin.Mixins.addConfiguration(Mixins.java:108) ~[Mixins.class:0.20.10+mixin.0.8.7]
+  [...]
 [Client thread/WARN] [mixin]: @Mixin target boni.dummy.EntityDummy was not found mixins.mods.testdummy.copyarmor.json:UTEntityDummyMixin from mod UniversalTweaks-1.12.2-1.15.2.jar
+[Client thread/WARN] [mixin]: @Mixin target mcp.mobius.waila.api.impl.MetaDataProvider was not found mixins.tweakedlib.top.json:MetaDataProviderMixin from mod tweakedlib-2.0.1.jar
 [Client thread/WARN] [mixin]: @Mixin target mrtjp.projectred.relocation.MovingBlockRenderDispatcher was not found mixins.vintagefix.late.json:chunk_rendering.MixinMovingBlockRenderDispatcher from mod unknown-owner
-[Client thread/WARN] [ReflectionExecutableData]: Can not get generic parameter types of method public boolean net.minecraft.entity.player.EntityPlayer.func_184613_cA()
-[Client thread/WARN] [ReflectionExecutableData]: Can not get generic return type of method public boolean net.minecraft.entity.player.EntityPlayer.func_184613_cA()
 [Client thread/WARN] [mixin]: Static binding violation: PRIVATE @Overwrite method func_76615_h in mixins.alfheim.json:ChunkMixin from mod unknown-owner cannot reduce visibiliy of PUBLIC target method, visibility will be upgraded.
 [Client thread/WARN] [curvy_pipes]: AVX-512 not available
 [Client thread/WARN] [draconicevolution]: Found empty mod doc folder D:\mc\E2E-E\config\brandon3055\ProjectIntelligence\ModDocs\draconicevolution
@@ -62,6 +54,10 @@ java.util.NoSuchElementException: null
 [Client thread/WARN] [tconstruct-API]: Replacing material "alumite" with material from PlusTiC (plustic)
 [Client thread/WARN] [tconstruct-API]: Replacing material "amber" with material from PlusTiC (plustic)
 [Client thread/WARN] [net.minecraft.network.datasync.EntityDataManager]: defineId called for: class malte0811.industrialwires.entities.EntityBrokenPart from class malte0811.industrialwires.IndustrialWires
+[Client thread/WARN] [Patchouli Books]: Book not found for mod id: gendustry
+[Client thread/ERROR] [Patchouli Books]: Unable to generate recipe for patchoulibooks:gendustry
+[Client thread/WARN] [Patchouli Books]: Book not found for mod id: thermallogistics
+[Client thread/ERROR] [Patchouli Books]: Unable to generate recipe for patchoulibooks:thermallogistics
 [Client thread/ERROR] [Patchouli Books]: Unable to find item at ic2:blockrubsapling
 [VintageFix item baking thread/WARN] [net.minecraft.client.renderer.block.model.ModelBlock]: Unable to resolve texture due to upward reference: #dust in tconevo:models/item/metal_dust
 [VintageFix item baking thread/WARN] [net.minecraft.client.renderer.block.model.ModelBlock]: Unable to resolve texture due to upward reference: #plate in tconevo:models/item/metal_plate
@@ -69,6 +65,12 @@ java.util.NoSuchElementException: null
 [VintageFix item baking thread/WARN] [net.minecraft.client.renderer.block.model.ModelBlock]: Unable to resolve texture due to upward reference: #gear in tconevo:models/item/metal_gear
 [VintageFix item baking thread/WARN] [net.minecraft.client.renderer.block.model.ModelBlock]: Unable to resolve texture due to upward reference: #nugget in tconevo:models/item/metal_nugget
 [Client thread/WARN] [sonarcore]: 'WAILA' - unavailable or disabled in config
+[Client thread/ERROR] [FML]: Error registering event handler: minecraft class ivorius.reccomplex.events.StructureGenerationEventLite$Post public void com.charles445.rltweaker.handler.RecurrentHandler$RCCleanup.onStructureGenerationLitePost(java.lang.Object)
+java.lang.RuntimeException: java.lang.invoke.LambdaConversionException: Type mismatch for dynamic parameter 0: class java.lang.Object is not a subtype of class net.minecraftforge.fml.common.eventhandler.Event
+	at net.minecraftforge.fml.common.eventhandler.EventListenerFactory.createListenerFactory(EventListenerFactory.java:58) ~[EventListenerFactory.class:?]
+	at net.minecraftforge.fml.common.eventhandler.EventListenerFactory.createRawListener(EventListenerFactory.java:21) ~[EventListenerFactory.class:?]
+	at net.minecraftforge.fml.common.eventhandler.ASMEventHandler.<init>(ASMEventHandler.java:52) ~[ASMEventHandler.class:?]
+  [...]
 [Client thread/WARN] [tweakersconstruct]: [Trait Tweaks] Could not find trait: wolframium, skipping.
 [Client thread/WARN] [tweakersconstruct]: [Trait Tweaks] Could not find trait: wolframium, skipping.
 [Client thread/WARN] [tweakersconstruct]: [Trait Tweaks] Could not find trait: wolframium, skipping.
@@ -79,30 +81,6 @@ java.util.NoSuchElementException: null
 [Client thread/WARN] [tweakersconstruct]: [Trait Tweaks] Could not find trait: wolframium, skipping.
 [Client thread/WARN] [net.minecraft.network.datasync.EntityDataManager]: defineId called for: class com.github.alexthe666.iceandfire.entity.EntityDreadThrall from class com.github.alexthe666.iceandfire.entity.EntityDreadKnight
 [Client thread/WARN] [net.minecraft.network.datasync.EntityDataManager]: defineId called for: class com.github.alexthe666.rats.server.entity.EntityFeralRatlantean from class com.github.alexthe666.rats.server.entity.EntityNeoRatlantean
-[Client thread/WARN] [reccomplex]: Error reading resource: Unholy
-java.lang.ClassCastException: Type adapter 'com.google.gson.internal.bind.TreeTypeAdapter@xxxxxxxx' returned wrong type; requested class net.minecraft.nbt.NBTTagCompound but got instance of class net.minecraft.nbt.NBTTagInt
-Verify that the adapter was registered for the correct type.
-	at com.google.gson.Gson.fromJson(Gson.java:1368) ~[gson-2.13.1.jar:?]
-	at com.google.gson.Gson.fromJson(Gson.java:1472) ~[gson-2.13.1.jar:?]
-  [...]
-[Client thread/WARN] [reccomplex]: Error reading resource: TribalChest
-java.lang.ClassCastException: Type adapter 'com.google.gson.internal.bind.TreeTypeAdapter@xxxxxxxx' returned wrong type; requested class net.minecraft.nbt.NBTTagCompound but got instance of class net.minecraft.nbt.NBTTagShort
-Verify that the adapter was registered for the correct type.
-	at com.google.gson.Gson.fromJson(Gson.java:1368) ~[gson-2.13.1.jar:?]
-	at com.google.gson.Gson.fromJson(Gson.java:1472) ~[gson-2.13.1.jar:?]
-  [...]
-[Client thread/WARN] [reccomplex]: Error reading resource: PeacefulCrypt
-java.lang.ClassCastException: Type adapter 'com.google.gson.internal.bind.TreeTypeAdapter@xxxxxxxx' returned wrong type; requested class net.minecraft.nbt.NBTTagCompound but got instance of class net.minecraft.nbt.NBTTagShort
-Verify that the adapter was registered for the correct type.
-	at com.google.gson.Gson.fromJson(Gson.java:1368) ~[gson-2.13.1.jar:?]
-	at com.google.gson.Gson.fromJson(Gson.java:1472) ~[gson-2.13.1.jar:?]
-  [...]
-[Client thread/WARN] [reccomplex]: Error reading resource: Holy
-java.lang.ClassCastException: Type adapter 'com.google.gson.internal.bind.TreeTypeAdapter@xxxxxxxx' returned wrong type; requested class net.minecraft.nbt.NBTTagCompound but got instance of class net.minecraft.nbt.NBTTagInt
-Verify that the adapter was registered for the correct type.
-	at com.google.gson.Gson.fromJson(Gson.java:1368) ~[gson-2.13.1.jar:?]
-	at com.google.gson.Gson.fromJson(Gson.java:1472) ~[gson-2.13.1.jar:?]
-  [...]
 [Client thread/WARN] [reccomplex]: Error reading resource: AirShrine
 java.lang.ClassCastException: Type adapter 'com.google.gson.internal.bind.TreeTypeAdapter@xxxxxxxx' returned wrong type; requested class net.minecraft.nbt.NBTTagCompound but got instance of class net.minecraft.nbt.NBTTagString
 Verify that the adapter was registered for the correct type.
@@ -110,7 +88,7 @@ Verify that the adapter was registered for the correct type.
 	at com.google.gson.Gson.fromJson(Gson.java:1472) ~[gson-2.13.1.jar:?]
   [...]
 [Client thread/WARN] [reccomplex]: Error reading resource: Ammunition
-java.lang.ClassCastException: Type adapter 'com.google.gson.internal.bind.TreeTypeAdapter@xxxxxxxx' returned wrong type; requested class net.minecraft.nbt.NBTTagCompound but got instance of class net.minecraft.nbt.NBTTagInt
+java.lang.ClassCastException: Type adapter 'com.google.gson.internal.bind.TreeTypeAdapter@xxxxxxxx' returned wrong type; requested class net.minecraft.nbt.NBTTagCompound but got instance of class net.minecraft.nbt.NBTTagString
 Verify that the adapter was registered for the correct type.
 	at com.google.gson.Gson.fromJson(Gson.java:1368) ~[gson-2.13.1.jar:?]
 	at com.google.gson.Gson.fromJson(Gson.java:1472) ~[gson-2.13.1.jar:?]
@@ -122,7 +100,7 @@ Verify that the adapter was registered for the correct type.
 	at com.google.gson.Gson.fromJson(Gson.java:1472) ~[gson-2.13.1.jar:?]
   [...]
 [Client thread/WARN] [reccomplex]: Error reading resource: Captain's_Chest
-java.lang.ClassCastException: Type adapter 'com.google.gson.internal.bind.TreeTypeAdapter@xxxxxxxx' returned wrong type; requested class net.minecraft.nbt.NBTTagCompound but got instance of class net.minecraft.nbt.NBTTagByte
+java.lang.ClassCastException: Type adapter 'com.google.gson.internal.bind.TreeTypeAdapter@xxxxxxxx' returned wrong type; requested class net.minecraft.nbt.NBTTagCompound but got instance of class net.minecraft.nbt.NBTTagString
 Verify that the adapter was registered for the correct type.
 	at com.google.gson.Gson.fromJson(Gson.java:1368) ~[gson-2.13.1.jar:?]
 	at com.google.gson.Gson.fromJson(Gson.java:1472) ~[gson-2.13.1.jar:?]
@@ -134,31 +112,7 @@ Verify that the adapter was registered for the correct type.
 	at com.google.gson.Gson.fromJson(Gson.java:1472) ~[gson-2.13.1.jar:?]
   [...]
 [Client thread/WARN] [reccomplex]: Error reading resource: Holy
-java.lang.ClassCastException: Type adapter 'com.google.gson.internal.bind.TreeTypeAdapter@xxxxxxxx' returned wrong type; requested class net.minecraft.nbt.NBTTagCompound but got instance of class net.minecraft.nbt.NBTTagInt
-Verify that the adapter was registered for the correct type.
-	at com.google.gson.Gson.fromJson(Gson.java:1368) ~[gson-2.13.1.jar:?]
-	at com.google.gson.Gson.fromJson(Gson.java:1472) ~[gson-2.13.1.jar:?]
-  [...]
-[Client thread/WARN] [reccomplex]: Error reading resource: LibraryNormal
-java.lang.ClassCastException: Type adapter 'com.google.gson.internal.bind.TreeTypeAdapter@xxxxxxxx' returned wrong type; requested class net.minecraft.nbt.NBTTagCompound but got instance of class net.minecraft.nbt.NBTTagShort
-Verify that the adapter was registered for the correct type.
-	at com.google.gson.Gson.fromJson(Gson.java:1368) ~[gson-2.13.1.jar:?]
-	at com.google.gson.Gson.fromJson(Gson.java:1472) ~[gson-2.13.1.jar:?]
-  [...]
-[Client thread/WARN] [reccomplex]: Error reading resource: LibrarySecret
-java.lang.ClassCastException: Type adapter 'com.google.gson.internal.bind.TreeTypeAdapter@xxxxxxxx' returned wrong type; requested class net.minecraft.nbt.NBTTagCompound but got instance of class net.minecraft.nbt.NBTTagShort
-Verify that the adapter was registered for the correct type.
-	at com.google.gson.Gson.fromJson(Gson.java:1368) ~[gson-2.13.1.jar:?]
-	at com.google.gson.Gson.fromJson(Gson.java:1472) ~[gson-2.13.1.jar:?]
-  [...]
-[Client thread/WARN] [reccomplex]: Error reading resource: PaperMakersHouse
-java.lang.ClassCastException: Type adapter 'com.google.gson.internal.bind.TreeTypeAdapter@xxxxxxxx' returned wrong type; requested class net.minecraft.nbt.NBTTagCompound but got instance of class net.minecraft.nbt.NBTTagShort
-Verify that the adapter was registered for the correct type.
-	at com.google.gson.Gson.fromJson(Gson.java:1368) ~[gson-2.13.1.jar:?]
-	at com.google.gson.Gson.fromJson(Gson.java:1472) ~[gson-2.13.1.jar:?]
-  [...]
-[Client thread/WARN] [reccomplex]: Error reading resource: PeacefulCrypt
-java.lang.ClassCastException: Type adapter 'com.google.gson.internal.bind.TreeTypeAdapter@xxxxxxxx' returned wrong type; requested class net.minecraft.nbt.NBTTagCompound but got instance of class net.minecraft.nbt.NBTTagShort
+java.lang.ClassCastException: Type adapter 'com.google.gson.internal.bind.TreeTypeAdapter@xxxxxxxx' returned wrong type; requested class net.minecraft.nbt.NBTTagCompound but got instance of class net.minecraft.nbt.NBTTagString
 Verify that the adapter was registered for the correct type.
 	at com.google.gson.Gson.fromJson(Gson.java:1368) ~[gson-2.13.1.jar:?]
 	at com.google.gson.Gson.fromJson(Gson.java:1472) ~[gson-2.13.1.jar:?]
@@ -181,14 +135,8 @@ Verify that the adapter was registered for the correct type.
 	at com.google.gson.Gson.fromJson(Gson.java:1368) ~[gson-2.13.1.jar:?]
 	at com.google.gson.Gson.fromJson(Gson.java:1472) ~[gson-2.13.1.jar:?]
   [...]
-[Client thread/WARN] [reccomplex]: Error reading resource: P_PlainsCityEnchant
-java.lang.ClassCastException: Type adapter 'com.google.gson.internal.bind.TreeTypeAdapter@xxxxxxxx' returned wrong type; requested class net.minecraft.nbt.NBTTagCompound but got instance of class net.minecraft.nbt.NBTTagShort
-Verify that the adapter was registered for the correct type.
-	at com.google.gson.Gson.fromJson(Gson.java:1368) ~[gson-2.13.1.jar:?]
-	at com.google.gson.Gson.fromJson(Gson.java:1472) ~[gson-2.13.1.jar:?]
-  [...]
 [Client thread/WARN] [reccomplex]: Error reading resource: P_Raid1
-java.lang.ClassCastException: Type adapter 'com.google.gson.internal.bind.TreeTypeAdapter@xxxxxxxx' returned wrong type; requested class net.minecraft.nbt.NBTTagCompound but got instance of class net.minecraft.nbt.NBTTagShort
+java.lang.ClassCastException: Type adapter 'com.google.gson.internal.bind.TreeTypeAdapter@xxxxxxxx' returned wrong type; requested class net.minecraft.nbt.NBTTagCompound but got instance of class net.minecraft.nbt.NBTTagString
 Verify that the adapter was registered for the correct type.
 	at com.google.gson.Gson.fromJson(Gson.java:1368) ~[gson-2.13.1.jar:?]
 	at com.google.gson.Gson.fromJson(Gson.java:1472) ~[gson-2.13.1.jar:?]
@@ -212,25 +160,25 @@ Verify that the adapter was registered for the correct type.
 	at com.google.gson.Gson.fromJson(Gson.java:1472) ~[gson-2.13.1.jar:?]
   [...]
 [Client thread/WARN] [reccomplex]: Error reading resource: Stone Mineshaft
-java.lang.ClassCastException: Type adapter 'com.google.gson.internal.bind.TreeTypeAdapter@xxxxxxxx' returned wrong type; requested class net.minecraft.nbt.NBTTagCompound but got instance of class net.minecraft.nbt.NBTTagDouble
+java.lang.ClassCastException: Type adapter 'com.google.gson.internal.bind.TreeTypeAdapter@xxxxxxxx' returned wrong type; requested class net.minecraft.nbt.NBTTagCompound but got instance of class net.minecraft.nbt.NBTTagString
 Verify that the adapter was registered for the correct type.
 	at com.google.gson.Gson.fromJson(Gson.java:1368) ~[gson-2.13.1.jar:?]
 	at com.google.gson.Gson.fromJson(Gson.java:1472) ~[gson-2.13.1.jar:?]
   [...]
 [Client thread/WARN] [reccomplex]: Error reading resource: Treasure1
-java.lang.ClassCastException: Type adapter 'com.google.gson.internal.bind.TreeTypeAdapter@xxxxxxxx' returned wrong type; requested class net.minecraft.nbt.NBTTagCompound but got instance of class net.minecraft.nbt.NBTTagInt
+java.lang.ClassCastException: Type adapter 'com.google.gson.internal.bind.TreeTypeAdapter@xxxxxxxx' returned wrong type; requested class net.minecraft.nbt.NBTTagCompound but got instance of class net.minecraft.nbt.NBTTagString
 Verify that the adapter was registered for the correct type.
 	at com.google.gson.Gson.fromJson(Gson.java:1368) ~[gson-2.13.1.jar:?]
 	at com.google.gson.Gson.fromJson(Gson.java:1472) ~[gson-2.13.1.jar:?]
   [...]
 [Client thread/WARN] [reccomplex]: Error reading resource: Treasure2
-java.lang.ClassCastException: Type adapter 'com.google.gson.internal.bind.TreeTypeAdapter@xxxxxxxx' returned wrong type; requested class net.minecraft.nbt.NBTTagCompound but got instance of class net.minecraft.nbt.NBTTagInt
+java.lang.ClassCastException: Type adapter 'com.google.gson.internal.bind.TreeTypeAdapter@xxxxxxxx' returned wrong type; requested class net.minecraft.nbt.NBTTagCompound but got instance of class net.minecraft.nbt.NBTTagString
 Verify that the adapter was registered for the correct type.
 	at com.google.gson.Gson.fromJson(Gson.java:1368) ~[gson-2.13.1.jar:?]
 	at com.google.gson.Gson.fromJson(Gson.java:1472) ~[gson-2.13.1.jar:?]
   [...]
 [Client thread/WARN] [reccomplex]: Error reading resource: Treasure3
-java.lang.ClassCastException: Type adapter 'com.google.gson.internal.bind.TreeTypeAdapter@xxxxxxxx' returned wrong type; requested class net.minecraft.nbt.NBTTagCompound but got instance of class net.minecraft.nbt.NBTTagInt
+java.lang.ClassCastException: Type adapter 'com.google.gson.internal.bind.TreeTypeAdapter@xxxxxxxx' returned wrong type; requested class net.minecraft.nbt.NBTTagCompound but got instance of class net.minecraft.nbt.NBTTagString
 Verify that the adapter was registered for the correct type.
 	at com.google.gson.Gson.fromJson(Gson.java:1368) ~[gson-2.13.1.jar:?]
 	at com.google.gson.Gson.fromJson(Gson.java:1472) ~[gson-2.13.1.jar:?]
@@ -248,13 +196,7 @@ Verify that the adapter was registered for the correct type.
 	at com.google.gson.Gson.fromJson(Gson.java:1472) ~[gson-2.13.1.jar:?]
   [...]
 [Client thread/WARN] [reccomplex]: Error reading resource: VillageGuardTower
-java.lang.ClassCastException: Type adapter 'com.google.gson.internal.bind.TreeTypeAdapter@xxxxxxxx' returned wrong type; requested class net.minecraft.nbt.NBTTagCompound but got instance of class net.minecraft.nbt.NBTTagInt
-Verify that the adapter was registered for the correct type.
-	at com.google.gson.Gson.fromJson(Gson.java:1368) ~[gson-2.13.1.jar:?]
-	at com.google.gson.Gson.fromJson(Gson.java:1472) ~[gson-2.13.1.jar:?]
-  [...]
-[Client thread/WARN] [reccomplex]: Error reading resource: VillageLibrary
-java.lang.ClassCastException: Type adapter 'com.google.gson.internal.bind.TreeTypeAdapter@xxxxxxxx' returned wrong type; requested class net.minecraft.nbt.NBTTagCompound but got instance of class net.minecraft.nbt.NBTTagShort
+java.lang.ClassCastException: Type adapter 'com.google.gson.internal.bind.TreeTypeAdapter@xxxxxxxx' returned wrong type; requested class net.minecraft.nbt.NBTTagCompound but got instance of class net.minecraft.nbt.NBTTagString
 Verify that the adapter was registered for the correct type.
 	at com.google.gson.Gson.fromJson(Gson.java:1368) ~[gson-2.13.1.jar:?]
 	at com.google.gson.Gson.fromJson(Gson.java:1472) ~[gson-2.13.1.jar:?]
@@ -277,20 +219,8 @@ Verify that the adapter was registered for the correct type.
 	at com.google.gson.Gson.fromJson(Gson.java:1368) ~[gson-2.13.1.jar:?]
 	at com.google.gson.Gson.fromJson(Gson.java:1472) ~[gson-2.13.1.jar:?]
   [...]
-[Client thread/WARN] [reccomplex]: Error reading resource: village_pack_cross
-java.lang.ClassCastException: Type adapter 'com.google.gson.internal.bind.TreeTypeAdapter@xxxxxxxx' returned wrong type; requested class net.minecraft.nbt.NBTTagCompound but got instance of class net.minecraft.nbt.NBTTagInt
-Verify that the adapter was registered for the correct type.
-	at com.google.gson.Gson.fromJson(Gson.java:1368) ~[gson-2.13.1.jar:?]
-	at com.google.gson.Gson.fromJson(Gson.java:1472) ~[gson-2.13.1.jar:?]
-  [...]
 [Client thread/WARN] [reccomplex]: Error reading resource: village_pack_decor_common
-java.lang.ClassCastException: Type adapter 'com.google.gson.internal.bind.TreeTypeAdapter@xxxxxxxx' returned wrong type; requested class net.minecraft.nbt.NBTTagCompound but got instance of class net.minecraft.nbt.NBTTagInt
-Verify that the adapter was registered for the correct type.
-	at com.google.gson.Gson.fromJson(Gson.java:1368) ~[gson-2.13.1.jar:?]
-	at com.google.gson.Gson.fromJson(Gson.java:1472) ~[gson-2.13.1.jar:?]
-  [...]
-[Client thread/WARN] [reccomplex]: Error reading resource: village_pack_farm
-java.lang.ClassCastException: Type adapter 'com.google.gson.internal.bind.TreeTypeAdapter@xxxxxxxx' returned wrong type; requested class net.minecraft.nbt.NBTTagCompound but got instance of class net.minecraft.nbt.NBTTagInt
+java.lang.ClassCastException: Type adapter 'com.google.gson.internal.bind.TreeTypeAdapter@xxxxxxxx' returned wrong type; requested class net.minecraft.nbt.NBTTagCompound but got instance of class net.minecraft.nbt.NBTTagString
 Verify that the adapter was registered for the correct type.
 	at com.google.gson.Gson.fromJson(Gson.java:1368) ~[gson-2.13.1.jar:?]
 	at com.google.gson.Gson.fromJson(Gson.java:1472) ~[gson-2.13.1.jar:?]
@@ -301,34 +231,24 @@ Verify that the adapter was registered for the correct type.
 	at com.google.gson.Gson.fromJson(Gson.java:1368) ~[gson-2.13.1.jar:?]
 	at com.google.gson.Gson.fromJson(Gson.java:1472) ~[gson-2.13.1.jar:?]
   [...]
-[Client thread/WARN] [reccomplex]: Error reading resource: village_pack_mechanisms
-java.lang.ClassCastException: Type adapter 'com.google.gson.internal.bind.TreeTypeAdapter@xxxxxxxx' returned wrong type; requested class net.minecraft.nbt.NBTTagCompound but got instance of class net.minecraft.nbt.NBTTagByte
-Verify that the adapter was registered for the correct type.
-	at com.google.gson.Gson.fromJson(Gson.java:1368) ~[gson-2.13.1.jar:?]
-	at com.google.gson.Gson.fromJson(Gson.java:1472) ~[gson-2.13.1.jar:?]
-  [...]
-[Client thread/WARN] [reccomplex]: Error reading resource: village_pack_paper
-java.lang.ClassCastException: Type adapter 'com.google.gson.internal.bind.TreeTypeAdapter@xxxxxxxx' returned wrong type; requested class net.minecraft.nbt.NBTTagCompound but got instance of class net.minecraft.nbt.NBTTagInt
-Verify that the adapter was registered for the correct type.
-	at com.google.gson.Gson.fromJson(Gson.java:1368) ~[gson-2.13.1.jar:?]
-	at com.google.gson.Gson.fromJson(Gson.java:1472) ~[gson-2.13.1.jar:?]
-  [...]
 [Client thread/ERROR] [scalingguis]: Unknown class 'us.getfluxed.controlsearch.client.gui.GuiNewControls'. Removing from check list. Will be left in json assets.scalingguis.file.
 java.lang.ClassNotFoundException: us.getfluxed.controlsearch.client.gui.GuiNewControls
-	at top.outlands.foundation.boot.ActualClassLoader.findClass(ActualClassLoader.java:277) ~[foundation-0.15.1.jar:?]
-	at top.outlands.foundation.boot.ActualClassLoader.loadClass(ActualClassLoader.java:284) ~[foundation-0.15.1.jar:?]
+	at top.outlands.foundation.boot.ActualClassLoader.findClass(ActualClassLoader.java:277) ~[foundation-0.15.3.jar:?]
+	at top.outlands.foundation.boot.ActualClassLoader.loadClass(ActualClassLoader.java:284) ~[foundation-0.15.3.jar:?]
 	at java.lang.Class.forName0(Native Method) ~[?:?]
   [...]
 [Client thread/ERROR] [scalingguis]: Unknown class 'us.getfluxed.controlsearch.client.gui.GuiNewControls'. Removing from check list. Will be left in json assets.scalingguis.file.
 java.lang.ClassNotFoundException: Found us.getfluxed.controlsearch.client.gui.GuiNewControls in invalid classes.
-	at top.outlands.foundation.boot.ActualClassLoader.findClass(ActualClassLoader.java:177) ~[foundation-0.15.1.jar:?]
-	at top.outlands.foundation.boot.ActualClassLoader.loadClass(ActualClassLoader.java:284) ~[foundation-0.15.1.jar:?]
+	at top.outlands.foundation.boot.ActualClassLoader.findClass(ActualClassLoader.java:177) ~[foundation-0.15.3.jar:?]
+	at top.outlands.foundation.boot.ActualClassLoader.loadClass(ActualClassLoader.java:284) ~[foundation-0.15.3.jar:?]
 	at java.lang.Class.forName0(Native Method) ~[?:?]
   [...]
 [Client thread/ERROR] [Had Enough Items]: A Recipe Handler has already been registered for this recipe class: com.github.alexthe666.iceandfire.recipe.DragonForgeRecipe
 [Client thread/ERROR] [Had Enough Items]: A Recipe Handler has already been registered for this recipe class: com.github.alexthe666.rats.server.recipes.SharedRecipe
 [Client thread/ERROR] [Had Enough Items]: A Recipe Handler has already been registered for this recipe class: com.github.alexthe666.rats.server.recipes.SharedRecipe
-[Client thread/ERROR] [Had Enough Items]: Found a broken recipe: Cyclic cyclicmagic:solidifier_0db199b0-8731-4456-b4dc-ed91dc9e52d3tile.air class com.lothrazar.cyclicmagic.block.solidifier.RecipeSolidifier
+[Client thread/WARN] [FML]: * Null fluid supplied to fluidstack. Did you try and create a stack for an unregistered fluid?
+[Client thread/WARN] [FML]: * Null fluid supplied to fluidstack. Did you try and create a stack for an unregistered fluid?
+[Client thread/ERROR] [Had Enough Items]: Found a broken recipe: Cyclic cyclicmagic:solidifier_db541507-9774-425f-b64e-1cb8b2b7c90atile.air class com.lothrazar.cyclicmagic.block.solidifier.RecipeSolidifier
 Failed to get ingredients from recipe wrapper
 
 java.lang.IllegalArgumentException: Cannot create a fluidstack from a null fluid

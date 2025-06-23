@@ -9,6 +9,9 @@
 - [ ] Integrate `Curvy Pipes`
 - [ ] Make Chaos Shards even harder (since players want it more than killing dragon)
 - [ ] ♻️ Refactor: replace all `itemUtils.getItem` to `<${}:${}>`, 
+- [ ] 🎁 Notify on server level when player open Mythic loot crate
+- [ ] Use `/tellraw @a` instead of `/say` to remove `[server]` prefix
+- [ ] ✏️ add missed QMD 1.5 assembler recipes
 
 <!-- 
 Command to generate single file from all files in directory:
@@ -28,6 +31,7 @@ git log --oneline abc123..HEAD -- $(git diff-tree --no-commit-id --name-only -r 
 - [ ] ✏️ `Draconic Evolution` add recipes that use trillions RF
 - [ ] ✏️ RFTools `Dimension building` rework - make cheaper by balancing possible dimlets
 - [ ] 🌟 Vitrified Sand drop items that can be combined with UU-Matter items to get any craftable item in game
+- [ ] 🌟 More Omnipotence perks: `Fast Flight, Instant portal`
 - [ ] 💜 Make `[constant] difficulty` dimension for replicator discount. Probably RFTools ones
 - [ ] 🌍 Gen Highly Radioactive stuff on `Asteroid Belt`, unbearable radiation
 - [ ] 🌍 `Asteroid Belt` Maybe spawn working Rainbow Generators?
