@@ -12,8 +12,6 @@ import native.com.feed_the_beast.ftbquests.quest.reward.ItemReward;
 import native.net.minecraft.util.EnumActionResult;
 import native.net.minecraftforge.event.entity.player.PlayerInteractEvent.RightClickItem;
 import native.ru.radviger.cases.Cases;
-import native.ru.radviger.cases.network.message.MessageSpinStart;
-import native.ru.radviger.cases.proxy.ClientProxy;
 import native.ru.radviger.cases.slot.Case;
 import native.ru.radviger.cases.slot.CaseSlots;
 import native.ru.radviger.cases.slot.SingleCaseSlot;
@@ -51,26 +49,24 @@ events.register(function (e as native.com.feed_the_beast.ftblib.events.universe.
   }
 });
 
-events.register(function (e as RightClickItem) {
-  if (isNull(e.itemStack) || e.itemStack.isEmpty()) return;
+function checkRightClick(e as RightClickItem) as bool {
+  if (isNull(e.itemStack) || e.itemStack.isEmpty()) return false;
 
   val player = e.entityPlayer;
-  if (player.isSneaking()) return;
+  if (player.isSneaking()) return false;
 
   val stack = e.itemStack;
 
   val id = native.net.minecraft.item.Item.REGISTRY.getNameForObject(stack.item);
-  if (isNull(id) || id.toString() != 'ftbquests:lootcrate') return;
+  if (isNull(id) || id.toString() != 'ftbquests:lootcrate') return false;
 
   val tag = stack.tagCompound;
-  if (isNull(tag) || tag.getString('type') != 'mythic') return;
+  if (isNull(tag) || tag.getString('type') != 'mythic') return false;
+  return true;
+}
 
-  if (e.world.isRemote) {
-    val caseTarget = Cases.findCase('mythic');
-    ClientProxy.openCase(caseTarget);
-    Cases.NET.sendToServer(MessageSpinStart());
-  }
-
+events.register(function (e as RightClickItem) {
+  if (!checkRightClick(e)) return;
   e.setCancellationResult(EnumActionResult.SUCCESS);
   e.setCanceled(true);
-});
+}, mods.zenutils.EventPriority.low());
