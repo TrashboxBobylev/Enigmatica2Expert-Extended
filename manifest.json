@@ -421,7 +421,7 @@
     {"projectID":1056812,"fileID":6510059,"___name":"UniLib"                                  ,"downloadUrl":"https://edge.forgecdn.net/files/6510/59/UniLib-1.1.0%2b1.12.2-forge.jar","required":true},
     {"projectID":1063334,"fileID":5951510,"___name":"The Twilight Forest - Deforestation Edition","downloadUrl":"https://edge.forgecdn.net/files/5951/510/twilightforest-1.12.2-3.12.jar","required":true},
     {"projectID":1064321,"fileID":6480479,"___name":"StellarCore"                             ,"downloadUrl":"https://edge.forgecdn.net/files/6480/479/StellarCore-1.5.22.jar","required":true},
-    {"projectID":1064613,"fileID":6679961,"___name":"Magiculture Integrations"                ,"downloadUrl":"https://edge.forgecdn.net/files/6679/961/magicultureintegrations-1.12.2-2.2.1.jar","required":true},
+    {"projectID":1064613,"fileID":6686348,"___name":"Magiculture Integrations"                ,"downloadUrl":"https://edge.forgecdn.net/files/6686/348/magicultureintegrations-1.12.2-2.2.2.jar","required":true},
     {"projectID":1067548,"fileID":5994116,"___name":"Integrated Derivative"                   ,"downloadUrl":"https://edge.forgecdn.net/files/5994/116/integratedderivative-1.1.2.jar","required":true},
     {"projectID":1073925,"fileID":5579062,"___name":"Rather Enough Immersive Multiblocks"     ,"downloadUrl":"https://edge.forgecdn.net/files/5579/62/reim-0.1.jar","required":true},
     {"projectID":1081085,"fileID":6143104,"___name":"MiniEffects-Legacy Extended Life"        ,"downloadUrl":"https://edge.forgecdn.net/files/6143/104/minieffects-2.3.2.jar","required":true},
