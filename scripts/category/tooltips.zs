@@ -105,7 +105,11 @@ for item in [
 /**/
 ] as IItemStack[] {
   if (isNull(item)) continue;
-  desc.both(item);
+
+  // Special case for Vis Salt, since it would error if doesnt have aspect NBT tag,
+  // but if we add NBT tag, only specific one will be described.
+  if (<thaumadditions:salt_essence> has item) desc.tooltip(item);
+  else desc.both(item);
 }
 
 ////////////////////////////////////////////////////////////////////////////////////////
