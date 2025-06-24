@@ -326,7 +326,6 @@
     {"projectID":402338,"fileID":3373954,"___name":"Fluid Drawers"                           ,"downloadUrl":"https://edge.forgecdn.net/files/3373/954/fluiddrawers-1.12.2-1.0.7.jar","required":true},
     {"projectID":403303,"fileID":3191544,"___name":"Potion Descriptions (Forge)"             ,"downloadUrl":"https://edge.forgecdn.net/files/3191/544/potiondescriptions-1.12.2-1.2.4.jar","required":true},
     {"projectID":403676,"fileID":5095243,"___name":"ThaumTweaks"                             ,"downloadUrl":"https://edge.forgecdn.net/files/5095/243/thaumtweaks-0.3.5.4.jar","required":true},
-    {"projectID":405327,"fileID":4641243,"___name":"Mixin 0.7-0.8 Compatibility"             ,"downloadUrl":"https://edge.forgecdn.net/files/4641/243/%5b___MixinCompat-1.1-1.12.2___%5d.jar","required":true},
     {"projectID":408853,"fileID":5337217,"___name":"Particle Culling"                        ,"downloadUrl":"https://edge.forgecdn.net/files/5337/217/particleculling-1.12.2-v1.4.3.jar","required":true},
     {"projectID":409965,"fileID":3166334,"___name":"Portable Drill for Immersive Engineering","downloadUrl":"https://edge.forgecdn.net/files/3166/334/portabledrill-1.2.1.jar","required":true},
     {"projectID":415684,"fileID":3093664,"___name":"Better Gendustry"                        ,"downloadUrl":"https://edge.forgecdn.net/files/3093/664/Better Gendustry v1.0.zip","required":true},
@@ -403,7 +402,7 @@
     {"projectID":895539,"fileID":6495943,"___name":"VisualOres"                              ,"downloadUrl":"https://edge.forgecdn.net/files/6495/943/visualores-0.2.7.jar","required":true},
     {"projectID":896591,"fileID":5187152,"___name":"SerializationIsBad"                      ,"downloadUrl":"https://edge.forgecdn.net/files/5187/152/serializationisbad-1.5.2.jar","required":true},
     {"projectID":905159,"fileID":6178311,"___name":"Patchouli ROFL Edition"                  ,"downloadUrl":"https://edge.forgecdn.net/files/6178/311/Patchouli-1.0-28.jar","required":true},
-    {"projectID":910715,"fileID":6182667,"___name":"Alfheim Lighting Engine"                 ,"downloadUrl":"https://edge.forgecdn.net/files/6182/667/Alfheim-1.5.jar","required":true},
+    {"projectID":910715,"fileID":6687458,"___name":"Alfheim Lighting Engine"                 ,"downloadUrl":"https://edge.forgecdn.net/files/6687/458/Alfheim-1.6.jar","required":true},
     {"projectID":923677,"fileID":4805869,"___name":"Omniwand"                                ,"downloadUrl":"https://edge.forgecdn.net/files/4805/869/omniwand-1.12.2-1.0.1.jar","required":true},
     {"projectID":934603,"fileID":4849268,"___name":"Finite Gas"                              ,"downloadUrl":"https://edge.forgecdn.net/files/4849/268/Finite%20Gas-1.0.jar","required":true},
     {"projectID":940521,"fileID":5796192,"___name":"Just Enough Magiculture"                 ,"downloadUrl":"https://edge.forgecdn.net/files/5796/192/justenoughmagiculture-1.12.2-1.2.1.jar","required":true},
@@ -413,7 +412,7 @@
     {"projectID":968474,"fileID":6386622,"___name":"FermiumBooter"                           ,"downloadUrl":"https://edge.forgecdn.net/files/6386/622/%60FermiumBooter-1.2.0.jar","required":true},
     {"projectID":977883,"fileID":6478903,"___name":"TheOneSmeagle"                           ,"downloadUrl":"https://edge.forgecdn.net/files/6478/903/TheOneSmeagle-1.12-1.1.2.jar","required":true},
     {"projectID":994251,"fileID":5481496,"___name":"Villager Contracts"                      ,"downloadUrl":"https://edge.forgecdn.net/files/5481/496/villagercontracts-1.12.2-1.2.1.jar","required":true},
-    {"projectID":1005815,"fileID":6681452,"___name":"Fugue"                                   ,"downloadUrl":"https://edge.forgecdn.net/files/6681/452/%2bFugue-0.19.0.jar","required":true},
+    {"projectID":1005815,"fileID":6690708,"___name":"Fugue"                                   ,"downloadUrl":"https://edge.forgecdn.net/files/6690/708/%2bFugue-0.19.5.jar","required":true},
     {"projectID":1016395,"fileID":6596160,"___name":"XU2-Patcher"                             ,"downloadUrl":"https://edge.forgecdn.net/files/6596/160/XU2-Patcher-1.0.2.jar","required":true},
     {"projectID":1024225,"fileID":6007708,"___name":"Advanced Rocketry - Reworked"            ,"downloadUrl":"https://edge.forgecdn.net/files/6007/708/AdvancedRocketry-1.12.2-2.1.4-9.jar","required":true},
     {"projectID":1032769,"fileID":5414463,"___name":"NCO Java Legacy Lib"                     ,"downloadUrl":"https://edge.forgecdn.net/files/5414/463/NCOLegacyLib-1.12.2-1.2.jar","required":true},
@@ -440,6 +439,6 @@
     {"projectID":1221029,"fileID":6644735,"___name":"Ender's Modpack Tweaks"                  ,"downloadUrl":"https://edge.forgecdn.net/files/6644/735/endermodpacktweaks-0.5.9.jar","required":true},
     {"projectID":1234162,"fileID":6378222,"___name":"Lumenized"                               ,"downloadUrl":"https://edge.forgecdn.net/files/6378/222/Lumenized-1.0.3.jar","required":true},
     {"projectID":1235372,"fileID":6384100,"___name":"Scalar Legacy"                           ,"downloadUrl":"https://edge.forgecdn.net/files/6384/100/scalar-1.0.0.jar","required":true},
-    {"projectID":1242239,"fileID":6587738,"___name":"Tinkers' Antique"                        ,"downloadUrl":"https://edge.forgecdn.net/files/6587/738/TinkersAntique-1.12.2-2.13.0.200.jar","required":true}
+    {"projectID":1242239,"fileID":6692342,"___name":"Tinkers' Antique"                        ,"downloadUrl":"https://edge.forgecdn.net/files/6692/342/TinkersAntique-1.12.2-2.13.0.201.jar","required":true}
   ]
 }
