@@ -4,12 +4,21 @@ import crafttweaker.item.IIngredient;
 import crafttweaker.item.IItemStack;
 import mods.nuclearcraft.ChanceItemIngredient;
 
-mods.immersiveengineering.Blueprint.addRecipe('components', <qmd:potassium_iodine_tablet> * 4, Grid(['♠▲Ab'], {
-  '♠': <ore:dustPotassium>,
-  '▲': <ore:dustIodine>,
-  'A': <ore:listAllsugar> * 4,
-  'b': <ore:bioplastic>,
-}).shapeless());
+// Recipes moved from Assembler (removed machine)
+mods.immersiveengineering.Blueprint.addRecipe('components', <qmd:potassium_iodine_tablet> * 4, [
+  <ore:dustPotassium>, <ore:dustIodine>, <ore:listAllsugar> * 4, <ore:bioplastic>]);
+
+mods.immersiveengineering.Blueprint.addRecipe('components', <ore:wireSSFAF>.firstItem * 6, [
+  <ore:dustSSFAF> * 3, <ore:ingotSilver> * 6]);
+
+mods.immersiveengineering.Blueprint.addRecipe('components', <ore:wireYBCO>.firstItem * 6, [
+  <ore:dustYBCO> * 3, <ore:ingotSilver> * 6]);
+
+recipes.addShapeless('dustSSFAF', <ore:dustSSFAF>.firstItem * 6, [
+  <ore:dustSamarium> * 1, <ore:dustStrontium> * 1, <ore:dustIronFluoride> * 2, <ore:dustArsenic> * 2]);
+
+recipes.addShapeless('dustYBCO', <ore:dustYBCO>.firstItem * 3, [
+  <ore:dustYttrium> * 1, <ore:dustBarium> * 2, <ore:dustCopperOxide> * 3]);
 
 // [BSCCO Wire]*6 from [Silver Plate][+1]
 mods.immersiveengineering.Blueprint.addRecipe('components', <qmd:part:4> * 6, Grid(['▲□□'], {
