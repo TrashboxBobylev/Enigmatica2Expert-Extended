@@ -5,13 +5,17 @@
 - [ ] Draconium Ore pieces cant be turned into ore (onloy on server) https://github.com/Krutoy242/Enigmatica2Expert-Extended/commit/f8d85415782be0d7234c037f232b8ee5ab9ac0eb
 - [ ] 🎆 Singularities could have OreDicts on server only, made them usable in the recipes
 - [ ] Fix RFToolsDims known dimlet recipes
-- [ ] Clear item drops on planets with meteors
-- [ ] Integrate `Curvy Pipes`
+- [ ] Integrate `Curvy Pipes`: Loot boxes, Tiers
 - [ ] Make Chaos Shards even harder (since players want it more than killing dragon)
-- [ ] ♻️ Refactor: replace all `itemUtils.getItem` to `<${}:${}>`, 
+- [ ] ♻️ Refactor: replace all `itemUtils.getItem` to `<${}:${}>`
 - [ ] 🎁 Notify on server level when player open Mythic loot crate
 - [ ] Use `/tellraw @a` instead of `/say` to remove `[server]` prefix
-- [ ] ✏️ add missed QMD 1.5 assembler recipes
+- [ ] 📀 Fix names of TCon mining levels
+- [ ] 📀 Fix `OpenComputers` JEI plugin is still loaded
+- [ ] ✏️ Oredict Deuterium for Mek reactor fuel
+- [ ] `Spectre` trait - remove annoying flashing
+- [ ] `Double Compressed Hammer` cant break double compressed charcoal
+- [ ] Check portal spread message
 
 <!-- 
 Command to generate single file from all files in directory:
@@ -32,6 +36,7 @@ git log --oneline abc123..HEAD -- $(git diff-tree --no-commit-id --name-only -r 
 - [ ] ✏️ RFTools `Dimension building` rework - make cheaper by balancing possible dimlets
 - [ ] 🌟 Vitrified Sand drop items that can be combined with UU-Matter items to get any craftable item in game
 - [ ] 🌟 More Omnipotence perks: `Fast Flight, Instant portal`
+- [ ] 🌟 Omnipotence allow to eat any food
 - [ ] 💜 Make `[constant] difficulty` dimension for replicator discount. Probably RFTools ones
 - [ ] 🌍 Gen Highly Radioactive stuff on `Asteroid Belt`, unbearable radiation
 - [ ] 🌍 `Asteroid Belt` Maybe spawn working Rainbow Generators?
