@@ -184,7 +184,7 @@ spectre.addPlatesMaterialStats(1.6, 100, 2);
 spectre.addTrimMaterialStats(70);
 spectre.register();
 
-static spectreUpdateTime as int = 80;
+static spectreUpdateTime as int = 180;
 static hasPotioncore as bool = loadedMods.contains('potioncore');
 
 function spectreMechanic(world as IWorld, player as IPlayer, level as int) as void {
