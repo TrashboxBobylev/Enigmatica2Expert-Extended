@@ -1,4 +1,4 @@
-#modloaded gamestages ftbq
+#modloaded gamestages ftbquests
 #reloadable
 
 import crafttweaker.player.IPlayer;
