@@ -66,7 +66,13 @@ function isForbidTravel(player as IPlayer, dimension as int) as bool {
 }
 
 // Allow listed dimensions and any of RFTools dimensions
-static allowedDims as int[] = [0,-1,144,-343800852,2,-2,3];
+static allowedDims as int[] = [
+  144, // Compact machines
+  -343800852, // Spectre
+  2, // Storage Cell
+  -2, // Space
+  3, // Skyblock
+];
 function isAllowedDim(dimId as int) as bool {
   if (allowedDims has dimId) return true;
   val providerType = native.net.minecraftforge.common.DimensionManager.getProviderType(dimId);
