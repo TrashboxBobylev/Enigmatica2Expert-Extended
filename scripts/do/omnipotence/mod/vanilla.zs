@@ -18,9 +18,9 @@ scripts.do.omnipotence.op.op.onGrant(function(player as IPlayer) as void {
   setAttribute(player, 'forge.swimSpeed', '9c1f6fe8-94ed-46ce-9307-6647900ae6ad', 2);
   setAttribute(player, 'generic.attackDamage', '8acc3dda-1db0-466b-9acc-8c7453683fe0', 999);
 
-  server.commandManager.executeCommandSilent(server, '/say # `' ~ player.name
+  server.commandManager.executeCommandSilent(server, '/tellraw @a ["# `' ~ player.name
     ~ '` just reached the §e**§lOmnipotence§e**§r ```Congrats!```'
-  );
+    ~ '"]');
 });
 
 scripts.do.omnipotence.op.op.onRevoke(function(player as IPlayer) as void {
@@ -32,9 +32,9 @@ scripts.do.omnipotence.op.op.onRevoke(function(player as IPlayer) as void {
   remAttribute(player, 'forge.swimSpeed', '9c1f6fe8-94ed-46ce-9307-6647900ae6ad');
   remAttribute(player, 'generic.attackDamage', '8acc3dda-1db0-466b-9acc-8c7453683fe0');
 
-  server.commandManager.executeCommandSilent(server, '/say `' ~ player.name
+  server.commandManager.executeCommandSilent(server, '/tellraw @a ["`' ~ player.name
     ~ '` just lost the §e*§lOmnipotence§e*§r'
-  );
+    ~ '"]');
 });
 
 scripts.do.omnipotence.op.op.onTick(function(player as IPlayer) as void {
