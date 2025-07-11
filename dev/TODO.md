@@ -2,20 +2,12 @@
 
 🚧✅❌⚠️♻️ List of priorities:
 
-- [ ] Draconium Ore pieces cant be turned into ore (onloy on server) https://github.com/Krutoy242/Enigmatica2Expert-Extended/commit/f8d85415782be0d7234c037f232b8ee5ab9ac0eb
-- [ ] 🎆 Singularities could have OreDicts on server only, made them usable in the recipes
-- [ ] Fix RFToolsDims known dimlet recipes
-- [ ] Integrate `Curvy Pipes`: Loot boxes, Tiers
-- [ ] Make Chaos Shards even harder (since players want it more than killing dragon)
-- [ ] ♻️ Refactor: replace all `itemUtils.getItem` to `<${}:${}>`
-- [ ] 🎁 Notify on server level when player open Mythic loot crate
-- [ ] Use `/tellraw @a` instead of `/say` to remove `[server]` prefix
+- [ ] 🟠 Downgrade Flare to Spark https://github.com/CleanroomMC/Flare/issues/18
 - [ ] 📀 Fix names of TCon mining levels
 - [ ] 📀 Fix `OpenComputers` JEI plugin is still loaded
-- [ ] ✏️ Oredict Deuterium for Mek reactor fuel
-- [ ] `Spectre` trait - remove annoying flashing
-- [ ] `Double Compressed Hammer` cant break double compressed charcoal
-- [ ] Check portal spread message
+- [ ] 🔨 `Double Compressed Hammer` cant break double compressed charcoal
+- [ ] 🔨 Add HV wire invincibility TCon trait
+- [ ] 🐦 enable Enchanting speed up for rats
 
 <!-- 
 Command to generate single file from all files in directory:
@@ -34,9 +26,7 @@ git log --oneline abc123..HEAD -- $(git diff-tree --no-commit-id --name-only -r 
 - [ ] 📀 Add `Uncrafting Table` automation block
 - [ ] ✏️ `Draconic Evolution` add recipes that use trillions RF
 - [ ] ✏️ RFTools `Dimension building` rework - make cheaper by balancing possible dimlets
-- [ ] 🌟 Vitrified Sand drop items that can be combined with UU-Matter items to get any craftable item in game
-- [ ] 🌟 More Omnipotence perks: `Fast Flight, Instant portal`
-- [ ] 🌟 Omnipotence allow to eat any food
+- [ ] 🌟 Vitrified Sand make drop items that can be combined with UU-Matter items to get any craftable item in game
 - [ ] 💜 Make `[constant] difficulty` dimension for replicator discount. Probably RFTools ones
 - [ ] 🌍 Gen Highly Radioactive stuff on `Asteroid Belt`, unbearable radiation
 - [ ] 🌍 `Asteroid Belt` Maybe spawn working Rainbow Generators?
@@ -61,6 +51,10 @@ Planned non-urgent changes, or just good ideas:
 - [ ] ⚡ Wand of the forest change recipe to Recipe Function
 - [ ] ⚡ Remove automatic IE armor recycling to speed up game load
 - [ ] ⚡ Remove `Chunk Loading Ward` since its make harder to find all chunk loaders on server
+- [ ] ⚡ Get rid of `Simple Trophies` since they strain FPS
+- [ ] ⚡ Remove `Cyclic`'s machines completely because they are laggy
+- [ ] ⚡ Disable Cyclic's machine animation since lag: https://i.imgur.com/cbCJJBq.png
+- [ ] ⚡ Add Tips note about IE multiblocks causing strong FPS strain. Also make them all work so fast only 1 machine needed
 
 ### Difficulty increase
 - Vanilla Chests
@@ -81,6 +75,8 @@ Planned non-urgent changes, or just good ideas:
 - [ ] 📖 `Portal Spread` add quest
 - [ ] 📖 `Conglomerate of Coal` add info about using as Portal catalyst
 - [ ] 📖 Note that `Singularities` consume items in inventory
+- [ ] 📖 Add bonus information on modpack finished, like time played, some stats and so on
+- [ ] 📖 Add note that EU2 Mining Node can automate fluid interactions
 
 ### "Battle" expansion
 - [ ] ✏️ Buff EU saber - give it more damage? But better split entities in two.
@@ -161,6 +157,9 @@ Planned non-urgent changes, or just good ideas:
 
 ### Other
 
+- [ ] ♻️ Refactor: replace all `itemUtils.getItem` to `<${}:${}>`
+- [ ] Enable and integrate EIO capacitors for IF machines `config/ometweaks/ometweaks.cfg:261`
+- [ ] 🔨 `Spectre` trait - remove annoying flashing
 - [ ] ✏️ `Thermal Logistics` cheaper, use widely
 - [ ] 💜 add `0 difficulty` dimension (replicator cant work here). Maybe Spectre. ☝ Problem: Allowing getting +1🎁 whole game.
 - [ ] 🌍 Populate Wasteland (4598) with removed Ores but make them extremely durable
@@ -284,7 +283,6 @@ Planned non-urgent changes, or just good ideas:
 - [ ] ✏️ Petrotheum `Conflux I` craft, probably Quicksand => Tube => Petrotheum
 - [ ] ✏️ Add craft mechanic - Mud Ball hit something (called "humilate")
 - [ ] ✏️ Add mobs in Mek's gear
-- [ ] ✏️ Remove Cyclic's machines completely because they are laggy
 - [ ] 📖 List of items that may be add into loot boxes in future: Fireproof Shards, Copernicium-291, IC2 seeds, https://i.imgur.com/G0A2KF1.png https://i.imgur.com/99itSSA.png
 - [ ] 🔄 Add custom progression for Twilight Forest based on Quest Book, since achievments can be disabled
 - [ ] 📀 Fix NPE https://is.gd/wZprY2
@@ -311,10 +309,6 @@ Planned non-urgent changes, or just good ideas:
 - [ ] 🔨 ![](https://git.io/JnzzI "Glitch Infused Ingot") add material. Ability: drop matter from mobs
 - [ ] 🔨 Add armor trait that speed up gain for `Time In Bottle`
 
-### Mods to remove for "Lite" version
-
-- `Libnine` and `Fluid Drawers` because lag https://github.com/phantamanta44/fluid-drawers/issues/19
-
 ---
 
 ---
@@ -324,6 +318,8 @@ Planned non-urgent changes, or just good ideas:
 List of features and changes for `E2EE v2.0`, that breaking worlds and require fresh start
 
 - 🌍 Remove OTG `Origin` biome since unnatural
+- 🌍 Remove OTG completely?
+- Remove `Libnine` and `Fluid Drawers` because lag https://github.com/phantamanta44/fluid-drawers/issues/19
 
 ---
 
@@ -331,6 +327,7 @@ List of features and changes for `E2EE v2.0`, that breaking worlds and require f
 
 ## Unable to
 
+- 🎆 Singularities add OreDicts on server, made usable in recipes - impossible since `#sideonly server` runs only on dedicated server
 - 🟢 Silently download mods from Modrinth - forbidden by CF policy (https://modrinth.com/mod/hit-indication)
 - ✏️ remove default furnace recipes from `arc furnace`. It seems like they are added by mods themselves, like Thermal or TConEvo
 - ✏️ fix 59% on Bees Output such as Combs. Impossible since this how Mod Tweaker adds them. Some recipes have -1% some dont.
@@ -392,6 +389,7 @@ Items that should have more uses:
   > Turn E2EE into opposite of GregTech, where 50% of your game you staring into GUI screens
   > Possible reward - whenever picking up item for the first time - get second copy of this item
 
+<!-- 
 ## Miscellaneous
 
 ### Player data reset
@@ -415,3 +413,4 @@ Items that should have more uses:
 **Execute commands:**
 - Leave team
 - `/ftbquests change_progress reset [NAME]`
+ -->

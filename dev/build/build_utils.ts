@@ -1,4 +1,5 @@
 import type { Options } from 'fast-glob'
+import type ignore from 'ignore'
 import type { InputFieldOptions } from 'terminal-kit/Terminal.js'
 
 import { relative } from 'node:path'
@@ -27,11 +28,34 @@ export function globs(source: string | string[], options?: Options) {
   return fast_glob.sync(source, { dot: true, onlyFiles: false, ...options })
 }
 
-export function getIgnoredFiles(ignored: any) {
+export function getIgnoredFiles(ignored: ignore.Ignore) {
   return globs(
-    ignored._rules.filter((r: { negative: any }) => !r.negative).map((r: { pattern: any }) => r.pattern),
-    { ignore: ignored._rules.filter((r: { negative: any }) => r.negative).map((r: { pattern: any }) => r.pattern) }
+    getIgnorePositives(ignored as PrivateIgnored),
+    { ignore: getIgnoreNegative(ignored as PrivateIgnored) }
   )
+}
+
+interface PartialRule {
+  negative: boolean
+  pattern : string
+}
+
+interface PrivateIgnored extends ignore.Ignore {
+  _rules: {
+    _rules: PartialRule[]
+  }
+}
+
+function getIgnorePositives(ignored: PrivateIgnored) {
+  return ignored._rules._rules
+    .filter(p => !p.negative)
+    .map(p => p.pattern)
+}
+
+function getIgnoreNegative(ignored: PrivateIgnored) {
+  return ignored._rules._rules
+    .filter(p => p.negative)
+    .map(p => p.pattern)
 }
 
 /**
@@ -50,8 +74,7 @@ export function removeFiles(fileArg: readonly string[] | string) {
       process.stdout.write(`\n${chalk.red(`Cannot remove: ${chalk.blue(file)}`)}\n`)
     }
   })
-  return `removed: ${removed.length}\n${
-    removed.map(s => chalk.gray(relative(process.cwd(), s))).join('\n')
+  return `removed: ${removed.length}\n${removed.map(s => chalk.gray(relative(process.cwd(), s))).join('\n')
   }`
 }
 
@@ -103,7 +126,7 @@ export async function enterString(message: string, options?: InputFieldOptions) 
   term(style.trace(msg.replace(/(ENTER|ESC)/g, style.info('$1'))))
   const result = await term.inputField({
     cancelable: true,
-    ...(options ?? {}),
+    ...options ?? {},
   }).promise
   term('\n')
   return result
@@ -117,8 +140,9 @@ export async function enterString(message: string, options?: InputFieldOptions) 
  */
 export async function pressEnterOrEsc(message: string, condition?: () => Promise<boolean>) {
   let oneTime = 0
-  while (condition ? !(await condition()) : !oneTime++)
-    if ((await enterString(message)) === undefined) return false
+  while (condition ? !await condition() : !oneTime++) {
+    if (await enterString(message) === undefined) return false
+  }
 
   return true
 }

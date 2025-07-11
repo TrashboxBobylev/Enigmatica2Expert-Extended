@@ -242,6 +242,7 @@ key_key.open_danknull.desc:0
 key_key.open_menu:19
 key_key.open_wireless_crafting_terminal.desc:18:CONTROL
 key_key.open_wireless_fluid_terminal.desc:33:SHIFT
+key_key.open_wireless_interface_terminal.desc:23:SHIFT
 key_key.open_wireless_pattern_terminal.desc:19:SHIFT
 key_key.open_wireless_terminal.desc:20:SHIFT
 key_key.otghud.desc:24
@@ -426,6 +427,8 @@ key_key.hitindication.toggle_hit_indication:72
 key_key.open_basic_extended_wireless_crafting_terminal:0
 key_key.open_elite_extended_wireless_crafting_terminal:0
 key_key.open_ultimate_extended_wireless_crafting_terminal:0
+key_key.retrieve_item.desc:-98:CONTROL
+key_key.start_craft.desc:-98:ALT
 key_key.toggleVisible:0
 key_keybind.endermodpacktweaks.toggle:0
 key_of.key.zoom:-97

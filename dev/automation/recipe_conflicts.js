@@ -74,6 +74,21 @@ const fineConflicts = [
   (r1, r2) =>
     r1.name.startsWith('storagedrawers:basicdrawers_')
     && r2.name.match(/^crafttweaker:.*drawer.*/),
+  (r1, r2) =>
+    r1.name === 'tconstruct:common/metals/alumite/alumite_ingot'
+    && r2.name === 'plustic:metals/alumite_ingot',
+  (r1, r2) =>
+    r1.name === 'tconstruct:common/metals/alumite/alumite_nugget'
+    && r2.name === 'plustic:metals/alumite_nugget',
+  (r1, r2) =>
+    r1.name === 'tconstruct:common/metals/alumite/alumite_ingot_nugget'
+    && r2.name === 'plustic:metals/alumite_ingot_nugget',
+  (r1, r2) =>
+    r1.name === 'tconstruct:common/metals/alumite/alumite_block'
+    && r2.name === 'plustic:metals/alumite_block',
+  (r1, r2) =>
+    r1.name === 'crafttweaker:fish_singularity'
+    && r2.name === 'crafttweaker:meat_singularity',
 ]
 
 function handleConflict(match) {
