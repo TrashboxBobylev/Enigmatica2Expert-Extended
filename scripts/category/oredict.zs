@@ -732,11 +732,9 @@ add(<ore:blockFlesh>, <thaumcraft:flesh_block>);
 
 // Make draconic ore Nether/End variants like all other Nether/End ores
 removeItems(<ore:oreDraconium>, [
-  <draconicevolution:draconium_ore>,
   <draconicevolution:draconium_ore:1>,
   <draconicevolution:draconium_ore:2>,
 ]);
-add(<ore:oreDraconium>, <draconicevolution:draconium_ore>);
 add(<ore:oreNetherDraconium>, <draconicevolution:draconium_ore:1>);
 add(<ore:oreEndDraconium>, <draconicevolution:draconium_ore:2>);
 
