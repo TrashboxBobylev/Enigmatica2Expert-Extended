@@ -509,6 +509,7 @@ regrind(<qmd:ingot:11>                          , <qmd:dust:11>);
 regrind(<qmd:ingot:12>                          , <qmd:dust:12>);
 regrind(<qmd:ingot:13>                          , <qmd:dust:13>);
 regrind(<qmd:ingot:14>                          , <qmd:dust:14>);
+regrind(<qmd:ingot:15>                          , <qmd:dust:15>);
 regrind(<qmd:ingot2:1>                          , <qmd:dust2:1>);
 regrind(<qmd:ingot2>                            , <qmd:dust2>);
 regrind(<redstonearsenal:material:32>           , <redstonearsenal:material>);

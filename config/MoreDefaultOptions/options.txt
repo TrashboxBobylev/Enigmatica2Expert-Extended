@@ -210,7 +210,7 @@ key_key.jei.showRecipe:19
 key_key.jei.showUses:22
 key_key.jei.toggleBookmarkOverlay:0
 key_key.jei.toggleCheatMode:0
-key_key.jei.toggleEditMode:35
+key_key.jei.toggleEditMode:0
 key_key.jei.toggleOverlay:24:CONTROL
 key_key.jeiutilities.displayRecipe:29
 key_key.jeiutilities.pickBookmark:-98
