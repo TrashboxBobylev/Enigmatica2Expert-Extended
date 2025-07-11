@@ -28,6 +28,13 @@ function removeItems(ore as IOreDictEntry, items as IItemStack[]) as void {
 }
 // *===========================================*
 
+addItems(<ore:itemJar>, [
+  <twilightforest:firefly_jar>,
+  <thaumcraft:jar_normal>,
+  <biomesoplenty:jar_empty>,
+  <iceandfire:jar_empty>,
+]);
+
 // Oredicts for pressure plates
 addItems(<ore:pressurePlateWood>, [
   <twilightforest:twilight_oak_plate>,
