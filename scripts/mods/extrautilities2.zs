@@ -368,7 +368,7 @@ craft.make(<extrautils2:drum>, [
   'S',
   'O',
   'S'], {
-  'S': <extrautils2:decorativesolid:3>, // Stoneburnt
+  'S': <ore:cobblestone>,
   'O': <enderio:block_omni_reservoir>,  // Omnivoir
 });
 
@@ -378,7 +378,7 @@ craft.make(<extrautils2:drum:1>, ['pretty',
   '  п  ',
   'S S S',
   '  Q  '], {
-  'Q': <extrautils2:decorativesolid:7>, // Quartzburnt
+  'Q': <extrautils2:decorativesolid:3>,
   'S': <extrautils2:drum>,              // Stone Drum
   'п': <ore:plateDenseIron>,            // Dense Iron Plate
 });
@@ -391,7 +391,7 @@ craft.make(<extrautils2:drum:2>, ['pretty',
   '  K  '], {
   '□': <ore:plateLumium>,         // Lumium Plate
   'I': <extrautils2:drum:1>,      // Iron Drum
-  'K': <extrautils2:klein>,       // Klein Bottle
+  'K': <extrautils2:decorativesolid:7>,
 });
 
 // [Demonically Gargantuan Drum] from [High Pressure Steam Bucket][+3]
@@ -402,7 +402,7 @@ craft.make(<extrautils2:drum:3>, ['pretty',
   '  ⌃  '], {
   'R': <extrautils2:drum:2>,            // Reinforced Large Drum
   '⌃': <extrautils2:decorativesolid:6>, // Blue Quartz
-  '~': LiquidIngr('high_pressure_steam'), // High Pressure Steam Bucket
+  '~': <extrautils2:klein>,
 });
 
 // High-GP usage ingredient
