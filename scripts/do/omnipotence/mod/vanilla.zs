@@ -16,7 +16,7 @@ scripts.do.omnipotence.op.op.onGrant(function(player as IPlayer) as void {
   setAttribute(player, 'generic.knockbackResistance', 'de6fd305-c216-4d0e-8d5b-020534e22789', 1);
   setAttribute(player, 'generic.movementSpeed', 'e6d2ed1e-243d-4684-bd9e-268b7c35153a', 0.1);
   setAttribute(player, 'forge.swimSpeed', '9c1f6fe8-94ed-46ce-9307-6647900ae6ad', 2);
-  setAttribute(player, 'generic.attackDamage', '8acc3dda-1db0-466b-9acc-8c7453683fe0', 99);
+  setAttribute(player, 'generic.attackDamage', '8acc3dda-1db0-466b-9acc-8c7453683fe0', 999);
 
   server.commandManager.executeCommandSilent(server, '/say # `' ~ player.name
     ~ '` just reached the §e**§lOmnipotence§e**§r ```Congrats!```'
