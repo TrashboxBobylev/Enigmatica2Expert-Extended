@@ -167,21 +167,23 @@ events.onPlayerLoggedIn(function (e as crafttweaker.event.PlayerLoggedInEvent) {
     .start();
 });
 
-print('##################################################');
-print('#       Unchanged Crafting Table recipes         #');
-for i, r in recipes.all {
-  if (isNull(r.name) || isNull(r.output)) continue;
-  print(r.commandString);
-}
-print('##################################################');
+if (currentLoader() == 'crafttweaker') {
+  print('##################################################');
+  print('#       Unchanged Crafting Table recipes         #');
+  for i, r in recipes.all {
+    if (isNull(r.name) || isNull(r.output)) continue;
+    print(r.commandString);
+  }
+  print('##################################################');
 
-// Every Furnace recipe before any changes
-print('##################################################');
-print('#         Unchanged furnace recipes dump         #');
-for r in furnace.all {
-  print(r.commandString);
+  // Every Furnace recipe before any changes
+  print('##################################################');
+  print('#         Unchanged furnace recipes dump         #');
+  for r in furnace.all {
+    print(r.commandString);
+  }
+  print('##################################################');
 }
-print('##################################################');
 
 val cmd = mods.zenutils.command.ZenCommand.create('run_automation');
 cmd.requiredPermissionLevel = 0;
