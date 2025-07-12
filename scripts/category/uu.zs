@@ -77,7 +77,7 @@ function formatUUCost(cost as int) as string {
 
 static values as int[int][string] = {
   'ic2:misc_resource'          : { 1: 10000, 2: 1119 },
-  'teslacorelib:base_addon'    : { 0: 100 },
+  'teslacorelib:base_addon'    : { 0: 0 },
   'minecraft:snowball'         : { 0: 2 },
   'minecraft:dirt'             : { 0: 2 },
   'minecraft:stone'            : { 0: 4, 1: 3, 3: 3, 5: 3 },
@@ -1215,7 +1215,7 @@ static values as int[int][string] = {
   'advancedrocketry:itemcircuitplate'          : { 1: 186133 },
   'advancedrocketry:rollingmachine'            : { 0: 191356 },
   'environmentaltech:void_res_miner_cont_1'    : { 0: 204645 },
-  'rftools:shape_card'                         : { 2: 210389, 3: 386764 },
+  'rftools:shape_card'                         : { 0: 0, 2: 210389, 3: 386764 },
   'nuclearcraft:rtg_californium'               : { 0: 216828 },
   'environmentaltech:solar_cell_litherite'     : { 0: 218703 },
   'environmentaltech:void_ore_miner_cont_2'    : { 0: 231166 },
