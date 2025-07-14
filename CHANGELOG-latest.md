@@ -1,9 +1,4 @@
 
-## Misc
-
-* [🖇](https://github.com/Krutoy242/Enigmatica2Expert-Extended/commit/96c05d50fb40da892ff561984ffb71ce5854ca24)Fixup! refactor: ♻️formatting Inject_js block
-  > 
-
 ## ✨ New Features
 
 * [🖇](https://github.com/Krutoy242/Enigmatica2Expert-Extended/commit/39ed31bc8e5a17a986f394695f1ab6b7f2bf437f)![](https://github.com/Krutoy242/mc-icons/raw/master/i/thaumadditions/mithminite_scythe__0__46769d22.png "Mithminite Scythe") Thaunomicon description entries
@@ -15,27 +10,8 @@
   > Robots could be used to easily craft singularities
 * [🖇](https://github.com/Krutoy242/Enigmatica2Expert-Extended/commit/003919a34245fcccfed0ecea7eadb82fd8d59a1d)🎁Print colored message for everyone when player open Mythic crate
   > 
-
-#### Quest
-
 * [🖇](https://github.com/Krutoy242/Enigmatica2Expert-Extended/commit/b29103a1ed9bd4a6d09d7092338155822cfa70ef)📖Add "has begun the questline" messages in global chat
-  > 
-
-## 🐛 Fixes
-
-* [🖇](https://github.com/Krutoy242/Enigmatica2Expert-Extended/commit/c94d283540c5470b14f735500a32d32812b719ce)✏️Fix dimlet recipes that wrong in original rftoolsdim
-  > 
-* <img src="https://i.imgur.com/abP287i.png" align=right> [🖇](https://github.com/Krutoy242/Enigmatica2Expert-Extended/commit/a193d274bf107b151a39d67a4acdd490c9a4ee4f)✏️new [Essentia Storage] recipes
-  > > Contributed by [TabakaSIM](https://github.com/https://github.com/tabakasim)
-  >
-  > 
-* [🖇](https://github.com/Krutoy242/Enigmatica2Expert-Extended/commit/29123824d69cd14eec1ad4d62adb374c8c476624)🌱Enable ![](https://github.com/Krutoy242/mc-icons/raw/master/i/industrialforegoing/crop_sower__0.png "Plant Sower") enhancements
-  > accept more crop items
-* [🖇](https://github.com/Krutoy242/Enigmatica2Expert-Extended/commit/9dabf1acbc76eaf74c6c0c04eba8e424a6d396c4)🐦Temporary disable Enchanting speed up for rats
-  > Now Jury rigged upgrade with Enchanting cant be speed up with speed upgrade.
-* [🖇](https://github.com/Krutoy242/Enigmatica2Expert-Extended/commit/8ce77fb8359405b6cff408b7b40cca00e31d7ac8)🐲Fix ![](https://github.com/Krutoy242/mc-icons/raw/master/i/jaopca/item_piecedraconium__0.png "Draconium Ore Piece") not forming blocks on servers
-  > 
-* [🖇](https://github.com/Krutoy242/Enigmatica2Expert-Extended/commit/3e3587bbb4a072b63f04c9c9bd22e1a808282ec3)👑`Omnipotence` add new perks and improve old ones
+* [🖇](https://github.com/Krutoy242/Enigmatica2Expert-Extended/commit/b4500a1697041e75f366e7c1354853c7c0cbdbae)👑`Omnipotence` add new perks and improve old ones
   > **Additions**:
   > - Get all TwilightForest progression
   > - Fly + fly faster
@@ -45,11 +21,23 @@
   > **Tweaks**:
   > - Do not reset TC progress on revoke
   > - Shorter reach bonus
-  > - Keep 1/2 hunger to allow eating food
+  > - Keep ½🍗 hunger to allow eating food
   > - Fix player lost some Omnipotence benefits on death and teleports
-* [🖇](https://github.com/Krutoy242/Enigmatica2Expert-Extended/commit/c542f7c11a70debded75ff59051f30e47016903e)👑`Omnipotence` increase barehand damage up to 1000
+  > - increase barehand damage up to 1000
+
+## 🐛 Fixes
+
+* [🖇](https://github.com/Krutoy242/Enigmatica2Expert-Extended/commit/c94d283540c5470b14f735500a32d32812b719ce)✏️Fix dimlet recipes that wrong in original rftoolsdim
   > 
-* [🖇](https://github.com/Krutoy242/Enigmatica2Expert-Extended/commit/697416a77a7fe6caee348f1fe771e95d43c1b069)💙Make ![](https://github.com/Krutoy242/mc-icons/raw/master/i/rftools/shape_card__0.png "Shape Card") and ![](https://github.com/Krutoy242/mc-icons/raw/master/i/teslacorelib/base_addon__0.png "Base Addon") UU cost = `0`
+* <img src="https://i.imgur.com/abP287i.png" align=right> [🖇](https://github.com/Krutoy242/Enigmatica2Expert-Extended/commit/a193d274bf107b151a39d67a4acdd490c9a4ee4f)✏️new ![](https://github.com/Krutoy242/mc-icons/raw/master/i/thaumicenergistics/essentia_cell_1k__0.png "1k ME Essentia Storage Cell") recipes
+  > > Contributed by [TabakaSIM](https://github.com/https://github.com/tabakasim)
+* [🖇](https://github.com/Krutoy242/Enigmatica2Expert-Extended/commit/29123824d69cd14eec1ad4d62adb374c8c476624)🌱Enable ![](https://github.com/Krutoy242/mc-icons/raw/master/i/industrialforegoing/crop_sower__0.png "Plant Sower") enhancements
+  > accept more crop items
+* [🖇](https://github.com/Krutoy242/Enigmatica2Expert-Extended/commit/ea1fe491f981279e03cca7dc457d2fa33a08a508)🐦Temporary disable Enchanting speed up for rats
+  > Now Jury rigged upgrade with Enchanting cant be speed up with speed upgrade.
+* [🖇](https://github.com/Krutoy242/Enigmatica2Expert-Extended/commit/8ce77fb8359405b6cff408b7b40cca00e31d7ac8)🐲Fix ![](https://github.com/Krutoy242/mc-icons/raw/master/i/jaopca/item_piecedraconium__0.png "Draconium Ore Piece") not forming blocks on servers
+  > 
+* [🖇](https://github.com/Krutoy242/Enigmatica2Expert-Extended/commit/20b1f99771e6afa256e8cae0c14045fdcdbe17f6)💙Make ![](https://github.com/Krutoy242/mc-icons/raw/master/i/rftools/shape_card__0.png "Shape Card") and ![](https://github.com/Krutoy242/mc-icons/raw/master/i/teslacorelib/base_addon__0.png "Base Addon") UU cost = `0`
   > To allow complete modpack with `0` difficulty increase.
   > <sub><sup>(actually even without this change you can, its just require to be very expert)</sup></sub>
 * [🖇](https://github.com/Krutoy242/Enigmatica2Expert-Extended/commit/092db967fd40157de8e2b15e63f538b4f2a598e7)💬Improve server congratulates players
@@ -58,20 +46,22 @@
   > > Contributed by [TabakaSIM](https://github.com/https://github.com/tabakasim)
   >
   > - 📖 Changed all armor quests to refer to the full armor set (instead of just the helmet).
-  > - 📖 Added a quest about the [Verdant Charm] "Sustainer" and its integration with the nutrition system.
+  > - 📖 Added a quest about the ![](https://github.com/Krutoy242/mc-icons/raw/master/i/thaumcraft/verdant_charm__0.png "Verdant Heart Charm") "Sustainer" and its integration with the nutrition system.
   > - 📖 Fixed the Spark Augment quest being available at the beginning of the Botania questline.
   > - 📖 Fixed ![](https://github.com/Krutoy242/mc-icons/raw/master/i/thaumcraft/metal_alchemical__0.png "Alchemical Construct") quest reward
   > 
   > - 🪄 Removed the requirement to research ![](https://github.com/Krutoy242/mc-icons/raw/master/i/thaumicwonders/primordial_grain__0.png "Primordial Grain") before unlocking the ![](https://github.com/Krutoy242/mc-icons/raw/master/i/thaumcraft/primordial_pearl__0.png "Primordial Pearl").
   > - ✏️ Increased crafting instability for Kami armor.
-* [🖇](https://github.com/Krutoy242/Enigmatica2Expert-Extended/commit/9516fc524109143a50a33864e6656a6d7dbbbcd6)🙋‍♂️![](https://github.com/Krutoy242/mc-icons/raw/master/i/astralsorcery/blockmachine__1.png "Grindstone") fix not working
+* [🖇](https://github.com/Krutoy242/Enigmatica2Expert-Extended/commit/6e484963c78a009512d126cf222ecea38db68f73)🙋‍♂️![](https://github.com/Krutoy242/mc-icons/raw/master/i/astralsorcery/blockmachine__1.png "Grindstone") fix not working
   > revert "allow Fake Players to interact with the Astral Sorcery"
 
 #### Balance
 
+* [🖇](https://github.com/Krutoy242/Enigmatica2Expert-Extended/commit/180c898422764cb4541658140f3f82dfc2528be8)✏️![](https://github.com/Krutoy242/mc-icons/raw/master/i/advgenerators/turbine_controller__0.png "Gas Turbine controller") buff all fuels and turbines x2
+  > Now fuels is x2 more efficient and turbines produce x2 more RF
 * [🖇](https://github.com/Krutoy242/Enigmatica2Expert-Extended/commit/c2a929482e0acd055e4173ef5d3bf2b4525b96ad)☢️buff x20 times speed of new NC multiblocks
   > and also increase power usage x10 times
-* [🖇](https://github.com/Krutoy242/Enigmatica2Expert-Extended/commit/d50cfc5d2b52640c651d32d65af07395ad6a8e96)✏️![](https://github.com/Krutoy242/mc-icons/raw/master/i/extrautils2/drum__1.png "Iron Drum")![](https://github.com/Krutoy242/mc-icons/raw/master/i/extrautils2/drum__0.png "Stone Drum")![](https://github.com/Krutoy242/mc-icons/raw/master/i/extrautils2/drum__4.png "Creative Drum")![](https://github.com/Krutoy242/mc-icons/raw/master/i/extrautils2/drum__2.png "Reinforced Large Drum")![](https://github.com/Krutoy242/mc-icons/raw/master/i/extrautils2/drum__2__7ba3aaff.png "Reinforced Large Drum")![](https://github.com/Krutoy242/mc-icons/raw/master/i/extrautils2/drum__2__dd4ae83d.png "Reinforced Large Drum")![](https://github.com/Krutoy242/mc-icons/raw/master/i/extrautils2/drum__2__95aa1e49.png "Reinforced Large Drum")![](https://github.com/Krutoy242/mc-icons/raw/master/i/extrautils2/drum__2__a698c9cd.png "Reinforced Large Drum")![](https://github.com/Krutoy242/mc-icons/raw/master/i/extrautils2/drum__3.png "Demonically Gargantuan Drum")![](https://github.com/Krutoy242/mc-icons/raw/master/i/extrautils2/drum__3__4f74eb4a.png "Demonically Gargantuan Drum") cheaper
+* [🖇](https://github.com/Krutoy242/Enigmatica2Expert-Extended/commit/9bb96eeae2bcd563c209096967fa885bb8f6e5bc)✏️![](https://github.com/Krutoy242/mc-icons/raw/master/i/extrautils2/drum__0.png "Stone Drum")![](https://github.com/Krutoy242/mc-icons/raw/master/i/extrautils2/drum__1.png "Iron Drum")![](https://github.com/Krutoy242/mc-icons/raw/master/i/extrautils2/drum__2.png "Reinforced Large Drum")![](https://github.com/Krutoy242/mc-icons/raw/master/i/extrautils2/drum__3.png "Demonically Gargantuan Drum") cheaper
   > I found that almost nobody ever using this drums, so its time to shift their ingredients to the right, also removing need of High Pressure Steam.
 * <img src="https://i.imgur.com/30nTcQy.png" align=right> [🖇](https://github.com/Krutoy242/Enigmatica2Expert-Extended/commit/062dcfd4094b5a3d8a0a2ec24c2a726c685ba259)✏️![](https://github.com/Krutoy242/mc-icons/raw/master/i/extrautils2/rainbowgenerator__0.png "Rainbow Generator!") cheaper
   > Rainbow generator mostly used only to make Rainbow Stone, and then forgotten. This change should make it viable power source.
@@ -81,7 +71,7 @@
   > Require less energy but harder ingredient
 * [🖇](https://github.com/Krutoy242/Enigmatica2Expert-Extended/commit/6542f932ccd63b518033fd1ab6b0320758c16540)✏️`Curvy Pipes` increase throughtput
   > 
-* [🖇](https://github.com/Krutoy242/Enigmatica2Expert-Extended/commit/64c3d4706fa12d783a79ad3f2271a2c0e73dd57b)✏️Remove every [Crystalthorn]
+* [🖇](https://github.com/Krutoy242/Enigmatica2Expert-Extended/commit/f5806601ffb198369b151cd135a2ff132007ae07)✏️Remove every [Crystalthorn]
   > Crystal Thorns allowed players to get rare gems with no effort from first 10 minutes of the game, if spawned near dungeon without mobs.
   > 
   > Saw it on YT `GölhMögh` channel.
@@ -100,15 +90,11 @@
   > 
 * [🖇](https://github.com/Krutoy242/Enigmatica2Expert-Extended/commit/3322082bb454fc403fca9975e4f09a7779cd207f)📖Make "drying rack" quest not require Quark's rod
   > 
-* [🖇](https://github.com/Krutoy242/Enigmatica2Expert-Extended/commit/74d689747d3d4af0d6fefeef707ab9be8047015f)📖Remove misleading skyblock [Bucket of Seared Stone] quest
+* [🖇](https://github.com/Krutoy242/Enigmatica2Expert-Extended/commit/5a0cb21ce94e860474b49bae1ebb7629da037079)📖Remove misleading skyblock [Bucket of Seared Stone] quest
   > 
 * [🖇](https://github.com/Krutoy242/Enigmatica2Expert-Extended/commit/42c771e4978e17d4b2bcc8aa27e2331bb57c4032)📖Slightly improve `has obtained the` messages
   > 
 
-#### Recipes
-
-* [🖇](https://github.com/Krutoy242/Enigmatica2Expert-Extended/commit/d7a79dcdcd9844749e2e8f86fd30a8d524b2d075)✏️![](https://github.com/Krutoy242/mc-icons/raw/master/i/advgenerators/turbine_controller__0.png "Gas Turbine controller") buff all fuels and turbines x2
-  > Now fuels is x2 more efficient and turbines produce x2 more RF
 
 ## Mods changes
 
@@ -116,7 +102,7 @@
 
 Icon | Summary | Reason
 ----:|:--------|:-------
-<img src="https://media.forgecdn.net/avatars/thumbnails/149/168/30/30/636587353752864449.png"            > |                           [**Tinker's JEI**](https://www.curseforge.com/minecraft/mc-mods/tinkers-jei)                  <sup><sub>tinkersjei-1.2.jar                               </sub></sup><br>Adds a JEI Tab to look at material stats from TConstruct | 
+<img src="https://media.forgecdn.net/avatars/thumbnails/149/168/30/30/636587353752864449.png"            > |                           [**Tinker's JEI**](https://www.curseforge.com/minecraft/mc-mods/tinkers-jei)                  <sup><sub>tinkersjei-1.2.jar                               </sub></sup><br>Adds a JEI Tab to look at material stats from TConstruct | Tinker's Antique replaced its functionality
 -----------
 
 ### 🟡 Updated Mods
