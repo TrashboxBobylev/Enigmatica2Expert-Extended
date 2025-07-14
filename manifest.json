@@ -432,7 +432,7 @@
     {"projectID":1151126,"fileID":6759744,"___name":"Curvy Pipes"                             ,"downloadUrl":"https://edge.forgecdn.net/files/6759/744/curvy_pipes-1.12.2-1.11.2.jar","required":true},
     {"projectID":1153744,"fileID":6759511,"___name":"NoiseThreader"                           ,"downloadUrl":"https://edge.forgecdn.net/files/6759/511/NoiseThreader-1.1.0.jar","required":true},
     {"projectID":1157825,"fileID":6749027,"___name":"Extended Crafting Terminals for Applied Energistics 2","downloadUrl":"https://edge.forgecdn.net/files/6749/27/ae2exttable-v1.0.7.jar","required":true},
-    {"projectID":1159298,"fileID":6751972,"___name":"OME Tweaks"                              ,"downloadUrl":"https://edge.forgecdn.net/files/6751/972/ometweaks-1.5.3.jar","required":true},
+    {"projectID":1159298,"fileID":6646361,"___name":"OME Tweaks"                              ,"downloadUrl":"https://edge.forgecdn.net/files/6646/361/ometweaks-1.5.0.jar","required":true},
     {"projectID":1179351,"fileID":6424586,"___name":"Keybind Unconflict"                      ,"downloadUrl":"https://edge.forgecdn.net/files/6424/586/keybindunconflict-1.0.2.jar","required":true},
     {"projectID":1198138,"fileID":6740105,"___name":"RandomComplement"                        ,"downloadUrl":"https://edge.forgecdn.net/files/6740/105/random_complement-1.5.1.jar","required":true},
     {"projectID":1221029,"fileID":6644735,"___name":"Ender's Modpack Tweaks"                  ,"downloadUrl":"https://edge.forgecdn.net/files/6644/735/endermodpacktweaks-0.5.9.jar","required":true},
