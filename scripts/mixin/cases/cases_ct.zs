@@ -20,9 +20,9 @@ scripts.mixin.common.shared.Op.casesGotItemMsg
         {text: player.name, color: 'aqua'},
         '` has just opened a ',
         scripts.lib.tellraw.item(<ftbquests:lootcrate>.withTag({type: 'mythic'}).withDisplayName('Mythic'), 'light_purple'),
-        '🟪 and got *',
+        ' 🟪 and got *［',
         scripts.lib.tellraw.item(item.wrapper, 'gold'),
-        '*',
+        '］*',
       ],
       color: 'gray',
     }];
