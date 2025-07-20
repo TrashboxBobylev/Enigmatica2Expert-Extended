@@ -1,4 +1,5 @@
 #modloaded environmentaltech
+#reloadable
 
 import crafttweaker.item.IIngredient;
 
@@ -209,17 +210,6 @@ for i in 0 .. 6 {
 //
 // ######################################################################
 
-/* Patchouli_js('Energy/Environmental Tech',
-  evtTechSolarCalc.getRfT()
-  .map((r,k)=>({
-		icon:	"environmentaltech:solar_cont_1",
-    type:	"item_list",
-    title: "Solar Array Tier "+(k+1),
-    ...item$i(r, m=>`environmentaltech:solar_cell_${m[0]}#${m[2]}`),
-    ...text$i(r, m=>numeral(m[1]).format('0,0').padStart(11) + " RF/t")
-  }))
-) */
-
 // Blocks of main EvT materials
 static evt as IIngredient[][string] = {
   crystal: [
@@ -238,7 +228,7 @@ static evt as IIngredient[][string] = {
     <environmentaltech:solar_cell_ionite>,
     <environmentaltech:solar_cell_aethium>,
   ],
-} as IIngredient[][string];
+};
 
 // ######################################################################
 //

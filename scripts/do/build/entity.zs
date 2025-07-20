@@ -217,7 +217,7 @@ function add(entity as IEntityDefinition, volume as string[][], map as IItemStac
     s ~= '\n  ]\n]';
 
     val fileName = entity.id.replaceAll(':', '_');
-    utils.log('Add Build Mob recipe for file config/compactmachines3/recipes/' ~ fileName ~ '.json'
+    utils.log('Save this into file "config/compactmachines3/recipes/' ~ fileName ~ '.json"'
     ~ '\n{'
     ~ '\n  "name": "compactmachines3:' ~ fileName ~ '",'
     ~ '\n'

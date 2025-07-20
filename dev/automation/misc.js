@@ -261,6 +261,24 @@ export async function init(h = defaultHelper, options = argv) {
 
   /*
 
+    Save files from crafttweaker.log
+
+  */
+
+  const saveMap = {}
+  for (const match of loadText('crafttweaker.log').matchAll(/Save this into file "(?<file>[^"]+)"\r?\n(?<content>[\s\S]+?)(?=\r?\n(?:\[\w+\]){3} )/g)) {
+    // @ts-ignore
+    const {file, content} = match.groups
+    saveMap[file] = content
+  }
+  Object.keys(saveMap).forEach(f => saveText(saveMap[f], f))
+
+  // ###############################################################################
+  // ###############################################################################
+  // ###############################################################################
+
+  /*
+
     Add all screenshots in folder to config
 
   */
