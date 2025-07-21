@@ -235,12 +235,15 @@ function add(entity as IEntityDefinition, volume as string[][], map as IItemStac
   return m;
 }
 
-val existingFileNames = [] as string[];
+static existingFileNames as bool[string] = {} as bool[string];
 function getFreeFileName(fileName as string) as string {
   var i = 0;
   var newName = fileName;
   while true {
-    if (!(existingFileNames has newName)) return newName;
+    if (!(existingFileNames has newName)) {
+      existingFileNames[newName] = true;
+      return newName;
+    }
     newName = fileName ~ '_' ~ i;
     i += 1;
   }
