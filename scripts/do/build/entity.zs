@@ -216,7 +216,7 @@ function add(entity as IEntityDefinition, volume as string[][], map as IItemStac
     }
     s ~= '\n  ]\n]';
 
-    val fileName = entity.id.replaceAll(':', '_');
+    var fileName = getFreeFileName(entity.id.replaceAll(':', '_'));
     utils.log('Save this into file "config/compactmachines3/recipes/' ~ fileName ~ '.json"'
     ~ '\n{'
     ~ '\n  "name": "compactmachines3:' ~ fileName ~ '",'
@@ -233,6 +233,17 @@ function add(entity as IEntityDefinition, volume as string[][], map as IItemStac
   }
 
   return m;
+}
+
+val existingFileNames = [] as string[];
+function getFreeFileName(fileName as string) as string {
+  var i = 0;
+  var newName = fileName;
+  while true {
+    if (!(existingFileNames has newName)) return newName;
+    newName = fileName ~ '_' ~ i;
+    i += 1;
+  }
 }
 
 function build(world as IWorld, pos as IBlockPos, state as IBlockState) as void {
