@@ -182,8 +182,8 @@ for i in 0 .. 6 {
     : 'tile.environmentaltech.structure_frame_' ~ i ~ '.name';
   val localCharged = 'description.crt.charged.evt_frame_' ~ i;
   val localEncrusted = 'description.crt.encrusted.evt_frame_' ~ i;
-  game.setLocalization(localCharged, mods.zenutils.I18n.format(game.localize('description.crt.charged'), game.localize(localPure)));
-  game.setLocalization(localEncrusted, mods.zenutils.I18n.format(game.localize('description.crt.encrusted'), game.localize(localPure)));
+  game.setLocalization(localCharged, mods.zenutils.I18n.format('description.crt.charged', game.localize(localPure)));
+  game.setLocalization(localEncrusted, mods.zenutils.I18n.format('description.crt.encrusted', game.localize(localPure)));
 
   val pureFrame = i == 0
     ? <environmentaltech:interconnect>

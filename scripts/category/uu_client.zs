@@ -15,5 +15,5 @@ import mods.zenutils.StaticString.format;
   val increase = 64.0 * scripts.category.uu.diffIncrease(0.01 * cost);
   val increaseText = increase < 0.01 ? format('%,.6f', increase) : format('%,.2f', increase);
 
-  return mods.zenutils.I18n.format(game.localize('e2ee.acquire.increase'), increaseText);
+  return mods.zenutils.I18n.format('e2ee.acquire.increase', increaseText);
 });
