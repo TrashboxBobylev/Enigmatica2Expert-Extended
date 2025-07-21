@@ -1,7 +1,7 @@
 {
   "name": "Spawn Changes",
   "icon": "draconicevolution:mob_soul{EntityName:\"minecraft:enderman\"}",
-  "category": "Mobs",
+  "category": "World",
   "pages": [
     {
       "item": "draconicevolution:mob_soul{EntityName:\"minecraft:enderman\"}",

@@ -1,7 +1,7 @@
 {
   "name": "Railgui Bullets",
   "icon": "immersiveengineering:railgun",
-  "category": "Items",
+  "category": "World",
   "pages": [
     {
       "item": "immersiveengineering:railgun",

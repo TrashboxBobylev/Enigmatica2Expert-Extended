@@ -1,7 +1,7 @@
 {
   "name": "Chemical Thrower",
   "icon": "immersiveengineering:chemthrower",
-  "category": "Liquids",
+  "category": "World",
   "pages": [
     {
       "title": "New Chemicals",

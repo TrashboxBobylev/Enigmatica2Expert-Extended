@@ -1,7 +1,7 @@
 {
   "name": "Matter Cannon",
   "icon": "appliedenergistics2:matter_cannon",
-  "category": "Items",
+  "category": "World",
   "pages": [
     {
       "title": "Matter Cannon Ammo",

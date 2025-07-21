@@ -1,7 +1,7 @@
 {
   "name": "Equip Generation",
   "icon": "draconicevolution:mob_soul{EntityName:\"minecraft:zombie\"}",
-  "category": "Mobs",
+  "category": "World",
   "pages": [
     {
       "item": "draconicevolution:mob_soul{EntityName:\"minecraft:zombie\"}",
