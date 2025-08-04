@@ -321,7 +321,7 @@ mods.advancedrocketry.RecipeTweaker
   .forMachine('PrecisionLaserEtcher')
   .builder()
   .input(<extendedcrafting:material:49>)
-  .input(<ore:gemDilithium>)
+  .inputOre(<ore:gemDilithium>)
   .outputs(<avaritia:resource:1>)
   .power(100000)
   .timeRequired(5)
