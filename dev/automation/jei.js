@@ -17,7 +17,6 @@ import {
   defaultHelper,
   getCSV,
   injectInFile,
-  naturalSort,
 } from '../lib/utils.js'
 
 export async function init(h = defaultHelper) {
@@ -75,8 +74,6 @@ export async function init(h = defaultHelper) {
 
     pure.push(s)
   })
-
-  pure.sort(naturalSort)
 
   const injected = injectInFile(
     jeiConfigPath,
