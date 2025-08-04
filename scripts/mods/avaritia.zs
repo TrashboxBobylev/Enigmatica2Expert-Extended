@@ -133,7 +133,7 @@ craft.make(<avaritia:ultimate_stew> * 9, ['pretty',
 mods.extendedcrafting.TableCrafting.addShapeless(
   <avaritia:cosmic_meatballs> * 9, [
     /* Inject_js(
-  getCSV('config/tellme/items-csv.csv')
+  getCSV(globSync('config/tellme/items-csv*.csv')[0])
   .filter(o=>o['Ore Dict keys'].split(',').includes('listAllmeatraw'))
   .map(o=>itemize(o['Registry name'], o['Meta/dmg']))
 	.sort(naturalSort)
