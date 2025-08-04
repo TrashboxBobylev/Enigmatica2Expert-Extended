@@ -72,7 +72,7 @@ XML editor will display that as tooltips when editing this file.
       <entity name="minecraft:squid"               costMultiplier="0.5" disabled="false"/> <!-- Squid -->
       <entity name="minecraft:stray"               costMultiplier="3.0" disabled="false"/> <!-- Stray -->
       <entity name="minecraft:vex"                 costMultiplier="1.0" disabled="false"/> <!-- Vex -->
-      <entity name="minecraft:villager"            costMultiplier="1.0" disabled="true"/> <!-- Villager -->
+      <entity name="minecraft:villager"            costMultiplier="10.0" disabled="false"/> <!-- Villager -->
       <entity name="minecraft:villager_golem"      costMultiplier="10"  disabled="true"/> <!-- Iron Golem -->
       <entity name="minecraft:vindication_illager" costMultiplier="15"  disabled="false"/> <!-- Vindicator -->
       <entity name="minecraft:witch"               costMultiplier="5.0" disabled="false"/> <!-- Witch -->
@@ -124,8 +124,8 @@ XML editor will display that as tooltips when editing this file.
 
   <recipe name="Spawner, Ice and Fire" required="false">
     <spawning>
-      <entity name="iceandfire:firedragon" costMultiplier="30.0" disabled="true"/>
-      <entity name="iceandfire:icedragon" costMultiplier="30.0" disabled="true"/>
+      <entity name="iceandfire:firedragon" costMultiplier="30.0" disabled="false"/>
+      <entity name="iceandfire:icedragon" costMultiplier="30.0" disabled="false"/>
       <entity name="iceandfire:icevillager" costMultiplier="1.0" disabled="true"/>
       <entity name="iceandfire:hippogryph" costMultiplier="2.0" disabled="false"/>
       <entity name="iceandfire:gorgon" costMultiplier="20.0" disabled="false"/>
