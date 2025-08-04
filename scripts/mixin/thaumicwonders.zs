@@ -183,16 +183,13 @@ zenClass MixinItemTransmuterStone {
   #mixin Overwrite
   function getRefiningResult(input as ItemStack) as ItemStack {
     if (isNull(input) || input.isEmpty()) return null;
-    // print('~~ enter getRefiningResult');
 
     val ids = OreDictionary.getOreIDs(input);
     for oreID in ids {
-      // print('     oreID: '~oreID);
       val inputOre = OreDictionary.getOreName(oreID);
       if (isNull(inputOre)) continue;
 
       for orePrefix in scripts.mods.thaumicwonders.transmuterStone.orePrefixes {
-        // print('       orePrefix: '~orePrefix);
         if (!inputOre.startsWith(orePrefix)) continue;
 
         val inputBase = inputOre.substring(orePrefix.length);
@@ -201,16 +198,13 @@ zenClass MixinItemTransmuterStone {
           val k = i * 2;
           val norm = refiningResults[k];
           val invr = refiningResults[k + 1];
-          // print('         k:'~k~' norm: '~norm~' invr: '~invr);
           if (norm != inputBase && invr != inputBase) continue;
 
           val resultOreBase = invr == inputBase ? norm : invr;
           val list as NonNullList = OreDictionary.getOres(orePrefix + resultOreBase);
-          // print('         resultOreBase: '~resultOreBase~' list.size(): '~list.size());
           if (list.size() <= 0) continue;
 
           val item = list.get(0) as ItemStack;
-          // print('         item: '~toString(item));
           if (!isNull(item)) return item;
         }
       }
