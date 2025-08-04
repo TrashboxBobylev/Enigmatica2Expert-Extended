@@ -190,32 +190,13 @@ zenClass MixinItemTransmuterStone {
       // print('     oreID: '~oreID);
       val inputOre = OreDictionary.getOreName(oreID);
       if (isNull(inputOre)) continue;
-      // print('     inputOre: '~inputOre);
 
-      for orePrefix in ['ore', 'nugget', 'block', 'ingot', 'gem', 'dust', ''] as string[] {
+      for orePrefix in scripts.mods.thaumicwonders.transmuterStone.orePrefixes {
         // print('       orePrefix: '~orePrefix);
         if (!inputOre.startsWith(orePrefix)) continue;
 
         val inputBase = inputOre.substring(orePrefix.length);
-        val refiningResults = [
-          'Aluminum',        /*🢥*/ 'Titanium',
-          'AstralStarmetal', /*🢥*/ 'Draconium',
-          'CertusQuartz',    /*🢥*/ 'ChargedCertusQuartz',
-          'Cobalt',          /*🢥*/ 'Ardite',
-          'Diamond',         /*🢥*/ 'Sapphire',
-          'Dilithium',       /*🢥*/ 'DimensionalShard',
-          'Emerald',         /*🢥*/ 'Peridot',
-          'gemCoal',         /*🢥*/ 'bitumen',
-          'Iron',            /*🢥*/ 'Gold',
-          'Lead',            /*🢥*/ 'Silver',
-          'oreCoal',         /*🢥*/ 'oreClathrateOilShale',
-          'Platinum',        /*🢥*/ 'Iridium',
-          'Redstone',        /*🢥*/ 'Ruby',
-          'Tin',             /*🢥*/ 'Copper',
-          'Uranium',         /*🢥*/ 'Thorium',
-          'Xorcite',         /*🢥*/ 'Aquamarine',
-        ] as string[];
-        // print('       inputBase: "'~inputBase~'"');
+        val refiningResults = scripts.mods.thaumicwonders.transmuterStone.refiningResults;
         for i in 0 .. refiningResults.length / 2 {
           val k = i * 2;
           val norm = refiningResults[k];
