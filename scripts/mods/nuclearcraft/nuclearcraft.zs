@@ -1077,13 +1077,6 @@ for i, item in batteries {
     });
 }
 
-// --------------------------------------------------------------
-// Remove Hazmat since radiation is disabled
-Purge(<nuclearcraft:helm_hazmat>);
-Purge(<nuclearcraft:chest_hazmat>);
-Purge(<nuclearcraft:legs_hazmat>);
-Purge(<nuclearcraft:boots_hazmat>);
-
 // Additional alloying recipes
 for inputs, output in {
   [<ore:ingotBoron>, <ore:ingotSteel>]: <nuclearcraft:alloy:6> * 2,
