@@ -16,7 +16,7 @@
 
    -->
 
-  <recipe name="Nutrient Distilation" required="true">
+  <!-- <recipe name="Nutrient Distilation" required="true">
     <fermenting energy="10000">
       <inputgroup>
         <input name="itemSkull" multiplier="2.0"/>
@@ -37,7 +37,7 @@
       <inputfluid name="water" multiplier="0.25"/>
       <outputfluid name="nutrient_distillation"/>
     </fermenting>
-  </recipe>
+  </recipe> -->
 
   <recipe name="Ender Distilation" required="true">
     <fermenting energy="15000">
@@ -65,7 +65,7 @@
     </fermenting>
   </recipe>
 
-  <recipe name="Hootch" required="true">
+  <!-- <recipe name="Hootch" required="true">
     <fermenting energy="10000">
       <inputgroup>
         <input name="minecraft:poisonous_potato" multiplier="8.0"/>
@@ -85,7 +85,7 @@
       <inputfluid name="water" multiplier="0.25"/>
       <outputfluid name="hootch"/>
     </fermenting>
-  </recipe>
+  </recipe> -->
 
   <recipe name="Rocket Fuel" required="true">
     <fermenting energy="10000">
