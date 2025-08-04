@@ -4,6 +4,9 @@ import crafttweaker.item.IIngredient;
 import crafttweaker.item.IItemStack;
 import mods.nuclearcraft.ChanceItemIngredient;
 
+// Air available in skyblock
+mods.qmd.atmosphere_collector.addRecipe('', '3', <fluid:compressed_air> * 1000);
+
 // Recipes moved from Assembler (removed machine)
 mods.immersiveengineering.Blueprint.addRecipe('components', <qmd:potassium_iodine_tablet> * 4, [
   <ore:dustPotassium>, <ore:dustIodine>, <ore:listAllsugar> * 4, <ore:bioplastic>]);

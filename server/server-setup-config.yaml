@@ -121,6 +121,7 @@ install:
       - 1121489 # AE2 Crafting Tree - Legacy
       - 1132293 # Backpack Display
       - 1147522 # Backpack Opener
+      - 1154099 # Crash Assistant
       - 1234162 # Lumenized
 
     # The base path where the server should be installed to, ~ for current path
