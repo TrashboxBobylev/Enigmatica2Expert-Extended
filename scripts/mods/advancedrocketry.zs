@@ -171,7 +171,6 @@ mods.qmd.target_chamber.addRecipe(
 
 // Crystals creation - just photoning Dilithium with different power
 for i in 0 .. 6 {
-  val energy = 5000000 * (i + 1);
   mods.qmd.target_chamber.addRecipe(
     <ore:gemDilithium>,
     null,
