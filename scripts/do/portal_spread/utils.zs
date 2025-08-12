@@ -12,8 +12,8 @@
 
 import crafttweaker.block.IBlockState;
 import crafttweaker.item.IItemStack;
-import crafttweaker.world.IWorld;
 import crafttweaker.world.IBlockPos;
+import crafttweaker.world.IWorld;
 
 static maxRadius as int = scripts.do.portal_spread.config.Config.maxRadius;
 
@@ -102,7 +102,7 @@ function getNextPoint(index as int) as int[] {
   while ((next_mirror_index & unwatend_reflections_mask) != 0)
     next_mirror_index += 1;
 
-  if ((mirror_index) % 2 == 1) x = -x;
+  if (mirror_index % 2 == 1) x = -x;
   if ((mirror_index / 2) % 2 == 1) y = -y;
   if ((mirror_index / 4) % 2 == 1) z = -z;
   if ((mirror_index / 8) % 2 == 1) { val _x as int = x; x = y; y = _x; }
@@ -135,7 +135,9 @@ function stateToItem(state as IBlockState, pos as IBlockPos = null, world as IWo
     isNull(state)
     || isNull(state.block)
     || isNull(state.block.definition)
-  ) return null;
+  ) {
+    return null;
+  }
 
   val defId = state.block.definition.id;
   var isWeird = false;
@@ -146,11 +148,11 @@ function stateToItem(state as IBlockState, pos as IBlockPos = null, world as IWo
     }
   }
   var item = isWeird && (isNull(world) || isNull(pos))
-      ? <item:${defId}:${state.block.meta}>
-      : state.block.getItem(world, pos, state);
+    ? <item:${defId}:${state.block.meta}>
+    : state.block.getItem(world, pos, state);
   if (isNull(item)) item = blockRepresentation[defId];
   if (isNull(item))
-    logger.logWarning('Cannot find item representation for block: ' ~ defId);
+    logger.logWarning(`Cannot find item representation for block: ${defId}`);
   return item;
 }
 
