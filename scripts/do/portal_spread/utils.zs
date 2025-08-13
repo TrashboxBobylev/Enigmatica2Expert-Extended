@@ -110,6 +110,14 @@ function getNextPoint(index as int) as int[] {
   return [index + next_mirror_index - mirror_index, x, y, z];
 }
 
+function radiusToIndex(radius as int) as int {
+  return MAX_DISTANCE_INDEXES * radius * radius;
+}
+
+function indexToRadius(index as int) as int {
+  return min(maxRadius, pow(index / MAX_DISTANCE_INDEXES, 0.5));
+}
+
 function abs(n as double) as double { return n < 0 ? -n : n; }
 
 // Replaces for blocks that cant be converted into items
