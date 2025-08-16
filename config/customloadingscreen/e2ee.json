@@ -178,11 +178,7 @@
     "max_scroll_count": "screen_height / (5 * 6)",
     "sub_status_ex": "(sub_status == 'zerocore:debugtool') ? 'GreedyCraft Tip: It is gonna be stuck here for a while...' : sub_status",
     "scroll_text": "status + (is_reloading ? '' : (' - ' + sub_status_ex))",
-    "tip_text": "(has_tips() & tip_interval > 0) ? tip(random_int(tip_seed, floor(time / tip_interval), tip_count())) : ''"
-  },
-  "constants": {
-      "tip_interval": 10.0,
-      "tip_seed": "generate_seed()"
+    "tip_text": "(has_tips() & 10 > 0) ? tip(random_int(generate_seed(), floor(time / 10), tip_count())) : ''"
   },
   "functions": {
     "log2(int n)": "log(n) / log(2)"
