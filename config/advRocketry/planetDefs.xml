@@ -254,7 +254,7 @@
 			<fillerBlock>advancedrocketry:vitrifiedsand</fillerBlock>
 			<atmosphereDensity>0</atmosphereDensity>
 			<gravitationalMultiplier>1</gravitationalMultiplier>
-			<orbitalDistance>90</orbitalDistance>
+			<orbitalDistance>8</orbitalDistance>
 			<rotationalPeriod>18000000</rotationalPeriod>
 			<genType>2</genType>
 		</planet>
