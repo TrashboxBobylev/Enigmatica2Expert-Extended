@@ -49,7 +49,7 @@ craft.shapeless(<trinity:trinitite>, "VO", {
 });
 
 // Replace Trinitite drop with Luck one
-scripts.lib.dropt.addDrop(<trinity:trinitite>, <trinity:trinitite_shard>);
+scripts.lib.dropt.addDrop(<trinity:trinitite>, [<trinity:trinitite_shard>]);
 
 // Fix Trinity blocks have tool type "Pickaxe" instead of "pickaxe"
 val pickaxeHarvestLevelItems = [
