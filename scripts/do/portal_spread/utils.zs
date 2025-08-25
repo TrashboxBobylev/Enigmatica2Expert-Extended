@@ -57,9 +57,12 @@ function init() as void {
   }
 }
 
-/*
-  Returns [i, x, y, z] where i is next index
-*/
+/**
+ * Returns [i, x, y, z] where i is next index
+ *
+ * @author dobrokot
+ * @link https://github.com/dobrokot
+ */
 function getNextPoint(index as int) as int[] {
   if (!initialized) init();
 
