@@ -118,20 +118,18 @@ function workEx(machineNameAnyCase as string, exceptionsAnyCase as string,
   // ------------
   // Combined
   // ------------
-  var combinedOutput as IItemStack[] = null;
-  var combinedChances as float[] = null;
+  var combinedOutput = [] as [IItemStack];
+  var combinedChances = [] as float[];
   if (haveItemOutput) {
     for i in 0 .. outputItems.length {
-      if (isNull(combinedOutput)) { combinedOutput = []; combinedChances = []; }
-      combinedOutput += outputItems[i];
-      combinedChances += 1.0f;
+      combinedOutput.add(outputItems[i]);
+      combinedChances = combinedChances.add(1.0f);
     }
   }
   if (haveExtra) {
     for i in 0 .. extra.length {
-      if (isNull(combinedOutput)) { combinedOutput = []; combinedChances = []; }
-      combinedOutput += extra[i];
-      combinedChances += ((!isNull(extraChance) && extraChance.length > i) ? extraChance[i] : 1.0f);
+      combinedOutput.add(extra[i]);
+      combinedChances = combinedChances.add((!isNull(extraChance) && extraChance.length > i) ? extraChance[i] : 1.0f);
     }
   }
   val havecombinedOutput = !isNull(combinedOutput) && combinedOutput.length > 0;
@@ -390,7 +388,7 @@ function workEx(machineNameAnyCase as string, exceptionsAnyCase as string,
         return info(machineNameAnyCase, getItemName(inputIngr0.itemArray[0]), 'received work, but this machine MUST have item output');
 
       // Calculate chanced output from combined
-      var chancedCombined = [] as WeightedItemStack[];
+      var chancedCombined = [] as [WeightedItemStack];
       for i, out in combinedOutput {
         chancedCombined += out % ((combinedChances[i] * 100) as int);
       }
@@ -407,7 +405,7 @@ function workEx(machineNameAnyCase as string, exceptionsAnyCase as string,
         return info(machineNameAnyCase, getItemName(inputIngr0.itemArray[0]), 'received work, but this machine MUST have item output');
 
       // Calculate chanced output from combined
-      var chancedCombined = [] as WeightedItemStack[];
+      var chancedCombined = [] as [WeightedItemStack];
       for i, out in combinedOutput {
         chancedCombined += out % ((combinedChances[i] * 100) as int);
       }
@@ -483,9 +481,9 @@ function workEx(machineNameAnyCase as string, exceptionsAnyCase as string,
       if (strict) { mods.immersiveengineering.ArcFurnace.removeRecipe(outputItem0); }
       if (inputItems.length > 1) {
         // Reduce all ingredients to additives
-        var additives = [] as IIngredient[];
+        var additives = [] as [IIngredient];
         for i in 1 .. inputItems.length {
-          additives = additives + inputItems[i];
+          additives += inputItems[i];
         }
         mods.immersiveengineering.ArcFurnace.addRecipe(outputItem0, inputIngr0, defaultItem0(extra, I('immersiveengineering:material', 7)), 200, 512, additives, 'Alloying');
       }
@@ -878,9 +876,9 @@ function workEx(machineNameAnyCase as string, exceptionsAnyCase as string,
     if (haveLiquidOutput) {
       if (machineName == 'forestrysqueezer') {
         // mods.forestry.Squeezer.addRecipe(ILiquidStack fluidOutput, IItemStack[] ingredients, int timePerItem, @Optional WeightedItemStack itemOutput);
-        var inputItemStacks = [] as IItemStack[];
+        var inputItemStacks = [] as [IItemStack];
         for inIngr in inputItems {
-          inputItemStacks = inputItemStacks + inIngr.itemArray[0];
+          inputItemStacks += inIngr.itemArray[0];
         }
         val wOut as WeightedItemStack = !isNull(outputItem0) ? outputItem0 % defaultChance0_int(extraChance, 20) : null;
         mods.forestry.Squeezer.addRecipe(outputLiquid0, inputItemStacks, 20, wOut);
