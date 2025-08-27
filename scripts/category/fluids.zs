@@ -125,3 +125,40 @@ for pos, names in smelteryFuels {
     }
   }
 }
+
+// Restore default AS interactions
+// This will allow compat with XU2 nodes
+// Taken from modpack IsolatedCrystal3
+// https://github.com/friendlyhj/IsolatedCrystal3/blob/e02e0901bb6df8f43a7b05ad22f2d761d69c7145/.minecraft/scripts/recipes/tier2/fluidinteractions.zs
+FITweaker.addRecipe(
+  <liquid:lava>,
+  <liquid:astralsorcery.liquidstarlight>,
+  FITweaker.outputBuilder()
+    .addEvent(
+      FITweaker.eventBuilder()
+        .createSetBlockEvent(<blockstate:minecraft:sand>)
+    )
+    .addEvent(
+      FITweaker.eventBuilder()
+        .createSetBlockEvent(<blockstate:astralsorcery:blockcustomsandore>)
+        .addCondition(Condition.byChance, [1.0f / 900.0f])
+    )
+);
+
+FITweaker.addRecipe(
+  <liquid:water>,
+  <liquid:astralsorcery.liquidstarlight>,
+  <blockstate:minecraft:ice>
+);
+
+FITweaker.addRecipe(
+  <liquid:petrotheum>,
+  <liquid:astralsorcery.liquidstarlight>,
+  <blockstate:minecraft:gravel>
+);
+
+FITweaker.addRecipe(
+  <liquid:pyrotheum>,
+  <liquid:astralsorcery.liquidstarlight>,
+  <blockstate:minecraft:glass>
+);
