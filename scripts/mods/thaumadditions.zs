@@ -1642,10 +1642,8 @@ function calcColor(lore as IData) as int {
   return r / l * 65536 + g / l * 256 + b / l;
 }
 
-function haveLoremError(lorem as IData) as bool{
-  if(lorem.length==0) return false;
-  
-  for i in 0 .. lorem.length{
+function haveLoremError(lorem as IData) as bool{  
+  for i in 0 .. lorem.length {
     if(!(loreUnColor has lorem[i])) return true;
   }
 
