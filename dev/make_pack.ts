@@ -24,12 +24,14 @@ import { confirm, getIgnoredFiles, removeFiles } from './build/build_utils.js'
 import { manageSFTP } from './build/sftp.js'
 import { generateChangelog } from './tools/changelog/changelog'
 
-const { existsSync, readFile } = fs
+const { existsSync, readFileSync } = fs
 const $$ = $({ stdio: 'inherit' })
 
 const tmpDir = 'D:/mc_tmp/'
 if (await confirm('🪓 Perform automation?'))
   await $$`bun dev`
+
+const devonlyIgnore = ignore().add(readFileSync('dev/.devonly.ignore', 'utf8'))
 
 /*
  ██████╗██╗  ██╗ █████╗ ███╗   ██╗ ██████╗ ███████╗██╗      ██████╗  ██████╗
@@ -80,6 +82,7 @@ if (await confirm(`Generate Changelog?`)) {
       from : /^( {2}modpackUrl\s*:\s*)(.+)$/m,
       to   : `$1https://github.com/Krutoy242/Enigmatica2Expert-Extended/releases/download/${nextVersion}/${zipBaseName}.zip`,
     }),
+    cleanupModlist(),
     generateChangelog(changelogPath),
   ])
 
@@ -87,7 +90,7 @@ if (await confirm(`Generate Changelog?`)) {
 
   await Promise.all([
     $$`bun E:/dev/mc-icons/src/cli.ts ${changelogPath} --silent --no-short --modpack=e2ee --treshold=2`
-      .then(async () => $$`git add config/CustomMainMenu/mainmenu.json dev/version.txt manifest.json config/endermodpacktweaks/modpack.cfg ${serverSetupConfig} ${changelogPath}`),
+      .then(async () => $$`git add -f config/CustomMainMenu/mainmenu.json dev/version.txt manifest.json config/endermodpacktweaks/modpack.cfg config/crash_assistant/modlist.json ${serverSetupConfig} ${changelogPath}`),
     $$`code --wait ${changelogPath}`
       .then(async () => $$`git add ${changelogPath}`),
   ])
@@ -148,14 +151,11 @@ if (makeZips) {
   await $$({ cwd: tmpOverrides })`git clone --recurse-submodules -j8 --depth 1 ${`file://${resolve(process.cwd())}`} .`
 
   consola.start('⬅️ Cleanse and move manifest.json...')
+  const devonlyList = getIgnoredFiles(devonlyIgnore, { cwd: tmpOverrides })
+    .map(f => resolve(tmpOverrides, f))
   const tmpManifestPath = resolve(tmpOverrides, 'manifest.json')
   const [removedFiles] = await Promise.all([
-    readFile('dev/.devonly.ignore', 'utf8').then((data) => {
-      const devonlyIgnore = ignore().add(data.toString())
-      const removeList = getIgnoredFiles(devonlyIgnore, { cwd: tmpOverrides })
-        .map(f => resolve(tmpOverrides, f))
-      return removeFiles(removeList)
-    }),
+    removeFiles(devonlyList),
     replaceInFile({
       files: tmpManifestPath,
       from : /"___name"\s*:\s*"((?:[^"\\]|\\.)*)"\s*,?/g,
@@ -186,4 +186,17 @@ if (inputTitle !== undefined) {
   const title = `${nextVersion} ${inputTitle.replace(/"/g, '\'')}`.trim()
   await $$`gh release create ${nextVersion} --title=${title} --repo=Krutoy242/Enigmatica2Expert-Extended --notes-file=CHANGELOG-latest.md ${zipPath} ${zipPath_server}`
     .then(() => consola.success('🌍 Releasing on Github ... '))
+}
+
+async function cleanupModlist() {
+  const modlistPath = 'config/crash_assistant/modlist.json'
+  const modlist: { [key: string]: unknown}  = JSON.parse(readFileSync(modlistPath, 'utf8'))
+
+  // Filter out ignored fields
+  const filteredModlist = Object.fromEntries(
+    Object.entries(modlist).filter(([key]) => !devonlyIgnore.ignores(`mods/${key}`))
+  )
+
+  // Save the modified modlist.json back
+  await fs.writeFile(modlistPath, JSON.stringify(filteredModlist, null, 2))
 }

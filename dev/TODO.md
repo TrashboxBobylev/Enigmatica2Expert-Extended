@@ -2,13 +2,8 @@
 
 🚧✅❌⚠️♻️ List of priorities:
 
-- [ ] Mythic give 2 mythics
-- [ ] 🐛 Remove debug mods from release version https://gnomebot.dev/paste/mclogs/aZFKXcf
-- [ ] 🦨 Nerf `Modifiable II` materials more
-- [ ] ✨ `Reinforcement` buff first levels of modifiers
 - [ ] ⚡ Fix `OpenComputers` JEI plugin is still loaded
 - [ ] 📀 Dont let IC2 miner dig any mining level
-- [ ] 🔨 Remove `Heavy Metal`
 - [ ] 🔨 `Double Compressed Hammer` cant break double compressed charcoal
 - [ ] 🔨 Add HV wire invincibility TCon trait
 - [ ] 🐦 enable Enchanting speed up for rats
@@ -16,16 +11,16 @@
 - [ ] 📖 Add emojis 🍎 to chapter finishing messages
 - [ ] 📖 Add quest explaining that Battery and Solar can be replaced in TCon tools
 - [ ] 💎 Diamond shouldn't be meltable in smeltery
-- [ ] 🐛 Omnipotence silk touch cant break tile entities
 - [ ] ♻️ Use `.sort()` from ZenUtils instead of ctintegration
 - [ ] ♻️ Completely get rid of `Patchouli_js()` code in .zs files
 - [ ] 🐛 Golden Torches shown as vanilla torches on default placement (caused by Lumenized chages)
 - [ ] ♻️ remove `crossscript` since data accessible between loaders
 - [ ] 👑 Upgrading Draconic tools give Omnopotence
+- [ ] 👑 `Omnopotence` add excavate for any item
 - [ ] 🐛 `64k me storage cell` cant be autocrafted in ME
 - [ ] 🐛 Custom beacons not working on server
 - [ ] 🎁 Disable upcraft for loot chests
-- [ ] 🐛 RMB to `rubber sapling` with `rubber seed` in main hand cause crash (zenmixin for `exnihilocreatio.items.seeds.ItemRubberSeed` for onItemUse (func_180614_a) with Inject on INVOKE and Ljava/util/List;get(I)Ljava/lang/Object; to check the size of the list and return EnumActionResult.PASS if the list is empty. or just overwrite the method)
+- [ ] 🟢 Migrate from `UniDict` to `OnlyOneItem`
 
 ### "Endgame" expansion
 
@@ -42,8 +37,8 @@
 - [ ] 💜 Make `[constant] difficulty` dimension for replicator discount. Probably RFTools ones
 
 <!-- 
-Command to generate single file from all files in directory:
-› find scripts/do -name '*.zs' -print0 | xargs -0 -I {} sh -c 'echo "--- {} ---"; cat "{}"' > merged_output.md
+Command to concat all files in directory:
+› find scripts/do -name '*.zs' -print0 | xargs -0 -I {} sh -c 'echo "--- {} ---"; cat "{}"'
 
 Command to show all commits that changing same files:
 › git log --oneline abc123..HEAD -- $(git diff-tree --no-commit-id --name-only -r abc123)
@@ -105,6 +100,7 @@ Planned non-urgent changes, or just good ideas:
 - [ ] ✏️ `Compressed` mobs should be bigger
 
 ### "Flora & Fauna" expansion
+- [ ] 📖 `Cocoon of Caprice` add JEI entry
 - [ ] ✨ Idea: Flower that regenerate ore in `bedrockore`
 - [ ] 💡 Feature idea: animal totem that work when you place mobs on each other in right sequence (cow-sheep-chicken for example)
 - [ ] 🌱 Add NC and QMD radioactive items mutating IC2 crops to increase / descrease their stats
@@ -162,6 +158,7 @@ Planned non-urgent changes, or just good ideas:
 
 ### Mods
 - [ ] 🔴 Remove **XTones** and **Environmental Materials** since they are depricated by LittleTiles and Cathedral
+- [ ] 🟠 Do not update **Had Enough Items** since its incompatible with `JeiUtilities`
 - [ ] 🟠 Do not update **Advanced Rocketry - Reworked** until fixed https://github.com/dercodeKoenig/AdvancedRocketry/issues/50
 - [ ] 🟠 Do not update **JAOPCA** - uncompatible with `JAOPCACustom`
 - [ ] 🟠 Do not update **籁/Sound Physics Remixin** `1.1.17` or above - uncompatible with `Java 8`
@@ -296,7 +293,6 @@ Planned non-urgent changes, or just good ideas:
 - [ ] ✏️ Cant make Bauble => advanced rings. Recipe functions prevent this from happen
 - [ ] 📖 `AnyMeatraw` should cycle in JEI. This usually possible with ore.firstItem, but not working for some reason.
 - [ ] 🔨 Add trait that auto-consume Sharpening Kits to repair TCon Tools
-- [ ] 🔨 Rework Grinding trait
 - [ ] ✏️ Add AS Grindstone recipe that rely on doubling chance mechanic
 - [ ] 📖 Add AS ritual to quest book
 - [ ] 💻 Add info about OC changes like https://www.reddit.com/r/feedthebeast/comments/98phxv/filtering_by_nbt_tag/
