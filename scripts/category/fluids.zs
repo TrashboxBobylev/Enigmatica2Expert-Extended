@@ -3,8 +3,8 @@
 
 import crafttweaker.item.IItemStack;
 import crafttweaker.liquid.ILiquidStack;
-import mods.fluidintetweaker.FBTweaker;
 import mods.fluidintetweaker.FITweaker;
+import mods.fluidintetweaker.interaction.Condition;
 
 // Chalice interactions
 val chaliceGrid = {
@@ -18,7 +18,7 @@ val chaliceGrid = {
   [<liquid:lifeessence>, <liquid:cloud_seed_concentrated>]                  : [<thermalfoundation:rockwool:7>, <minecraft:wool>, <minecraft:wool:2>],
   [<liquid:plasma>, <liquid:water>]                                         : [<mekanism:saltblock>, <additionalcompression:dustsugar_compressed:1>, <additionalcompression:dustgunpowder_compressed>],
   [<liquid:plasma>, <liquid:lava>]                                          : [<minecraft:magma>, <additionalcompression:flint_compressed:1>, <additionalcompression:coal_compressed:2>],
-//[<liquid:plasma>, <liquid:astralsorcery.liquidstarlight>]                 : [<quark:sugar_block>, <biomesoplenty:white_sand>, <astralsorcery:blockmarble>], // For some reason, Starlight+Water=Sand triggered faster than custom interaction
+  //[<liquid:plasma>, <liquid:astralsorcery.liquidstarlight>]                 : [<quark:sugar_block>, <biomesoplenty:white_sand>, <astralsorcery:blockmarble>], // For some reason, Starlight+Water=Sand triggered faster than custom interaction
   [<liquid:plasma>, <liquid:cloud_seed_concentrated>]                       : [<enderio:block_fused_quartz>, <mysticalagriculture:storage:5>, <biomesoplenty:crystal>],
   [<liquid:plasma>, <liquid:lifeessence>]                                   : [<excompressum:compressed_block:6>, <minecraft:bone_block>, <iceandfire:dragon_bone_block>],
   [<liquid:ic2uu_matter>, <liquid:water>]                                   : [<quark:crystal:0>, <quark:crystal:6>, <actuallyadditions:block_crystal:2>],
@@ -125,6 +125,15 @@ for pos, names in smelteryFuels {
     }
   }
 }
+
+// Custom special interactions
+FITweaker.addRecipe(utils.getStateFromItem(<advancedrocketry:vitrifiedsand>),
+  <liquid:pyrotheum>, false,
+  utils.getStateFromItem(<extrautils2:decorativesolid:4>));
+
+FITweaker.addRecipe(utils.getStateFromItem(<extrautils2:decorativesolid:4>),
+  <liquid:enrichedlava>, false,
+  utils.getStateFromItem(<minecraft:glass>));
 
 // Restore default AS interactions
 // This will allow compat with XU2 nodes

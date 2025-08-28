@@ -8,6 +8,7 @@ scripts.lib.dropt.addDrop(<advancedrocketry:vitrifiedsand>, [
   <qmd:isotope:5>,
   <qmd:isotope:1>,
   <qmd:isotope>,
+  <qmd:isotope:8>,
 ]);
 <advancedrocketry:geode>.asBlock().definition.resistance = 160;
 <advancedrocketry:vitrifiedsand>.asBlock().definition.resistance = 160;
