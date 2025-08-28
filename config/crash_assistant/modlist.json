@@ -500,10 +500,10 @@
     "modId": "craftpresence",
     "version": "2.6.2"
   },
-  "CraftTweaker2-1.12-4.1.20.707.jar": {
-    "jarName": "CraftTweaker2-1.12-4.1.20.707.jar",
+  "CraftTweaker2-1.12-4.1.20.709.jar": {
+    "jarName": "CraftTweaker2-1.12-4.1.20.709.jar",
     "modId": "crafttweaker",
-    "version": "1.12-4.1.20.707"
+    "version": "1.12-4.1.20.709"
   },
   "crafttweakerutils-0.7.jar": {
     "jarName": "crafttweakerutils-0.7.jar",
@@ -530,10 +530,10 @@
     "modId": "cucumber",
     "version": "1.1.3"
   },
-  "curvy_pipes-1.12.2-1.12.4.jar": {
-    "jarName": "curvy_pipes-1.12.2-1.12.4.jar",
+  "curvy_pipes-1.12.2-1.12.6.jar": {
+    "jarName": "curvy_pipes-1.12.2-1.12.6.jar",
     "modId": "curvy_pipes",
-    "version": "1.12.4"
+    "version": "1.12.6"
   },
   "CustomBackgrounds-MC1.12-1.1.1.jar": {
     "jarName": "CustomBackgrounds-MC1.12-1.1.1.jar",
@@ -843,10 +843,10 @@
     "modId": "gunpowderlib",
     "version": "1.12.2-1.1"
   },
-  "HadEnoughItems_1.12.2-4.28.1.jar": {
-    "jarName": "HadEnoughItems_1.12.2-4.28.1.jar",
+  "HadEnoughItems_1.12.2-4.29.6.jar": {
+    "jarName": "HadEnoughItems_1.12.2-4.29.6.jar",
     "modId": "jei",
-    "version": "4.28.1"
+    "version": "4.29.6"
   },
   "HammerLib-1.12.2-12.2.58.jar": {
     "jarName": "HammerLib-1.12.2-12.2.58.jar",
@@ -1001,10 +1001,10 @@
   "JAOPCACustom-1.12-2.2.2.14.jar": {
     "jarName": "JAOPCACustom-1.12-2.2.2.14.jar"
   },
-  "JEI-Utilities-1.12.2-0.2.12.jar": {
-    "jarName": "JEI-Utilities-1.12.2-0.2.12.jar",
+  "JEI-Utilities-1.12.2-0.2.13.jar": {
+    "jarName": "JEI-Utilities-1.12.2-0.2.13.jar",
     "modId": "jeiutilities",
-    "version": "0.2.11"
+    "version": "0.2.13"
   },
   "jei_area_fixer-2.2.0.jar": {
     "jarName": "jei_area_fixer-2.2.0.jar",
@@ -1226,6 +1226,11 @@
     "modId": "minieffects",
     "version": "2.3.2"
   },
+  "MmmMmmMmmMmm-1.12-2.0.5.jar": {
+    "jarName": "MmmMmmMmmMmm-1.12-2.0.5.jar",
+    "modId": "testdummy",
+    "version": "2.0.0"
+  },
   "modnametooltip_1.12.2-1.10.1.jar": {
     "jarName": "modnametooltip_1.12.2-1.10.1.jar",
     "modId": "modnametooltip",
@@ -1401,20 +1406,20 @@
     "modId": "packagedastral",
     "version": "1.0.4.22"
   },
-  "PackagedAuto-1.12.2-1.0.21.68.jar": {
-    "jarName": "PackagedAuto-1.12.2-1.0.21.68.jar",
+  "PackagedAuto-1.12.2-1.0.23.71.jar": {
+    "jarName": "PackagedAuto-1.12.2-1.0.23.71.jar",
     "modId": "packagedauto",
-    "version": "1.0.21.68"
+    "version": "1.0.23.71"
   },
   "PackagedDraconic-1.12.2-1.0.4.24.jar": {
     "jarName": "PackagedDraconic-1.12.2-1.0.4.24.jar",
     "modId": "packageddraconic",
     "version": "1.0.4.24"
   },
-  "PackagedExCrafting-1.12.2-1.0.3.32.jar": {
-    "jarName": "PackagedExCrafting-1.12.2-1.0.3.32.jar",
+  "PackagedExCrafting-1.12.2-1.0.3.33.jar": {
+    "jarName": "PackagedExCrafting-1.12.2-1.0.3.33.jar",
     "modId": "packagedexcrafting",
-    "version": "1.0.3.32"
+    "version": "1.0.3.33"
   },
   "Pam\u0027s HarvestCraft 1.12.2zg.jar": {
     "jarName": "Pam\u0027s HarvestCraft 1.12.2zg.jar",
@@ -1431,10 +1436,10 @@
     "modId": "patchouli",
     "version": "1.0-28"
   },
-  "patchoulibooks-0.2.6.jar": {
-    "jarName": "patchoulibooks-0.2.6.jar",
+  "patchoulibooks-0.2.7.jar": {
+    "jarName": "patchoulibooks-0.2.7.jar",
     "modId": "patchoulibooks",
-    "version": "0.2.5"
+    "version": "0.2.7-indev"
   },
   "persistency-1.2.0.jar": {
     "jarName": "persistency-1.2.0.jar"
@@ -1780,11 +1785,6 @@
     "modId": "teslacorelib",
     "version": "1.12.2-1.0.18"
   },
-  "TestDummy2-2.0.4.jar": {
-    "jarName": "TestDummy2-2.0.4.jar",
-    "modId": "testdummy",
-    "version": "2.0.0"
-  },
   "Thaumcraft-1.12.2-6.1.BETA26.jar": {
     "jarName": "Thaumcraft-1.12.2-6.1.BETA26.jar",
     "modId": "thaumcraft",
@@ -2018,10 +2018,10 @@
     "modId": "unilib",
     "version": "1.1.1"
   },
-  "UniversalTweaks-1.12.2-1.15.2.jar": {
-    "jarName": "UniversalTweaks-1.12.2-1.15.2.jar",
+  "UniversalTweaks-1.12.2-1.16.0.jar": {
+    "jarName": "UniversalTweaks-1.12.2-1.16.0.jar",
     "modId": "universaltweaks",
-    "version": "1.15.2"
+    "version": "1.16.0"
   },
   "useful_railroads-1.12.2-1.1.3.24.jar": {
     "jarName": "useful_railroads-1.12.2-1.1.3.24.jar",
