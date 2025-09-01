@@ -82,8 +82,6 @@ q.getting_started.cow_in_a_jar.name=罐中奶牛
 q.getting_started.cow_in_a_jar.desc=罐中奶牛会持续产出牛奶。查看 JEI 看看怎么获取它。
 q.getting_started.harvest_level_4.name=挖掘等级 4
 q.getting_started.harvest_level_4.desc=铅生成于 Y=10-45 之间。焦黑石英具有相同的挖掘等级，因此找到焦黑石英一样可以完成任务。
-q.getting_started.heavy_material.name=沉重混凝材料
-q.getting_started.heavy_material.desc=沉重混凝 - 是一种匠魂材料。它具有独特的盔甲属性：§6磨碎§r。\n\n§6跳上矿石§r可以将它粉碎为粉末。\n§6只有潜行时§r生效。\n§6越多盔甲部件§r产生的粉末就更多，最多12个。\n坠落§6高度§r越高，概率越高。\n盔甲的§6耐久§r会基于挖掘速度被消耗。\n手持§6木 手柄§r可以显示属性信息。\n\n§c无法修复§r\n\n§7提示：§8可以用粘性活塞自动化粉碎方块。§r
 q.getting_started.silver.name=银
 q.getting_started.silver.desc=银矿§4完全不会生成§r。\n\n银的获取途径：\n§2-§r §6金§r或§1铅§r的副产物。\n§2-§r 从冰龙的§n银堆§r中获得\n§2-§r 通过种植§n银制果§r\n§2-§r 从§n多孔雾石§r\n§2-§r 在§n岩石粉碎机§r中处理安山岩\n§2-§r 来自虚空采矿机（例如沉浸工程的挖掘机）
 q.getting_started.diamond.desc=匠魂的钻石强化现在需要§b充能钻石水晶

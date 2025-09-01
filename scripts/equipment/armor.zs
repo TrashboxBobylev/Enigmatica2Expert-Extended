@@ -412,7 +412,7 @@ val itemsToRecycle as string[] = [
   'ic2:quantum_chestplate', '1', 'thermalfoundation:material:135', 'iridium',
   'ic2:quantum_helmet', '1', 'thermalfoundation:material:135', 'iridium',
   'ic2:quantum_leggings', '1', 'thermalfoundation:material:135', 'iridium',
-  'iceandfire:troll_weapon.hammer', '8', 'mechanics:heavy_ingot', 'heavy_metal',
+  'iceandfire:troll_weapon.hammer', '8', 'mechanics:heavy_ingot', '',
   'animus:kama_diamond', '8', 'minecraft:diamond', '',
   'botania:manaweavehelm', '20', 'botania:manaresource:16', '!saw',
   'botania:manaweavechest', '32', 'botania:manaresource:16', '!saw',

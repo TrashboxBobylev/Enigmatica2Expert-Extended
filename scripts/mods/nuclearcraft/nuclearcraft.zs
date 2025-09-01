@@ -578,7 +578,6 @@ return loadJson('exports/recipes/tconstruct__casting_table.json')
   crystal_matrix              : <avaritia:resource:1>,
   neutronium                  : <avaritia:resource:4>,
   tungsten                    : <endreborn:item_ingot_wolframium>,
-  heavy_metal                 : <mechanics:heavy_ingot>,
   electronics                 : <opencomputers:material:8>,
   spectre                     : <randomthings:ingredient:3>,
   fluxed_electrum             : <redstonearsenal:material:32>,
