@@ -20,7 +20,6 @@ tooltips.lang.ic2:quantum_chestplate=§bПробел+V§r чтобы завис�
 tooltips.lang.ic2:te:48=Отключено. Используйте Advanced Scrap Factory
 tooltips.lang.ic2:upgrade:4=§4Недоступен. §cВызывает сильные лаги при неправильном использовании.
 tooltips.lang.ic2:upgrade:6=§4Недоступен. §cВызывает сильные лаги при неправильном использовании.
-tooltips.lang.minecraft:torch=§4 Уровень освещенности уменьшен
 tooltips.lang.openblocks:tank=Хранит до §f24§r ведер
 tooltips.lang.openblocks:trophy:{entity_id:'minecraft:blaze'}=§eПоджечь игрока
 tooltips.lang.openblocks:trophy:{entity_id:'minecraft:cave_spider'}=§eОтравление игрока
