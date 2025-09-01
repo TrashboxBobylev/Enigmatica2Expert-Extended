@@ -1,5 +1,5 @@
 #loader mixin
-#modloader hammercore
+#modloaded hammercore
 
 import native.com.zeitheron.hammercore.utils.java.io.win32.ModSourceAdapter.IllegalSite;
 import mixin.CallbackInfo;

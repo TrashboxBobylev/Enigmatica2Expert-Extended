@@ -1,4 +1,4 @@
-#modloaded extrautils2
+#modloaded extrautils2 ic2
 #priority 1
 
 import crafttweaker.item.IIngredient;

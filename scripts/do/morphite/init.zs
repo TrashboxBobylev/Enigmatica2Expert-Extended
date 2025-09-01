@@ -1,4 +1,5 @@
 #reloadable
+#modloaded appliedenergistics2 qmd
 
 import crafttweaker.item.IItemDefinition;
 import crafttweaker.item.IItemStack;
