@@ -162,19 +162,6 @@ function workEx(machineNameAnyCase as string, exceptionsAnyCase as string,
       return machineName;
     }
 
-    if (machineName == 'grindstone') {
-      // mods.astralsorcery.Grindstone.addRecipe(IItemStack input, IItemStack output, float doubleChance);
-      if (inputIngr0.amount == 1) {
-        for ii in inputIngr0.itemArray {
-          mods.astralsorcery.Grindstone.addRecipe(ii, outputItem0, defaultChance0(extraChance, 0.0f) / outputItem0.amount);
-        }
-      }
-      else {
-        return info(machineNameAnyCase, getItemName(inputIngr0.itemArray[0]), 'received work, but this machine can only work with 1 item as input');
-      }
-      return machineName;
-    }
-
     if (machineName == 'compactor') {
       for ii in inputIngr0.itemArray {
         mods.thermalexpansion.Compactor.addPressRecipe(outputItem0, ii, 4000);
@@ -245,20 +232,6 @@ function workEx(machineNameAnyCase as string, exceptionsAnyCase as string,
         }
         else {
           mods.thermalexpansion.Sawmill.addRecipe(outputItem0, ii, 1000);
-        }
-      }
-      return machineName;
-    }
-
-    if (machineName == 'eu2crusher') {
-      if (strict) { mods.extrautils2.Crusher.remove(inputIngr0.itemArray[0]); }
-
-      for ii in inputIngr0.itemArray {
-        if (haveExtra) {
-          mods.extrautils2.Crusher.add(outputItem0, ii, extra[0], extraChance[0]);
-        }
-        else {
-          mods.extrautils2.Crusher.add(outputItem0, ii);
         }
       }
       return machineName;
@@ -358,22 +331,6 @@ function workEx(machineNameAnyCase as string, exceptionsAnyCase as string,
       //   @Optional ILiquidStack outputFluid);
       for ii in inputIngr0.itemArray {
         mods.integrateddynamics.Squeezer.addRecipe(ii,
-          arrN_item(outputItems, 0), arrN_float(combinedChances, 0),
-          arrN_item(outputItems, 1), arrN_float(combinedChances, 1),
-          arrN_item(outputItems, 2), arrN_float(combinedChances, 2),
-          outputLiquid0);
-      }
-      return machineName;
-    }
-
-    if (machineName == 'mechanicalsqueezer') {
-      // MechanicalSqueezer.addRecipe(IItemStack inputStack,
-      //   @Optional IItemStack outputStack1, @Optional float outputStackChance1,
-      //   @Optional IItemStack outputStack2, @Optional float outputStackChance2,
-      //   @Optional IItemStack outputStack3, @Optional float outputStackChance3,
-      //   @Optional ILiquidStack outputFluid, @Optional(10) int duration);
-      for ii in inputIngr0.itemArray {
-        mods.integrateddynamics.MechanicalSqueezer.addRecipe(ii,
           arrN_item(outputItems, 0), arrN_float(combinedChances, 0),
           arrN_item(outputItems, 1), arrN_float(combinedChances, 1),
           arrN_item(outputItems, 2), arrN_float(combinedChances, 2),

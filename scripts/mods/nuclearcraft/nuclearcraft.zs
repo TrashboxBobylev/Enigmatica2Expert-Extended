@@ -361,7 +361,7 @@ recipes.remove(<nuclearcraft:compound:9>);
 scripts.process.crush(
   <biomesoplenty:biome_essence>,
   <nuclearcraft:compound:9>,
-  'only: eu2Crusher IECrusher SAGMill',
+  'only: IECrusher SAGMill',
   [
     <thermalfoundation:material:66>,
     <nuclearcraft:compound:9>,

@@ -343,7 +343,7 @@ scripts.process.crush(<minecraft:arrow>, <minecraft:flint>, 'no exceptions', [<o
 
 // Fire charge recycle
 scripts.process.crush(<minecraft:fire_charge> * 3, <minecraft:gunpowder>,
-  'only: eu2Crusher', [<minecraft:blaze_powder>], [0.2f]);
+  'only: IECrusher', [<minecraft:blaze_powder>], [0.2f]);
 
 // ------------------------------------
 
