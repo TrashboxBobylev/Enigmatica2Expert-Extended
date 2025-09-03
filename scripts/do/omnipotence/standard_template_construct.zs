@@ -7,7 +7,7 @@ which contains infinite "blueprints" (resources) for building.
 
 */
 
-#priority -1000
+#priority -90
 #reloadable
 #modloaded zenutils danknull gamestages
 
@@ -178,9 +178,8 @@ function getSatchel() as IItemStack {
   return <thermalexpansion:satchel:4>.withTag(satchelTag);
 }
 
-// Called when Omnipotence is obtained
 function grant(player as IPlayer) as void {
-  if (player.world.remote || player.hasGameStage('stc_granted')) return;
+  if (player.hasGameStage('stc_granted')) return;
 
   // Remove existing STC items
   for i in 0 .. player.inventorySize {
@@ -263,16 +262,6 @@ function handleBlockEvent(player as IPlayer, blockState as IBlockState) as void 
 }
 
 // --- EVENT HANDLERS ---
-
-// Check if STC should be granted
-events.onPlayerTick(function (e as PlayerTickEvent) {
-  if (e.phase != 'END' || e.player.world.remote) return;
-  if (e.player.world.time % 20 != 0) return; // Check once per second
-
-  if (scripts.do.omnipotence.op.op.isPlayerOmnipotent(e.player)) {
-    grant(e.player);
-  }
-});
 
 // Replenish resources on block place
 events.register(function (e as crafttweaker.event.BlockPlaceEvent) {
