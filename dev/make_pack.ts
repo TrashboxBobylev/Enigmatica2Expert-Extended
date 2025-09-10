@@ -14,21 +14,25 @@
 /* eslint-disable regexp/no-misleading-capturing-group */
 /* eslint-disable regexp/no-super-linear-backtracking */
 
-import { consola } from 'consola'
+import { resolve } from 'node:path'
+import process from 'node:process'
+
+import * as p from '@clack/prompts'
 import ignore from 'ignore'
-import { resolve } from 'pathe'
 import { replaceInFile } from 'replace-in-file'
 import { $, fs } from 'zx'
 
-import { confirm, getIgnoredFiles, removeFiles } from './build/build_utils.js'
+import { getIgnoredFiles, removeFiles } from './build/build_utils.js'
 import { manageSFTP } from './build/sftp.js'
 import { generateChangelog } from './tools/changelog/changelog'
 
 const { existsSync, readFileSync } = fs
 const $$ = $({ stdio: 'inherit' })
 
+p.intro('Let\'s cook a new release! 🍳')
+
 const tmpDir = 'D:/mc_tmp/'
-if (await confirm('🪓 Perform automation?'))
+if (await p.confirm({message: '🪓 Perform automation?'}))
   await $$`bun dev`
 
 const devonlyIgnore = ignore().add(readFileSync('dev/.devonly.ignore', 'utf8'))
@@ -44,21 +48,28 @@ const devonlyIgnore = ignore().add(readFileSync('dev/.devonly.ignore', 'utf8'))
 
 const oldVersion = await $`git describe --tags --abbrev=0`.text()
 
-const inputVersion = (
-  await consola.prompt('Enter next version', {
-    initial: oldVersion,
-    cancel : 'undefined',
-  })
-)?.trim()
-const nextVersion = inputVersion || oldVersion || 'v???'
+const inputVersion = await p.text({
+  message     : 'Enter next version',
+  initialValue: oldVersion,
+})
+
+if (p.isCancel(inputVersion)) {
+  p.cancel('Operation cancelled.')
+  process.exit(0)
+}
+
+const nextVersion = inputVersion?.trim() || oldVersion || 'v???'
 const zipBaseName = `E2E-Extended-${nextVersion}`
 const serverSetupConfig = 'server/server-setup-config.yaml'
 
-consola.info(`🧼 Clear your working tree and rebase`)
+const s = p.spinner()
 
-if (await confirm(`Generate Changelog?`)) {
+s.message('🧼 Clear your working tree and rebase')
+
+if (await p.confirm({message: `Generate Changelog?`})) {
   const changelogPath = 'CHANGELOG-latest.md'
 
+  s.start('Updating version in files')
   // Update version in files
   await Promise.all([
     fs.writeFile('dev/version.txt', nextVersion),
@@ -74,7 +85,7 @@ if (await confirm(`Generate Changelog?`)) {
     }),
     replaceInFile({
       files: 'config/endermodpacktweaks/modpack.cfg',
-      from : /^(\s*S\s*:\s*"\[\d+\] Modpack Version"\s*=\s*).*$/m,
+      from : /^(\s*S\s*:\s*"\[\\d+\] Modpack Version"\s*=\s*).*$/m,
       to   : `$1${nextVersion}`,
     }),
     replaceInFile({
@@ -85,8 +96,9 @@ if (await confirm(`Generate Changelog?`)) {
     cleanupModlist(),
     generateChangelog(changelogPath),
   ])
+  s.stop('Updating version in files')
 
-  consola.info(`✍ Manually fix changelog`)
+  p.note('Manually fix changelog and close file', '✍')
 
   await Promise.all([
     $$`bun E:/dev/mc-icons/src/cli.ts ${changelogPath} --silent --no-short --modpack=e2ee --treshold=2`
@@ -98,7 +110,7 @@ if (await confirm(`Generate Changelog?`)) {
   await $$`git commit -m "chore: 🧱 CHANGELOG update, version bump"`
 }
 
-if (await confirm(`Add tag?`))
+if (await p.confirm({message: `Add tag?`}))
   await $$`git tag -a -f -m "Next automated release" ${nextVersion}`
 
 /*
@@ -117,13 +129,14 @@ const zipPath_server = `${zipPath_base}-server.zip`
 const isZipsExist = [zipPath, zipPath_server].some(f => existsSync(f))
 
 let rewriteOldZipFiles = false
-if (isZipsExist && await confirm(`Rewrite old .zip files?`)) {
+if (isZipsExist && await p.confirm({message: `Rewrite old .zip files?`})) {
   rewriteOldZipFiles = true
-  consola.info(`🪓 Removing old zip files:\n${zipPath}\n${zipPath_server}`)
+  s.start(`🪓 Removing old zip files:\n${zipPath}\n${zipPath_server}`)
   await Promise.all([
     fs.rm(zipPath, { force: true }),
     fs.rm(zipPath_server, { force: true }),
   ])
+  s.stop(`🪓 Removing old zip files:\n${zipPath}\n${zipPath_server}`)
 }
 
 /*
@@ -136,21 +149,23 @@ if (isZipsExist && await confirm(`Rewrite old .zip files?`)) {
   */
 const makeZips = !isZipsExist || rewriteOldZipFiles
 if (makeZips) {
-  consola.start(`🪓 Clearing tmp folder ${tmpDir} ... `)
+  s.start(`🪓 Clearing tmp folder ${tmpDir} ... `)
   try {
     await fs.rm(tmpDir, { recursive: true, force: true })
   }
   catch (err) {
-    consola.error(`Cannot remove TMP folder ${tmpDir}`, err)
+    p.cancel(`Cannot remove TMP folder ${tmpDir}`)
   }
+  s.stop(`🪓 Clearing tmp folder ${tmpDir} ... `)
 
   const tmpOverrides = resolve(tmpDir, 'overrides/')
   await fs.mkdir(tmpOverrides, { recursive: true })
 
-  consola.start('👬 Cloning latest tag to tmpOverrides...')
+  s.start('👬 Cloning latest tag to tmpOverrides...')
   await $$({ cwd: tmpOverrides })`git clone --recurse-submodules -j8 --depth 1 ${`file://${resolve(process.cwd())}`} .`
+  s.stop('👬 Cloning latest tag to tmpOverrides...')
 
-  consola.start('⬅️ Cleanse and move manifest.json...')
+  s.start('⬅️ Cleanse and move manifest.json...')
   const devonlyList = getIgnoredFiles(devonlyIgnore, { cwd: tmpOverrides })
     .map(f => resolve(tmpOverrides, f))
   const tmpManifestPath = resolve(tmpOverrides, 'manifest.json')
@@ -162,35 +177,43 @@ if (makeZips) {
       to   : '',
     })
       .then(async () => fs.rename(tmpManifestPath, resolve(tmpOverrides, '../manifest.json'))),
-    $$({ cwd: tmpOverrides })`find mods/OpenTerrainGenerator/worlds -type f -name "*.bo3" -exec sed -i '/^$/d;/^#/d' {} +`,
+    $$({ cwd: tmpOverrides })`find mods/OpenTerrainGenerator/worlds -type f -name "*.bo3" -exec sed -i '/^$/d; /^#/d' {} +`,
   ])
+  s.stop('⬅️ Cleanse and move manifest.json...')
 
-  consola.success('🧹 Removed non-release files and folders:\n', removedFiles)
+  p.note(removeFiles.length > 0 ? `🧹 Removed non-release files and folders:\n${removedFiles}` : 'Nothing to remove')
 
-  consola.start('🏴 Create EN .zip')
+  s.start('🏴 Create EN .zip')
   await $$({ cwd: tmpDir })`7z a -bso0 ${zipPath} .`
+  s.stop('🏴 Create EN .zip')
 
-  consola.start('📥 Create server zip')
+  s.start('📥 Create server zip')
   await $$({ cwd: 'server' })`7z a -bso0 ${zipPath_server} .`
+  s.stop('📥 Create server zip')
 }
 
 await manageSFTP(serverSetupConfig)
 
-if (await confirm(`Push tag?`))
+if (await p.confirm({message: `Push tag?`}))
   await $$`git push --follow-tags`
 
-const inputTitle = await consola.prompt(`Enter release title`, { type: 'text', cancel: 'undefined' })
+const inputTitle = await p.text({ message: 'Enter release title' })
 
-if (inputTitle !== undefined) {
-  consola.start('🌍 Releasing on Github ... ')
+if (p.isCancel(inputTitle)) {
+  p.cancel('Operation cancelled.')
+  process.exit(0)
+}
+
+if (inputTitle) {
+  s.start('🌍 Releasing on Github ... ')
   const title = `${nextVersion} ${inputTitle.replace(/"/g, '\'')}`.trim()
   await $$`gh release create ${nextVersion} --title=${title} --repo=Krutoy242/Enigmatica2Expert-Extended --notes-file=CHANGELOG-latest.md ${zipPath} ${zipPath_server}`
-    .then(() => consola.success('🌍 Releasing on Github ... '))
+    .then(() => p.note('🌍 Releasing on Github ... '))
 }
 
 async function cleanupModlist() {
   const modlistPath = 'config/crash_assistant/modlist.json'
-  const modlist: { [key: string]: unknown}  = JSON.parse(readFileSync(modlistPath, 'utf8'))
+  const modlist: { [key: string]: unknown} = JSON.parse(readFileSync(modlistPath, 'utf8'))
 
   // Filter out ignored fields
   const filteredModlist = Object.fromEntries(

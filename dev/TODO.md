@@ -2,18 +2,14 @@
 
 🚧✅❌⚠️♻️ List of priorities:
 
-- [ ] ⚡ Fix `OpenComputers` JEI plugin is still loaded
-- [ ] 📀 Dont let IC2 miner dig any mining level
-- [ ] 🔨 `Double Compressed Hammer` cant break double compressed charcoal
-- [ ] 🔨 Add HV wire invincibility TCon trait
-- [ ] 🐦 enable Enchanting speed up for rats
-- [ ] 📖 `Garden Cloche` add to chapter completion requirment
-- [ ] 📖 Add emojis 🍎 to chapter finishing messages
-- [ ] 📖 Add quest explaining that Battery and Solar can be replaced in TCon tools
+- [x] 💧 `Liquid Chorus` more effective recipe
+- [x] 📖 `Reinforcement` add info about unbreakable on level 10
+- [x] 📖 `Garden Cloche` add to chapter completion requirment
+- [x] 📖 Add quest explaining that Battery and Solar can be replaced in TCon tools
+- [x] 📖 On Chapter completion show `copleted / total` chapter count
 - [ ] 💎 Diamond shouldn't be meltable in smeltery
-- [ ] ♻️ Use `.sort()` from ZenUtils instead of ctintegration
+- [x] ♻️ Use `.sort()` from ZenUtils instead of ctintegration
 - [ ] ♻️ Completely get rid of `Patchouli_js()` code in .zs files
-- [ ] 🐛 Golden Torches shown as vanilla torches on default placement (caused by Lumenized chages)
 - [ ] ♻️ remove `crossscript` since data accessible between loaders
 - [ ] 👑 Upgrading Draconic tools give Omnopotence
 - [ ] 👑 `Omnopotence` add excavate for any item
@@ -21,6 +17,8 @@
 - [ ] 🐛 Custom beacons not working on server
 - [ ] 🎁 Disable upcraft for loot chests
 - [ ] 🟢 Migrate from `UniDict` to `OnlyOneItem`
+- [ ] ✏️ Prevent using Repair Augment to fill Singularities
+- [ ] ⛏️ Fix Excavate modifier always working at max level
 
 ### "Endgame" expansion
 
@@ -57,6 +55,7 @@ Command to optimize all the .png files:
 Planned non-urgent changes, or just good ideas:
 
 ### "Performance ⚡"
+- [ ] ⚡ Fix `OpenComputers` JEI plugin is still loaded (see benchmark)
 - [ ] ⚡ Cleanup JER data (and ores on other planets for clear JER tab)
 - [ ] ⚡ Fix projectiles accumulated on chunk borders, such as Scythe or Beam Laser. Use `ForceUpdateEntityClasses` StellarCore's config
 - [ ] ⚡ Remove Openblock's `Vacuum Hoppers` since they cause lags
@@ -178,6 +177,10 @@ Planned non-urgent changes, or just good ideas:
 
 ### Other
 
+- [ ] 📖 Add emojis 🍎 to chapter finishing messages
+- [ ] 🐦 enable Enchanting speed up for rats
+- [ ] 📀 Add HV wire invincibility TCon trait
+- [ ] 📀 Dont let IC2 miner dig any mining level
 - [ ] 📀 Add `Uncrafting Table` automation block - probably GUI-less tile entities working like hopper
 - [ ] 🔚 Make EIO capacitors actually usabe: right now, tweaked machine power usage make machine speed always 1 tick, neglibe capacitor usefulness
 - [ ] ♻️ Refactor: replace all `itemUtils.getItem` to `<${}:${}>`
