@@ -322,6 +322,8 @@ addItems(<ore:listAllmeatcooked>, [
   <thaumcraft:chunk:5>,
 ]);
 add(<ore:listAllfishcooked>, <thaumcraft:chunk:3>);
+add(<ore:listAllfishraw>, <harvestcraft:eelrawitem>);
+add(<ore:listAllfishfresh>, <harvestcraft:eelrawitem>);
 
 // Blood Magic Runes
 add(<ore:runeBlood>, <bloodmagic:blood_rune:*>);
