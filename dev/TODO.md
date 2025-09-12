@@ -2,17 +2,18 @@
 
 🚧✅❌⚠️♻️ List of priorities:
 
+- [ ] 🤖 Nanomachines give next levels of potions
+- [ ] ✏️ Add `Veggie Singularity`
+- [ ] ✏️ Add `Upgrade Singularity`
+- [ ] ✏️ Return Tungsten Blocks for High-pressure turbines
 - [ ] 🧱 Automatically interactive-rebase
-- [x] ♻️ Completely get rid of `Patchouli_js()` code in .zs files
-- [x] ♻️ remove `crossscript` since data accessible between loaders
 - [ ] 👑 Upgrading Draconic tools give Omnopotence
 - [ ] 👑 `Omnopotence` add excavate for any item
-- [ ] 🐛 `64k me storage cell` cant be autocrafted in ME
 - [ ] 🐛 Custom beacons not working on server
-- [x] 📖 Disable upcraft for loot chests
 - [ ] 🟢 Migrate from `UniDict` to `OnlyOneItem`
-- [x] ✏️ Prevent using `Flux Reconstruction` to fill Singularities
+- [ ] ✏️ Prevent using `Flux Reconstruction` to fill Singularities
 - [ ] ⛏️ Fix Excavate modifier always working at max level
+- [ ] ⛏️ Make `Borrowing` as TCon Modifier dirt-cheap (only Vis Crystal for ex.)
 
 ### "Endgame" expansion
 

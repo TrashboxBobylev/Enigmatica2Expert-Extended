@@ -71,7 +71,7 @@ await p.confirm({message: '🧼 Clear your working tree and rebase'})
 if (await p.confirm({message: `Generate Changelog?`})) {
   const changelogPath = 'CHANGELOG-latest.md'
 
-  s.start('Updating version in files')
+  p.note('Updating version in files')
   // Update version in files
   await Promise.all([
     fs.writeFile('dev/version.txt', nextVersion),
@@ -98,7 +98,6 @@ if (await p.confirm({message: `Generate Changelog?`})) {
     cleanupModlist(),
     generateChangelog(changelogPath),
   ])
-  s.stop('Updating version in files')
 
   // Some files need to be assumed unchanged
   // to prevent them always clutter git
@@ -174,14 +173,13 @@ if (isZipsExist && await p.confirm({message: `Rewrite old .zip files?`})) {
   */
 const makeZips = !isZipsExist || rewriteOldZipFiles
 if (makeZips) {
-  s.start(`🪓 Clearing tmp folder ${tmpDir} ... `)
+  p.note(`Clearing tmp folder ${tmpDir} ...`, '🪓 ')
   try {
     await fs.rm(tmpDir, { recursive: true, force: true })
   }
   catch (err) {
     p.cancel(`Cannot remove TMP folder ${tmpDir} ${err}`)
   }
-  s.stop(`🪓 Clearing tmp folder ${tmpDir} ... `)
 
   const tmpOverrides = resolve(tmpDir, 'overrides/')
   await fs.mkdir(tmpOverrides, { recursive: true })
