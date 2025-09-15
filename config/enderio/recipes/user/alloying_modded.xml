@@ -77,23 +77,6 @@
     </alloying>
   </recipe>
 
-  <recipe name="Alloy: Enderium Base (Thermal Expansion)" required="false">
-    <alloying energy="4000" exp="0">
-      <input name="ingotLead" amount="3"/>
-      <input name="ingotPlatinum"/>
-      <input name="oredict:enderpearl" amount="4"/>
-      <output name="ingotEnderiumBase" amount="4"/>
-    </alloying>
-  </recipe>
-
-  <recipe name="Alloy: Enderium (Thermal Expansion)" required="false">
-    <alloying energy="25000" exp="0">
-      <input name="ingotEnderiumBase" amount="2"/>
-      <input name="oredict:sand"/>
-      <output name="ingotEnderium" amount="2"/>
-    </alloying>
-  </recipe>
-
   <recipe name="Alloy: Steel (Oredict)" required="false">
     <alloying energy="4000" exp="0">
       <input name="ingotIron"/>

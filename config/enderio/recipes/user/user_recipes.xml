@@ -22,72 +22,6 @@
       <output name="skullGuardianDiode"/>
     </slicing>
   </recipe>
-  <recipe name="Stirling Generator, Upgrade">
-    <disabled/>
-  </recipe>
-  <recipe name="Enhanced Combustion Generator, Upgrade">
-    <disabled/>
-  </recipe>
-  <recipe name="Alloy Smelter, Upgrade">
-    <disabled/>
-  </recipe>
-  <recipe name="Solar Panel 2, Upgrade">
-    <disabled/>
-  </recipe>
-  <recipe name="Solar Panel 3, Upgrade">
-    <disabled/>
-  </recipe>
-  <recipe name="Solar Panel 4, Upgrade">
-    <disabled/>
-  </recipe>
-  <recipe name="Crafter, Upgrade">
-    <disabled/>
-  </recipe>
-  <recipe name="SAG Mill, Upgrade">
-    <disabled/>
-  </recipe>
-  <recipe name="Gear, Wood">
-    <disabled/>
-  </recipe>
-  <recipe name="Gear, ae2 messes things up">
-    <disabled/>
-  </recipe>
-  <recipe name="Gear, just to be sure">
-    <disabled/>
-  </recipe>
-  <recipe name="Gear, better save than sorry">
-    <disabled/>
-  </recipe>
-  <recipe name="Gear, Stone">
-    <disabled/>
-  </recipe>
-  <recipe name="Gear, Stone, Upgrade">
-    <disabled/>
-  </recipe>
-  <recipe name="Enhanced Combustion Generator">
-    <disabled/>
-  </recipe>
-  <recipe name="Enhanced Wired Charger">
-    <disabled/>
-  </recipe>
-  <recipe name="Enhanced Wired Charger, Upgrade">
-    <disabled/>
-  </recipe>
-  <recipe name="Wireless Charger (Antenna, enhanced)">
-    <disabled/>
-  </recipe>
-  <recipe name="Wireless Charger (Antenna, enhanced), Upgrade 1">
-    <disabled/>
-  </recipe>
-  <recipe name="Wireless Charger (Antenna, enhanced), Upgrade 2">
-    <disabled/>
-  </recipe>
-  <recipe name="Enhanced Alloy Smelter">
-    <disabled/>
-  </recipe>
-  <recipe name="Enhanced Alloy Smelter, Upgrade">
-    <disabled/>
-  </recipe>
   <recipe name="Alloy: Signalum (Thermal Expansion)">
     <alloying energy="320000" exp="0">
       <input name="ingotCopper"/>
@@ -95,9 +29,6 @@
       <input name="dustRedstone" amount="10"/>
       <output name="ingotSignalum" amount="4"/>
     </alloying>
-  </recipe>
-  <recipe name="Alloy: Vibrant Alloy">
-    <disabled/>
   </recipe>
   <!-- Late game Graphite Block alternatives -->
   <recipe name="Graphite Shortcut">
@@ -182,59 +113,6 @@
       <output name="additionalcompression:stone_compressed:9"/>
     </alloying>
   </recipe>
-  <!-- Disable recipes that EnderTweaker cant -->
-  <recipe name="Alloy: Enderium Base (Thermal Expansion)">
-    <disabled/>
-  </recipe>
-  <recipe name="Alloy: Enderium (Thermal Expansion)">
-    <disabled/>
-  </recipe>
-  <recipe name="Infinity Goop">
-    <disabled/>
-  </recipe>
-  <recipe name="Infinity Goop, Charcoal">
-    <disabled/>
-  </recipe>
-  <recipe name="Alloy: Pulsating Iron">
-    <disabled/>
-  </recipe>
-  <!-- Disable Endenergy alloys -->
-  <recipe name="Alloy: Endergy Crude Steel">
-    <disabled/>
-  </recipe>
-  <recipe name="Alloy: Endergy Crystalline Alloy">
-    <disabled/>
-  </recipe>
-  <recipe name="Alloy: Endergy Crystalline Pink Slime">
-    <disabled/>
-  </recipe>
-  <recipe name="Alloy: Endergy Melodic Alloy">
-    <disabled/>
-  </recipe>
-  <recipe name="Alloy: Endergy Stellar Alloy">
-    <disabled/>
-  </recipe>
-  <!-- Remove Too hard totemic capacitor -->
-  <recipe name="Totemic Capacitor">
-    <disabled/>
-  </recipe>
-  <!-- Remove Purged Capacitor -->
-  <recipe name="Capacitor Grainy">
-    <disabled/>
-  </recipe>
-  <!-- Disable Recipes that Ender Tweaker was disabled before -->
-  <recipe name="The Enhanced Vat">
-    <disabled/>
-  </recipe>
-  <recipe name="The Enhanced Vat, Upgrade">
-    <disabled/>
-  </recipe>
-  <recipe name="Enhanced SAG Mill">
-    <disabled/>
-  </recipe>
-  <recipe name="Enhanced SAG Mill, Upgrade">
-    <disabled/>
-  </recipe>
   <recipe name="Sagmill: Flux Core">
     <sagmilling energy="1000000" bonus="multiply_output">
       <input name="thermalexpansion:frame:148"/>
@@ -301,18 +179,6 @@
       <output name="endreborn:item_end_essence"/>
       <output name="endreborn:item_end_essence" chance="0.1"/>
     </sagmilling>
-  </recipe>
-  <recipe name="Sagmill: Black Quartz Block">
-    <disabled/>
-  </recipe>
-  <recipe name="Tweak: Stick from Wood">
-    <disabled/>
-  </recipe>
-  <recipe name="Tweak: Chest from Wood">
-    <disabled/>
-  </recipe>
-  <recipe name="Tweak: Wood Hopper">
-    <disabled/>
   </recipe>
   <!-- Mud recipe -->
   <recipe name="Mud from Dirt">
@@ -616,28 +482,9 @@
       <output name="enderio:block_inventory_chest_warehouse13"/>
     </crafting>
   </recipe>
-  <recipe name="Alloy: Black Dye">
-    <disabled/>
-  </recipe>
-  <recipe name="Alloy: Black Dye, Variant">
-    <disabled/>
-  </recipe>
   <grindingball name="Fur Ball" grinding="1.0" chance="1.0" power="0.25" durability="64000">
     <item name="actuallyadditions:item_hairy_ball"/>
   </grindingball>
-  <!-- Endergy Grinding Balls -->
-  <grindingball name="Crude Steel Ball" grinding="1.2" chance="1.25" power="0.85" disabled="true" durability="24000">
-    <item name="ballCrudeSteel"/>
-  </grindingball>
-  <grindingball name="Energetic Sliver Ball" grinding="1.6" chance="1.1" power="1.1" disabled="true" durability="80000">
-    <item name="ballEnergeticSilver"/>
-  </grindingball>
-  <recipe name="Alloy: Energetic Silver Alloy">
-    <disabled/>
-  </recipe>
-  <recipe name="Alloy: Vivid Alloy">
-    <disabled/>
-  </recipe>
   <!-- Grinding Ball buffs
   - Increased durability of all balls by 2x to account for required power for most of grinding recipes being lower, than SAG Mill's actual consumption (3200 RF < 5000 RF/t)
   - For balls with Power Use less than 1x, additionally increased durability by (1 / Power Use)x to make them last as long as in vanilla EnderIO
@@ -733,12 +580,6 @@
       <output name="ORGANIC_GREEN_DYE"/>
     </alloying>
   </recipe>
-  <recipe name="Alloy: Green Dye, Oredict">
-    <disabled/>
-  </recipe>
-  <recipe name="Alloy: Green Dye, Oredict Variant">
-    <disabled/>
-  </recipe>
   <recipe name="Alloy: Brown Dye">
     <alloying energy="2000" exp="0.5">
       <input name="itemPlantbrown" amount="6"/>
@@ -746,15 +587,6 @@
       <input name="actuallyadditions:item_misc:21"/>
       <output name="ORGANIC_BROWN_DYE"/>
     </alloying>
-  </recipe>
-  <recipe name="Alloy: Brown Dye, Variant">
-    <disabled/>
-  </recipe>
-  <recipe name="Alloy: Brown Dye, Oredict">
-    <disabled/>
-  </recipe>
-  <recipe name="Alloy: Brown Dye, Oredict Variant">
-    <disabled/>
   </recipe>
   <!-- Recipe below generated automatically. Do not make changes or they gonna be rewritten. -->
   <recipe name="Alumite Ingot">
