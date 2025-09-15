@@ -262,14 +262,6 @@
     </crafting>
   </recipe>
 
-  <recipe name="Gear, Stone, Casting">
-    <casting>
-      <input name="minecraft:cobblestone" amount="4"/>
-      <cast name="GEAR_WOOD" consumed="true"/>
-      <output name="GEAR_STONE"/>
-    </casting>
-  </recipe>
-
   <recipe name="Gear, Iron" required="true">
     <crafting>
       <grid>
