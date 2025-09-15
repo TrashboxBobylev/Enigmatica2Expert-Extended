@@ -226,6 +226,29 @@ Generate mods screenshot with command:
 </td></tr>
 </table>
 
+This diagram compares the overall difficulty and completion time of E2EE with other popular expert modpacks:
+
+<!--
+```mermaid
+title: "                  🠜 𝑒𝑎𝑠𝑦 ───────── ℎ𝑎𝑟𝑑➔"
+config:
+  gitGraph:
+    mainBranchName: 'Expert packs'
+---
+gitGraph
+  commit id: "SkyFactory 4" tag: "~40h"
+  commit id: "Enigmatica 2: Expert"
+  commit id: "Enigmatica 2: Expert - Extended🌳" type: HIGHLIGHT
+  commit id: "Meatballcraft"
+  commit id: "E2EE Peaceful Skyblock 🕊️🌌" type: HIGHLIGHT
+  commit id: "Divine Journey 2"
+  commit id: "GTNH" tag: "~2000h"
+  %% PO3:Kappa
+  %% FTB interactions
+```
+-->
+![Mermaid diagram about modpack relative comparison](https://mermaid.ink/svg/pako:eNqNU81u00AQfpXRSFUvSZTYTuzssTRN-GmpRE7Il6m9sVexd63NGjVEQRw4oaqoqNyA5MQLcOHMo-QFyCOwdhuEoIhq95N2VvPNNzO7s8BIxRwZNpvNUBphMs4gxO_r_6_tav0Rtp-u3ltcWqwtvsDm-vW_NmzeXN76riyuNp-vQwxlpOREJCyUAIkwQ01FWhsAOQl5oElG6QnlNq_9wXnBtYGCoulsP5R1zjtORYlUngsDIq5qeDadH1FklJ6DFyIYSqrbV147rVT_cB5IkeRkRETgMLjRuacbNO3BcBnzeLu6-FpJzQub7ejhcPTEYvxXlGNO5oyyLNI0uVPFGQzglFPEJ2UGto6zTEVT2K4-vP3x7Z0VubiHyKF4ISSHR6rUks_BuUNnOD4Z_dYZp93e9WZvD06fuuwxFQXd2kfjAxDScG17KpScYQMTLWJkRpe8gTnX9rmsiYuKEKJJec5DrCLHpKdV3KXlFCSfK5XvaFqVSYpsQtnMWmURk-GHghJN-a9bXfVWP1ClNMg6bh0D2QLPkbmB2wp6ge97Xsdr95xuA-fInK7XCvodN_D7bt_ruh1n2cCXtWq75fuu53edoOf4Hdfv9hrIY2F_yfHNHNTjsPwJ4soinw)
+
 </center>
 
 -----------------
