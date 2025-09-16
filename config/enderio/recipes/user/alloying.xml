@@ -64,7 +64,7 @@
     <alloying energy="20000" exp="0.5">
       <input name="oredict:endstone"/>
       <input name="ingotDarkSteel"/>
-      <input name="obsidian"/>
+      <input name="nuggetTungsten"/>
       <output name="ingotEndSteel"/>
     </alloying>
   </recipe>
@@ -236,26 +236,29 @@
   </recipe>
 
   <recipe name="Alloy: Green Dye" required="true">
-    <alloying energy="2000" exp="0.25">
-      <input name="itemPlantgreen" amount="12"/>
-      <input name="oredict:slimeball"/>
+    <alloying energy="2000" exp="0.5">
+      <input name="itemPlantgreen" amount="6"/>
+      <input name="ingotUranium238"/>
+      <input name="industrialforegoing:pink_slime"/>
       <output name="ORGANIC_GREEN_DYE" amount="2"/>
     </alloying>
   </recipe>
 
   <recipe name="Alloy: Green Dye, Variant" required="true">
-    <alloying energy="1500" exp="0.125">
+    <alloying energy="1500" exp="0.25">
       <input name="itemPlantgreen" amount="6"/>
-      <input name="oredict:egg"/>
+      <input name="ingotUranium238"/>
+      <input name="betteranimalsplus:goose_egg"/>
       <output name="ORGANIC_GREEN_DYE"/>
     </alloying>
   </recipe>
 
   <recipe name="Alloy: Brown Dye" required="true">
-    <alloying energy="2000" exp="0.25">
-      <input name="itemPlantbrown" amount="12"/>
-      <input name="oredict:slimeball"/>
-      <output name="ORGANIC_BROWN_DYE" amount="2"/>
+    <alloying energy="2000" exp="0.5">
+      <input name="itemPlantbrown" amount="6"/>
+      <input name="forestry:mulch"/>
+      <input name="actuallyadditions:item_misc:21"/>
+      <output name="ORGANIC_BROWN_DYE"/>
     </alloying>
   </recipe>
 
