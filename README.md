@@ -358,15 +358,12 @@ Some screenshots of new worldgen:
 
 ### Shaders
 
-1. Optifine must be installed.
-
-2. Add shader, for example, [Complementary Unbound](https://www.curseforge.com/minecraft/shaders/complementary-unbound).
-
-3. Configure your MC configs:
-    - `config/astralsorcery.cfg` add `0` line after line `S:weakSkyRenders <`.
-    - `config/advRocketry/advancedRocketry.cfg` set `PlanetSkyOverride` and `StationSkyOverride` to `false`.
-    - `config/brandon3055/DraconicEvolution.cfg` set `useShaders` and `useCrystalShaders` to `false`
-    - `config/botania.cfg` set `shaders.enabled` to `false`
+- Optifine must be installed.
+- List of tested, compatible shader options:
+  * **SEUS-Renewed-v1.0.1**
+  * [**Complementary Unbound**](https://www.curseforge.com/minecraft/shaders/complementary-unbound)
+  * [**BSL**](https://www.curseforge.com/minecraft/shaders/bsl-shaders)
+- Shaders require no manual setup. The modpack automatically disables conflicting shader options in `Astral Sorcery`, `Botania`, `Advanced Rocketry`, and `Twilight Forest`.
 
 -----------------
 
