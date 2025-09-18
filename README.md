@@ -400,10 +400,6 @@ Some screenshots of new worldgen:
 
   Crash logs are located in the folder `crash-reports/`. If there are no files, check the file `logs/latest.log`. If there is still no information about the crash, enable debug logging and the generation of the file `debug.log` in your launcher.
 
-- **The game crashes on load, and the logs show something about `Unexpected error` and `IllegalStateException: Already building!`**
-
-  In any strange situation, remove `VintageFix` first.
-
 - **What Java arguments should I use?**
 
   I recommend using *no arguments at all*.
@@ -415,10 +411,6 @@ Some screenshots of new worldgen:
 - **My world has 2 TPS, and it lags extremely hard.**
 
   This happens when the OTG world rapidly generates new chunks. To fix this, pre-generate your world by pressing the "O" hotkey.
-
-- **I'm getting 2 FPS, and I can't play.**
-
-  Remove the `VintageFix` mod.
 
 - **There are too few hostile mobs at night.**
 
