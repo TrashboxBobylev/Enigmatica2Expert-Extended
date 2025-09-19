@@ -314,15 +314,10 @@ In order to create a new Skyblock world, you need:
 <details><summary>🏔️ Open Terrain Generator</summary>
 <p>
 
-#### ✅ Pros:
-- Better landscape
-- Huge mountains
-- Good alternative if bored from **BoP**
+| ✅ Pros                                                                              | 👎 Cons                                                                                                    |
+|--------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------------------|
+| • Better landscape<br> • Huge mountains<br> • Good alternative if bored from **BoP** | • `Nature Compass` not working<br> • Biomes too big or too small<br> • Rarely structures generating midair |
 
-#### 👎 Cons:
-- `Nature Compass` not working
-- Biomes too big or too small
-- Rarely structures generating midair
 
 To enable new world generation type, follow this buttons:
 
