@@ -261,7 +261,7 @@ Just use *New Instance* feature of your launcher and choose "from CurseForge".
 [Prism Launcher example](https://i.imgur.com/u1TgH6r.png).
 
 > [!WARNING]
-> **💥 Important: CurseForge Launcher & Java Version**
+> **💥 CurseForge Launcher & Java Version**
 >
 > The CurseForge launcher uses an outdated, bundled version of Java 8 (`1.8.0_51`) that causes crashes. To ensure stability, you **must** configure the launcher to use a modern Java 8 release (e.g., `1.8.0_400+`) in its Minecraft settings.
 >
